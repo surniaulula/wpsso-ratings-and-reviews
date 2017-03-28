@@ -14,7 +14,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 	class WpssoRarComment {
 
 		protected $p;
-		protected static $status_cache = array();
+		protected static $rating_enabled = array();
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
@@ -27,9 +27,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			add_filter( 'comment_form_field_comment', array( __CLASS__, 'add_comment_form_html' ) );
 
 			// called for both front and back-end
-			add_filter( 'comment_text', array( __CLASS__, 'add_comment_text_rating' ) );
+			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
-			add_action( 'comment_post', array( __CLASS__, 'save_comment_rating' ) );
+			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );	// also enqueued by admin class
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
@@ -38,8 +38,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Check if ratings are allowed for this post type.
 		 */
 		public static function is_rating_enabled( $post_id ) {
-			if ( isset( self::$status_cache[$post_id] ) ) {	// use a status cache to optimize
-				return self::$status_cache[$post_id];
+
+			if ( isset( self::$rating_enabled[$post_id] ) ) {	// use a status cache to optimize
+				return self::$rating_enabled[$post_id];
 			}
 
 			$wpsso = Wpsso::get_instance();
@@ -54,18 +55,34 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$status = 1;
 			}
 
-			return self::$status_cache[$post_id] = $status;
+			return self::$rating_enabled[$post_id] = $status;
 		}
 
 		/*
 		 * Prepend the rating field to the comment textarea. Called for both the comment login form and logged-in users.
 		 */
 		public static function add_comment_form_html( $comment_textarea ) {
+
 			$post_id = get_the_ID();
 
-			if ( self::is_rating_enabled( $post_id ) ) {
-				$comment_textarea = implode( "\n", self::add_comment_rating_field() ).	// prepend
-					$comment_textarea;
+			if ( strpos( $comment_textarea, 'id="rating"' ) === false && self::is_rating_enabled( $post_id ) ) {
+
+				// check for a reply argument when javascript is disabled
+				$is_reply = empty( $_GET['replytocom'] ) ? false : true;
+
+				// prepare the "review" label
+				$review_label = sprintf( '<div class="comment-label-review"'.( $is_reply ? ' style="display:none;">' : '>' ).
+					'<label for="comment">%1$s</label></div>', _x( 'Review', 'field label', 'wpsso-ratings-and-reviews' ) );
+
+				// add a "review" label after the "comment" label and hide/show one or the other
+				$comment_textarea = preg_replace( '/(<label for="comment">.*<\/label>)/Uim',
+					'<div class="comment-label-comment"'.( $is_reply ? '>' : ' style="display:none;">' ).'$1</div>'.
+						$review_label, $comment_textarea );
+
+				// add the "rating" label and select
+				$comment_textarea = '<div class="wpsso-rar">'.
+					implode( "\n", self::get_extra_comment_fields() ).	// prepend the fields
+						$comment_textarea.'</div>';
 			}
 
 			return $comment_textarea;
@@ -74,21 +91,23 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/*
 		 * Prepend the rating field to a comment fields array.
 		 */
-		public static function add_comment_rating_field( $form_fields = array() ) {
+		public static function get_extra_comment_fields( $form_fields = array() ) {
+
+			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
+
 			$select = '<p class="comment-form-rating"'.
-				( empty( $_GET['replytocom'] ) ?	// auto-hide rating select for replies
-					'>' : ' style="display:none;">' );
+				( $is_reply ? ' style="display:none;">' : '>' )."\n";	// auto-hide for replies
 
 			$select .= sprintf( '<label for="rating">%s</label>',
-				_x( 'Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).
-					' '.'<select id="rating" name="'.WPSSORAR_COMMENT_META_NAME.'">';
-
-			$select .= '<option value=""></option>';	// do not select a rating by default
-			for( $i = 1; $i <= 5; $i++ ) {
-				$select .= '<option'.( $i ? '' : ' disabled selected' ).
-					' value="'.$i.'">'.$i.'</option>';
-			}
-			$select .= '</select></p>';
+				_x( 'Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).'
+<select name="'.WPSSORAR_COMMENT_META_NAME.'" id="rating" aria-required="true" required>
+	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
+	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
+	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
+	<option value="3">' . _x( 'Average', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
+	<option value="2">' . _x( 'Not Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
+	<option value="1">' . _x( 'Awful', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
+</select></p>';
 
 			// make the ratings field first
 			$form_fields = array( 'rating' => $select ) + $form_fields;
@@ -99,7 +118,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/*
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
-		public static function save_comment_rating( $comment_id ) { 
+		public static function save_request_comment_rating( $comment_id ) { 
+
 			if ( empty( $_GET['replytocom'] ) && empty( $_POST['replytocom'] ) ) {	// don't save reply ratings
 
 				$rating = (int) SucomUtil::get_request_value( WPSSORAR_COMMENT_META_NAME, 'POST' );
@@ -113,7 +133,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/*
 		 * Append the rating value to the comment text. This filter is called on both the front and back-end.
 		 */
-		public static function add_comment_text_rating( $comment_text ) {
+		public static function add_rating_to_comment_text( $comment_text ) {
+
 			$comment_id = get_comment_ID();
 			$comment_obj = get_comment( $comment_id );
 
@@ -123,8 +144,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$rating = get_comment_meta( $comment_id, WPSSORAR_COMMENT_META_NAME, true );
 
 				if ( $rating ) {
-					$comment_text .= '<p class="comment-text-rating">'.	// append rating stars
-						self::get_rating_stars_html( $rating ).'</p>';
+					$comment_text .= '<div class="wpsso-rar">'.	// append rating stars
+						self::get_star_rating_html( $rating ).'</div>';
 				}
 			}
 			return $comment_text;
@@ -133,61 +154,34 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/*
 		 * Create the rating stars HTML for the rating value provided.
 		 */
-		public static function get_rating_stars_html( $rating ) { 
+		public static function get_star_rating_html( $rating ) { 
+
 			$html = ''; 
+			$rating = (int) $rating;
+
 			if ( ! empty( $rating ) ) { 
-				$html = '<span class="rating-stars">'; 
-				for ( $i = 1; $i <= 5; $i++ ) {
-					$html .= '<i class="fa fa-star'.
-						( $i <= $rating ? ' rated' : '-o' ).'"></i>';
-				} 
-				$html .= '</span>';
+				$html = '<div class="star-rating" title="'.
+					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating ).'">'.
+				'<span style="width:'.( ( $rating / 5 ) * 100 ).'%;">'.
+					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating ). 
+				'</span></div>';
 			}
 			return $html;
 		}
 
-		/*
-		 * Enqueue the Font Awesome styles. Also hooked by the WpssoRarAdmin class for the back-end.
-		 */
 		public static function enqueue_styles() {
+
 			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
-
-			/*
-			 * Font Awesome
-			 */
-			wp_enqueue_style( 'fontawesome', WPSSORAR_URLPATH.'css/font-awesome.min.css', array(), '4.7.0' ); 
-
-			/*
-			 * jQuery Bar Rating Theme
-			 */
-			wp_enqueue_style( 'bar-rating-theme', WPSSORAR_URLPATH.'css/themes/fontawesome-stars-o.min.css', array(), '1.2.2' ); 
-
-			/*
-			 * Custom Styles
-			 */
 			wp_enqueue_style( 'wpsso-rar-style', WPSSORAR_URLPATH.'css/style.min.css', array(), WpssoRarConfig::get_version() );
 		}
 
-		/*
-		 * Enqueue the BarRating jQuery scripts.
-		 */
 		public static function enqueue_scripts() {
+
 			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
-
-			/*
-			 * jQuery Bar Rating
-			 *	http://antenna.io/demo/jquery-bar-rating/examples/
-			 *	https://github.com/antennaio/jquery-bar-rating
-			 */
-			wp_enqueue_script( 'bar-rating', WPSSORAR_URLPATH.'js/jquery.barrating.min.js', array( 'jquery' ), '1.2.2' );
-
-			/*
-			 * Custom jQuery
-			 */
 			wp_enqueue_script( 'wpsso-rar-script', WPSSORAR_URLPATH.'js/script.min.js', array( 'jquery' ), WpssoRarConfig::get_version() );
 		}
 	}

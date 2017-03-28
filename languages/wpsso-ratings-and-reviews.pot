@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.0-dev2\n"
+"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.0-dev3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
@@ -13,13 +13,52 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:33
+#: lib/admin.php:34
 msgid "Allow ratings in comments (reviews)."
 msgstr ""
 
-#: lib/comment.php:83
+#: lib/comment.php:75
+msgctxt "field label"
+msgid "Review"
+msgstr ""
+
+#: lib/comment.php:102
 msgctxt "field label"
 msgid "Rating"
+msgstr ""
+
+#: lib/comment.php:104
+msgctxt "option value"
+msgid "Rating&hellip;"
+msgstr ""
+
+#: lib/comment.php:105
+msgctxt "option value"
+msgid "Excellent"
+msgstr ""
+
+#: lib/comment.php:106
+msgctxt "option value"
+msgid "Good"
+msgstr ""
+
+#: lib/comment.php:107
+msgctxt "option value"
+msgid "Average"
+msgstr ""
+
+#: lib/comment.php:108
+msgctxt "option value"
+msgid "Not Good"
+msgstr ""
+
+#: lib/comment.php:109
+msgctxt "option value"
+msgid "Awful"
+msgstr ""
+
+#: lib/comment.php:164 lib/comment.php:166
+msgid "Rated %d out of 5"
 msgstr ""
 
 #: lib/config-gettext-extract.php:3
