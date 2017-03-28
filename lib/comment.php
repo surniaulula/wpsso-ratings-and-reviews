@@ -138,8 +138,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			if ( ! empty( $rating ) ) { 
 				$html = '<span class="rating-stars">'; 
 				for ( $i = 1; $i <= 5; $i++ ) {
-					$html .= '<i class="fa fa-star-o'.
-						( $i <= $rating ? ' rated' : '' ).'"></i>';
+					$html .= '<i class="fa fa-star'.
+						( $i <= $rating ? ' rated' : '-o' ).'"></i>';
 				} 
 				$html .= '</span>';
 			}
@@ -162,7 +162,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/*
 			 * jQuery Bar Rating Theme
 			 */
-			wp_enqueue_style( 'bar-rating-theme', WPSSORAR_URLPATH.'css/themes/fontawesome-stars.min.css', array(), '1.2.2' ); 
+			wp_enqueue_style( 'bar-rating-theme', WPSSORAR_URLPATH.'css/themes/fontawesome-stars-o.min.css', array(), '1.2.2' ); 
 
 			/*
 			 * Custom Styles
