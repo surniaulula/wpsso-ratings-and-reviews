@@ -71,12 +71,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 
 				// prepare the "review" label
-				$review_label = sprintf( '<div class="comment-label-review"'.( $is_reply ? ' style="display:none;">' : '>' ).
-					'<label for="comment">%1$s</label></div>', _x( 'Review', 'field label', 'wpsso-ratings-and-reviews' ) );
+				$review_label = sprintf( '<span class="comment-label-review"'.( $is_reply ? ' style="display:none;">' : '>' ).
+					'<label for="review">%1$s <span class="required">*</span></label></span>',
+						_x( 'Your Review', 'field label', 'wpsso-ratings-and-reviews' ) );
 
 				// add a "review" label after the "comment" label and hide/show one or the other
 				$comment_textarea = preg_replace( '/(<label for="comment">.*<\/label>)/Uim',
-					'<div class="comment-label-comment"'.( $is_reply ? '>' : ' style="display:none;">' ).'$1</div>'.
+					'<span class="comment-label-comment"'.( $is_reply ? '>' : ' style="display:none;">' ).'$1</span>'.
 						$review_label, $comment_textarea );
 
 				// add the "rating" label and select
@@ -93,14 +94,18 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function get_extra_comment_fields( $form_fields = array() ) {
 
+			$wpsso = Wpsso::get_instance();
+			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
+			$is_req_attr = $is_required ? ' aria-required="true" required="required"' : '';
+			$is_req_span = $is_required ? ' <span class="required">*</span>' : '';
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 
 			$select = '<p class="comment-form-rating"'.
 				( $is_reply ? ' style="display:none;">' : '>' )."\n";	// auto-hide for replies
 
-			$select .= sprintf( '<label for="rating">%s</label>',
-				_x( 'Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).'
-<select name="'.WPSSORAR_COMMENT_META_NAME.'" id="rating" aria-required="true" required>
+			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
+				_x( 'Your Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).'
+<select name="'.WPSSORAR_COMMENT_META_NAME.'" id="rating"'.$is_req_attr.'>
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
@@ -183,6 +188,19 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return;
 			}
 			wp_enqueue_script( 'wpsso-rar-script', WPSSORAR_URLPATH.'js/script.min.js', array( 'jquery' ), WpssoRarConfig::get_version() );
+
+			wp_localize_script( 'wpsso-rar-script', 'wpsso_rar_script', self::get_script_data() );
+		}
+
+		public static function get_script_data() {
+
+			$wpsso = Wpsso::get_instance();
+
+			return array(
+				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
+				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
+				'review_rating_required'    => empty( $wpsso->options['rar_rating_required'] ) ? false : true,
+			);
 		}
 	}
 }

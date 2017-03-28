@@ -17,48 +17,56 @@ msgstr ""
 msgid "Allow ratings in comments (reviews)."
 msgstr ""
 
-#: lib/comment.php:75
+#: lib/comment.php:76
 msgctxt "field label"
-msgid "Review"
-msgstr ""
-
-#: lib/comment.php:102
-msgctxt "field label"
-msgid "Rating"
-msgstr ""
-
-#: lib/comment.php:104
-msgctxt "option value"
-msgid "Rating&hellip;"
-msgstr ""
-
-#: lib/comment.php:105
-msgctxt "option value"
-msgid "Excellent"
-msgstr ""
-
-#: lib/comment.php:106
-msgctxt "option value"
-msgid "Good"
+msgid "Your Review"
 msgstr ""
 
 #: lib/comment.php:107
-msgctxt "option value"
-msgid "Average"
-msgstr ""
-
-#: lib/comment.php:108
-msgctxt "option value"
-msgid "Not Good"
+msgctxt "field label"
+msgid "Your Rating"
 msgstr ""
 
 #: lib/comment.php:109
 msgctxt "option value"
+msgid "Rating&hellip;"
+msgstr ""
+
+#: lib/comment.php:110
+msgctxt "option value"
+msgid "Excellent"
+msgstr ""
+
+#: lib/comment.php:111
+msgctxt "option value"
+msgid "Good"
+msgstr ""
+
+#: lib/comment.php:112
+msgctxt "option value"
+msgid "Average"
+msgstr ""
+
+#: lib/comment.php:113
+msgctxt "option value"
+msgid "Not Good"
+msgstr ""
+
+#: lib/comment.php:114
+msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:164 lib/comment.php:166
+#: lib/comment.php:169 lib/comment.php:171
 msgid "Rated %d out of 5"
+msgstr ""
+
+#: lib/comment.php:200
+msgid "Please select a rating before submitting."
+msgstr ""
+
+#: lib/comment.php:201
+msgid "Please write a review before submitting."
 msgstr ""
 
 #: lib/config-gettext-extract.php:3
@@ -79,6 +87,11 @@ msgstr ""
 #: lib/submenu/rar-general.php:45
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
+msgstr ""
+
+#: lib/submenu/rar-general.php:49
+msgctxt "option label"
+msgid "Rating Required to Leave a Review"
 msgstr ""
 
 #: wpsso-ratings-and-reviews.php:81

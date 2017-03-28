@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			'plugin' => array(
 				'wpssorar' => array(
 					'version' => '1.0.0-dev3',		// plugin version
-					'opt_version' => '2',		// increment when changing default options
+					'opt_version' => '3',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews (WPSSO RAR)',
 					'desc' => 'WPSSO extension to add a ratings feature to WordPress comments.',
@@ -68,6 +68,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_add_to_attachment' => 0,
 					'rar_add_to_page' => 1,
 					'rar_add_to_post' => 0,
+					'rar_rating_required' => 1,
 				),
 			),
 		);

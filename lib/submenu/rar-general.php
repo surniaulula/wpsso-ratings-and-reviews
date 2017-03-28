@@ -46,6 +46,10 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 						'option label', 'wpsso-rar' ), '', 'rar_add_to' ).
 					'<td>'.$this->form->get_post_type_checkboxes( 'rar_add_to' ).'</td>';
 
+					$table_rows['rar_rating_required'] = $this->form->get_th_html( _x( 'Rating Required to Leave a Review',
+						'option label', 'wpsso-rar' ), '', 'rar_rating_required' ).
+					'<td>'.$this->form->get_checkbox( 'rar_rating_required' ).'</td>';
+
 					break;
 			}
 			return $table_rows;
