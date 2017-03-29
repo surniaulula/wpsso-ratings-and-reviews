@@ -29,6 +29,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			// called for both front and back-end
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
+			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_average_rating_meta' ) );
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );	// also enqueued by admin class
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
@@ -128,15 +129,18 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $form_fields;
 		}
 
+		public static function clear_average_rating_meta( $post_id ) {
+			delete_post_meta( $post_id, '_wpsso_average_rating' );
+			delete_post_meta( $post_id, '_wpsso_rating_count' );
+			delete_post_meta( $post_id, '_wpsso_review_count' );
+		}
+
 		/*
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
 		public static function save_request_comment_rating( $comment_id ) { 
-
 			if ( empty( $_GET['replytocom'] ) && empty( $_POST['replytocom'] ) ) {	// don't save reply ratings
-
 				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_COMMENT_META_NAME, 'POST' );
-
 				if ( $rating_value ) {
 					add_comment_meta( $comment_id, WPSSORAR_COMMENT_META_NAME, $rating_value );
 				}
@@ -193,34 +197,39 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		public static function enqueue_styles() {
-
 			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
-
 			wp_enqueue_style( 'wpsso-rar-style', WPSSORAR_URLPATH.'css/style.min.css', array(), WpssoRarConfig::get_version() );
 		}
 
 		public static function enqueue_scripts() {
-
 			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
-
 			wp_enqueue_script( 'wpsso-rar-script', WPSSORAR_URLPATH.'js/script.min.js', array( 'jquery' ), WpssoRarConfig::get_version() );
-
 			wp_localize_script( 'wpsso-rar-script', 'wpsso_rar_script', self::get_script_data() );
 		}
 
 		public static function get_script_data() {
-
 			$wpsso = Wpsso::get_instance();
-
 			return array(
 				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
 				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
 				'review_rating_required'    => empty( $wpsso->options['rar_rating_required'] ) ? false : true,
 			);
+		}
+
+		public static function get_average_rating( $post_id ) {
+			return (float) 0;
+		}
+
+		public static function get_rating_count( $post_id ) {
+			return (int) 0;
+		}
+
+		public static function get_review_count( $post_id ) {
+			return (int) 0;
 		}
 	}
 }

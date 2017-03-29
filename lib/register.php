@@ -80,7 +80,9 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 		}
 
 		private static function uninstall_plugin() {
-			// nothing to do
+			delete_post_meta_by_key( '_wpsso_rating_average' );	// re-created automatically
+			delete_post_meta_by_key( '_wpsso_rating_count' );	// re-created automatically
+			delete_post_meta_by_key( '_wpsso_review_count' );	// re-created automatically
 		}
 	}
 }
