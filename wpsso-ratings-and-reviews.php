@@ -12,7 +12,7 @@
  * Description: WPSSO extension to add a ratings feature to WordPress comments.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 1.0.0-dev4
+ * Version: 1.0.0-dev5
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -134,6 +134,25 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 			if ( self::$have_req_min === false ) {
 				return;		// stop here
+			}
+
+			// disable reviews on products if competing feature exists
+			if ( $this->p->is_avail['ecom']['woocommerce'] ) {
+				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' || 
+					! empty( $this->p->is_avail['ecom']['yotpowc'] ) ) {
+
+					if ( ! empty( $this->p->options['rar_add_to_product'] ) ) {
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log( 'ratings feature for products found - ratings for the product post type disabled' );
+						}
+						if ( is_admin() ) {
+							$this->p->notice->warn( sprintf( __( 'An existing products rating feature has been found &mdash; %1$s for the "product" custom post type has been disabled.', 'wpsso-ratings-and-reviews' ), $this->p->cf['plugin']['wpssorar']['short'] ) );
+						}
+						$this->p->options['rar_add_to_product'] = 0;
+						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, false, true );	// $has_diff = true
+					}
+					$this->p->options['rar_add_to_product:is'] = 'disabled';
+				}
 			}
 
 			$this->filters = new WpssoRarFilters( $this->p );

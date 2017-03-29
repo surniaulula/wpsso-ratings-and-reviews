@@ -46,8 +46,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$wpsso = Wpsso::get_instance();
 			$post_type = get_post_type( $post_id );
 			$default = empty( $wpsso->options['rar_add_to_'.$post_type] ) ? 0 : 1;
+			$disabled = isset( $wpsso->options['rar_add_to_'.$post_type.':is'] ) &&
+				$wpsso->options['rar_add_to_'.$post_type.':is'] == 'disabled' ? true : false;
 
-			if ( ( $current = get_post_meta( $post_id, WPSSORAR_POST_META_NAME, true ) ) === '' ) {
+			if ( $disabled ) {
+				$status = 0;
+			} elseif ( ( $current = get_post_meta( $post_id, WPSSORAR_POST_META_NAME, true ) ) === '' ) {
 				$status = $default;
 			} elseif ( empty( $current ) ) {
 				$status = 0;

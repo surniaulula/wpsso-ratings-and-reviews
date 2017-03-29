@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.0-dev4\n"
+"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.0-dev5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
@@ -13,59 +13,59 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:34
+#: lib/admin.php:38
 msgid "Allow ratings in comments (reviews)."
 msgstr ""
 
-#: lib/comment.php:81
+#: lib/comment.php:85
 msgctxt "field label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:111
+#: lib/comment.php:115
 msgctxt "field label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:113
+#: lib/comment.php:117
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:114
+#: lib/comment.php:118
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:115
+#: lib/comment.php:119
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:116
+#: lib/comment.php:120
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:117
+#: lib/comment.php:121
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:118
+#: lib/comment.php:122
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:183 lib/comment.php:185
+#: lib/comment.php:187 lib/comment.php:189
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/comment.php:216
+#: lib/comment.php:220
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/comment.php:217
+#: lib/comment.php:221
 msgid "Please write a review before submitting."
 msgstr ""
 
@@ -106,7 +106,13 @@ msgid ""
 "activate the %3$s plugin."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:167
+#: wpsso-ratings-and-reviews.php:149
+msgid ""
+"An existing products rating feature has been found &mdash; %1$s for the "
+"\"product\" custom post type has been disabled."
+msgstr ""
+
+#: wpsso-ratings-and-reviews.php:186
 msgid ""
 "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently "
 "installed)."

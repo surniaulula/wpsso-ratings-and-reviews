@@ -28,11 +28,16 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		}
 
 		public function add_rating_meta_option( $post ) {
-			$rating_enabled = WpssoRarComment::is_rating_enabled( $post->ID );
+			$post_type = get_post_type( $post->ID );
+			$disabled = isset( $this->p->options['rar_add_to_'.$post_type.':is'] ) &&
+				$this->p->options['rar_add_to_'.$post_type.':is'] == 'disabled' ? true : false;
 
-			printf( '<br /><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" class="selectit" %2$s/> %3$s</label>',
-				WPSSORAR_POST_META_NAME, checked( $rating_enabled, 1, false ), __( 'Allow ratings in comments (reviews).', 
-					'wpsso-ratings-and-reviews' ) );
+			if ( ! $disabled ) {
+				$rating_enabled = WpssoRarComment::is_rating_enabled( $post->ID );	// get current setting
+				printf( '<br /><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" class="selectit" %2$s/> %3$s</label>',
+					WPSSORAR_POST_META_NAME, checked( $rating_enabled, 1, false ), __( 'Allow ratings in comments (reviews).', 
+						'wpsso-ratings-and-reviews' ) );
+			}
 		}
 
         	public function save_rating_meta_option( $post_id, $post, $update ) {

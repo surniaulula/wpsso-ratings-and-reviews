@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(
-					'version' => '1.0.0-dev4',		// plugin version
+					'version' => '1.0.0-dev5',		// plugin version
 					'opt_version' => '3',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews (WPSSO RAR)',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
-						'min_version' => '3.40.7-dev4',
+						'min_version' => '3.40.7-dev5',
 					),
 					'img' => array(
 						'icon_small' => 'images/icon-128x128.png',
@@ -68,6 +68,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_add_to_attachment' => 0,
 					'rar_add_to_page' => 1,
 					'rar_add_to_post' => 0,
+					'rar_add_to_product' => 1,
 					'rar_rating_required' => 1,
 				),
 			),
