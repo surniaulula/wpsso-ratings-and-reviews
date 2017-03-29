@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews - Star Ratings and Meta Tags / Markup for WordPress Comments ===
+=== WPSSO Ratings and Reviews ===
 Plugin Name: WPSSO Ratings and Reviews (WPSSO RAR)
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
@@ -6,13 +6,13 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
-Tags: star, rating, review, comment, stars, ratings, reviews, comments
+Tags: star, rating, review, aggregate, schema, stars, ratings, reviews, comment, comments
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
 Stable Tag: 1.1.0-1
 
-WPSSO extension to add a ratings feature to WordPress comments.
+WPSSO extension to add ratings and reviews for WordPress comments, with aggregate rating meta tags and (optional) Schema Review markup.
 
 == Description ==
 
@@ -55,7 +55,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 1.0.0-dev5 (2017/03/29)**
+**Version 1.0.0-a1 (2017/03/29)**
 
 * *New Features*
 	* Initial release.
@@ -68,7 +68,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 1.0.0-dev5 =
+= 1.0.0-a1 =
 
 (2017/03/29) Initial release.
 
