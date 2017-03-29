@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			if ( ! $disabled ) {
 				$rating_enabled = WpssoRarComment::is_rating_enabled( $post->ID );	// get current setting
 				printf( '<br /><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" class="selectit" %2$s/> %3$s</label>',
-					WPSSORAR_POST_META_NAME, checked( $rating_enabled, 1, false ), __( 'Allow ratings in comments (reviews).', 
+					WPSSORAR_META_ALLOW_RATINGS, checked( $rating_enabled, 1, false ), __( 'Allow ratings in comments (reviews).', 
 						'wpsso-ratings-and-reviews' ) );
 			}
 		}
@@ -45,11 +45,11 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				return;
 			} elseif ( ! current_user_can( 'edit_'.$_POST['post_type'], $post_id ) ) {
 				return;
-			} elseif ( isset ( $_POST[WPSSORAR_POST_META_NAME] ) && 
-				strtolower( $_POST[WPSSORAR_POST_META_NAME] ) === 'on' ) {
-				return update_post_meta( $post_id, WPSSORAR_POST_META_NAME, 1 );
+			} elseif ( isset ( $_POST[WPSSORAR_META_ALLOW_RATINGS] ) && 
+				strtolower( $_POST[WPSSORAR_META_ALLOW_RATINGS] ) === 'on' ) {
+				return update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
 			} else {
-				return update_post_meta( $post_id, WPSSORAR_POST_META_NAME, 0 );
+				return update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
 			}
 		}
 	}

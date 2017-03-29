@@ -98,8 +98,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static function get_variable_constants() {
 			$var_const = array();
 
-			$var_const['WPSSORAR_COMMENT_META_NAME'] = 'rating';
-			$var_const['WPSSORAR_POST_META_NAME'] = '_comments_rating';
+			$var_const['WPSSORAR_META_REVIEW_RATING'] = 'rating';			// comment meta int
+			$var_const['WPSSORAR_META_ALLOW_RATINGS'] = '_wpsso_allow_ratings';	// post meta 0/1
+			$var_const['WPSSORAR_META_AVERAGE_RATING'] = '_wpsso_average_rating';	// post meta float
+			$var_const['WPSSORAR_META_RATING_COUNTS'] = '_wpsso_rating_counts';	// post meta array
+			$var_const['WPSSORAR_META_REVIEW_COUNT'] = '_wpsso_review_count';	// post meta int
 
 			foreach ( $var_const as $name => $value ) {
 				if ( defined( $name ) ) {

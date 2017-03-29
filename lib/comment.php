@@ -15,6 +15,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		protected $p;
 		protected static $rating_enabled = array();
+		protected static $rating_cache = array();
 
 		public function __construct( &$plugin ) {
 			$this->p =& $plugin;
@@ -29,7 +30,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			// called for both front and back-end
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
-			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_average_rating_meta' ) );
+			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );	// also enqueued by admin class
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
@@ -51,16 +52,16 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->options['rar_add_to_'.$post_type.':is'] == 'disabled' ? true : false;
 
 			if ( $disabled ) {
-				$status = 0;
-			} elseif ( ( $current = get_post_meta( $post_id, WPSSORAR_POST_META_NAME, true ) ) === '' ) {
-				$status = $default;
+				$enabled = 0;
+			} elseif ( ( $current = get_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, true ) ) === '' ) {
+				$enabled = $default;
 			} elseif ( empty( $current ) ) {
-				$status = 0;
+				$enabled = 0;
 			} else {
-				$status = 1;
+				$enabled = 1;
 			}
 
-			return self::$rating_enabled[$post_id] = $status;
+			return self::$rating_enabled[$post_id] = $enabled;
 		}
 
 		/*
@@ -114,7 +115,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
 				_x( 'Your Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).'
-<select name="'.WPSSORAR_COMMENT_META_NAME.'" id="rating"'.$is_req_attr.'>
+<select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.$is_req_attr.'>
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
@@ -129,20 +130,14 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $form_fields;
 		}
 
-		public static function clear_average_rating_meta( $post_id ) {
-			delete_post_meta( $post_id, '_wpsso_average_rating' );
-			delete_post_meta( $post_id, '_wpsso_rating_count' );
-			delete_post_meta( $post_id, '_wpsso_review_count' );
-		}
-
 		/*
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
 		public static function save_request_comment_rating( $comment_id ) { 
 			if ( empty( $_GET['replytocom'] ) && empty( $_POST['replytocom'] ) ) {	// don't save reply ratings
-				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_COMMENT_META_NAME, 'POST' );
+				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
 				if ( $rating_value ) {
-					add_comment_meta( $comment_id, WPSSORAR_COMMENT_META_NAME, $rating_value );
+					add_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, $rating_value );
 				}
 			}
 		}
@@ -168,7 +163,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return $comment_text;
 			}
 
-			$rating_value = get_comment_meta( $comment_id, WPSSORAR_COMMENT_META_NAME, true );
+			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
 				$comment_text .= '<div class="wpsso-rar">'.	// append rating stars
@@ -220,16 +215,93 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			);
 		}
 
+		public static function clear_rating_post_meta( $post_id ) {
+			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
+			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
+			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
+		}
+
+		/*
+		 * Average Rating
+		 */
 		public static function get_average_rating( $post_id ) {
-			return (float) 0;
+			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
+				self::sync_average_rating( $post_id );	// calculate the average rating
+			} 
+			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, true );
 		}
 
-		public static function get_rating_count( $post_id ) {
-			return (int) 0;
+		public static function sync_average_rating( $post_id ) {
+			if ( $count_total = self::get_rating_count( $post_id ) ) {
+				global $wpdb; 
+				$rating_total = $wpdb->get_var( $wpdb->prepare( "
+					SELECT SUM(meta_value) FROM $wpdb->commentmeta
+					LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
+					WHERE meta_key = 'rating'
+					AND comment_post_ID = %d
+					AND comment_parent = '0'
+					AND comment_approved = '1'
+					AND meta_value > 0", $post_id ) );
+				$average = number_format( $rating_total / $count_total, 2, '.', '' );
+			} else {
+				$average = 0;
+			}
+			update_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, $average );
 		}
 
+		/*
+		 * Rating Count
+		 */
+		public static function get_rating_count( $post_id, $count_idx = null ) {
+			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {
+				self::sync_rating_counts( $post_id );
+			}
+			$rating_counts = array_filter( (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, true ) );
+			if ( $count_idx === null ) {
+				return array_sum( $rating_counts );
+			} else {
+				return isset( $rating_counts[$count_idx] ) ?
+					(int) $rating_counts[$count_idx] : 0;
+			}
+		}
+
+		public static function sync_rating_counts( $post_id ) {
+			global $wpdb;
+			$count_meta = $wpdb->get_results( $wpdb->prepare( "
+				SELECT meta_value, COUNT( * ) as meta_value_count FROM $wpdb->commentmeta
+				LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
+				WHERE meta_key = 'rating'
+				AND comment_post_ID = %d
+				AND comment_parent = '0'
+				AND comment_approved = '1'
+				AND meta_value > 0
+				GROUP BY meta_value", $post_id ) );
+			$rating_counts = array();
+			foreach ( $count_meta as $count ) {
+				$rating_counts[$count->meta_value] = $count->meta_value_count;
+			}
+			update_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $rating_counts );
+		}
+
+		/*
+		 * Review Count
+		 */
 		public static function get_review_count( $post_id ) {
-			return (int) 0;
+			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_REVIEW_COUNT ) ) {
+				self::sync_review_count( $post_id );
+			}
+			return (int) get_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, true );
+		}
+
+		public static function sync_review_count( $post_id ) {
+			global $wpdb;
+			$review_count = $wpdb->get_var( $wpdb->prepare( "
+				SELECT COUNT(*) FROM $wpdb->comments
+				WHERE comment_parent = 0
+				AND comment_post_ID = %d
+				AND comment_parent = '0'
+				AND comment_approved = '1'", $post_id ) );
+			update_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, $review_count );
 		}
 	}
 }

@@ -80,9 +80,11 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 		}
 
 		private static function uninstall_plugin() {
-			delete_post_meta_by_key( '_wpsso_rating_average' );	// re-created automatically
-			delete_post_meta_by_key( '_wpsso_rating_count' );	// re-created automatically
-			delete_post_meta_by_key( '_wpsso_review_count' );	// re-created automatically
+			$var_const = WpssoRarConfig::get_variable_constants();
+
+			delete_post_meta_by_key( $var_const['WPSSORAR_META_AVERAGE_RATING'] );	// re-created automatically
+			delete_post_meta_by_key( $var_const['WPSSORAR_META_RATING_COUNTS'] );	// re-created automatically
+			delete_post_meta_by_key( $var_const['WPSSORAR_META_REVIEW_COUNT'] );	// re-created automatically
 		}
 	}
 }
