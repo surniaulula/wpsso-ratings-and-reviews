@@ -12,7 +12,7 @@
  * Description: WPSSO extension to add a ratings feature to WordPress comments.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 1.0.0-dev5
+ * Version: 1.0.0-a1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *

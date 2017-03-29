@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.0-dev5\n"
+"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.0-a1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
@@ -76,7 +76,9 @@ msgstr ""
 
 #: lib/config-gettext-extract.php:4
 msgctxt "plugin description"
-msgid "WPSSO extension to add a ratings feature to WordPress comments."
+msgid ""
+"WPSSO extension to add ratings and reviews for WordPress comments, with "
+"aggregate rating meta tags and (optional) Schema Review markup."
 msgstr ""
 
 #: lib/submenu/rar-general.php:30

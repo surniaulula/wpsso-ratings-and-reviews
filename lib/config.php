@@ -16,11 +16,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(
-					'version' => '1.0.0-dev5',		// plugin version
+					'version' => '1.0.0-a1',		// plugin version
 					'opt_version' => '3',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews (WPSSO RAR)',
-					'desc' => 'WPSSO extension to add a ratings feature to WordPress comments.',
+					'desc' => 'WPSSO extension to add ratings and reviews for WordPress comments, with aggregate rating meta tags and (optional) Schema Review markup.',
 					'slug' => 'wpsso-ratings-and-reviews',
 					'base' => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
 					'update_auth' => '',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
-						'min_version' => '3.40.7-dev5',
+						'min_version' => '3.40.7-a1',
 					),
 					'img' => array(
 						'icon_small' => 'images/icon-128x128.png',
