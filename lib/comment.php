@@ -104,16 +104,17 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$wpsso = Wpsso::get_instance();
 			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
-			$is_req_attr = $is_required ? ' aria-required="true" required="required"' : '';
 			$is_req_span = $is_required ? ' <span class="required">*</span>' : '';
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 
+			// auto-hide for replies
 			$select = '<p class="comment-form-rating"'.
-				( $is_reply ? ' style="display:none;">' : '>' )."\n";	// auto-hide for replies
+				( $is_reply ? ' style="display:none;">' : '>' )."\n";
 
+			// disable the select for replies
 			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
 				_x( 'Your Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).'
-<select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.$is_req_attr.'>
+<select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.( $is_reply ? ' disabled' : '' ).'">
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
