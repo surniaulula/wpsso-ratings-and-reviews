@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			'plugin' => array(
 				'wpssorar' => array(
 					'version' => '1.0.0-a1',		// plugin version
-					'opt_version' => '3',		// increment when changing default options
+					'opt_version' => '4',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews (WPSSO RAR)',
 					'desc' => 'WPSSO extension to add ratings and reviews for WordPress comments, with aggregate rating meta tags and (optional) Schema Review markup.',
@@ -70,6 +70,8 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_add_to_post' => 0,
 					'rar_add_to_product' => 1,
 					'rar_rating_required' => 1,
+					'rar_star_color_selected' => '#222222',
+					'rar_star_color_default' => '#dddddd',
 				),
 			),
 		);
@@ -115,9 +117,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once WPSSORAR_PLUGINDIR.'lib/register.php';
-			require_once WPSSORAR_PLUGINDIR.'lib/filters.php';
 			require_once WPSSORAR_PLUGINDIR.'lib/comment.php';
+			require_once WPSSORAR_PLUGINDIR.'lib/filters.php';
+			require_once WPSSORAR_PLUGINDIR.'lib/register.php';
+			require_once WPSSORAR_PLUGINDIR.'lib/script.php';
+			require_once WPSSORAR_PLUGINDIR.'lib/style.php';
 
 			if ( is_admin() ) {
 				require_once WPSSORAR_PLUGINDIR.'lib/admin.php';

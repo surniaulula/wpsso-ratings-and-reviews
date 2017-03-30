@@ -36,9 +36,11 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 		public $p;		// Wpsso
 		public $reg;		// WpssoRarRegister
-		public $filters;	// WpssoRarFilters
-		public $comment;	// WpssoRarComment
 		public $admin;		// WpssoRarAdmin
+		public $comment;	// WpssoRarComment
+		public $filters;	// WpssoRarFilters
+		public $script;		// WpssoRarScript
+		public $style;		// WpssoRarStyle
 
 		private static $instance;
 		private static $have_req_min = true;	// have at least minimum wpsso version
@@ -155,8 +157,10 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				}
 			}
 
-			$this->filters = new WpssoRarFilters( $this->p );
 			$this->comment = new WpssoRarComment( $this->p );
+			$this->filters = new WpssoRarFilters( $this->p );
+			$this->script = new WpssoRarScript( $this->p );
+			$this->style = new WpssoRarStyle( $this->p );
 
 			if ( is_admin() ) {
 				$this->admin = new WpssoRarAdmin( $this->p );

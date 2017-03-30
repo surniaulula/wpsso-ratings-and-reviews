@@ -32,8 +32,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );	// also enqueued by admin class
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 
 		/*
@@ -166,8 +164,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
-				$comment_text .= '<div class="wpsso-rar">'.	// append rating stars
-					self::get_star_rating_html( $rating_value ).'</div>';
+				$comment_text = '<div class="wpsso-rar">'.	// append rating stars
+					self::get_star_rating_html( $rating_value ).'</div>'.$comment_text;
 			}
 
 			return $comment_text;
@@ -189,30 +187,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				'</span></div>';
 			}
 			return $html;
-		}
-
-		public static function enqueue_styles() {
-			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
-				return;
-			}
-			wp_enqueue_style( 'wpsso-rar-style', WPSSORAR_URLPATH.'css/style.min.css', array(), WpssoRarConfig::get_version() );
-		}
-
-		public static function enqueue_scripts() {
-			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
-				return;
-			}
-			wp_enqueue_script( 'wpsso-rar-script', WPSSORAR_URLPATH.'js/script.min.js', array( 'jquery' ), WpssoRarConfig::get_version() );
-			wp_localize_script( 'wpsso-rar-script', 'wpsso_rar_script', self::get_script_data() );
-		}
-
-		public static function get_script_data() {
-			$wpsso = Wpsso::get_instance();
-			return array(
-				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
-				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
-				'review_rating_required'    => empty( $wpsso->options['rar_rating_required'] ) ? false : true,
-			);
 		}
 
 		public static function clear_rating_post_meta( $post_id ) {

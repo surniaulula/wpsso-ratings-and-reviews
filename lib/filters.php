@@ -26,6 +26,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				'get_defaults' => 1,
 				'og' => 2,	// $mt_og, $mod
 			) );
+
+			if ( is_admin() ) {
+				$this->p->util->add_plugin_filters( $this, array( 
+					'messages_tooltip' => 2,		// tooltip messages filter
+				) );
+			}
 		}
 
 		public function filter_get_defaults( $def_opts ) {
@@ -95,6 +101,28 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			}
 
 			return $mt_og;
+		}
+
+		public function filter_messages_tooltip( $text, $idx ) {
+			if ( strpos( $idx, 'tooltip-rar_' ) !== 0 )
+				return $text;
+
+			switch ( $idx ) {
+				case 'tooltip-rar_add_to':
+					$text = __( 'You can choose to enable or disable ratings by default for each public post type.', 'wpsso-ratings-and-reviews' ).' ';
+					$text .= sprintf( __( 'When editing a post (page, or custom post type), an "%1$s" option is also available to enable or disable ratings for that specific webpage.', 'wpsso-ratings-and-reviews' ), __( 'Allow ratings for comments (aka reviews).', 'wpsso-ratings-and-reviews' ) );
+					break;
+				case 'tooltip-rar_rating_required':
+					$text = __( 'Force a reviewer to select a rating before their review / comment is allowed to be submitted (enabled by default).', 'wpsso-ratings-and-reviews' );
+					break;
+				case 'tooltip-rar_star_color_selected':
+					$text = __( 'A color for selected stars representing the rating.', 'wpsso-ratings-and-reviews' );
+					break;
+				case 'tooltip-rar_star_color_default':
+					$text = __( 'A default color for unselected stars.', 'wpsso-ratings-and-reviews' );
+					break;
+			}
+			return $text;
 		}
 	}
 }

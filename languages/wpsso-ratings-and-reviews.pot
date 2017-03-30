@@ -13,60 +13,52 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:38
-msgid "Allow ratings in comments (reviews)."
+#: lib/admin.php:38 lib/filters.php:113
+msgid "Allow ratings for comments (aka reviews)."
 msgstr ""
 
-#: lib/comment.php:87
+#: lib/comment.php:85
 msgctxt "field label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:117
+#: lib/comment.php:115
 msgctxt "field label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:119
+#: lib/comment.php:117
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:120
+#: lib/comment.php:118
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:121
+#: lib/comment.php:119
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:122
+#: lib/comment.php:120
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:123
+#: lib/comment.php:121
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:124
+#: lib/comment.php:122
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:186 lib/comment.php:188
+#: lib/comment.php:184 lib/comment.php:186
 msgid "Rated %d out of 5"
-msgstr ""
-
-#: lib/comment.php:212
-msgid "Please select a rating before submitting."
-msgstr ""
-
-#: lib/comment.php:213
-msgid "Please write a review before submitting."
 msgstr ""
 
 #: lib/config-gettext-extract.php:3
@@ -81,6 +73,40 @@ msgid ""
 "aggregate rating meta tags and (optional) Schema Review markup."
 msgstr ""
 
+#: lib/filters.php:112
+msgid ""
+"You can choose to enable or disable ratings by default for each public post "
+"type."
+msgstr ""
+
+#: lib/filters.php:113
+msgid ""
+"When editing a post (page, or custom post type), an \"%1$s\" option is also "
+"available to enable or disable ratings for that specific webpage."
+msgstr ""
+
+#: lib/filters.php:116
+msgid ""
+"Force a reviewer to select a rating before their review / comment is allowed "
+"to be submitted (enabled by default)."
+msgstr ""
+
+#: lib/filters.php:119
+msgid "A color for selected stars representing the rating."
+msgstr ""
+
+#: lib/filters.php:122
+msgid "A default color for unselected stars."
+msgstr ""
+
+#: lib/script.php:39
+msgid "Please select a rating before submitting."
+msgstr ""
+
+#: lib/script.php:40
+msgid "Please write a review before submitting."
+msgstr ""
+
 #: lib/submenu/rar-general.php:30
 msgctxt "metabox title"
 msgid "Ratings and Reviews"
@@ -93,28 +119,38 @@ msgstr ""
 
 #: lib/submenu/rar-general.php:49
 msgctxt "option label"
-msgid "Rating Required to Leave a Review"
+msgid "Rating Required to Submit Review"
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:81
+#: lib/submenu/rar-general.php:53
+msgctxt "option label"
+msgid "Selected Star Rating Color"
+msgstr ""
+
+#: lib/submenu/rar-general.php:57
+msgctxt "option label"
+msgid "Unselected Star Rating Color"
+msgstr ""
+
+#: wpsso-ratings-and-reviews.php:83
 msgid ""
 "%1$s is an extension for the %2$s plugin &mdash; please install and activate "
 "the %3$s plugin before activating %4$s."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:83
+#: wpsso-ratings-and-reviews.php:85
 msgid ""
 "The %1$s extension requires the %2$s plugin &mdash; please install and "
 "activate the %3$s plugin."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:149
+#: wpsso-ratings-and-reviews.php:151
 msgid ""
 "An existing products rating feature has been found &mdash; %1$s for the "
 "\"product\" custom post type has been disabled."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:186
+#: wpsso-ratings-and-reviews.php:190
 msgid ""
 "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently "
 "installed)."
