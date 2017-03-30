@@ -55,7 +55,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
-**Version 1.0.0-a1 (2017/03/29)**
+**Version 1.0.0-b1 (2017/03/30)**
 
 * *New Features*
 	* Initial release.
@@ -68,7 +68,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 == Upgrade Notice ==
 
-= 1.0.0-a1 =
+= 1.0.0-b1 =
 
-(2017/03/29) Initial release.
+(2017/03/30) Initial release.
 
