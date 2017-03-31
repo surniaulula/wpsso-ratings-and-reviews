@@ -15,6 +15,8 @@
 
 <p align="center"><img src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png" /></p><p></p>
 
+<p>The WPSSO Ratings and Reviews extension will be released shortly. ;-)</p>
+
 
 <h2>Installation</h2>
 
