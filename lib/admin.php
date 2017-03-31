@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			if ( ! $disabled ) {
 				$rating_enabled = WpssoRarComment::is_rating_enabled( $post->ID );	// get current setting
 				printf( '<br /><label for="%1$s"><input type="checkbox" id="%1$s" name="%1$s" class="selectit" %2$s/> %3$s</label>',
-					WPSSORAR_META_ALLOW_RATINGS, checked( $rating_enabled, 1, false ), __( 'Allow ratings for comments (aka reviews).', 
+					WPSSORAR_META_ALLOW_RATINGS, checked( $rating_enabled, 1, false ), __( 'Allow ratings for reviews (comments).', 
 						'wpsso-ratings-and-reviews' ) );
 			}
 		}

@@ -13,8 +13,8 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:38 lib/filters.php:113
-msgid "Allow ratings for comments (aka reviews)."
+#: lib/admin.php:38
+msgid "Allow ratings for reviews (comments)."
 msgstr ""
 
 #: lib/comment.php:85
@@ -85,10 +85,14 @@ msgid ""
 "available to enable or disable ratings for that specific webpage."
 msgstr ""
 
+#: lib/filters.php:113
+msgid "Allow ratings for comments (aka reviews)."
+msgstr ""
+
 #: lib/filters.php:116
 msgid ""
-"Force a reviewer to select a rating before their review / comment is allowed "
-"to be submitted (enabled by default)."
+"Force a reviewer to select a rating before submitting their review (enabled "
+"by default)."
 msgstr ""
 
 #: lib/filters.php:119
@@ -165,7 +169,9 @@ msgid "https://surniaulula.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "WPSSO extension to add a ratings feature to WordPress comments."
+msgid ""
+"WPSSO extension to add ratings and reviews for WordPress comments, with "
+"aggregate rating meta tags and (optional) Schema Review markup."
 msgstr ""
 
 #. Author of the plugin/theme
