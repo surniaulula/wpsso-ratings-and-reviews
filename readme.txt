@@ -18,7 +18,7 @@ WPSSO extension to add ratings and reviews for WordPress comments, with aggregat
 
 <img src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png" style="width:33%;min-width:128px;max-width:256px;height:auto;float:left;margin:10px 40px 40px 0;" />
 
-<p>The WPSSO Ratings and Reviews extension will be released shortly. ;-)</p>
+<p>The WPSSO Ratings and Reviews extension will be announced shortly. ;-)</p>
 
 == Installation ==
 
