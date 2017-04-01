@@ -18,7 +18,15 @@ WPSSO extension to add ratings and reviews for WordPress comments, with aggregat
 
 <img src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png" style="width:33%;min-width:128px;max-width:256px;height:auto;float:left;margin:10px 40px 40px 0;" />
 
-<p>The WPSSO Ratings and Reviews extension will be announced shortly. ;-)</p>
+<p><strong>WPSSO RAR extends the WordPress comment system with rating and review features</strong> &mdash; new reviews are labeled as reviews (not comments), a star rating selection can be forced before submissions are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
+
+<p><strong>WPSSO RAR provides <a href="https://schema.org/aggregateRating">https://schema.org/aggregateRating</a> meta tags and (optional) JSON-LD markup.</strong></p>
+
+<p><strong>WPSSO RAR provides complete <a href="https://schema.org/Review">https://schema.org/Review</a> as (optional) JSON-LD markup</strong> &mdash; including all information about the review, and all threaded comments for that review.</p>
+
+<blockquote>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews (WPSSO RAR) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
+</blockquote>
 
 == Installation ==
 
@@ -39,10 +47,10 @@ WPSSO extension to add ratings and reviews for WordPress comments, with aggregat
 
 == Screenshots ==
 
-01. WPSSO RAR with the 2017 theme showing the submission of a new 4-star review.
-02. WPSSO RAR with the 2017 theme showing a reply (no star rating) to an earlier 4-star review.
-03. WPSSO RAR in the back-end showing the option to enable / disable ratings, reviews with star rating, and replies to reviews (no star rating).
-04. WPSSO RAR settings page with options to enable / disable ratings by post type, force star ratings, and select colors for the star ratings. 
+01. WPSSO RAR showing the submission of a 4-star review &mdash; note the themed labels (Your Rating, Your Review, etc.) and the customized star colors.
+02. WPSSO RAR showing a reply to an earlier 4-star review &mdash; note there are no rating options for replies to reviews, and the labels reflect this.
+03. WPSSO RAR in the back-end showing an option to enable / disable ratings per post, some reviews with star ratings, and a reply to a review (no star rating).
+04. WPSSO RAR settings page with options to enable / disable ratings by post type, force star ratings for reviews, and colors for the star ratings. 
 
 == Changelog ==
 
