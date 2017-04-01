@@ -39,6 +39,11 @@ WPSSO extension to add ratings and reviews for WordPress comments, with aggregat
 
 == Screenshots ==
 
+01. WPSSO RAR with the 2017 theme showing the submission of a new 4-star review.
+02. WPSSO RAR with the 2017 theme showing a reply (no star rating) to an earlier 4-star review.
+03. WPSSO RAR in the back-end showing the option to enable / disable ratings, reviews with star rating, and replies to reviews (no star rating).
+04. WPSSO RAR settings page with options to enable / disable ratings by post type, force star ratings, and select colors for the star ratings. 
+
 == Changelog ==
 
 = Repositories =
