@@ -17,7 +17,7 @@
 
 <p><strong>WPSSO RAR extends the native WordPress comment system with new rating and review features</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
 
-<p><strong>WPSSO RAR provides <a href="https://schema.org/aggregateRating">https://schema.org/aggregateRating</a> using meta tags and (optional) JSON-LD markup</strong> (requires WPSSO JSON Pro extension). Google reads the aggregate rating meta tags and/or JSON-LD markup to add rating information to search results.</p>
+<p><strong>WPSSO RAR provides <a href="https://schema.org/aggregateRating">https://schema.org/aggregateRating</a> using meta tags and (optional) JSON-LD markup</strong> (requires WPSSO JSON Pro extension) &mdash; Google reads the aggregate rating meta tags and/or JSON-LD markup to add rating information to search results!</p>
 
 <p><strong>WPSSO RAR also includes complete <a href="https://schema.org/Review">https://schema.org/Review</a> details as (optional) JSON-LD markup</strong> (requires WPSSO JSON Pro extension) &mdash; including information about the review (author name, creation time, and excerpt), along with the threaded replies / comments for each review.</p>
 
