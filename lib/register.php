@@ -46,6 +46,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 			self::do_multisite( $sitewide, array( &$this, 'deactivate_plugin' ) );
 		}
 
+		// uninstall.php defines constants before calling network_uninstall()
 		public static function network_uninstall() {
 			$sitewide = true;
 
@@ -79,12 +80,18 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 			// nothing to do
 		}
 
+		// uninstall.php defines constants before calling network_uninstall()
 		private static function uninstall_plugin() {
-			$var_const = WpssoRarConfig::get_variable_constants();
 
-			delete_post_meta_by_key( $var_const['WPSSORAR_META_AVERAGE_RATING'] );	// re-created automatically
-			delete_post_meta_by_key( $var_const['WPSSORAR_META_RATING_COUNTS'] );	// re-created automatically
-			delete_post_meta_by_key( $var_const['WPSSORAR_META_REVIEW_COUNT'] );	// re-created automatically
+			$opts = get_option( WPSSO_OPTIONS_NAME, array() );
+
+			if ( empty( $opts['plugin_preserve'] ) ) {
+				delete_post_meta_by_key( WPSSORAR_META_ALLOW_RATINGS );
+			}
+
+			delete_post_meta_by_key( WPSSORAR_META_AVERAGE_RATING );	// re-created automatically
+			delete_post_meta_by_key( WPSSORAR_META_RATING_COUNTS );		// re-created automatically
+			delete_post_meta_by_key( WPSSORAR_META_REVIEW_COUNT );		// re-created automatically
 		}
 	}
 }
