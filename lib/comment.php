@@ -24,8 +24,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$this->p->debug->mark();
 			}
 
-			// called by comment-template.php for both login form and logged-in users
-			add_filter( 'comment_form_field_comment', array( __CLASS__, 'add_comment_form_html' ), 5 );
+			// called by comment-template.php to define text and html for the form
+			add_filter( 'comment_form_defaults', array( __CLASS__, 'add_comment_form_defaults' ), 500 );
 
 			// called for both front and back-end
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
@@ -65,42 +65,59 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/*
 		 * Prepend the rating field to the comment textarea. Called for both the comment login form and logged-in users.
 		 */
-		public static function add_comment_form_html( $comment_textarea ) {
+		public static function add_comment_form_defaults( $defaults ) {
 
-			// only add a single rating field (ours or from another plugin)
-			if ( strpos( $comment_textarea, ' id="rating"' ) !== false ) {
-				return $comment_textarea;
-			}
-			
 			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
-				return $comment_textarea;
+				return $defaults;
 			}
 
 			// check for a reply argument when javascript is disabled
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
+			$is_req_span = ' <span class="required">*</span>';
 
-			// prepare the "review" label
-			$review_label = sprintf( '<span class="comment-label-review"'.( $is_reply ? ' style="display:none;">' : '>' ).
-				'<label for="review">%1$s <span class="required">*</span></label></span>',
-					_x( 'Your Review', 'field label', 'wpsso-ratings-and-reviews' ) );
+			$rev_span_begin = '<span class="comment-toggle-review"'.
+				( $is_reply ? ' style="display:none;"' : '' ).'>';
+			$rev_span_end = '</span><!-- .comment-toggle-review -->';
 
-			// add a "review" label after the "comment" label and hide/show one or the other
-			$comment_textarea = preg_replace( '/(<label for="comment">.*<\/label>)/Uim',
-				'<span class="comment-label-comment"'.( $is_reply ? '>' : ' style="display:none;">' ).'$1</span>'.
-					$review_label, $comment_textarea );
+			$cmt_span_begin = '<span class="comment-toggle-comment"'.
+				( $is_reply ? '' : ' style="display:none;"' ).'>';
+			$cmt_span_end = '</span><!-- .comment-toggle-comment -->';
 
-			// add the "rating" label and select
-			$comment_textarea = '<div class="wpsso-rar">'.
-				implode( "\n", self::get_extra_comment_fields() ).	// prepend the fields
-					$comment_textarea.'</div>';
+			/*
+			 * Title
+			 */
+			$defaults['title_reply_before'] = '<span class="wpsso-rar">'.
+				$rev_span_begin.'<h3 id="review-title" class="comment-review-title">'.
+					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ).
+						'</h3>'.$rev_span_end.$cmt_span_begin.$defaults['title_reply_before'];
 
-			return $comment_textarea;
+			$defaults['title_reply_after'] .= $cmt_span_end.'</span><!-- .wpsso-rar -->';
+
+			/*
+			 * Comment Box
+			 */
+			$defaults['comment_field'] = preg_replace( '/(<label for="comment">.*<\/label>)/Uim',
+				$rev_span_begin.'<label for="review">'._x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ).
+					$is_req_span.'</label>'.$rev_span_end.$cmt_span_begin.'$1'.$cmt_span_end,
+						$defaults['comment_field'] );
+
+			$defaults['comment_field'] = '<span class="wpsso-rar">'.
+				self::get_form_rating_field().$defaults['comment_field'].
+					'</span><!-- .wpsso-rar -->';
+
+			/*
+			 * Submit Button
+			 */
+			$defaults['submit_button'] = '<span class="wpsso-rar">'.$rev_span_begin.
+				'<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="'.
+					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ).'" />'.
+						$rev_span_end.$cmt_span_begin.$defaults['submit_button'].$cmt_span_end.
+							'</span><!-- .wpsso-rar -->';
+
+			return $defaults;
 		}
 
-		/*
-		 * Prepend the rating field to a comment fields array.
-		 */
-		public static function get_extra_comment_fields( $form_fields = array() ) {
+		public static function get_form_rating_field() {
 
 			$wpsso = Wpsso::get_instance();
 			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
@@ -113,7 +130,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			// disable the select for replies
 			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
-				_x( 'Your Rating', 'field label', 'wpsso-ratings-and-reviews' ) ).'
+				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) ).'
 <select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.( $is_reply ? ' disabled' : '' ).'">
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
@@ -123,10 +140,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 	<option value="1">' . _x( 'Awful', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 </select></p>';
 
-			// make the ratings field first
-			$form_fields = array( 'rating' => $select ) + $form_fields;
-
-			return $form_fields;
+			return $select;
 		}
 
 		/*

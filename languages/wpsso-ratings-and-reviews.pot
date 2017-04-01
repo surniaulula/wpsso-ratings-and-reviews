@@ -13,51 +13,61 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:38
+#: lib/admin.php:38 lib/filters.php:113
 msgid "Allow ratings for reviews (comments)."
 msgstr ""
 
-#: lib/comment.php:85
-msgctxt "field label"
+#: lib/comment.php:91
+msgctxt "form label"
+msgid "Leave a Review"
+msgstr ""
+
+#: lib/comment.php:100
+msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:116
-msgctxt "field label"
+#: lib/comment.php:113
+msgctxt "form label"
+msgid "Post Review"
+msgstr ""
+
+#: lib/comment.php:133
+msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:118
+#: lib/comment.php:135
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:119
+#: lib/comment.php:136
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:120
+#: lib/comment.php:137
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:121
+#: lib/comment.php:138
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:122
+#: lib/comment.php:139
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:123
+#: lib/comment.php:140
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:185 lib/comment.php:187
+#: lib/comment.php:199 lib/comment.php:201
 msgid "Rated %d out of 5"
 msgstr ""
 
@@ -83,10 +93,6 @@ msgstr ""
 msgid ""
 "When editing a post (page, or custom post type), an \"%1$s\" option is also "
 "available to enable or disable ratings for that specific webpage."
-msgstr ""
-
-#: lib/filters.php:113
-msgid "Allow ratings for comments (aka reviews)."
 msgstr ""
 
 #: lib/filters.php:116
