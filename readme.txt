@@ -20,9 +20,9 @@ WPSSO extension to add ratings and reviews for WordPress comments, with aggregat
 
 <p><strong>WPSSO RAR extends the native WordPress comment system with new rating and review features</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
 
-<p><strong>WPSSO RAR provides <a href="https://schema.org/aggregateRating">https://schema.org/aggregateRating</a> meta tags and (optional) JSON-LD markup</strong> (WPSSO JSON Pro extension required). Google reads the aggregate rating meta tags and/or JSON-LD markup to add rating information to search results.</p>
+<p><strong>WPSSO RAR provides <a href="https://schema.org/aggregateRating">https://schema.org/aggregateRating</a> meta tags and (optional) JSON-LD markup</strong> (requires the WPSSO JSON Pro extension). Google reads the aggregate rating meta tags and/or JSON-LD markup to add rating information to search results.</p>
 
-<p><strong>WPSSO RAR also provides complete <a href="https://schema.org/Review">https://schema.org/Review</a> details as (optional) JSON-LD markup</strong> WPSSO JSON Pro extension required) &mdash; including information about the review (author name, creation time, and excerpt), along with the threaded comments for each review.</p>
+<p><strong>WPSSO RAR also provides complete <a href="https://schema.org/Review">https://schema.org/Review</a> details as (optional) JSON-LD markup</strong> (requires the WPSSO JSON Pro extension) &mdash; including information about the review (author name, creation time, and excerpt), along with the threaded replies / comments for each review.</p>
 
 <blockquote>
 <p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews (WPSSO RAR) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
