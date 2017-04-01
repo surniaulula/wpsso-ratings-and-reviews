@@ -63,7 +63,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		/*
-		 * Prepend the rating field to the comment textarea. Called for both the comment login form and logged-in users.
+		 * Update the title, comment field, and submit button to toggle review/comment labels.
 		 */
 		public static function add_comment_form_defaults( $defaults ) {
 
@@ -71,14 +71,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return $defaults;
 			}
 
-			// check for a reply argument when javascript is disabled
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 			$is_req_span = ' <span class="required">*</span>';
-
 			$rev_span_begin = '<span class="comment-toggle-review"'.
 				( $is_reply ? ' style="display:none;"' : '' ).'>';
 			$rev_span_end = '</span><!-- .comment-toggle-review -->';
-
 			$cmt_span_begin = '<span class="comment-toggle-comment"'.
 				( $is_reply ? '' : ' style="display:none;"' ).'>';
 			$cmt_span_end = '</span><!-- .comment-toggle-comment -->';
@@ -124,11 +121,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$is_req_span = $is_required ? ' <span class="required">*</span>' : '';
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 
-			// auto-hide for replies
+			// auto-hide the paragraph for replies
 			$select = '<p class="comment-form-rating"'.
 				( $is_reply ? ' style="display:none;">' : '>' )."\n";
 
-			// disable the select for replies
+			// auto-disable the select for replies
 			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
 				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) ).'
 <select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.( $is_reply ? ' disabled' : '' ).'">
@@ -168,19 +165,17 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$comment_id = get_comment_ID();
 			$comment_obj = get_comment( $comment_id );
 
-			if ( empty( $comment_obj->comment_post_ID ) ) {
-				return $comment_text;
-			}
-			
-			if ( ! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
+			if ( empty( $comment_obj->comment_post_ID ) ||
+				! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
 				return $comment_text;
 			}
 
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
-				$comment_text = '<div class="wpsso-rar">'.	// append rating stars
-					self::get_star_rating_html( $rating_value ).'</div>'.$comment_text;
+				$comment_text = '<div class="wpsso-rar">'.
+					self::get_star_rating_html( $rating_value ).
+						'</div><!-- .wpsso-rar -->'.$comment_text;
 			}
 
 			return $comment_text;
