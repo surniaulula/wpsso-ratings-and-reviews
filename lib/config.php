@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 						'update' => 'https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/update/',
 						'changelog' => 'https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/changelog/',
 						'codex' => 'https://wpsso.com/codex/plugins/wpsso-ratings-and-reviews/',
-						'faq' => '',
+						'faqs' => '',
 						'notes' => '',
 						'support' => '',
 					),
