@@ -10,7 +10,7 @@ Tags: star rating, aggregate rating, review, google, schema, comment, knowledge 
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
-Stable Tag: 1.0.1-1
+Stable Tag: 1.0.2-1
 
 WPSSO extension to add ratings and reviews for WordPress comments, with aggregate rating meta tags and (optional) Schema Review markup.
 
@@ -99,7 +99,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = 1.0.2-1 =
 
-(2017/04/05) Updated the plugin icon images and the documentation URLs.
+(2017/04/05) Updated the plugin icon images and the documentation URLs. Minimized the custom inline styles. Moved the fonts sub-folder to the WPSSO plugin.
 
 = 1.0.1-1 =
 
