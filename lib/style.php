@@ -29,22 +29,40 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
-			wp_enqueue_style( 'wpsso-rar-style', WPSSORAR_URLPATH.'css/style.min.css', array(), WpssoRarConfig::get_version() );
+
+			wp_enqueue_style( 'wpsso-rar-style', 
+				WPSSORAR_URLPATH.'css/style.min.css', 
+					array(), WpssoRarConfig::get_version() );
 
 			$wpsso = Wpsso::get_instance();
 			$sel_color = $wpsso->options['rar_star_color_selected'];
 			$def_color = $wpsso->options['rar_star_color_default'];
 
 			$custom_style_css = '
-				.wpsso-rar .star-rating:before { color:'.$def_color.'; }
-				.wpsso-rar .star-rating span:before { color:'.$sel_color.'; }
-				.wpsso-rar p.select-star a:before { color:'.$def_color.'; }
-				.wpsso-rar p.select-star a:hover ~ a:before { color:'.$def_color.'; }
-				.wpsso-rar p.select-star:hover a:before { color:'.$sel_color.'; }
-				.wpsso-rar p.select-star.selected a.active:before { color:'.$sel_color.'; }
-				.wpsso-rar p.select-star.selected a.active ~ a:before { color:'.$def_color.'; }
-				.wpsso-rar p.select-star.selected a:not(.active):before { color:'.$sel_color.'; }
-			';
+@font-face {
+	font-family: "Star";
+	src: url("'.WPSSO_URLPATH.'fonts/star.eot");
+	src: url("'.WPSSO_URLPATH.'fonts/star.eot?#iefix") format("embedded-opentype"),
+	url("'.WPSSO_URLPATH.'fonts/star.woff") format("woff"),
+	url("'.WPSSO_URLPATH.'fonts/star.ttf") format("truetype"),
+	url("'.WPSSO_URLPATH.'fonts/star.svg#star") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+.wpsso-rar .star-rating:before { color:'.$def_color.'; }
+.wpsso-rar .star-rating span:before { color:'.$sel_color.'; }
+.wpsso-rar p.select-star a:before { color:'.$def_color.'; }
+.wpsso-rar p.select-star a:hover ~ a:before { color:'.$def_color.'; }
+.wpsso-rar p.select-star:hover a:before { color:'.$sel_color.'; }
+.wpsso-rar p.select-star.selected a.active:before { color:'.$sel_color.'; }
+.wpsso-rar p.select-star.selected a.active ~ a:before { color:'.$def_color.'; }
+.wpsso-rar p.select-star.selected a:not(.active):before { color:'.$sel_color.'; }';
+
+			$classname = apply_filters( 'wpsso_load_lib', false, 'ext/compressor', 'SuextMinifyCssCompressor' );
+
+			if ( $classname !== false && class_exists( $classname ) ) {
+				$custom_style_css = call_user_func( array( $classname, 'process' ), $custom_style_css );
+			}
 
 			wp_add_inline_style( 'wpsso-rar-style', $custom_style_css );
 		}
