@@ -78,10 +78,11 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 * *Improvements*
 	* Updated the plugin icon images and the documentation URLs.
+	* Minimized the custom inline styles for the "Star" font and colors.
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* None
+	* Moved the fonts sub-folder to the WPSSO plugin folder in WPSSO v3.40.11-1.
 
 **Version 1.0.1-1 (2017/03/31)**
 
