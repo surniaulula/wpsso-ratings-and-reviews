@@ -10,11 +10,13 @@ Tags: star rating, aggregate rating, review, google, schema, comment, knowledge 
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
-Stable Tag: 1.0.2
+Stable Tag: 1.0.2-1
 
 WPSSO extension to add ratings and reviews for WordPress comments, with aggregate rating meta tags and (optional) Schema Review markup.
 
 == Description ==
+
+<img src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png" style="width:33%;min-width:128px;max-width:256px;height:auto;float:left;margin:10px 40px 40px 0;" />
 
 <p><strong>WPSSO RAR extends the native WordPress comment system with new rating and review features</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
 
