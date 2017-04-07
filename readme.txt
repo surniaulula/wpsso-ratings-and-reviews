@@ -18,11 +18,11 @@ WPSSO extension to add ratings and reviews for WordPress comments, with Aggregat
 
 <img src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png" style="width:33%;min-width:128px;max-width:256px;height:auto;float:left;margin:10px 40px 40px 0;" />
 
-<p><strong>Extends the native WordPress comment system with new rating and review features</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
+<p><strong>Extends the WordPress comment system with a new star rating and review feature</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> with meta tags and (optional) JSON-LD markup</strong> &mdash; Google reads the aggregate rating meta tags and (optional) JSON-LD markup to add rating information to search results!</p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> with meta tags and (optional) JSON-LD markup</strong> &mdash; Google reads the aggregate rating meta tags and (optional) JSON-LD markup to add star ratings to search results!</p>
 
-<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as (optional) JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, and excerpt), along with the threaded replies / comments for each review.</p>
+<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as (optional) JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
 
 <blockquote>
 <p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews (WPSSO RAR) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
@@ -49,8 +49,8 @@ WPSSO extension to add ratings and reviews for WordPress comments, with Aggregat
 
 == Screenshots ==
 
-01. WPSSO RAR showing the submission of a 4-star review &mdash; note the themed labels (Your Rating, Your Review, etc.) and the customized star colors.
-02. WPSSO RAR showing a reply to an earlier 4-star review &mdash; note there are no rating options for replies to reviews, and the labels reflect this.
+01. WPSSO RAR showing the submission of a four-star review &mdash; note the themed labels (Your Rating, Your Review, etc.) and the customized star colors.
+02. WPSSO RAR showing a reply to an earlier four-star review &mdash; note there are no rating options for replies to reviews, and the labels reflect this.
 03. WPSSO RAR in the back-end showing an option to enable / disable ratings per post, some reviews with star ratings, and a reply to a review (no star rating).
 04. WPSSO RAR settings page with options to enable / disable ratings by post type, force star ratings for reviews, and colors for the star ratings. 
 
