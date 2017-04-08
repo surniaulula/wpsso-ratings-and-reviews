@@ -12,17 +12,15 @@
  * Description: WPSSO extension to add ratings and reviews for WordPress comments, with aggregate rating meta tags and (optional) Schema Review markup.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 1.0.2-1
+ * Version: 1.0.4
  *
- * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
+ * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
- *	{major}		Major code changes / re-writes or significant feature changes.
- *	{minor}		New features / options were added or improved.
- *	{bugfix}	Bugfixes or minor improvements.
- *	{stage}{level}	dev < a (alpha) < b (beta) < rc (release candidate) < # (production).
+ *	{major}		Major structural code changes / re-writes or incompatible API changes.
+ *	{minor}		New functionality was added or improved in a backwards-compatible manner.
+ *	{bugfix}	Backwards-compatible bug fixes or small improvements.
+ *	{stage}.{level}	Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
  *
- * See PHP's version_compare() documentation at http://php.net/manual/en/function.version-compare.php.
- * 
  * Copyright 2017 Jean-Sebastien Morisset (https://surniaulula.com/)
  */
 
