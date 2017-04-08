@@ -10,7 +10,7 @@ Tags: star rating, aggregate rating, review, google, schema, comment, knowledge 
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
-Stable Tag: 1.0.2-1
+Stable Tag: 1.0.3
 
 WPSSO extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
 
