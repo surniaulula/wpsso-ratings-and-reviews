@@ -1,4 +1,4 @@
-<h1>WPSSO Ratings and Reviews for WordPress Comments and Schema Aggregate Ratings</h1>
+<h1>WPSSO Ratings and Reviews for WordPress Comments with Schema Aggregate Ratings</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews (WPSSO RAR)</td></tr>
