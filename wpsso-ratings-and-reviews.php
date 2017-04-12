@@ -12,7 +12,7 @@
  * Description: WPSSO extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 1.0.4
+ * Version: 1.0.5-a.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 		public $style;		// WpssoRarStyle
 
 		private static $instance;
-		private static $have_req_min = true;	// have at least minimum wpsso version
+		private static $have_req_min = true;	// have minimum wpsso version
 
 		public function __construct() {
 
@@ -120,11 +120,12 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( self::$have_req_min === false ) {
-				return;		// stop here
+			if ( self::$have_req_min ) {
+				$this->p->is_avail['p_ext']['rar'] = true;
+			} else {
+				$this->p->is_avail['p_ext']['rar'] = false;	// just in case
 			}
 
-			$this->p->is_avail['rar'] = true;
 		}
 
 		public function wpsso_init_objects() {
@@ -132,7 +133,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( self::$have_req_min === false ) {
+			if ( ! self::$have_req_min ) {
 				return;		// stop here
 			}
 
@@ -170,8 +171,8 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( self::$have_req_min === false ) {
-				return $this->min_version_notice();
+			if ( ! self::$have_req_min ) {
+				return $this->min_version_notice();	// stop here
 			}
 		}
 

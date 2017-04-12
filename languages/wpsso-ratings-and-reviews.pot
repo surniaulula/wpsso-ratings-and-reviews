@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.4\n"
+"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.5-a.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
@@ -154,13 +154,13 @@ msgid ""
 "activate the %3$s plugin."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:149
+#: wpsso-ratings-and-reviews.php:150
 msgid ""
 "An existing products rating feature has been found &mdash; %1$s for the "
 "\"product\" custom post type has been disabled."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:188
+#: wpsso-ratings-and-reviews.php:189
 msgid ""
 "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently "
 "installed)."
