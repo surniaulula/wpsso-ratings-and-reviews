@@ -3,7 +3,7 @@
  * Plugin Name: WPSSO Ratings and Reviews (WPSSO RAR)
  * Text Domain: wpsso-ratings-and-reviews
  * Domain Path: /languages
- * Plugin URI: https://surniaulula.com/extend/plugins/wpsso-ratings-and-reviews/
+ * Plugin URI: https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/
  * Assets URI: https://jsmoriss.github.io/wpsso-ratings-and-reviews/assets/
  * Author: JS Morisset
  * Author URI: https://surniaulula.com/
@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 		public $style;		// WpssoRarStyle
 
 		private static $instance;
-		private static $have_req_min = true;	// have minimum wpsso version
+		private static $have_min = true;	// have minimum wpsso version
 
 		public function __construct() {
 
@@ -102,7 +102,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			$info = WpssoRarConfig::$cf['plugin']['wpssorar'];
 
 			if ( version_compare( $plugin_version, $info['req']['min_version'], '<' ) ) {
-				self::$have_req_min = false;
+				self::$have_min = false;
 				return $cf;
 			}
 
@@ -120,7 +120,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( self::$have_req_min ) {
+			if ( self::$have_min ) {
 				$this->p->is_avail['p_ext']['rar'] = true;
 			} else {
 				$this->p->is_avail['p_ext']['rar'] = false;	// just in case
@@ -133,7 +133,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! self::$have_req_min ) {
+			if ( ! self::$have_min ) {
 				return;		// stop here
 			}
 
@@ -171,7 +171,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! self::$have_req_min ) {
+			if ( ! self::$have_min ) {
 				return $this->min_version_notice();	// stop here
 			}
 		}

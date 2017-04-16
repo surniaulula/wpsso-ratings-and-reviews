@@ -171,7 +171,7 @@ msgid "WPSSO Ratings and Reviews (WPSSO RAR)"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://surniaulula.com/extend/plugins/wpsso-ratings-and-reviews/"
+msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr ""
 
 #. Description of the plugin/theme
