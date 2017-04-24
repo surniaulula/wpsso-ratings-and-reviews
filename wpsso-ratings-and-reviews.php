@@ -1,6 +1,7 @@
 <?php
 /*
  * Plugin Name: WPSSO Ratings and Reviews (WPSSO RAR)
+ * Plugin Slug: wpsso-ratings-and-reviews
  * Text Domain: wpsso-ratings-and-reviews
  * Domain Path: /languages
  * Plugin URI: https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/
@@ -12,7 +13,7 @@
  * Description: WPSSO extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.4
- * Version: 1.0.5
+ * Version: 1.0.6-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -121,9 +122,9 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			}
 
 			if ( self::$have_min ) {
-				$this->p->is_avail['p_ext']['rar'] = true;
+				$this->p->avail['p_ext']['rar'] = true;
 			} else {
-				$this->p->is_avail['p_ext']['rar'] = false;	// just in case
+				$this->p->avail['p_ext']['rar'] = false;	// just in case
 			}
 
 		}
@@ -138,9 +139,9 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			}
 
 			// disable reviews on products if competing feature exists
-			if ( $this->p->is_avail['ecom']['woocommerce'] ) {
+			if ( $this->p->avail['ecom']['woocommerce'] ) {
 				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' || 
-					! empty( $this->p->is_avail['ecom']['yotpowc'] ) ) {
+					! empty( $this->p->avail['ecom']['yotpowc'] ) ) {
 
 					if ( ! empty( $this->p->options['rar_add_to_product'] ) ) {
 						if ( $this->p->debug->enabled ) {
