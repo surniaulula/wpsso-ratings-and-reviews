@@ -81,7 +81,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed the $is_avail array to $avail for WPSSO v3.42.0.
+	* Code refactoring to rename the $is_avail array to $avail for WPSSO v3.42.0.
 
 **Version 1.0.5 (2017/04/16)**
 
@@ -119,6 +119,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Moved the fonts sub-folder to the WPSSO plugin folder in WPSSO v3.40.11-1.
 
 == Upgrade Notice ==
+
+= 1.0.6-dev.1 =
+
+(2017/04/24) Code refactoring to rename the $is_avail array to $avail for WPSSO v3.42.0.
 
 = 1.0.5 =
 
