@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(
-					'version' => '1.0.6-dev.2',		// plugin version
+					'version' => '1.0.6-dev.4',		// plugin version
 					'opt_version' => '4',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews (WPSSO RAR)',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WordPress Social Sharing Optimization (WPSSO)',
-						'min_version' => '3.42.0-dev.2',
+						'min_version' => '3.42.0-dev.4',
 					),
 					'img' => array(
 						'icons' => array(
