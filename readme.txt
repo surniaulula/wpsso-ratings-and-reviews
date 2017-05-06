@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews for WordPress Comments with Schema Aggregate Ratings ===
+=== WPSSO Ratings and Reviews for with Schema Aggregate Ratings ===
 Plugin Name: WPSSO Ratings and Reviews (WPSSO RAR)
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
@@ -20,14 +20,14 @@ WPSSO extension to add ratings and reviews for WordPress comments, with Aggregat
 
 <p><strong>Extends the WordPress comment system with a new star rating and review feature</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> with meta tags and <em>optional</em> JSON-LD markup</strong> &mdash; Google reads the aggregate rating meta tags and <em>optional</em> JSON-LD markup to add star ratings to search results!</p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> with meta tags and optional JSON-LD markup</strong> &mdash; Google reads the aggregate rating meta tags and optional JSON-LD markup to add star ratings to search results!</p>
 
-<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as <em>optional</em> JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
+<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as optional JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
 
 <blockquote>
 <p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews (WPSSO RAR) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
 
-<p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> plugin and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as <em>optional</em> JSON-LD markup.</p>
+<p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> plugin and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup.</p>
 </blockquote>
 
 == Installation ==
