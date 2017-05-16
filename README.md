@@ -22,7 +22,7 @@
 <p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as optional JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
 
 <blockquote>
-<p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews (WPSSO RAR) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WordPress Social Sharing Optimization (WPSSO)</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews (WPSSO RAR) is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for Social Sharing Optimization (SSO) and Search Engine Optimization (SEO).</p>
 
 <p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> plugin and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup.</p>
 </blockquote>
