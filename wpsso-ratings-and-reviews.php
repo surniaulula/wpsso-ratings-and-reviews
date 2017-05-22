@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: WPSSO Ratings and Reviews (WPSSO RAR)
+ * Plugin Name: WPSSO Ratings and Reviews
  * Plugin Slug: wpsso-ratings-and-reviews
  * Text Domain: wpsso-ratings-and-reviews
  * Domain Path: /languages

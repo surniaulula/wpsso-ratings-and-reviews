@@ -1,8 +1,8 @@
-# Copyright (C) 2017 WPSSO Ratings and Reviews (WPSSO RAR)
-# This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
+# Copyright (C) 2017 WPSSO Ratings and Reviews
+# This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews (WPSSO RAR) 1.0.6\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.0.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Ratings and Reviews (WPSSO RAR)"
+msgid "WPSSO Ratings and Reviews"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
