@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews for with Schema Aggregate Ratings ===
+=== WPSSO Ratings and Reviews / Comments with Schema Aggregate Ratings ===
 Plugin Name: WPSSO Ratings and Reviews
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
