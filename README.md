@@ -1,4 +1,4 @@
-<h1>WPSSO Ratings and Reviews / Comments with Schema Aggregate Ratings</h1>
+<h1>WPSSO Ratings and Reviews / Replies / Comments with Schema Aggregate Ratings</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
