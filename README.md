@@ -15,7 +15,7 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
-<p><strong>Extends the WordPress comment system with a new star rating and review feature</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
+<p><strong>Extends the WordPress comment system with a new star rating and review feature</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews, a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
 
 <p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> with meta tags and optional JSON-LD markup</strong> &mdash; Google reads the aggregate rating meta tags and optional JSON-LD markup to add star ratings to search results!</p>
 
