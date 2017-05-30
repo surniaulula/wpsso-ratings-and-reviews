@@ -81,7 +81,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'adding average rating meta tags for post id '.$mod['id'] );
 					}
-					$mt_og[$og_type.':rating:average'] = $average_rating;
+					$mt_og[$og_type.':rating:average'] = number_format( (float) $average_rating, 2, '.', '' );
 					$mt_og[$og_type.':rating:count'] = $rating_count;
 					$mt_og[$og_type.':rating:worst'] = 1;
 					$mt_og[$og_type.':rating:best'] = 5;
