@@ -25,7 +25,7 @@ WPSSO extension to add ratings and reviews for WordPress comments, with Aggregat
 <p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as optional JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
 
 <blockquote>
-<p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO</a> plugin, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for social media optimization (SMO) and SEO.</p>
+<p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews is an extension for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO core plugin</a>, which <em>automatically</em> generates complete and accurate meta tags + Schema markup from your content for social media optimization (SMO) and SEO.</p>
 
 <p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Pro</a> plugin and its <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup.</p>
 </blockquote>
@@ -103,7 +103,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Minor revision to move URLs in the extension config to the main WPSSO plugin config.
+	* Minor revision to move URLs in the extension config to the main WPSSO core plugin config.
 	* Dropped the package number from the production version string.
 
 **Version 1.0.2-1 (2017/04/05)**
@@ -116,7 +116,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Moved the fonts sub-folder to the WPSSO plugin folder in WPSSO v3.40.11-1.
+	* Moved the fonts sub-folder to the WPSSO core plugin folder in WPSSO v3.40.11-1.
 
 == Upgrade Notice ==
 
@@ -130,9 +130,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.0.4 =
 
-(2017/04/08) Minor revision to move URLs in the extension config to the main WPSSO plugin config.
+(2017/04/08) Minor revision to move URLs in the extension config to the main WPSSO core plugin config.
 
 = 1.0.2-1 =
 
-(2017/04/05) Updated the plugin icon images and the documentation URLs. Minimized the custom inline styles. Moved the fonts sub-folder to the WPSSO plugin.
+(2017/04/05) Updated the plugin icon images and the documentation URLs. Minimized the custom inline styles. Moved the fonts sub-folder to the WPSSO core plugin.
 
