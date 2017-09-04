@@ -35,8 +35,8 @@ WPSSO extension to add ratings and reviews for WordPress comments, with Aggregat
 
 = Install and Uninstall =
 
-* [Install the Plugin](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/)
-* [Uninstall the Plugin](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/uninstall-the-plugin/)
+* [Install the WPSSO RAR Plugin](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/)
+* [Uninstall the WPSSO RAR Plugin](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
