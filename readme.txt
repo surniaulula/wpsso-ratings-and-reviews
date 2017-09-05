@@ -73,6 +73,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = Changelog / Release Notes =
 
+**Version 1.0.7-dev.1 (2017/09/05)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor code refactoring for WPSSO v3.45.10.
+
 **Version 1.0.6 (2017/04/30)**
 
 * *New Features*
@@ -120,6 +131,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Moved the fonts sub-folder to the WPSSO core plugin folder in WPSSO v3.40.11-1.
 
 == Upgrade Notice ==
+
+= 1.0.7-dev.1 =
+
+(2017/09/05) Minor code refactoring for WPSSO v3.45.10.
 
 = 1.0.6 =
 
