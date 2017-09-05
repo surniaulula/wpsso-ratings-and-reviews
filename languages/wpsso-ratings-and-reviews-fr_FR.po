@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 1.0.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2017-09-05 14:05-0400\n"
-"PO-Revision-Date: 2017-09-05 14:05-0400\n"
+"POT-Creation-Date: 2017-09-05 15:33-0400\n"
+"PO-Revision-Date: 2017-09-05 15:34-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -76,7 +76,7 @@ msgstr "Noté %d sur 5"
 #: lib/config-gettext-extract.php:3
 msgctxt "lib file description"
 msgid "Rating / Review"
-msgstr "Note / Critique"
+msgstr "Note / critique"
 
 #: lib/config-gettext-extract.php:4
 msgctxt "plugin description"
@@ -114,7 +114,7 @@ msgstr "Veuillez écrire une critique avant de soumettre."
 #: lib/submenu/rar-general.php:32
 msgctxt "metabox title"
 msgid "Ratings and Reviews"
-msgstr "Notes et Critiques"
+msgstr "Notes et critiques"
 
 #: lib/submenu/rar-general.php:47
 msgctxt "option label"
