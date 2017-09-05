@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.0.6\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.0.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2017-05-23 07:39-0400\n"
-"PO-Revision-Date: 2017-05-24 22:46-0400\n"
+"POT-Creation-Date: 2017-09-05 14:05-0400\n"
+"PO-Revision-Date: 2017-09-05 14:05-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -111,44 +111,44 @@ msgstr "Veuillez sélectionner une note avant de soumettre."
 msgid "Please write a review before submitting."
 msgstr "Veuillez écrire une critique avant de soumettre."
 
-#: lib/submenu/rar-general.php:31
+#: lib/submenu/rar-general.php:32
 msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr "Notes et Critiques"
 
-#: lib/submenu/rar-general.php:46
+#: lib/submenu/rar-general.php:47
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
 msgstr "Activer par défaut pour types d'articles"
 
-#: lib/submenu/rar-general.php:50
+#: lib/submenu/rar-general.php:51
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
 
-#: lib/submenu/rar-general.php:54
+#: lib/submenu/rar-general.php:55
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr "Couleur d'étoile sélectionné"
 
-#: lib/submenu/rar-general.php:58
+#: lib/submenu/rar-general.php:59
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr "Couleur d'étoile non sélectionné"
 
-#: wpsso-ratings-and-reviews.php:82
+#: wpsso-ratings-and-reviews.php:83
 msgid "%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est une extension pour %2$s &mdash; s'il vous plaît installer et activer %3$s avant d'activer l'extension %4$s."
 
-#: wpsso-ratings-and-reviews.php:84
+#: wpsso-ratings-and-reviews.php:85
 msgid "The %1$s extension requires the %2$s plugin &mdash; please install and activate the %3$s plugin."
 msgstr "L'extension %1$s requiert %2$s &mdash; s'il vous plaît installer et activer l'extension %3$s."
 
-#: wpsso-ratings-and-reviews.php:151
+#: wpsso-ratings-and-reviews.php:152
 msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
 msgstr "Une fonctionnalité de notation des produits a été trouvée &mdash; %1$s a été désactivé pour le type d'article personnalisé \"produit\"."
 
-#: wpsso-ratings-and-reviews.php:190
+#: wpsso-ratings-and-reviews.php:191
 msgid "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently installed)."
 msgstr "L'extension %1$s v%2$s requiert l'utilisation de %3$s v%4$s ou plus récente (v%5$s est actuellement installée)."
 
