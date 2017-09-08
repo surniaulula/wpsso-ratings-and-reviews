@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(
-					'version' => '1.0.7-dev.3',		// plugin version
+					'version' => '1.0.7-b.1',		// plugin version
 					'opt_version' => '4',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WPSSO',
-						'min_version' => '3.45.10-dev.3',
+						'min_version' => '3.45.10-b.1',
 					),
 					'img' => array(
 						'icons' => array(
@@ -67,11 +67,16 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
+			if ( defined( 'WPSSORAR_VERSION' ) ) {			// execute and define constants only once
+				return;
+			}
+			define( 'WPSSORAR_VERSION', self::$cf['plugin']['wpssorar']['version'] );						
 			define( 'WPSSORAR_FILEPATH', $plugin_filepath );						
 			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
 			define( 'WPSSORAR_PLUGINSLUG', self::$cf['plugin']['wpssorar']['slug'] );		// wpsso-ratings-and-reviews
 			define( 'WPSSORAR_PLUGINBASE', self::$cf['plugin']['wpssorar']['base'] );		// wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php
 			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
+
 			self::set_variable_constants();
 		}
 
