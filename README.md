@@ -15,15 +15,15 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
-<p><strong>Extends the WordPress comment system with a star ratings and reviews:</strong></p>
+<p><strong>Extend the WordPress comment system with ratings and reviews:</strong></p>
 
-<p>Ratings and reviews can be enabled / disabled per post, new reviews are labeled as "reviews" (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies and/or comments, and the colors of star ratings can be customized from the settings page.</p>
+<p>Star ratings and reviews can be enabled / disabled per post, new reviews are labeled as "reviews" (not comments), a rating can be required before reviews are accepted, replies to reviews are properly labeled as replies and/or comments, and the colors of star ratings can be customized from the settings page.</p>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and Schema JSON-LD markup</strong> (requires the optional WPSSO JSON extension):</p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and JSON-LD markup</strong> (requires the optional WPSSO JSON extension):</p>
 
 <p>Google can read the aggregate rating meta tags and/or optional Schema JSON-LD markup to add star ratings to search results!</p>
 
-<p><strong>Includes complete [Schema Review](Schema Review) details as optional Schema JSON-LD markup:</strong></p>
+<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as optional Schema JSON-LD markup:</strong></p>
 
 <p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
 
