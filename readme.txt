@@ -27,7 +27,7 @@ Star ratings and reviews can be enabled / disabled per post, new reviews are lab
 
 Google can read the aggregate rating meta tags and/or optional Schema JSON-LD markup to add star ratings to search results!
 
-**Includes complete [Schema Review](https://schema.org/Review) details as optional Schema JSON-LD markup:**
+**Includes complete [Schema Review](https://schema.org/Review) as optional JSON-LD markup:**
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.
 
