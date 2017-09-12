@@ -19,11 +19,25 @@ WPSSO extension to add ratings and reviews for WordPress comments, with Aggregat
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png">
 
-<p><strong>Extends the WordPress comment system with a new star rating and review feature</strong> &mdash; ratings and reviews can be enabled / disabled per post, new reviews are labeled as reviews, a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies / comments, and the colors of star ratings can be customized from the settings page.</p>
+**Extends the WordPress comment system with a star ratings and reviews:**
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> with meta tags and optional Schema JSON-LD markup</strong> &mdash; Google reads the aggregate rating meta tags and optional Schema JSON-LD markup to add star ratings to search results!</p>
+Ratings and reviews can be enabled / disabled per post, new reviews are labeled as "reviews" (not comments), a star rating can be required before reviews are accepted, replies to reviews are properly labeled as replies and/or comments, and the colors of star ratings can be customized from the settings page.
 
-<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> details as optional Schema JSON-LD markup</strong> &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
+**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and Schema JSON-LD markup** (requires the optional WPSSO JSON extension):
+
+Google can read the aggregate rating meta tags and/or optional Schema JSON-LD markup to add star ratings to search results!
+
+**Includes complete [Schema Review](Schema Review) details as optional Schema JSON-LD markup:**
+
+Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.
+
+**Fast and coded for performance:**
+
+WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching).
+
+Loads only the PHP library files and object classes it needs, keeping the code small, fast, light, and still able to support a wide range of 3rd party integration features.
+
+Fully tested and compatible with PHP v7.x (requires PHP v5.3 or better).
 
 <blockquote>
 <p><strong>Prerequisite</strong> &mdash; WPSSO Ratings and Reviews is an extension for the WPSSO (Core Plugin), which <em>automatically</em> generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).</p>
