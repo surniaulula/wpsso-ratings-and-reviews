@@ -33,9 +33,7 @@ Including information about the review (author name, creation time, excerpt, rat
 
 **Fast and coded for performance:**
 
-WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching).
-
-Loads only the PHP library files and object classes it needs, keeping the code small, fast, light, and still able to support a wide range of 3rd party integration features.
+WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching). They load only the PHP library files and object classes needed, keeping the code small, fast, light, and able to support a wide range of 3rd party integration features.
 
 Fully tested and compatible with PHP v7.x (requires PHP v5.3 or better).
 
