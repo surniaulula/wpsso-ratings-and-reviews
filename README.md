@@ -35,7 +35,7 @@
 
 <h4>WPSSO (Core Plugin) Prerequisite</h4>
 
-<p>WPSSO Ratings and Reviews is an extension for the WPSSO (Core Plugin), which automatically generates complete and accurate meta tags and Schema markup from your content for Social Media Optimization (SMO) and Search Engine Optimization (SEO).</p>
+<p>WPSSO Ratings and Reviews is an extension for the WPSSO (Core Plugin) &mdash; which creates complete and accurate meta tags and Schema markup from your content for social sharing, social media, search / SEO and rich cards.</p>
 
 <p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Pro (Core Plugin)</a> and the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as Schema JSON-LD markup.</p>
 
