@@ -31,7 +31,7 @@ Google can read the aggregate rating meta tags and/or optional Schema JSON-LD ma
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.
 
-**WPSSO RAR is *fast* and coded for performance:**
+**WPSSO RAR is *super fast* and coded for performance:**
 
 WPSSO and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.
 
