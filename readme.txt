@@ -37,28 +37,28 @@ WPSSO and its extensions make full use of all available caching techniques (pers
 
 WPSSO and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).
 
-= WPSSO (Core Plugin) Prerequisite =
+<h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Ratings and Reviews is an extension for the WPSSO (Core Plugin) &mdash; which creates complete &amp; accurate meta tags and Schema markup from your content for social sharing, social media / SMO, search / SEO / rich cards, and more.
+WPSSO Ratings and Reviews is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your content for social sharing, social media / SMO, search / SEO / rich cards, and more.
 
-The [WPSSO Pro (Core Plugin)](https://wpsso.com/extend/plugins/wpsso/) and the [WPSSO JSON Pro](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) extension are required to add the [Schema Aggregate Rating](https://schema.org/aggregateRating) and [Schema Review](https://schema.org/Review) as Schema JSON-LD markup.
+The [WPSSO Core Pro](https://wpsso.com/extend/plugins/wpsso/) plugin and the [WPSSO JSON Pro](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) extension are required to add the [Schema Aggregate Rating](https://schema.org/aggregateRating) and [Schema Review](https://schema.org/Review) as Schema JSON-LD markup.
 
 == Installation ==
 
-= Install and Uninstall =
+<h3>Install and Uninstall</h3>
 
 * [Install the WPSSO RAR Plugin](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/)
 * [Uninstall the WPSSO RAR Plugin](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
-= Frequently Asked Questions =
+<h3>Frequently Asked Questions</h3>
 
 * None
 
 == Other Notes ==
 
-= Additional Documentation =
+<h3>Additional Documentation</h3>
 
 == Screenshots ==
 
@@ -69,12 +69,12 @@ The [WPSSO Pro (Core Plugin)](https://wpsso.com/extend/plugins/wpsso/) and the [
 
 == Changelog ==
 
-= Repositories =
+<h3>Free / Standard Version Repositories</h3>
 
 * [GitHub](https://surniaulula.github.io/wpsso-ratings-and-reviews/)
 * [WordPress.org](https://wordpress.org/plugins/wpsso-ratings-and-reviews/developers/)
 
-= Version Numbering =
+<h3>Version Numbering</h3>
 
 Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
@@ -83,7 +83,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * {bugfix} = Backwards-compatible bug fixes or small improvements.
 * {stage}.{level} = Pre-production release: dev < a (alpha) < b (beta) < rc (release candidate).
 
-= Changelog / Release Notes =
+<h3>Changelog / Release Notes</h3>
 
 **Version 1.0.7 (2017/09/10)**
 

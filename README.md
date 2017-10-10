@@ -33,16 +33,16 @@
 
 <p>WPSSO and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).</p>
 
-<h4>WPSSO (Core Plugin) Prerequisite</h4>
+<h3>WPSSO Core Plugin Prerequisite</h3>
 
-<p>WPSSO Ratings and Reviews is an extension for the WPSSO (Core Plugin) &mdash; which creates complete &amp; accurate meta tags and Schema markup from your content for social sharing, social media / SMO, search / SEO / rich cards, and more.</p>
+<p>WPSSO Ratings and Reviews is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your content for social sharing, social media / SMO, search / SEO / rich cards, and more.</p>
 
-<p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Pro (Core Plugin)</a> and the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as Schema JSON-LD markup.</p>
+<p>The <a href="https://wpsso.com/extend/plugins/wpsso/">WPSSO Core Pro</a> plugin and the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro</a> extension are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as Schema JSON-LD markup.</p>
 
 
 <h2>Installation</h2>
 
-<h4>Install and Uninstall</h4>
+<h3>Install and Uninstall</h3>
 
 <ul>
 <li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/">Install the WPSSO RAR Plugin</a></li>
@@ -52,7 +52,7 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<h4>Frequently Asked Questions</h4>
+<h3>Frequently Asked Questions</h3>
 
 <ul>
 <li>None</li>
@@ -62,5 +62,5 @@
 <h2>Other Notes</h2>
 
 <h3>Other Notes</h3>
-<h4>Additional Documentation</h4>
+<h3>Additional Documentation</h3>
 
