@@ -35,7 +35,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		}
 
 		public function filter_get_defaults( $def_opts ) {
-			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, 'rar_add_to', 0 );
+			/*
+			 * Add options using a key prefix array and post type names.
+			 */
+			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
+				'rar_add_to' => 0,
+			) );
 			return $def_opts;
 		}
 
