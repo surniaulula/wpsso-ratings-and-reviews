@@ -127,7 +127,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Minor revision to move URLs in the extension config to the main WPSSO core plugin config.
+	* Minor revision to move URLs in the extension config to the main WPSSO Core plugin config.
 	* Dropped the package number from the production version string.
 
 **Version 1.0.2-1 (2017/04/05)**
@@ -140,7 +140,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Moved the fonts sub-folder to the WPSSO core plugin folder in WPSSO v3.40.11-1.
+	* Moved the fonts sub-folder to the WPSSO Core plugin folder in WPSSO v3.40.11-1.
 
 == Upgrade Notice ==
 
@@ -158,9 +158,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.0.4 =
 
-(2017/04/08) Minor revision to move URLs in the extension config to the main WPSSO core plugin config.
+(2017/04/08) Minor revision to move URLs in the extension config to the main WPSSO Core plugin config.
 
 = 1.0.2-1 =
 
-(2017/04/05) Updated the plugin icon images and the documentation URLs. Minimized the custom inline styles. Moved the fonts sub-folder to the WPSSO core plugin.
+(2017/04/05) Updated the plugin icon images and the documentation URLs. Minimized the custom inline styles. Moved the fonts sub-folder to the WPSSO Core plugin.
 
