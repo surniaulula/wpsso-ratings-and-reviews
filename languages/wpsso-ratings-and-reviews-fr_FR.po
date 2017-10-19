@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 1.0.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2017-10-08 08:25-0600\n"
-"PO-Revision-Date: 2017-10-08 08:25-0600\n"
+"POT-Creation-Date: 2017-10-19 16:17-0600\n"
+"PO-Revision-Date: 2017-10-19 16:17-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/admin.php:38 lib/filters.php:113
+#: lib/admin.php:38 lib/filters.php:118
 msgid "Allow ratings for reviews (comments)."
 msgstr "Autoriser les notes pour critiques (commentaires)."
 
@@ -80,26 +80,26 @@ msgstr "Note / critique"
 
 #: lib/config-gettext-extract.php:4
 msgctxt "plugin description"
-msgid "WPSSO extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr "Extension WPSSO pour ajouter des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
+msgid "WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
+msgstr "Extension WPSSO Core pour ajouter des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
 
-#: lib/filters.php:112
+#: lib/filters.php:117
 msgid "You can choose to enable or disable ratings by default for each public post type."
 msgstr "Vous pouvez choisir d'activer ou désactiver par défaut les notes pour chaque type d'article public."
 
-#: lib/filters.php:113
+#: lib/filters.php:118
 msgid "When editing a post (page, or custom post type), an \"%1$s\" option is also available to enable or disable ratings for that specific webpage."
 msgstr "Lorsque vous modifiez un article (page, ou type d'article personnalisé), une option \"%1$s\" est aussi disponible pour activer ou désactiver les notes pour cette page Web."
 
-#: lib/filters.php:116
+#: lib/filters.php:121
 msgid "Force a reviewer to select a rating before submitting their review (enabled by default)."
 msgstr "Obliger le critique à sélectionner une note avant de soumettre leur texte (activé par défaut)."
 
-#: lib/filters.php:119
+#: lib/filters.php:124
 msgid "A color for selected stars representing the rating."
 msgstr "Une couleur pour les étoiles sélectionnées représentant la note."
 
-#: lib/filters.php:122
+#: lib/filters.php:127
 msgid "A default color for unselected stars."
 msgstr "Une couleur par défaut pour les étoiles non sélectionnées."
 
@@ -161,8 +161,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 
 #. Description of the plugin/theme
-msgid "WPSSO extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr "Extension WPSSO pour ajouter des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
+msgid "WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
+msgstr "Extension WPSSO Core pour ajouter des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
