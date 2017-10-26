@@ -21,7 +21,7 @@ WPSSO Core extension to add ratings and reviews for WordPress comments, with Agg
 
 **Extend the WordPress comment system with ratings and reviews:**
 
-Star ratings and reviews can be enabled / disabled by post type and/or single post, new reviews are correctly labeled as "reviews" (not comments), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.
+Star ratings and reviews can be enabled / disabled by post type and/or single post, new reviews are correctly labeled as "reviews" (not "comments"), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.
 
 **Does not conflict with WooCommerce ratings and reviews:**
 
