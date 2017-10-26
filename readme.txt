@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews / Replies / Comments with Schema Aggregate Ratings ===
+=== WPSSO Ratings and Reviews / Replies / Comments with Schema Aggregate Ratings (Compatible with WooCommerce) ===
 Plugin Name: WPSSO Ratings and Reviews
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
@@ -21,7 +21,11 @@ WPSSO Core extension to add ratings and reviews for WordPress comments, with Agg
 
 **Extend the WordPress comment system with ratings and reviews:**
 
-Star ratings and reviews can be enabled / disabled per post, new reviews are labeled as "reviews" (not comments), a rating can be required before reviews are accepted, replies to reviews are properly labeled as replies and/or comments, and the colors of star ratings can be customized from the settings page.
+Star ratings and reviews can be enabled / disabled by post type and/or single post, new reviews are labeled as "reviews" (not comments), a rating can be required before reviews are accepted, replies to reviews are properly labeled as replies and/or comments, and the colors of star ratings can be customized from the settings page.
+
+**Does not conflict with WooCommerce ratings and reviews:**
+
+WPSSO RAR checks [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin settings, and if WooCommerce product reviews enabled (or the [Yotpo Reviews for Woocommerce](https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/) plugin is active), WPSSO RAR skips the "product" post type to avoid conflicts with WooCommerce.
 
 **Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and JSON-LD markup** (requires the optional WPSSO JSON extension):
 
