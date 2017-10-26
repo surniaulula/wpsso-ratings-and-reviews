@@ -154,13 +154,13 @@ msgid ""
 "%3$s plugin or <a href=\"%4$s\">deactivate the %5$s extension</a>."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:155
+#: wpsso-ratings-and-reviews.php:153
 msgid ""
 "An existing products rating feature has been found &mdash; %1$s for the "
 "\"product\" custom post type has been disabled."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:194
+#: wpsso-ratings-and-reviews.php:192
 msgid ""
 "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently "
 "installed)."

@@ -144,9 +144,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 			// disable reviews on products if competing feature exists
 			if ( $this->p->avail['ecom']['woocommerce'] ) {
-				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' || 
-					! empty( $this->p->avail['ecom']['yotpowc'] ) ) {
-
+				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' || ! empty( $this->p->avail['ecom']['yotpowc'] ) ) {
 					if ( ! empty( $this->p->options['rar_add_to_product'] ) ) {
 						if ( $this->p->debug->enabled ) {
 							$this->p->debug->log( 'ratings feature for products found - ratings for the product post type disabled' );
