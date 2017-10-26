@@ -27,9 +27,9 @@ Star ratings and reviews can be enabled / disabled by post type and/or single po
 
 WPSSO RAR checks [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin settings, and if WooCommerce product reviews are enabled (or the [Yotpo Reviews for Woocommerce](https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/) plugin is active), WPSSO RAR skips the "product" post type to avoid conflicts with WooCommerce.
 
-**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and JSON-LD markup** ([WPSSO JSON extension](https://wordpress.org/plugins/wpsso-schema-json-ld/) required for JSON-LD markup):
+**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and JSON-LD markup:**
 
-Google can read the aggregate rating meta tags and/or optional Schema JSON-LD markup to add star ratings to search results!
+Google can read the aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required for JSON-LD markup).
 
 **Includes complete [Schema Review](https://schema.org/Review) as optional JSON-LD markup:**
 

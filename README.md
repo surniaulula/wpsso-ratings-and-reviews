@@ -23,9 +23,9 @@
 
 <p>WPSSO RAR checks <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin settings, and if WooCommerce product reviews are enabled (or the <a href="https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/">Yotpo Reviews for Woocommerce</a> plugin is active), WPSSO RAR skips the "product" post type to avoid conflicts with WooCommerce.</p>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and JSON-LD markup</strong> (<a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO JSON extension</a> required for JSON-LD markup):</p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and JSON-LD markup:</strong></p>
 
-<p>Google can read the aggregate rating meta tags and/or optional Schema JSON-LD markup to add star ratings to search results!</p>
+<p>Google can read the aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> required for JSON-LD markup).</p>
 
 <p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup:</strong></p>
 
