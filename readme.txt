@@ -33,7 +33,7 @@ Google can read the aggregate rating meta tags (or the optional Schema JSON-LD m
 
 **Includes complete [Schema Review](https://schema.org/Review) as optional JSON-LD markup:**
 
-Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.
+Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required for JSON-LD markup).
 
 **WPSSO RAR is *incredibly fast* and coded for performance:**
 

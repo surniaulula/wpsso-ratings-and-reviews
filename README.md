@@ -29,7 +29,7 @@
 
 <p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup:</strong></p>
 
-<p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review.</p>
+<p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> required for JSON-LD markup).</p>
 
 <p><strong>WPSSO RAR is <em>incredibly fast</em> and coded for performance:</strong></p>
 
