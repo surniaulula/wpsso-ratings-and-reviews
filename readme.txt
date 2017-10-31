@@ -6,11 +6,12 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
-Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup
+Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
 Contributors: jsmoriss
 Requires PHP: 5.3
 Requires At Least: 3.7
 Tested Up To: 4.8.3
+WC Tested Up To: 3.2.2
 Stable Tag: 1.0.7
 
 WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
