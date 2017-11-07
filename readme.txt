@@ -90,6 +90,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.0.8-dev.4 (2017/11/07)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Minor code refactoring for WPSSO v3.48.1.
+
 **Version 1.0.7 (2017/09/10)**
 
 * *New Features*
