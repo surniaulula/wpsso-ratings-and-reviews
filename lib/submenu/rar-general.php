@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 
 					$table_rows['rar_add_to'] = $this->form->get_th_html( _x( 'Enable by Default for Post Types',
 						'option label', 'wpsso-rar' ), '', 'rar_add_to' ).
-					'<td>'.$this->form->get_post_type_checkboxes( 'rar_add_to' ).'</td>';
+					'<td>'.$this->form->get_checklist_post_types( 'rar_add_to' ).'</td>';
 
 					$table_rows['rar_rating_required'] = $this->form->get_th_html( _x( 'Rating Required to Submit Review',
 						'option label', 'wpsso-rar' ), '', 'rar_rating_required' ).
