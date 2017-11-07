@@ -100,6 +100,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None
 * *Developer Notes*
 	* Minor code refactoring for WPSSO v3.48.1.
+		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 **Version 1.0.7 (2017/09/10)**
 
@@ -159,6 +160,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Moved the fonts sub-folder to the WPSSO Core plugin folder in WPSSO v3.40.11-1.
 
 == Upgrade Notice ==
+
+= 1.0.8-dev.4 =
+
+(2017/11/07) Minor code refactoring for WPSSO v3.48.1: Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 = 1.0.7 =
 
