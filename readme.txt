@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.8-b.4 (2017/11/10)**
+**Version 1.0.8-b.5 (2017/11/10)**
 
 * *New Features*
 	* None
@@ -161,7 +161,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.0.8-b.4 =
+= 1.0.8-b.5 =
 
 (2017/11/10) Minor code refactoring for WPSSO v3.48.1: Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
