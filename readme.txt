@@ -99,7 +99,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Minor code refactoring for WPSSO v3.48.1.
+	* Minor code refactoring for WPSSO v3.48.2.
 		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 **Version 1.0.7 (2017/09/10)**
@@ -163,7 +163,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.0.8 =
 
-(2017/11/14) Minor code refactoring for WPSSO v3.48.1: Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
+(2017/11/14) Minor code refactoring for WPSSO v3.48.2: Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 = 1.0.7 =
 
