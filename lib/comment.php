@@ -25,7 +25,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 
 			// called by comment-template.php to define text and html for the form
-			add_filter( 'comment_form_defaults', array( __CLASS__, 'add_comment_form_defaults' ), 500 );
+			add_filter( 'comment_form_defaults', array( __CLASS__, 'add_comment_form_defaults' ), 1000 );
 
 			// called for both front and back-end
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
@@ -73,11 +73,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 			$is_req_span = ' <span class="required">*</span>';
-			$rev_span_begin = '<span class="comment-toggle-review"'.
-				( $is_reply ? ' style="display:none;"' : '' ).'>';
+			$rev_span_begin = '<span class="comment-toggle-review"'.( $is_reply ? ' style="display:none;"' : '' ).'>';
 			$rev_span_end = '</span><!-- .comment-toggle-review -->';
-			$cmt_span_begin = '<span class="comment-toggle-comment"'.
-				( $is_reply ? '' : ' style="display:none;"' ).'>';
+			$cmt_span_begin = '<span class="comment-toggle-comment"'.( $is_reply ? '' : ' style="display:none;"' ).'>';
 			$cmt_span_end = '</span><!-- .comment-toggle-comment -->';
 
 			/*
@@ -122,8 +120,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 
 			// auto-hide the paragraph for replies
-			$select = '<p class="comment-form-rating"'.
-				( $is_reply ? ' style="display:none;">' : '>' )."\n";
+			$select = '<p class="comment-form-rating"'.( $is_reply ? ' style="display:none;">' : '>' )."\n";
 
 			// auto-disable the select for replies
 			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
@@ -165,17 +162,17 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$comment_id = get_comment_ID();
 			$comment_obj = get_comment( $comment_id );
 
-			if ( empty( $comment_obj->comment_post_ID ) ||
-				! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
-				return $comment_text;
+			if ( empty( $comment_obj->comment_post_ID ) ) {
+				return '<!-- wpsso-rar comment post ID is empty -->'."\n".$comment_text;
+			} elseif ( ! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
+				return '<!-- wpsso-rar rating is disabled -->'."\n".$comment_text;
 			}
 
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
-				$comment_text = '<div class="wpsso-rar">'.
-					self::get_star_rating_html( $rating_value ).
-						'</div><!-- .wpsso-rar -->'.$comment_text;
+				$comment_text = '<div class="wpsso-rar">'.self::get_star_rating_html( $rating_value ).
+					'</div><!-- .wpsso-rar -->'."\n".$comment_text;
 			}
 
 			return $comment_text;
