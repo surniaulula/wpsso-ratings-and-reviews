@@ -287,4 +287,3 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 	}
 }
 
-?>

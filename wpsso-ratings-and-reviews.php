@@ -200,4 +200,3 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 	WpssoRar::get_instance();
 }
 
-?>

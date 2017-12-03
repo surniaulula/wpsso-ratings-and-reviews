@@ -64,4 +64,3 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 	}
 }
 
-?>

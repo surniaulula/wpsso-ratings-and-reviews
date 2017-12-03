@@ -18,4 +18,3 @@ WpssoRarConfig::set_constants( $plugin_filepath );
 WpssoRarConfig::require_libs( $plugin_filepath );	// includes the register.php class library
 WpssoRarRegister::network_uninstall();
 
-?>

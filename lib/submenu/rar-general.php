@@ -67,4 +67,3 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 	}
 }
 
-?>
