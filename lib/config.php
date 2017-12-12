@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(
-					'version' => '1.0.8',		// plugin version
-					'opt_version' => '4',		// increment when changing default options
+					'version' => '1.1.0-dev.1',		// plugin version
+					'opt_version' => '5',		// increment when changing default options
 					'short' => 'WPSSO RAR',		// short plugin name
 					'name' => 'WPSSO Ratings and Reviews',
 					'desc' => 'WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WPSSO Core',
-						'min_version' => '3.48.3',
+						'min_version' => '3.48.9-dev.1',
 					),
 					'img' => array(
 						'icons' => array(
@@ -58,12 +58,20 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_rating_required' => 1,
 					'rar_star_color_selected' => '#222222',
 					'rar_star_color_default' => '#dddddd',
+					'plugin_avg_rating_col_media' => 0,
+					'plugin_avg_rating_col_post' => 1,
 				),
 			),
 		);
 
-		public static function get_version() { 
-			return self::$cf['plugin']['wpssorar']['version'];
+		public static function get_version( $add_slug = false ) {
+			$ext = 'wpssorar';
+			$info =& self::$cf['plugin'][$ext];
+			if ( $add_slug ) {
+				return $info['slug'].'-'.$info['version'];
+			} else {
+				return $info['version'];
+			}
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
@@ -81,11 +89,14 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		}
 
 		public static function set_variable_constants( $var_const = null ) {
-			if ( $var_const === null )
+			if ( $var_const === null ) {
 				$var_const = self::get_variable_constants();
-			foreach ( $var_const as $name => $value )
-				if ( ! defined( $name ) )
+			}
+			foreach ( $var_const as $name => $value ) {
+				if ( ! defined( $name ) ) {
 					define( $name, $value );
+				}
+			}
 		}
 
 		public static function get_variable_constants() {
@@ -126,9 +137,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 				$filepath = WPSSORAR_PLUGINDIR.'lib/'.$filespec.'.php';
 				if ( file_exists( $filepath ) ) {
 					require_once $filepath;
-					if ( empty( $classname ) )
+					if ( empty( $classname ) ) {
 						return SucomUtil::sanitize_classname( 'wpssorar'.$filespec, false );	// $underscore = false
-					else return $classname;
+					} else {
+						return $classname;
+					}
 				}
 			}
 			return $ret;

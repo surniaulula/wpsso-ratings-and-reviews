@@ -137,6 +137,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $select;
 		}
 
+		public static function clear_rating_post_meta( $post_id ) {
+			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
+			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
+			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
+		}
+
 		/*
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
@@ -193,13 +199,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ). 
 				'</span></div>';
 			}
-			return $html;
-		}
 
-		public static function clear_rating_post_meta( $post_id ) {
-			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
-			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
-			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
+			return $html;
 		}
 
 		/*
@@ -241,8 +242,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			if ( $count_idx === null ) {
 				return array_sum( $rating_counts );
 			} else {
-				return isset( $rating_counts[$count_idx] ) ?
-					(int) $rating_counts[$count_idx] : 0;
+				return isset( $rating_counts[$count_idx] ) ? (int) $rating_counts[$count_idx] : 0;
 			}
 		}
 
