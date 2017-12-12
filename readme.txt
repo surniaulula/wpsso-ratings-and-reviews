@@ -90,6 +90,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.1.0-dev.1 (2017/12/12)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added a "Rating" column for media, posts, pages, and custom post types admin lists.
+* *Bugfixes*
+	* Fixed disabling of the "Allow ratings for reviews" option when saving Quick Edit options.
+* *Developer Notes*
+	* None
+
 **Version 1.0.8 (2017/11/14)**
 
 * *New Features*
@@ -102,86 +113,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Minor code refactoring for WPSSO v3.48.2.
 		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
-**Version 1.0.7 (2017/09/10)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minor code refactoring for WPSSO v3.46.0.
-
-**Version 1.0.6 (2017/04/30)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Code refactoring to rename the $is_avail array to $avail for WPSSO v3.42.0.
-
-**Version 1.0.5 (2017/04/16)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Refactored the plugin init filters and moved/renamed the registration boolean from `is_avail[$name]` to `is_avail['p_ext'][$name]`.
-
-**Version 1.0.4 (2017/04/08)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Minor revision to move URLs in the extension config to the main WPSSO Core plugin config.
-	* Dropped the package number from the production version string.
-
-**Version 1.0.2-1 (2017/04/05)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Updated the plugin icon images and the documentation URLs.
-	* Minimized the custom inline styles for the "Star" font and colors.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Moved the fonts sub-folder to the WPSSO Core plugin folder in WPSSO v3.40.11-1.
-
 == Upgrade Notice ==
+
+= 1.1.0-dev.1 =
+
+(2017/12/12) Added a "Rating" column for media, posts, pages, and custom post types admin lists. Fixed disabling of the "Allow ratings for reviews" option when saving Quick Edit options.
 
 = 1.0.8 =
 
 (2017/11/14) Minor code refactoring for WPSSO v3.48.2: Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
-
-= 1.0.7 =
-
-(2017/09/10) Minor code refactoring for WPSSO v3.46.0.
-
-= 1.0.6 =
-
-(2017/04/30) Code refactoring to rename the $is_avail array to $avail for WPSSO v3.42.0.
-
-= 1.0.5 =
-
-(2017/04/16) Refactored the plugin init filters and moved/renamed the registration boolean.
-
-= 1.0.4 =
-
-(2017/04/08) Minor revision to move URLs in the extension config to the main WPSSO Core plugin config.
-
-= 1.0.2-1 =
-
-(2017/04/05) Updated the plugin icon images and the documentation URLs. Minimized the custom inline styles. Moved the fonts sub-folder to the WPSSO Core plugin.
 
