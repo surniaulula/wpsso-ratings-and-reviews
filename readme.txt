@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.0-rc.1 (2017/12/12)**
+**Version 1.1.0 (2017/12/13)**
 
 * *New Features*
 	* None
@@ -115,9 +115,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.1.0-rc.1 =
+= 1.1.0 =
 
-(2017/12/12) Added a "Rating" column for media, posts, pages, and custom post types admin lists. Fixed disabling of the "Allow ratings for reviews" option when saving Quick Edit options.
+(2017/12/13) Added a "Rating" column for media, posts, pages, and custom post types admin lists. Fixed disabling of the "Allow ratings for reviews" option when saving Quick Edit options.
 
 = 1.0.8 =
 
