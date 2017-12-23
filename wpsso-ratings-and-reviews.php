@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name: WPSSO Ratings and Reviews
  * Plugin Slug: wpsso-ratings-and-reviews
