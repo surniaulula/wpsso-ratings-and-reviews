@@ -65,6 +65,9 @@ The [WPSSO Core Pro plugin](https://wpsso.com/) and the [WPSSO JSON Pro extensio
 
 <h3>Additional Documentation</h3>
 
+* [Developer Resources](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/)
+	* [Get Average Rating](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/get-average-rating/)
+
 == Screenshots ==
 
 01. WPSSO RAR showing the submission of a four-star review &mdash; note the themed labels (Your Rating, Your Review, etc.) and the customized star colors.

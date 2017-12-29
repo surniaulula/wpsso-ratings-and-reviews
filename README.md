@@ -68,3 +68,11 @@
 <h3>Other Notes</h3>
 <h3>Additional Documentation</h3>
 
+<ul>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/">Developer Resources</a>
+
+<ul>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/get-average-rating/">Get Average Rating</a></li>
+</ul></li>
+</ul>
+
