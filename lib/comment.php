@@ -239,7 +239,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				self::sync_rating_counts( $post_id );
 			}
 			$rating_counts = array_filter( (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, true ) );
-			if ( $count_idx === null ) {
+			if ( null === $count_idx ) {
 				return array_sum( $rating_counts );
 			} else {
 				return isset( $rating_counts[$count_idx] ) ? (int) $rating_counts[$count_idx] : 0;
