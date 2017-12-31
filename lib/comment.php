@@ -1,5 +1,4 @@
 <?php
-
 /**
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
@@ -35,7 +34,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 		}
 
-		/*
+		/**
 		 * Check if ratings are allowed for this post type.
 		 */
 		public static function is_rating_enabled( $post_id ) {
@@ -63,7 +62,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return self::$rating_enabled[$post_id] = $enabled;
 		}
 
-		/*
+		/**
 		 * Update the title, comment field, and submit button to toggle review/comment labels.
 		 */
 		public static function add_comment_form_defaults( $defaults ) {
@@ -79,7 +78,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$cmt_span_begin = '<span class="comment-toggle-comment"'.( $is_reply ? '' : ' style="display:none;"' ).'>';
 			$cmt_span_end = '</span><!-- .comment-toggle-comment -->';
 
-			/*
+			/**
 			 * Title
 			 */
 			$defaults['title_reply_before'] = '<span class="wpsso-rar">'.
@@ -89,7 +88,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$defaults['title_reply_after'] .= $cmt_span_end.'</span><!-- .wpsso-rar -->';
 
-			/*
+			/**
 			 * Comment Box
 			 */
 			$defaults['comment_field'] = preg_replace( '/(<label for="comment">.*<\/label>)/Uim',
@@ -101,7 +100,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				self::get_form_rating_field().$defaults['comment_field'].
 					'</span><!-- .wpsso-rar -->';
 
-			/*
+			/**
 			 * Submit Button
 			 */
 			$defaults['submit_button'] = '<span class="wpsso-rar">'.$rev_span_begin.
@@ -144,7 +143,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
 		}
 
-		/*
+		/**
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
 		public static function save_request_comment_rating( $comment_id ) { 
@@ -156,7 +155,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 		}
 
-		/*
+		/**
 		 * Append the rating value to the comment text. This filter is called on both the front and back-end.
 		 */
 		public static function add_rating_to_comment_text( $comment_text ) {
@@ -185,7 +184,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $comment_text;
 		}
 
-		/*
+		/**
 		 * Create the rating stars HTML for the rating value provided.
 		 */
 		public static function get_star_rating_html( $rating_value ) { 
@@ -204,7 +203,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $html;
 		}
 
-		/*
+		/**
 		 * Average Rating
 		 */
 		public static function get_average_rating( $post_id ) {
@@ -232,7 +231,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			update_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, $average );
 		}
 
-		/*
+		/**
 		 * Rating Count
 		 */
 		public static function get_rating_count( $post_id, $count_idx = null ) {
@@ -265,7 +264,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			update_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $rating_counts );
 		}
 
-		/*
+		/**
 		 * Review Count
 		 */
 		public static function get_review_count( $post_id ) {
