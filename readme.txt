@@ -80,7 +80,7 @@ The [WPSSO Core Pro plugin](https://wpsso.com/) and the [WPSSO JSON Pro extensio
 <h3>Free / Standard Version Repositories</h3>
 
 * [GitHub](https://surniaulula.github.io/wpsso-ratings-and-reviews/)
-* [WordPress.org](https://wordpress.org/plugins/wpsso-ratings-and-reviews/developers/)
+* [WordPress.org](https://plugins.trac.wordpress.org/browser/wpsso-ratings-and-reviews/)
 
 <h3>Version Numbering</h3>
 
