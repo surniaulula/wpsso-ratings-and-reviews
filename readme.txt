@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.1.1-dev.1 (TBD)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 1.1.0 (2017/12/13)**
 
 * *New Features*
@@ -117,6 +128,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 == Upgrade Notice ==
+
+= 1.1.1-dev.1 =
+
+(TBD) None.
 
 = 1.1.0 =
 
