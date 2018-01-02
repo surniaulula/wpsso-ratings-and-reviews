@@ -24,12 +24,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
-				'og' => 2,	// $mt_og, $mod
+				'og' => 2,
 			) );
 
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
-					'messages_tooltip' => 2,		// tooltip messages filter
+					'messages_tooltip' => 2,
 				) );
 			}
 		}
