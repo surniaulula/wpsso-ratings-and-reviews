@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:61 lib/filters.php:118
+#: lib/admin.php:60 lib/admin.php:85 lib/filters.php:118
 msgid "Allow ratings for reviews (comments)."
 msgstr ""
 
