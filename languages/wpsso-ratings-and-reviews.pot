@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.1.1-dev.1\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.1.1-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2018-MO-DA HO:MI+ZONE\n"
@@ -13,8 +13,8 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:60 lib/admin.php:85 lib/filters.php:118
-msgid "Allow ratings for reviews (comments)."
+#: lib/admin.php:60 lib/admin.php:85
+msgid "Enable ratings and reviews"
 msgstr ""
 
 #: lib/comment.php:86
@@ -93,6 +93,10 @@ msgstr ""
 msgid ""
 "When editing a post (page, or custom post type), an \"%1$s\" option is also "
 "available to enable or disable ratings for that specific webpage."
+msgstr ""
+
+#: lib/filters.php:118
+msgid "Enabled ratings and reviews"
 msgstr ""
 
 #: lib/filters.php:121

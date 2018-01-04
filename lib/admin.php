@@ -57,7 +57,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				return;
 			}
 
-			$label = __( 'Allow ratings for reviews (comments).', 'wpsso-ratings-and-reviews' );
+			$label = __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' );
 
 			echo '<fieldset class="inline-edit-col-right quick-edit-rating">';
 			echo '<div class="inline-edit-col quick-edit-' . $column_name . '">';
@@ -82,7 +82,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			$post_type = get_post_type( $post_obj->ID );
 			$disabled = isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
 				$this->p->options['rar_add_to_' . $post_type . ':is'] == 'disabled' ? true : false;
-			$label = __( 'Allow ratings for reviews (comments).', 'wpsso-ratings-and-reviews' );
+			$label = __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' );
 
 			if ( ! $disabled ) {
 				$allow_ratings = WpssoRarComment::is_rating_enabled( $post_obj->ID );	// get current setting
