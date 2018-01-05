@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:60 lib/admin.php:85
+#: lib/admin.php:66 lib/admin.php:95
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -113,11 +113,11 @@ msgstr ""
 msgid "A default color for unselected stars."
 msgstr ""
 
-#: lib/script.php:40
+#: lib/script.php:70
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/script.php:41
+#: lib/script.php:71
 msgid "Please write a review before submitting."
 msgstr ""
 

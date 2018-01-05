@@ -22,20 +22,50 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 				$this->p->debug->mark();
 			}
 
+			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ) );
+
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 
+		public static function admin_enqueue_scripts( $hook_name ) {
+
+			$plugin_version = WpssoRarConfig::get_version();
+
+			// don't load our javascript where we don't need it
+			switch ( $hook_name ) {
+				case 'edit.php':
+
+					wp_enqueue_script( 'wpsso-rar-admin-script', 
+						WPSSORAR_URLPATH.'js/admin-script.min.js', 
+							array( 'jquery' ), $plugin_version, true );
+
+					break;	// stop here
+			}
+
+		}
+
 		public static function enqueue_scripts() {
+
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
-			wp_enqueue_script( 'wpsso-rar-script', WPSSORAR_URLPATH.'js/script.min.js', array( 'jquery' ), WpssoRarConfig::get_version() );
-			wp_localize_script( 'wpsso-rar-script', 'wpsso_rar_script', self::get_script_data() );
+
+			$plugin_version = WpssoRarConfig::get_version();
+
+			wp_enqueue_script( 'wpsso-rar-script', 
+				WPSSORAR_URLPATH.'js/script.min.js', 
+					array( 'jquery' ), $plugin_version );
+
+			wp_localize_script( 'wpsso-rar-script',
+				'wpsso_rar_script', self::get_script_data() );
 		}
 
 		public static function get_script_data() {
+
 			$wpsso = Wpsso::get_instance();
+
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
+
 			return array(
 				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
 				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),

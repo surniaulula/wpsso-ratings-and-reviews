@@ -37,6 +37,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				'avg_rating' => array(
 					'header' => 'Rating',
 					'meta_key' => WPSSORAR_META_AVERAGE_RATING,
+					'hidden_meta_callbacks' => array( WPSSORAR_META_ALLOW_RATINGS => array( 'WpssoRarComment', 'is_rating_enabled' ) ),
 					'orderby' => 'meta_value',
 					'width' => '80px',
 					'height' => 'auto',
@@ -54,6 +55,11 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			}
 
 			if ( $column_name !== 'wpsso_avg_rating' ) {
+				return;
+			}
+
+			if ( isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
+				$this->p->options['rar_add_to_' . $post_type . ':is'] === 'disabled' ) {
 				return;
 			}
 
@@ -80,16 +86,19 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			}
 
 			$post_type = get_post_type( $post_obj->ID );
-			$disabled = isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
-				$this->p->options['rar_add_to_' . $post_type . ':is'] == 'disabled' ? true : false;
+			
+			if ( isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
+				$this->p->options['rar_add_to_' . $post_type . ':is'] === 'disabled' ) {
+				return;
+			}
+
 			$label = __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' );
 
-			if ( ! $disabled ) {
-				$allow_ratings = WpssoRarComment::is_rating_enabled( $post_obj->ID );	// get current setting
-				printf( '<br /><label for="%1$s"><input type="hidden" name="is_checkbox_%1$s" value="1"/>' .
-					'<input type="checkbox" id="%1$s" name="%1$s" class="selectit" %2$s/> %3$s</label>',
-						WPSSORAR_META_ALLOW_RATINGS, checked( $allow_ratings, 1, false ), $label );
-			}
+			$allow_ratings = WpssoRarComment::is_rating_enabled( $post_obj->ID );	// get current setting
+
+			printf( '<br /><label for="%1$s"><input type="hidden" name="is_checkbox_%1$s" value="1"/>' .
+				'<input type="checkbox" id="%1$s" name="%1$s" class="selectit" %2$s/> %3$s</label>',
+					WPSSORAR_META_ALLOW_RATINGS, checked( $allow_ratings, 1, false ), $label );
 		}
 
         	public function save_rating_meta_option( $post_id, $post_obj, $update ) {
