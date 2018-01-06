@@ -93,12 +93,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.1-dev.2 (TBD)**
+**Version 1.1.1-dev.2 (2018/01/06)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Added a "Enable ratings and reviews" checkbox to the Quick Edit form.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -131,7 +131,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.1.1-dev.2 =
 
-(TBD) None.
+(2018/01/06) Added a "Enable ratings and reviews" checkbox to the Quick Edit form.
 
 = 1.1.0 =
 
