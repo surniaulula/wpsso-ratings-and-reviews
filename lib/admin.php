@@ -50,13 +50,6 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 		public function show_quick_edit_option( $column_name, $post_type ) {
 
-			static $nonce_added = null;
-
-			if ( $nonce_added === null ) {
-				wp_nonce_field( WpssoAdmin::get_nonce_action(), WPSSO_NONCE_NAME );	// WPSSO_NONCE_NAME is an md5() string
-				$nonce_added = true;
-			}
-
 			if ( $column_name !== 'wpsso_avg_rating' ) {
 				return;
 			}
@@ -64,6 +57,13 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			if ( isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
 				$this->p->options['rar_add_to_' . $post_type . ':is'] === 'disabled' ) {
 				return;
+			}
+
+			static $nonce_added = null;
+
+			if ( $nonce_added === null ) {
+				wp_nonce_field( WpssoAdmin::get_nonce_action(), WPSSO_NONCE_NAME );	// WPSSO_NONCE_NAME is an md5() string
+				$nonce_added = true;
 			}
 
 			$enable_ratings_label = __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' );
@@ -97,6 +97,13 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				return;
 			}
 
+			static $nonce_added = null;
+
+			if ( $nonce_added === null ) {
+				wp_nonce_field( WpssoAdmin::get_nonce_action(), WPSSO_NONCE_NAME );	// WPSSO_NONCE_NAME is an md5() string
+				$nonce_added = true;
+			}
+
 			$enable_ratings_label = __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' );
 
 			$allow_ratings = WpssoRarComment::is_rating_enabled( $post_obj->ID );	// get current setting
@@ -107,14 +114,18 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		}
 
         	public function save_rating_meta_option( $post_id, $post_obj, $update ) {
-			if ( isset ( $_POST['post_type'] ) && current_user_can( 'edit_' . $_POST['post_type'], $post_id ) ) {
-				if ( ! empty( $_POST['is_checkbox_'.$this->allow_ratings_opt_key] ) ) {
-					if ( ! empty( $_POST[$this->allow_ratings_opt_key] ) && strtolower( $_POST[$this->allow_ratings_opt_key] ) === 'on' ) {
-						update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
-					} else {
-						update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
-					}
-				}
+			if ( ! isset ( $_POST['post_type'] ) ) {
+				return;
+			} elseif ( ! current_user_can( 'edit_' . $_POST['post_type'], $post_id ) ) {
+				return;
+			} elseif ( ! wp_verify_nonce( $_POST[ WPSSO_NONCE_NAME ], WpssoAdmin::get_nonce_action() ) ) {
+				return;
+			} elseif ( empty( $_POST['is_checkbox_'.$this->allow_ratings_opt_key] ) ) {
+				return;
+			} elseif ( isset( $_POST[$this->allow_ratings_opt_key] ) && strtolower( $_POST[$this->allow_ratings_opt_key] ) === 'on' ) {
+				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
+			} else {
+				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
 			}
 		}
 	}
