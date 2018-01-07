@@ -38,8 +38,8 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				'avg_rating' => array(
 					'header' => 'Rating',
 					'meta_key' => WPSSORAR_META_AVERAGE_RATING,
-					'hidden_input_callbacks' => array(
-						$this->allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ),
+					'post_callbacks' => array(	// An array of callback functions / methods.
+						$this->allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ), // The only argument is a post id.
 					),
 					'orderby' => 'meta_value',
 					'width' => '80px',
