@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:69 lib/admin.php:107
+#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:118
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -93,10 +93,6 @@ msgstr ""
 msgid ""
 "When editing a post (page, or custom post type), an \"%1$s\" option is also "
 "available to enable or disable ratings for that specific webpage."
-msgstr ""
-
-#: lib/filters.php:118
-msgid "Enabled ratings and reviews"
 msgstr ""
 
 #: lib/filters.php:121
