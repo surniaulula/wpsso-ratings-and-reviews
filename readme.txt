@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.1-rc.1 (2018/01/06)**
+**Version 1.2.0 (2018/01/07)**
 
 * *New Features*
 	* None
@@ -129,9 +129,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.1.1-rc.1 =
+= 1.2.0 =
 
-(2018/01/06) Added a "Enable ratings and reviews" checkbox to the Quick Edit form.
+(2018/01/07) Added a "Enable ratings and reviews" checkbox to the Quick Edit form.
 
 = 1.1.0 =
 
