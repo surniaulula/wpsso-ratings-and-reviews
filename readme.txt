@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.2.1 (2018/01/08)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Fixed the missing admin-script.min.js file in GitHub and WordPress SVN repositories.
+* *Developer Notes*
+	* None
+
 **Version 1.2.0 (2018/01/07)**
 
 * *New Features*
@@ -128,6 +139,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+
+(2018/01/08) Fixed the missing admin-script.min.js file in GitHub and WordPress SVN repositories.
 
 = 1.2.0 =
 
