@@ -1,0 +1,212 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPSSO Ratings and Reviews 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
+"reviews\n"
+"POT-Creation-Date: 2017-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-12-14 07:08+0000\n"
+"Last-Translator: admin <admin@localhost.local>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: lib/admin.php:61 lib/filters.php:118
+msgid "Allow ratings for reviews (comments)."
+msgstr "Erlaube Bewertungen für Rezensionen (Kommentare)"
+
+#: lib/comment.php:86
+msgctxt "form label"
+msgid "Leave a Review"
+msgstr "Hinterlasse eine Rezension"
+
+#: lib/comment.php:95
+msgctxt "form label"
+msgid "Your Review"
+msgstr "Deine Rezension"
+
+#: lib/comment.php:108
+msgctxt "form label"
+msgid "Post Review"
+msgstr "Rezension abschicken"
+
+#: lib/comment.php:127
+msgctxt "form label"
+msgid "Your Rating"
+msgstr "Deine Bewertung"
+
+#: lib/comment.php:129
+msgctxt "option value"
+msgid "Rating&hellip;"
+msgstr "Bewertung&hellip;"
+
+#: lib/comment.php:130
+msgctxt "option value"
+msgid "Excellent"
+msgstr "Sehr gut"
+
+#: lib/comment.php:131
+msgctxt "option value"
+msgid "Good"
+msgstr "Gut"
+
+#: lib/comment.php:132
+msgctxt "option value"
+msgid "Average"
+msgstr "Befriedigend"
+
+#: lib/comment.php:133
+msgctxt "option value"
+msgid "Not Good"
+msgstr "Ausreichend"
+
+#: lib/comment.php:134
+msgctxt "option value"
+msgid "Awful"
+msgstr "Mangelhaft"
+
+#: lib/comment.php:197 lib/comment.php:199
+msgid "Rated %d out of 5"
+msgstr "Bewertung: %d von 5 Sternen"
+
+#: lib/config-gettext-extract.php:3
+msgctxt "lib file description"
+msgid "Rating / Review"
+msgstr "Bewertung / Rezension"
+
+#: lib/config-gettext-extract.php:4
+msgctxt "plugin description"
+msgid ""
+"WPSSO Core extension to add ratings and reviews for WordPress comments, with "
+"Aggregate Rating meta tags and optional Schema Review markup."
+msgstr ""
+"WPSSO Core Erweiterung zum Hinzufügen von Bewertungen und Rezensionen zu "
+"WordPress-Kommentaren, mit Meta-Tags für die Gesamtbewertung und optionalem "
+"Schema Review-Markup."
+
+#: lib/filters.php:117
+msgid ""
+"You can choose to enable or disable ratings by default for each public post "
+"type."
+msgstr ""
+"Du kannst festlegen für welche Inhalstypen Bewertungen und Rezensionen "
+"standardmäßig aktiviert oder deaktiviert werden."
+
+#: lib/filters.php:118
+msgid ""
+"When editing a post (page, or custom post type), an \"%1$s\" option is also "
+"available to enable or disable ratings for that specific webpage."
+msgstr ""
+"Beim Bearbeiten eines Beitrags (Seite oder benutzerdefinierter Typ) ist eine "
+"Option \"%1$s\" verfügbar, um Bewertungen für die jeweilige Webseite zu "
+"aktivieren oder zu deaktivieren."
+
+#: lib/filters.php:121
+msgid ""
+"Force a reviewer to select a rating before submitting their review (enabled "
+"by default)."
+msgstr ""
+"Erzwinge, dass vor dem Abschicken einer Rezension eine Bewertung auswählt "
+"werden muss (standardmäßig aktiviert)."
+
+#: lib/filters.php:124
+msgid "A color for selected stars representing the rating."
+msgstr "Eine Farbe für ausgewählte Sterne, die die Bewertung darstellen."
+
+#: lib/filters.php:127
+msgid "A default color for unselected stars."
+msgstr "Eine Farbe für nicht ausgewählte Sterne, die die Bewertung darstellen."
+
+#: lib/script.php:40
+msgid "Please select a rating before submitting."
+msgstr "Bitte wähle Deine Bewertung, bevor Du das Formular abschickst."
+
+#: lib/script.php:41
+msgid "Please write a review before submitting."
+msgstr "Bitte schreibe eine Rezension bevor Du das Formular abschickst."
+
+#: lib/submenu/rar-general.php:32
+msgctxt "metabox title"
+msgid "Ratings and Reviews"
+msgstr "Bewertungen und Rezensionen"
+
+#: lib/submenu/rar-general.php:47
+msgctxt "option label"
+msgid "Enable by Default for Post Types"
+msgstr "Aktiviere Rezensionen für diese Inhaltstypen"
+
+#: lib/submenu/rar-general.php:51
+msgctxt "option label"
+msgid "Rating Required to Submit Review"
+msgstr "Sterne-Bewertung erzwingen"
+
+#: lib/submenu/rar-general.php:55
+msgctxt "option label"
+msgid "Selected Star Rating Color"
+msgstr "Sternen-Bewertung Farbe (markiert)"
+
+#: lib/submenu/rar-general.php:59
+msgctxt "option label"
+msgid "Unselected Star Rating Color"
+msgstr "Sternen-Bewertung Farbe (nicht markiert)"
+
+#: wpsso-ratings-and-reviews.php:84
+msgid ""
+"%1$s is an extension for the %2$s plugin &mdash; please install and activate "
+"the %3$s plugin before activating %4$s."
+msgstr ""
+"%1$s ist eine Erweiterung für das %2$s plugin &mdash; Bitte installiere und "
+"aktiviere das %3$s Plugin vor der Aktivierung von %4$s."
+
+#: wpsso-ratings-and-reviews.php:85
+msgid ""
+"The %1$s extension requires the %2$s plugin &mdash; install and activate the "
+"%3$s plugin or <a href=\"%4$s\">deactivate the %5$s extension</a>."
+msgstr ""
+"Die %1$s Erweiterung benötigt das %2$s Plugin &mdash; Installiere und "
+"aktiviere das %3$s Plugin oder <a href=\"%4$s\">deaktiviere die %5$s "
+"Erweiterung</a>."
+
+#: wpsso-ratings-and-reviews.php:154
+msgid ""
+"An existing products rating feature has been found &mdash; %1$s for the "
+"\"product\" custom post type has been disabled."
+msgstr ""
+"Eine bereits existierende Produkt Bewertungsfunktion wurde gefunden &mdash; "
+"%1$s wurde für den \"product\" Post Typ deaktiviert."
+
+#: wpsso-ratings-and-reviews.php:193
+msgid ""
+"The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently "
+"installed)."
+msgstr ""
+"Die %1$s Erweiterung v%2$s benötigt %3$s v%4$s oder neuer (v%5$s momentan "
+"installiert)."
+
+#. Plugin Name of the plugin/theme
+msgid "WPSSO Ratings and Reviews"
+msgstr "WPSSO Ratings and Reviews"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
+msgstr "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
+
+#. Description of the plugin/theme
+msgid ""
+"WPSSO Core extension to add ratings and reviews for WordPress comments, with "
+"Aggregate Rating meta tags and optional Schema Review markup."
+msgstr ""
+"WPSSO Core Erweiterung zum Hinzufügen von Sternen-Bewertungen zur Wordpress "
+"Kommentarfunktion, mit \"Aggregate Rating meta tags\" und optionalen "
+"\"Schema Review markup\"."
+
+#. Author of the plugin/theme
+msgid "JS Morisset"
+msgstr "JS Morisset"
+
+#. Author URI of the plugin/theme
+msgid "https://wpsso.com/"
+msgstr "https://wpsso.com/"
