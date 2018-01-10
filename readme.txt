@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.2.2-b.1 (2018/01/10)**
+**Version 1.2.2-b.2 (2018/01/10)**
 
 * *New Features*
 	* None
@@ -151,7 +151,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.2.2-b.1 =
+= 1.2.2-b.2 =
 
 (2018/01/10) Added German translation mo/po files and fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
 
