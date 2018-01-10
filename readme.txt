@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.2.2-b.1 (2018/01/10)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Added German translation mo/po files (props @legacycode). 
+* *Bugfixes*
+	* Fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
+* *Developer Notes*
+	* None
+
 **Version 1.2.1 (2018/01/08)**
 
 * *New Features*
@@ -139,6 +150,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
 
 == Upgrade Notice ==
+
+= 1.2.2-b.1 =
+
+(2018/01/10) Added German translation mo/po files and fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
 
 = 1.2.1 =
 
