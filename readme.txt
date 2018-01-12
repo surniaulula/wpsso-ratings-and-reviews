@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.2.2-rc.1 (2018/01/10)**
+**Version 1.2.2-rc.1 (2018/01/12)**
 
 * *New Features*
 	* None
@@ -153,7 +153,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.2.2-rc.1 =
 
-(2018/01/10) Added German translation mo/po files and fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
+(2018/01/12) Added German translation mo/po files and fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
 
 = 1.2.1 =
 
