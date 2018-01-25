@@ -125,7 +125,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			// auto-disable the select for replies
 			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
 				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) ).'
-<select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.( $is_reply ? ' disabled' : '' ).'">
+<select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.( $is_reply ? ' disabled' : '' ).'>
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
