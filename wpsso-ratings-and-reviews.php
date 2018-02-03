@@ -13,7 +13,7 @@
  * Description: WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
- * Tested Up To: 4.9.2
+ * Tested Up To: 4.9.3
  * WC Tested Up To: 3.3.0
  * Version: 1.2.2
  *
