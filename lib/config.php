@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version' => '1.2.2',		// Plugin version.
+					'version' => '1.2.3',		// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short' => 'WPSSO RAR',		// Short plugin name.
 					'name' => 'WPSSO Ratings and Reviews',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO',
 						'name' => 'WPSSO Core',
-						'min_version' => '3.49.1',
+						'min_version' => '3.52.0',
 					),
 					'img' => array(
 						'icons' => array(
