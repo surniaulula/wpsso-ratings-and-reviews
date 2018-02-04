@@ -93,51 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.2.2 (2018/01/14)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added German translation mo/po files (props @legacycode). 
-* *Bugfixes*
-	* Fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
-* *Developer Notes*
-	* None
-
-**Version 1.2.1 (2018/01/08)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* Fixed the missing admin-script.min.js file in GitHub and WordPress SVN repositories.
-* *Developer Notes*
-	* None
-
-**Version 1.2.0 (2018/01/07)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added a "Enable ratings and reviews" checkbox to the Quick Edit form.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
-**Version 1.1.0 (2017/12/13)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Added a "Rating" column for media, posts, pages, and custom post types admin lists.
-* *Bugfixes*
-	* Fixed disabling of the "Enable ratings and reviews" option when saving Quick Edit options.
-* *Developer Notes*
-	* None
-
-**Version 1.0.8 (2017/11/14)**
+**Version 1.2.3 (2018/02/04)**
 
 * *New Features*
 	* None
@@ -146,28 +102,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Minor code refactoring for WPSSO v3.48.2.
-		* Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
+	* Maintenance release.
 
 == Upgrade Notice ==
 
-= 1.2.2 =
+= 1.2.3 =
 
-(2018/01/14) Added German translation mo/po files and fixed an incorrect text domain string in the Ratings / Reviews settings page (props @legacycode).
-
-= 1.2.1 =
-
-(2018/01/08) Fixed the missing admin-script.min.js file in GitHub and WordPress SVN repositories.
-
-= 1.2.0 =
-
-(2018/01/07) Added a "Enable ratings and reviews" checkbox to the Quick Edit form.
-
-= 1.1.0 =
-
-(2017/12/13) Added a "Rating" column for media, posts, pages, and custom post types admin lists. Fixed disabling of the "Enable ratings and reviews" option when saving Quick Edit options.
-
-= 1.0.8 =
-
-(2017/11/14) Minor code refactoring for WPSSO v3.48.2: Renamed the SucomForm get_post_type_checkboxes() method to get_checklist_post_types().
+(2018/02/04) Maintenance release.
 
