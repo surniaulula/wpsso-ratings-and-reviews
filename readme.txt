@@ -26,7 +26,7 @@ Star ratings and reviews can be enabled / disabled by post type and/or single po
 
 **Does not conflict with WooCommerce ratings and reviews:**
 
-WPSSO RAR checks [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin settings, and if WooCommerce product reviews are enabled (or the [Yotpo Reviews for Woocommerce](https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/) plugin is active), WPSSO RAR skips the "product" post type to avoid conflicts with WooCommerce.
+WPSSO Ratings and Reviews (aka WPSSO RAR) checks [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin settings, and if WooCommerce product reviews are enabled (or the [Yotpo Reviews for Woocommerce](https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/) plugin is active), WPSSO RAR skips the "product" post type to avoid conflicts with WooCommerce.
 
 **Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and JSON-LD markup:**
 
@@ -36,15 +36,15 @@ Google can read the aggregate rating meta tags (or the optional Schema JSON-LD m
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review ([WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required for JSON-LD markup).
 
-**WPSSO RAR is *incredibly fast* and coded for performance:**
+**WPSSO Ratings and Reviews is *incredibly fast* and coded for performance:**
 
 WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.
 
-WPSSO Core and its extensions are fully tested and compatible with PHP v7.x (PHP v5.3 or better required).
+WPSSO Core and its extensions are fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Ratings and Reviews is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
+WPSSO Ratings and Reviews (aka WPSSO RAR) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
 
 The [WPSSO Core Pro plugin](https://wpsso.com/) and the [WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) are required to add the [Schema Aggregate Rating](https://schema.org/aggregateRating) and [Schema Review](https://schema.org/Review) as Schema JSON-LD markup.
 
