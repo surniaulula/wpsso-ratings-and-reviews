@@ -219,7 +219,8 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				}
 			}
 
-			trigger_error( sprintf( __( '%s warning:', 'wpsso-ratings-and-reviews' ), $info['short'] ).' '.$error_msg, E_USER_WARNING );
+			// translators: %s is the short plugin name
+			trigger_error( sprintf( __( '%s warning:', 'wpsso-ratings-and-reviews' ), $info['short'] ).' '.rtrim( $error_msg, '.' ), E_USER_WARNING );
 		}
 	}
 

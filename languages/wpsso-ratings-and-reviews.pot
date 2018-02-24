@@ -166,7 +166,8 @@ msgid ""
 "%5$s is currently installed)."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:222
+#. translators: %s is the short plugin name
+#: wpsso-ratings-and-reviews.php:223
 msgid "%s warning:"
 msgstr ""
 
