@@ -166,7 +166,7 @@ msgid ""
 "%5$s is currently installed)."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:220
+#: wpsso-ratings-and-reviews.php:222
 msgid "%s warning:"
 msgstr ""
 

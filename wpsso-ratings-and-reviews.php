@@ -211,7 +211,9 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				'wpsso-ratings-and-reviews' ), $info['name'], $info['version'], $info['req']['short'], $info['req']['min_version'], $have_version );
 
 			if ( is_admin() ) {
+
 				$this->p->notice->err( $error_msg );
+
 				if ( method_exists( $this->p->admin, 'get_check_for_updates_link' ) ) {
 					$this->p->notice->inf( $this->p->admin->get_check_for_updates_link() );
 				}
