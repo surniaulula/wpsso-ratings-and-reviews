@@ -13,61 +13,61 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:118
+#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:119
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:86
+#: lib/comment.php:87
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""
 
-#: lib/comment.php:95
+#: lib/comment.php:96
 msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:108
+#: lib/comment.php:109
 msgctxt "form label"
 msgid "Post Review"
 msgstr ""
 
-#: lib/comment.php:127
+#: lib/comment.php:128
 msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:129
+#: lib/comment.php:130
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:130
+#: lib/comment.php:131
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:131
+#: lib/comment.php:132
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:132
+#: lib/comment.php:133
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:133
+#: lib/comment.php:134
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:134
+#: lib/comment.php:135
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:197 lib/comment.php:199
+#: lib/comment.php:201 lib/comment.php:203
 msgid "Rated %d out of 5"
 msgstr ""
 
@@ -83,29 +83,29 @@ msgid ""
 "Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
-#: lib/filters.php:117
+#: lib/filters.php:118
 msgid ""
 "You can choose to enable or disable ratings by default for each public post "
 "type."
 msgstr ""
 
-#: lib/filters.php:118
+#: lib/filters.php:119
 msgid ""
 "When editing a post (page, or custom post type), an \"%1$s\" option is also "
 "available to enable or disable ratings for that specific webpage."
 msgstr ""
 
-#: lib/filters.php:121
+#: lib/filters.php:122
 msgid ""
 "Force a reviewer to select a rating before submitting their review (enabled "
 "by default)."
 msgstr ""
 
-#: lib/filters.php:124
+#: lib/filters.php:125
 msgid "A color for selected stars representing the rating."
 msgstr ""
 
-#: lib/filters.php:127
+#: lib/filters.php:128
 msgid "A default color for unselected stars."
 msgstr ""
 

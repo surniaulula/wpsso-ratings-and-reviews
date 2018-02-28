@@ -66,6 +66,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$og_type = $mt_og['og:type'];
 
 			if ( apply_filters( $lca.'_og_add_mt_rating', true, $mod ) ) {	// enabled by default
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'add rating meta tags is true' );
 				}

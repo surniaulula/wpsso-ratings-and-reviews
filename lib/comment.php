@@ -31,6 +31,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
 			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
+
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 		}
 
@@ -147,8 +148,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
 		public static function save_request_comment_rating( $comment_id ) { 
+
 			if ( empty( $_GET['replytocom'] ) && empty( $_POST['replytocom'] ) ) {	// don't save reply ratings
+
 				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
+
 				if ( $rating_value ) {
 					add_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, $rating_value );
 				}
@@ -207,15 +211,20 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Average Rating
 		 */
 		public static function get_average_rating( $post_id ) {
+
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
 				self::sync_average_rating( $post_id );	// calculate the average rating
 			} 
+
 			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, true );
 		}
 
 		public static function sync_average_rating( $post_id ) {
+
 			if ( $count_total = self::get_rating_count( $post_id ) ) {
+
 				global $wpdb; 
+
 				$rating_total = $wpdb->get_var( $wpdb->prepare( "
 					SELECT SUM(meta_value) FROM $wpdb->commentmeta
 					LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
@@ -224,10 +233,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 					AND comment_parent = '0'
 					AND comment_approved = '1'
 					AND meta_value > 0", $post_id ) );
+
 				$average = number_format( $rating_total / $count_total, 2, '.', '' );
+
 			} else {
 				$average = 0;
 			}
+
 			update_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, $average );
 		}
 
@@ -235,10 +247,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Rating Count
 		 */
 		public static function get_rating_count( $post_id, $count_idx = null ) {
+
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {
 				self::sync_rating_counts( $post_id );
 			}
+
 			$rating_counts = array_filter( (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, true ) );
+
 			if ( null === $count_idx ) {
 				return array_sum( $rating_counts );
 			} else {
@@ -247,7 +262,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		public static function sync_rating_counts( $post_id ) {
+
 			global $wpdb;
+
 			$count_meta = $wpdb->get_results( $wpdb->prepare( "
 				SELECT meta_value, COUNT( * ) as meta_value_count FROM $wpdb->commentmeta
 				LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
@@ -257,10 +274,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				AND comment_approved = '1'
 				AND meta_value > 0
 				GROUP BY meta_value", $post_id ) );
+
 			$rating_counts = array();
+
 			foreach ( $count_meta as $count ) {
 				$rating_counts[$count->meta_value] = $count->meta_value_count;
 			}
+
 			update_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $rating_counts );
 		}
 
@@ -268,20 +288,25 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Review Count
 		 */
 		public static function get_review_count( $post_id ) {
+
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_REVIEW_COUNT ) ) {
 				self::sync_review_count( $post_id );
 			}
+
 			return (int) get_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, true );
 		}
 
 		public static function sync_review_count( $post_id ) {
+
 			global $wpdb;
+
 			$review_count = $wpdb->get_var( $wpdb->prepare( "
 				SELECT COUNT(*) FROM $wpdb->comments
 				WHERE comment_parent = 0
 				AND comment_post_ID = %d
 				AND comment_parent = '0'
 				AND comment_approved = '1'", $post_id ) );
+
 			update_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, $review_count );
 		}
 	}
