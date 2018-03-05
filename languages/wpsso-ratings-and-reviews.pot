@@ -160,14 +160,14 @@ msgid ""
 "\"product\" custom post type has been disabled."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:210
+#: wpsso-ratings-and-reviews.php:209
 msgid ""
 "The %1$s version %2$s extension requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
 msgstr ""
 
 #. translators: %s is the short plugin name
-#: wpsso-ratings-and-reviews.php:223
+#: wpsso-ratings-and-reviews.php:221
 msgid "%s warning:"
 msgstr ""
 
