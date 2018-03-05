@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.3.1 (2018/03/05)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Added `jQuery( document ).ready()` to the plugin jQuery script to delay it's execution.
+
 **Version 1.3.0 (2018/02/24)**
 
 * *New Features*
@@ -105,6 +116,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Refactored the WpssoRar `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+
+(2018/03/05) Added `jQuery( document ).ready()` to the plugin jQuery script to delay it's execution.
 
 = 1.3.0 =
 
