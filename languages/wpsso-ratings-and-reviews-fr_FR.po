@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.3.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2018-02-19 18:11-0600\n"
-"PO-Revision-Date: 2018-02-23 11:59-0600\n"
+"POT-Creation-Date: 2018-03-05 10:18-0600\n"
+"PO-Revision-Date: 2018-03-05 10:18-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,61 +15,61 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:118
+#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:119
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
-#: lib/comment.php:86
+#: lib/comment.php:101
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr "Laisser une critique"
 
-#: lib/comment.php:95
+#: lib/comment.php:110
 msgctxt "form label"
 msgid "Your Review"
 msgstr "Votre critique"
 
-#: lib/comment.php:108
+#: lib/comment.php:123
 msgctxt "form label"
 msgid "Post Review"
 msgstr "Publier la critique"
 
-#: lib/comment.php:127
+#: lib/comment.php:142
 msgctxt "form label"
 msgid "Your Rating"
 msgstr "Votre note"
 
-#: lib/comment.php:129
+#: lib/comment.php:144
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr "Note&hellip;"
 
-#: lib/comment.php:130
+#: lib/comment.php:145
 msgctxt "option value"
 msgid "Excellent"
 msgstr "Excellent"
 
-#: lib/comment.php:131
+#: lib/comment.php:146
 msgctxt "option value"
 msgid "Good"
 msgstr "Bon"
 
-#: lib/comment.php:132
+#: lib/comment.php:147
 msgctxt "option value"
 msgid "Average"
 msgstr "Moyen"
 
-#: lib/comment.php:133
+#: lib/comment.php:148
 msgctxt "option value"
 msgid "Not Good"
 msgstr "Pas bon"
 
-#: lib/comment.php:134
+#: lib/comment.php:149
 msgctxt "option value"
 msgid "Awful"
 msgstr "Terrible"
 
-#: lib/comment.php:197 lib/comment.php:199
+#: lib/comment.php:215 lib/comment.php:217
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
@@ -83,23 +83,23 @@ msgctxt "plugin description"
 msgid "WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
 msgstr "Extension WPSSO Core pour ajouter des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
 
-#: lib/filters.php:117
+#: lib/filters.php:118
 msgid "You can choose to enable or disable ratings by default for each public post type."
 msgstr "Vous pouvez choisir d'activer ou désactiver par défaut les notes pour chaque type d'article public."
 
-#: lib/filters.php:118
+#: lib/filters.php:119
 msgid "When editing a post (page, or custom post type), an \"%1$s\" option is also available to enable or disable ratings for that specific webpage."
 msgstr "Lorsque vous modifiez un article (page, ou type d'article personnalisé), une option \"%1$s\" est aussi disponible pour activer ou désactiver les notes pour cette page Web."
 
-#: lib/filters.php:121
+#: lib/filters.php:122
 msgid "Force a reviewer to select a rating before submitting their review (enabled by default)."
 msgstr "Obliger le critique à sélectionner une note avant de soumettre leur texte (activé par défaut)."
 
-#: lib/filters.php:124
+#: lib/filters.php:125
 msgid "A color for selected stars representing the rating."
 msgstr "Une couleur pour les étoiles sélectionnées représentant la note."
 
-#: lib/filters.php:127
+#: lib/filters.php:128
 msgid "A default color for unselected stars."
 msgstr "Une couleur par défaut pour les étoiles non sélectionnées."
 
@@ -148,11 +148,12 @@ msgstr "L'extension %1$s requiert %2$s &mdash; installer et activer %3$s ou <a h
 msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
 msgstr "Une fonctionnalité de notation des produits a été trouvée &mdash; %1$s a été désactivé pour le type d'article personnalisé \"produit\"."
 
-#: wpsso-ratings-and-reviews.php:210
+#: wpsso-ratings-and-reviews.php:209
 msgid "The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'extension %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
-#: wpsso-ratings-and-reviews.php:213
+#. translators: %s is the short plugin name
+#: wpsso-ratings-and-reviews.php:221
 msgid "%s warning:"
 msgstr "Alerte %s:"
 
