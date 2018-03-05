@@ -74,4 +74,3 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 		}
 	}
 }
-

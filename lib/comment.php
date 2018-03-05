@@ -40,11 +40,19 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function is_rating_enabled( $post_id ) {
 
+			$wpsso = Wpsso::get_instance();
+
 			if ( isset( self::$rating_enabled[$post_id] ) ) {	// use a status cache to optimize
+
+				$rating_is = self::$rating_enabled[$post_id] ? 'enabled' : 'disabled';
+
+				if ( $wpsso->debug->enabled ) {
+					$wpsso->debug->log( 'rating is '.$rating_is );
+				}
+
 				return self::$rating_enabled[$post_id];
 			}
 
-			$wpsso = Wpsso::get_instance();
 			$post_type = get_post_type( $post_id );
 			$default = empty( $wpsso->options['rar_add_to_'.$post_type] ) ? 0 : 1;
 			$disabled = isset( $wpsso->options['rar_add_to_'.$post_type.':is'] ) &&
@@ -58,6 +66,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$enabled = 0;
 			} else {
 				$enabled = 1;
+			}
+
+			$rating_is = $enabled ? 'enabled' : 'disabled';
+
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->log( 'rating is '.$rating_is );
 			}
 
 			return self::$rating_enabled[$post_id] = $enabled;
