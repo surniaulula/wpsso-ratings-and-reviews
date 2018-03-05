@@ -12,7 +12,7 @@ Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.4
 WC Tested Up To: 3.3.3
-Stable Tag: 1.3.1
+Stable Tag: 1.3.2
 
 WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
 
@@ -102,11 +102,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Added `jQuery( document ).ready()` to the plugin jQuery script to delay it's execution until the HTML document is fully loaded.
+	* Added `jQuery( document ).ready()` to the plugin jQuery scripts to delay their execution until the HTML document is fully loaded.
 
 == Upgrade Notice ==
 
 = 1.3.2 =
 
-(2018/03/05) Improved parsing for the comment label in the 'comment_field' value. Added `jQuery( document ).ready()` to the plugin jQuery script to delay it's execution until the HTML document is fully loaded.
+(2018/03/05) Improved parsing for the comment label in the 'comment_field' value. Added `jQuery( document ).ready()` to the jQuery scripts to delay their execution until the HTML document is fully loaded.
 
