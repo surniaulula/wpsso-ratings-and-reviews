@@ -47,16 +47,16 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$rating_is = self::$rating_enabled[$post_id] ? 'enabled' : 'disabled';
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'rating is '.$rating_is );
+					$wpsso->debug->log( 'rating is ' . $rating_is );
 				}
 
 				return self::$rating_enabled[$post_id];
 			}
 
 			$post_type = get_post_type( $post_id );
-			$default = empty( $wpsso->options['rar_add_to_'.$post_type] ) ? 0 : 1;
-			$disabled = isset( $wpsso->options['rar_add_to_'.$post_type.':is'] ) &&
-				$wpsso->options['rar_add_to_'.$post_type.':is'] == 'disabled' ? true : false;
+			$default = empty( $wpsso->options['rar_add_to_' . $post_type] ) ? 0 : 1;
+			$disabled = isset( $wpsso->options['rar_add_to_' . $post_type . ':is'] ) &&
+				$wpsso->options['rar_add_to_' . $post_type . ':is'] == 'disabled' ? true : false;
 
 			if ( $disabled ) {
 				$enabled = 0;
@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_is = $enabled ? 'enabled' : 'disabled';
 
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'rating is '.$rating_is );
+				$wpsso->debug->log( 'rating is ' . $rating_is );
 			}
 
 			return self::$rating_enabled[$post_id] = $enabled;
@@ -88,46 +88,56 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 			$is_req_span = ' <span class="required">*</span>';
-			$rev_span_begin = '<span class="comment-toggle-review"'.( $is_reply ? ' style="display:none;"' : '' ).'>';
+			$rev_span_begin = '<span class="comment-toggle-review"' . ( $is_reply ? ' style="display:none;"' : '' ) . '>';
 			$rev_span_end = '</span><!-- .comment-toggle-review -->';
-			$cmt_span_begin = '<span class="comment-toggle-comment"'.( $is_reply ? '' : ' style="display:none;"' ).'>';
+			$cmt_span_begin = '<span class="comment-toggle-comment"' . ( $is_reply ? '' : ' style="display:none;"' ) . '>';
 			$cmt_span_end = '</span><!-- .comment-toggle-comment -->';
 
 			/**
 			 * Title
 			 */
-			$defaults['title_reply_before'] = '<span class="wpsso-rar">'.
-				$rev_span_begin.'<h3 id="review-title" class="comment-review-title">'.
-					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ).
-						'</h3>'.$rev_span_end.$cmt_span_begin.$defaults['title_reply_before'];
+			$defaults['title_reply_before'] = '<span class="wpsso-rar">' . 
+				$rev_span_begin . '<h3 id="review-title" class="comment-review-title">' . 
+					'<!-- Leave a Review -->' . _x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ) . 
+						'</h3>' . $rev_span_end . $cmt_span_begin . $defaults['title_reply_before'];
 
-			$defaults['title_reply_after'] .= $cmt_span_end.'</span><!-- .wpsso-rar -->';
+			$defaults['title_reply_after'] .= $cmt_span_end . '</span><!-- .wpsso-rar -->';
 
 			/**
 			 * Comment Box
 			 */
-			$defaults['comment_field'] = preg_replace( '/(<label for="comment">.*<\/label>)/Uim',
-				$rev_span_begin.'<label for="review">'._x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ).
-					$is_req_span.'</label>'.$rev_span_end.$cmt_span_begin.'$1'.$cmt_span_end,
-						$defaults['comment_field'] );
+			if ( preg_match( '/^(.*)(<label ([^>]*)for="comment"([^>]*)>.*<\/label>)(.*)$/Uim', $defaults['comment_field'], $matches ) ) {
 
-			$defaults['comment_field'] = '<span class="wpsso-rar">'.
-				self::get_form_rating_field().$defaults['comment_field'].
-					'</span><!-- .wpsso-rar -->';
+				list( $comment_field, $label_before, $comment_label, $attr_before, $attr_after, $label_after ) = $matches;
+
+				$defaults['comment_field'] = $label_before . 
+					$rev_span_begin . '<label ' . $attr_before . 'for="review"' . $attr_after . '>' .
+						'<!-- Your Review -->' . _x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . 
+							$is_req_span . '</label>' . $rev_span_end . 
+								$cmt_span_begin . $comment_label . $cmt_span_end .
+									$label_after;
+	
+				$defaults['comment_field'] = '<span class="wpsso-rar">' . 
+					self::get_form_rating_field( $attr_before, $attr_after ) . 
+						$defaults['comment_field'] . '</span><!-- .wpsso-rar -->';
+
+			} else {
+				$defaults['comment_field'] .= '<!-- error: comment label not found in the \'comment_field\' value -->';
+			}
 
 			/**
 			 * Submit Button
 			 */
-			$defaults['submit_button'] = '<span class="wpsso-rar">'.$rev_span_begin.
-				'<input name="%1$s" type="submit" id="%2$s" class="%3$s" value="'.
-					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ).'" />'.
-						$rev_span_end.$cmt_span_begin.$defaults['submit_button'].$cmt_span_end.
+			$defaults['submit_button'] = '<span class="wpsso-rar">' . $rev_span_begin . 
+				'<!-- Post Review --><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="' . 
+					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ) . '"/>' . 
+						$rev_span_end . $cmt_span_begin . $defaults['submit_button'] . $cmt_span_end . 
 							'</span><!-- .wpsso-rar -->';
 
 			return $defaults;
 		}
 
-		public static function get_form_rating_field() {
+		public static function get_form_rating_field( $attr_before = '', $attr_after = '' ) {
 
 			$wpsso = Wpsso::get_instance();
 			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
@@ -135,12 +145,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
 
 			// auto-hide the paragraph for replies
-			$select = '<p class="comment-form-rating"'.( $is_reply ? ' style="display:none;">' : '>' ) . "\n";
+			$select = '<p class="comment-form-rating"' . ( $is_reply ? ' style="display:none;">' : '>' ) . "\n";
 
 			// auto-disable the select for replies
-			$select .= sprintf( '<label for="rating">%s'.$is_req_span.'</label>',
-				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) ).'
-<select name="'.WPSSORAR_META_REVIEW_RATING.'" id="rating"'.( $is_reply ? ' disabled' : '' ).'>
+			$select .= '<label ' . $attr_before . 'for="rating"' . $attr_after . '>' .
+				'<!-- Your Rating -->' . _x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) . $is_req_span . '</label>
+<select name="' . WPSSORAR_META_REVIEW_RATING . '" id="rating"' . ( $is_reply ? ' disabled' : '' ) . '>
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
@@ -195,7 +205,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
-				$comment_text = '<div class="wpsso-rar">'.self::get_star_rating_html( $rating_value ).
+				$comment_text = '<div class="wpsso-rar">' . self::get_star_rating_html( $rating_value ) . 
 					'</div><!-- .wpsso-rar -->' . "\n" . $comment_text;
 			}
 
@@ -211,10 +221,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_value = (int) $rating_value;
 
 			if ( ! empty( $rating_value ) ) { 
-				$html = '<div class="star-rating" title="'.
-					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ).'">'.
-				'<span style="width:'.( ( $rating_value / 5 ) * 100 ).'%;">'.
-					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ). 
+				$html = '<div class="star-rating" title="' . 
+					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) . '">' . 
+				'<span style="width:' . ( ( $rating_value / 5 ) * 100 ) . '%;">' . 
+					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) .  
 				'</span></div>';
 			}
 
