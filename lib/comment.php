@@ -110,8 +110,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				list( $comment_field, $label_before, $comment_label, $attr_before, $attr_after, $label_after ) = $matches;
 
-				$label_attr = trim( $attr_before . ' '. $attr_after );
-				$label_attr = preg_replace( '/(^| )id=["\'][^"\']+["\']/', '', $label_attr );
+				$label_attr = ' ' . $attr_before . ' '. $attr_after;
+				$label_attr = preg_replace( '/ id=["\'][^"\']+["\']/', '', $label_attr );
+				$label_attr = trim( $label_attr );
+
+				if ( ! empty( $label_attr ) ) {
+					$label_attr .= ' ';
+				}
 
 				$defaults['comment_field'] = $label_before . $rev_span_begin .
 					'<!-- Your Review --><label ' . $label_attr . 'for="review"' . '>' .
