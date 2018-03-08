@@ -25,11 +25,11 @@
         </ul>
       </header>
       <section>
-<h1>WPSSO Ratings and Reviews / Replies / Comments with Schema Aggregate Ratings (Compatible with WooCommerce)</h1>
+<h1>WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings (Compatible with WooCommerce)</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core extension to add ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.9.4</td></tr>
@@ -42,33 +42,21 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
-<p><strong>Extend the WordPress comment system with ratings and reviews:</strong></p>
+<p><strong>WPSSO Core extension to add ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.</strong></p>
 
-<p>Star ratings and reviews can be enabled / disabled by post type and/or single post, new reviews are correctly labeled as "reviews" (not "comments"), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.</p>
+<p>Extends the WordPress comment system with ratings and reviews &mdash; star ratings and reviews can be enabled / disabled by post type and/or individual posts, new reviews are correctly labeled as "reviews" (not "comments"), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.</p>
 
-<p><strong>Does not conflict with WooCommerce ratings and reviews:</strong></p>
+<p>Does not conflict with WooCommerce ratings and reviews &mdash; the <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin settings are checked, and if WooCommerce product reviews are enabled (or the <a href="https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/">Yotpo Reviews for Woocommerce</a> plugin is active), the "product" post type is ignored to avoid conflicts with WooCommerce product reviews.</p>
 
-<p>WPSSO Ratings and Reviews (aka WPSSO RAR) checks <a href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a> plugin settings, and if WooCommerce product reviews are enabled (or the <a href="https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/">Yotpo Reviews for Woocommerce</a> plugin is active), WPSSO RAR skips the "product" post type to avoid conflicts with WooCommerce.</p>
+<p>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and JSON-LD markup &mdash; Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> required for JSON-LD markup). WooCommerce product ratings and reviews are also included in the aggregate rating meta tags and JSON-LD markup.</p>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and JSON-LD markup:</strong></p>
+<p>Includes complete <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup &mdash; including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> required for JSON-LD markup).</p>
 
-<p>Google can read the aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> required for JSON-LD markup).</p>
-
-<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup:</strong></p>
-
-<p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> required for JSON-LD markup).</p>
-
-<p><strong>WPSSO Ratings and Reviews is <em>incredibly fast</em> and coded for performance:</strong></p>
-
-<p>WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.</p>
-
-<p>WPSSO Core and its extensions are fully tested and compatible with PHP v7.x (PHP v5.4 or better required).</p>
+<p>WPSSO Ratings and Reviews is <em>incredibly fast</em> and coded for performance &mdash; WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its extensions are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).</p>
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-<p>WPSSO Ratings and Reviews (aka WPSSO RAR) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.</p>
-
-<p>The <a href="https://wpsso.com/">WPSSO Core Pro plugin</a> and the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as Schema JSON-LD markup.</p>
+<p>WPSSO Ratings and Reviews (aka WPSSO RAR) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.  The <a href="https://wpsso.com/">WPSSO Core Pro plugin</a> and the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro extension</a> are required to add the <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> as Schema JSON-LD markup.</p>
 
 
 <h2>Installation</h2>
