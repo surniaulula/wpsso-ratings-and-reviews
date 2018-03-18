@@ -34,7 +34,9 @@ WPSSO Ratings and Reviews is *incredibly fast* and coded for performance &mdash;
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Ratings and Reviews (aka WPSSO RAR) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.  The [WPSSO Core Pro plugin](https://wpsso.com/) and the [WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) are required to add the [Schema Aggregate Rating](https://schema.org/aggregateRating) and [Schema Review](https://schema.org/Review) as Schema JSON-LD markup.
+WPSSO Ratings and Reviews (aka WPSSO RAR) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc. 
+
+The [WPSSO Core Pro plugin](https://wpsso.com/) and the [WPSSO JSON Pro extension](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) are required to add the [Schema Aggregate Rating](https://schema.org/aggregateRating) and [Schema Review](https://schema.org/Review) as Schema JSON-LD markup.
 
 == Installation ==
 
