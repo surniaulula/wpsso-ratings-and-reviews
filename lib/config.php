@@ -16,11 +16,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version' => '1.3.2',		// Plugin version.
+					'version' => '1.3.3-dev.2',		// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short' => 'WPSSO RAR',		// Short plugin name.
 					'name' => 'WPSSO Ratings and Reviews',
-					'desc' => 'WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.',
+					'desc' => 'WPSSO Core add-on to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.',
 					'slug' => 'wpsso-ratings-and-reviews',
 					'base' => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
 					'update_auth' => '',

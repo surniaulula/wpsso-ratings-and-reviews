@@ -10,12 +10,12 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: WPSSO Core extension to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
+ * Description: WPSSO Core add-on to add ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 4.9.4
  * WC Tested Up To: 3.3.3
- * Version: 1.3.2
+ * Version: 1.3.3-dev.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -91,9 +91,9 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 			$info = WpssoRarConfig::$cf['plugin']['wpssorar'];
 
-			$die_msg = __( '%1$s is an extension for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s.', 'wpsso-ratings-and-reviews' );
+			$die_msg = __( '%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s.', 'wpsso-ratings-and-reviews' );
 
-			$error_msg = __( 'The %1$s extension requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href="%4$s">deactivate the %5$s extension</a>.', 'wpsso-ratings-and-reviews' );
+			$error_msg = __( 'The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href="%4$s">deactivate the %5$s add-on</a>.', 'wpsso-ratings-and-reviews' );
 
 			if ( true === $deactivate ) {
 
@@ -206,7 +206,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 			$info = WpssoRarConfig::$cf['plugin']['wpssorar'];
 			$have_version = $this->p->cf['plugin']['wpsso']['version'];
-			$error_msg = sprintf( __( 'The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed).',
+			$error_msg = sprintf( __( 'The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed).',
 				'wpsso-ratings-and-reviews' ), $info['name'], $info['version'], $info['req']['short'], $info['req']['min_version'], $have_version );
 
 			if ( is_admin() ) {
@@ -226,4 +226,3 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 	WpssoRar::get_instance();
 }
-
