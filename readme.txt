@@ -14,13 +14,13 @@ Tested Up To: 4.9.4
 WC Tested Up To: 3.3.4
 Stable Tag: 1.3.2
 
-WPSSO Core add-on to add ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
+WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
 == Description ==
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png">
 
-**WPSSO Core add-on to add ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.**
+**WPSSO Core add-on to provide ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.**
 
 Extends the WordPress comment system with ratings and reviews &mdash; star ratings and reviews can be enabled / disabled by post type and/or individual posts, new reviews are correctly labeled as "reviews" (not "comments"), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.
 
@@ -83,7 +83,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.3.3-b.1 (2018/03/22)**
+**Version 1.3.3-rc.1 (2018/03/23)**
 
 * *New Features*
 	* None
@@ -107,9 +107,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.3.3-b.1 =
+= 1.3.3-rc.1 =
 
-(2018/03/22) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
+(2018/03/23) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
 
 = 1.3.2 =
 

@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on to add ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.9.4</td></tr>
@@ -15,7 +15,7 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
-<p><strong>WPSSO Core add-on to add ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.</strong></p>
+<p><strong>WPSSO Core add-on to provide ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.</strong></p>
 
 <p>Extends the WordPress comment system with ratings and reviews &mdash; star ratings and reviews can be enabled / disabled by post type and/or individual posts, new reviews are correctly labeled as "reviews" (not "comments"), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.</p>
 
