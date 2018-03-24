@@ -12,7 +12,7 @@ Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.4
 WC Tested Up To: 3.3.4
-Stable Tag: 1.3.2
+Stable Tag: 1.3.3
 
 WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
@@ -110,8 +110,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 1.3.3 =
 
 (2018/03/24) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
-
-= 1.3.2 =
-
-(2018/03/05) Improved parsing for the comment label in the 'comment_field' value. Added `jQuery( document ).ready()` to the jQuery scripts to delay their execution until the HTML document is fully loaded.
 
