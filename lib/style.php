@@ -49,14 +49,14 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 					font-weight: normal;
 					font-style: normal;
 				}
-				.wpsso-rar .star-rating:before { color:'.$def_color.'; }
-				.wpsso-rar .star-rating span:before { color:'.$sel_color.'; }
-				.wpsso-rar p.select-star a:before { color:'.$def_color.'; }
-				.wpsso-rar p.select-star a:hover ~ a:before { color:'.$def_color.'; }
-				.wpsso-rar p.select-star:hover a:before { color:'.$sel_color.'; }
-				.wpsso-rar p.select-star.selected a.active:before { color:'.$sel_color.'; }
-				.wpsso-rar p.select-star.selected a.active ~ a:before { color:'.$def_color.'; }
-				.wpsso-rar p.select-star.selected a:not(.active):before { color:'.$sel_color.'; }
+				.wpsso-rar .star-rating::before { color:'.$def_color.'; }
+				.wpsso-rar .star-rating span::before { color:'.$sel_color.'; }
+				.wpsso-rar p.select-star a::before { color:'.$def_color.'; }
+				.wpsso-rar p.select-star a:hover ~ a::before { color:'.$def_color.'; }
+				.wpsso-rar p.select-star:hover a::before { color:'.$sel_color.'; }
+				.wpsso-rar p.select-star.selected a.active::before { color:'.$sel_color.'; }
+				.wpsso-rar p.select-star.selected a.active ~ a::before { color:'.$def_color.'; }
+				.wpsso-rar p.select-star.selected a:not(.active)::before { color:'.$sel_color.'; }
 			';
 
 			wp_add_inline_style( 'wpsso-rar-style', SucomUtil::minify_css( $custom_style_css, 'wpsso' ) );
