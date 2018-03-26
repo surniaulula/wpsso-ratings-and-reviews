@@ -20,7 +20,7 @@ WPSSO Core add-on to provide ratings and reviews for WordPress comments with Agg
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png">
 
-**WPSSO Core add-on to provide ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.**
+**A WPSSO Core add-on to provide ratings and reviews for WordPress comments with aggregate rating meta tags, and optional Schema Review markup.**
 
 Extends the WordPress comment system with ratings and reviews &mdash; star ratings and reviews can be enabled / disabled by post type and/or individual posts, new reviews are correctly labeled as "reviews" (not "comments"), a rating can be required before reviews are accepted, replies to reviews are properly labeled as "replies", and colors of star ratings can be customized from the settings page.
 
