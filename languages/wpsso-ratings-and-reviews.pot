@@ -142,32 +142,32 @@ msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:94
+#: wpsso-ratings-and-reviews.php:99
 msgid ""
 "%1$s is an add-on for the %2$s plugin &mdash; please install and activate "
 "the %3$s plugin before activating %4$s."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:96
+#: wpsso-ratings-and-reviews.php:101
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
 "%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:174
+#: wpsso-ratings-and-reviews.php:185
 msgid ""
 "An existing products rating feature has been found &mdash; %1$s for the "
 "\"product\" custom post type has been disabled."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:209
+#: wpsso-ratings-and-reviews.php:220
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
 msgstr ""
 
 #. translators: %s is the short plugin name
-#: wpsso-ratings-and-reviews.php:221
+#: wpsso-ratings-and-reviews.php:232
 msgid "%s warning:"
 msgstr ""
 
