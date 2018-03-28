@@ -39,9 +39,12 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
 		}
 
-		protected function get_table_rows( $metabox_id, $key ) {
+		protected function get_table_rows( $metabox_id, $tab_key ) {
+
 			$table_rows = array();
-			switch ( $metabox_id.'-'.$key ) {
+
+			switch ( $metabox_id.'-'.$tab_key ) {
+
 				case 'rar-general':
 
 					$table_rows['rar_add_to'] = $this->form->get_th_html( _x( 'Enable by Default for Post Types',
@@ -62,8 +65,8 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 
 					break;
 			}
+
 			return $table_rows;
 		}
 	}
 }
-

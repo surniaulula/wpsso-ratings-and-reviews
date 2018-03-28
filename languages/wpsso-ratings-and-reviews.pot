@@ -122,22 +122,22 @@ msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr ""
 
-#: lib/submenu/rar-general.php:47
+#: lib/submenu/rar-general.php:50
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
 msgstr ""
 
-#: lib/submenu/rar-general.php:51
+#: lib/submenu/rar-general.php:54
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr ""
 
-#: lib/submenu/rar-general.php:55
+#: lib/submenu/rar-general.php:58
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:59
+#: lib/submenu/rar-general.php:62
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr ""
