@@ -70,9 +70,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
+
 			if ( defined( 'WPSSORAR_VERSION' ) ) {			// execute and define constants only once
 				return;
 			}
+
 			define( 'WPSSORAR_VERSION', self::$cf['plugin']['wpssorar']['version'] );						
 			define( 'WPSSORAR_FILEPATH', $plugin_filepath );						
 			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
@@ -84,9 +86,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		}
 
 		public static function set_variable_constants( $var_const = null ) {
+
 			if ( null === $var_const ) {
 				$var_const = self::get_variable_constants();
 			}
+
 			foreach ( $var_const as $name => $value ) {
 				if ( ! defined( $name ) ) {
 					define( $name, $value );
@@ -95,6 +99,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		}
 
 		public static function get_variable_constants() {
+
 			$var_const = array();
 
 			$var_const['WPSSORAR_META_REVIEW_RATING'] = 'rating';			// comment meta int
