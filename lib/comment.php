@@ -24,10 +24,14 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$this->p->debug->mark();
 			}
 
-			// called by comment-template.php to define text and html for the form
+			/**
+			 * Called by comment-template.php to define text and html for the form.
+			 */
 			add_filter( 'comment_form_defaults', array( __CLASS__, 'add_comment_form_defaults' ), PHP_INT_MAX );
 
-			// called for both front and back-end
+			/**
+			 * Called for both front and back-end.
+			 */
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
 			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
@@ -194,7 +198,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function add_rating_to_comment_text( $comment_text ) {
 
-			// only add a single star rating (ours or from another plugin)
+			/**
+			 * Make sure we only add the star rating once (ours or from another plugin).
+			 */
 			if ( strpos( $comment_text, ' class="star-rating"' ) !== false ) {
 				return $comment_text;
 			}
