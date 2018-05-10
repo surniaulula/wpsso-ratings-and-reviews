@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 1.3.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2018-03-24 09:02-0400\n"
-"PO-Revision-Date: 2018-03-24 09:57-0400\n"
+"POT-Creation-Date: 2018-05-10 10:36-0600\n"
+"PO-Revision-Date: 2018-05-10 10:36-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -19,57 +19,57 @@ msgstr ""
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
-#: lib/comment.php:101
+#: lib/comment.php:105
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr "Laisser une critique"
 
-#: lib/comment.php:123
+#: lib/comment.php:127
 msgctxt "form label"
 msgid "Your Review"
 msgstr "Votre critique"
 
-#: lib/comment.php:139
+#: lib/comment.php:143
 msgctxt "form label"
 msgid "Post Review"
 msgstr "Publier la critique"
 
-#: lib/comment.php:158
+#: lib/comment.php:162
 msgctxt "form label"
 msgid "Your Rating"
 msgstr "Votre note"
 
-#: lib/comment.php:160
+#: lib/comment.php:164
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr "Note&hellip;"
 
-#: lib/comment.php:161
+#: lib/comment.php:165
 msgctxt "option value"
 msgid "Excellent"
 msgstr "Excellent"
 
-#: lib/comment.php:162
+#: lib/comment.php:166
 msgctxt "option value"
 msgid "Good"
 msgstr "Bon"
 
-#: lib/comment.php:163
+#: lib/comment.php:167
 msgctxt "option value"
 msgid "Average"
 msgstr "Moyen"
 
-#: lib/comment.php:164
+#: lib/comment.php:168
 msgctxt "option value"
 msgid "Not Good"
 msgstr "Pas bon"
 
-#: lib/comment.php:165
+#: lib/comment.php:169
 msgctxt "option value"
 msgid "Awful"
 msgstr "Terrible"
 
-#: lib/comment.php:231 lib/comment.php:233
+#: lib/comment.php:237 lib/comment.php:239
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
@@ -116,46 +116,41 @@ msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr "Notes et critiques"
 
-#: lib/submenu/rar-general.php:47
+#: lib/submenu/rar-general.php:50
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
 msgstr "Activer par défaut pour types d'articles"
 
-#: lib/submenu/rar-general.php:51
+#: lib/submenu/rar-general.php:54
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
 
-#: lib/submenu/rar-general.php:55
+#: lib/submenu/rar-general.php:58
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr "Couleur d'étoile sélectionné"
 
-#: lib/submenu/rar-general.php:59
+#: lib/submenu/rar-general.php:62
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr "Couleur d'étoile non sélectionné"
 
-#: wpsso-ratings-and-reviews.php:94
+#: wpsso-ratings-and-reviews.php:99
 msgid "%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est un ajout pour l'extension %2$s &mdash; SVP installer et activer l'extension %3$s avant d'activer %4$s."
 
-#: wpsso-ratings-and-reviews.php:96
+#: wpsso-ratings-and-reviews.php:101
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
 
-#: wpsso-ratings-and-reviews.php:174
+#: wpsso-ratings-and-reviews.php:185
 msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
 msgstr "Une fonctionnalité de notation des produits a été trouvée &mdash; %1$s a été désactivé pour le type d'article personnalisé \"produit\"."
 
-#: wpsso-ratings-and-reviews.php:209
+#: wpsso-ratings-and-reviews.php:220
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
-
-#. translators: %s is the short plugin name
-#: wpsso-ratings-and-reviews.php:221
-msgid "%s warning:"
-msgstr "Alerte %s:"
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Ratings and Reviews"
