@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings (Compatible with WooCommerce) ===
+=== WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings - Supports WooCommerce ===
 Plugin Name: WPSSO Ratings and Reviews
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
