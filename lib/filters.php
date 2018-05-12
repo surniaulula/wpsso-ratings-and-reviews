@@ -62,10 +62,9 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				return $mt_og;
 			}
 
-			$lca = $this->p->cf['lca'];
 			$og_type = $mt_og['og:type'];
 
-			if ( apply_filters( $lca.'_og_add_mt_rating', true, $mod ) ) {	// enabled by default
+			if ( apply_filters( $this->p->lca.'_og_add_mt_rating', true, $mod ) ) {	// enabled by default
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'add rating meta tags is true' );
@@ -97,7 +96,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
-			if ( apply_filters( $lca.'_og_add_mt_reviews', false, $mod ) ) {	// disabled by default
+			if ( apply_filters( $this->p->lca.'_og_add_mt_reviews', false, $mod ) ) {	// disabled by default
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
