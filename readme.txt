@@ -22,7 +22,7 @@ WPSSO Core add-on to provide ratings and reviews for WordPress comments with Agg
 
 **Extends the WordPress comment system with ratings and reviews:**
 
-* Star ratings can be enabled / disabled by post type and/or individual posts.
+* Star ratings can be enabled/disabled by post type or individual post.
 * A rating value can be required (or not) before reviews are accepted.
 * The review form is correctly labeled as a "Review".
 * The review reply form is correctly labeled as a "Reply".

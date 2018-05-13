@@ -18,7 +18,7 @@
 <p><strong>Extends the WordPress comment system with ratings and reviews:</strong></p>
 
 <ul>
-<li>Star ratings can be enabled / disabled by post type and/or individual posts.</li>
+<li>Star ratings can be enabled/disabled by post type or individual post.</li>
 <li>A rating value can be required (or not) before reviews are accepted.</li>
 <li>The review form is correctly labeled as a "Review".</li>
 <li>The review reply form is correctly labeled as a "Reply".</li>
