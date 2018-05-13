@@ -18,11 +18,11 @@
 <p><strong>Extends the WordPress comment system with ratings and reviews:</strong></p>
 
 <ul>
-<li>Star ratings can be enabled/disabled by post type or individual post.</li>
-<li>A rating value can be required (or not) before reviews are accepted.</li>
-<li>The review form is correctly labeled as a "Review".</li>
-<li>The review reply form is correctly labeled as a "Reply".</li>
-<li>The color of star ratings can be customized from the settings page.</li>
+<li><p>Star ratings can be enabled/disabled by post type or individual post.</p></li>
+<li><p>A rating value can be required (or not) before reviews are accepted.</p></li>
+<li><p>The review form is correctly labeled as a "Review".</p></li>
+<li><p>The review reply form is correctly labeled as a "Reply".</p></li>
+<li><p>The color of star ratings can be customized from the settings page.</p></li>
 </ul>
 
 <p><strong>Does not conflict with WooCommerce ratings and reviews:</strong></p>
@@ -38,8 +38,6 @@
 <p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro add-on</a> required for JSON-LD markup).</p>
 
 <div style="clear:both"></div>
-
-<!-- clear fyi container before the first h3 -->
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 

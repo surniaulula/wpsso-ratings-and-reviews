@@ -23,9 +23,13 @@ WPSSO Core add-on to provide ratings and reviews for WordPress comments with Agg
 **Extends the WordPress comment system with ratings and reviews:**
 
 * Star ratings can be enabled/disabled by post type or individual post.
+
 * A rating value can be required (or not) before reviews are accepted.
+
 * The review form is correctly labeled as a "Review".
+
 * The review reply form is correctly labeled as a "Reply".
+
 * The color of star ratings can be customized from the settings page.
 
 **Does not conflict with WooCommerce ratings and reviews:**
@@ -40,7 +44,7 @@ Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) 
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review ([WPSSO JSON Pro add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required for JSON-LD markup).
 
-<div style="clear:both"></div><!-- clear fyi container before the first h3 -->
+<div style="clear:both"></div>
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
