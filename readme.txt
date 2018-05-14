@@ -20,17 +20,17 @@ WPSSO Core add-on to provide ratings and reviews for WordPress comments with Agg
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png">
 
-**Extends the WordPress comment system with ratings and reviews:**
+**Extend the WordPress comment system with ratings and reviews:**
 
-* Star ratings can be enabled/disabled by post type or individual post.
+Star ratings can be enabled/disabled by post type or individual post.
 
-* A rating value can be required (or not) before reviews are accepted.
+A rating value can be required (or not) before reviews are accepted.
 
-* The review form is correctly labeled as a "Review".
+The review form is correctly labeled as a "Review".
 
-* The review reply form is correctly labeled as a "Reply".
+The review reply form is correctly labeled as a "Reply".
 
-* The color of star ratings can be customized from the settings page.
+The color of star ratings can be customized from the settings page.
 
 **Does not conflict with WooCommerce ratings and reviews:**
 
