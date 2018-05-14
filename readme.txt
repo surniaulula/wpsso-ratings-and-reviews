@@ -44,8 +44,6 @@ Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) 
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review ([WPSSO JSON Pro add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required for JSON-LD markup).
 
-<div style="clear:both"></div>
-
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
 WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the WPSSO Core plugin.
@@ -104,33 +102,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
-
-**Version 1.3.3 (2018/03/24)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
-**Version 1.3.2 (2018/03/05)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Improved parsing for the comment label in the 'comment_field' value.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Added `jQuery( document ).ready()` to the plugin jQuery scripts to delay their execution until the HTML document is fully loaded.
+	* Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
 
 == Upgrade Notice ==
 
 = 1.3.4 =
 
-(2018/04/05) Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
+(2018/04/05) Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
 
