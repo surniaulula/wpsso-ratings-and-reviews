@@ -41,7 +41,7 @@
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-<p>WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the WPSSO Core plugin. The Free add-on works with either the Free or Pro versions of WPSSO Core.</p>
+<p>WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the WPSSO Core plugin.</p>
 
 
 <h2>Installation</h2>
