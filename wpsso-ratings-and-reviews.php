@@ -185,7 +185,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 							$this->p->notice->warn( sprintf( __( 'An existing products rating feature has been found &mdash; %1$s for the "product" custom post type has been disabled.', 'wpsso-ratings-and-reviews' ), $this->p->cf['plugin']['wpssorar']['short'] ) );
 						}
 						$this->p->options['rar_add_to_product'] = 0;
-						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, false );
+						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, false );	// $network is false.
 					}
 					$this->p->options['rar_add_to_product:is'] = 'disabled';
 				}
