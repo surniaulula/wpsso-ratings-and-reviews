@@ -44,6 +44,10 @@ Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) 
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review ([WPSSO JSON Pro add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) required for JSON-LD markup).
 
+<h3>No templates to modify or update!<h3>
+
+Simply activate / deactivate the plugin to enable / disable the addition of ratings and reviews.
+
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
 WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the WPSSO Core plugin.
