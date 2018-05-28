@@ -37,13 +37,7 @@
 
 <p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Pro add-on</a> required for JSON-LD markup).</p>
 
-<p>&lt;</p>
-
-<p>h3>No templates to modify or update!</p>
-
-<p>&lt;</p>
-
-<p>h3></p>
+<h3>No templates to modify or update!</h3>
 
 <p>Simply activate / deactivate the plugin to enable / disable the addition of ratings and reviews.</p>
 
