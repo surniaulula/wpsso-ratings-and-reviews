@@ -75,9 +75,11 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 		}
 
 		public static function &get_instance() {
+
 			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self;
 			}
+
 			return self::$instance;
 		}
 
