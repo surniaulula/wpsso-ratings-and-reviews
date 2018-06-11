@@ -18,7 +18,7 @@ WPSSO Core add-on to provide ratings and reviews for WordPress comments with Agg
 
 == Description ==
 
-<img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png">
+<p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
 **Extend the WordPress comment system with ratings and reviews:**
 
