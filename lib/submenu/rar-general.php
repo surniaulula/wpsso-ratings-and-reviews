@@ -30,7 +30,7 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 		protected function add_meta_boxes() {
 			add_meta_box( $this->pagehook.'_general',
 				_x( 'Ratings and Reviews', 'metabox title', 'wpsso-ratings-and-reviews' ), 
-					array( &$this, 'show_metabox_general' ), $this->pagehook, 'normal' );
+					array( $this, 'show_metabox_general' ), $this->pagehook, 'normal' );
 		}
 
 		public function show_metabox_general() {
