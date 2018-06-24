@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 		public static function set_constants( $plugin_filepath ) { 
 
-			if ( defined( 'WPSSORAR_VERSION' ) ) {			// execute and define constants only once
+			if ( defined( 'WPSSORAR_VERSION' ) ) {	// Define constants only once.
 				return;
 			}
 
