@@ -90,12 +90,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return $defaults;
 			}
 
-			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
-			$is_req_span = ' <span class="required">*</span>';
+			$is_reply       = empty( $_GET['replytocom'] ) ? false : true;
+			$is_req_span    = ' <span class="required">*</span>';
 			$rev_span_begin = "\n" . '<span class="comment-toggle-review"' . ( $is_reply ? ' style="display:none;"' : '' ) . '>';
-			$rev_span_end = '</span><!-- .comment-toggle-review -->';
+			$rev_span_end   = '</span><!-- .comment-toggle-review -->';
 			$cmt_span_begin = "\n" . '<span class="comment-toggle-comment"' . ( $is_reply ? '' : ' style="display:none;"' ) . '>';
-			$cmt_span_end = '</span><!-- .comment-toggle-comment -->';
+			$cmt_span_end   = '</span><!-- .comment-toggle-comment -->';
 
 			/**
 			 * Title
@@ -149,10 +149,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		public static function get_form_rating_field( $label_attr = '' ) {
 
-			$wpsso = Wpsso::get_instance();
+			$wpsso       = Wpsso::get_instance();
 			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
 			$is_req_span = $is_required ? ' <span class="required">*</span>' : '';
-			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
+			$is_reply    = empty( $_GET['replytocom'] ) ? false : true;
 
 			// auto-hide the paragraph for replies
 			$select = "\n" . '<p class="comment-form-rating"' . ( $is_reply ? ' style="display:none;">' : '>' ) . "\n";
@@ -205,7 +205,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return $comment_text;
 			}
 			
-			$comment_id = get_comment_ID();
+			$comment_id  = get_comment_ID();
 			$comment_obj = get_comment( $comment_id );
 
 			if ( empty( $comment_obj->comment_post_ID ) ) {
@@ -347,4 +347,3 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 	}
 }
-

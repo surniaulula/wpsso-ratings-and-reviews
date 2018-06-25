@@ -35,16 +35,20 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		}
 
 		public function filter_get_defaults( $def_opts ) {
+
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
 				'rar_add_to' => 0,
 			) );
+
 			return $def_opts;
 		}
 
-		// use 'og' filter instead of the 'og_seed' filter to get the og:type meta tag value
+		/**
+		 * Use the 'og' filter instead of 'og_seed' to get the og:type meta tag value.
+		 */
 		public function filter_og( array $mt_og, array $mod ) {
 
 			if ( $this->p->debug->enabled ) {
@@ -71,36 +75,46 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				}
 
 				$average_rating = WpssoRarComment::get_average_rating( $mod['id'] );
-				$rating_count = WpssoRarComment::get_rating_count( $mod['id'] );
-				$review_count = WpssoRarComment::get_review_count( $mod['id'] );
+				$rating_count   = WpssoRarComment::get_rating_count( $mod['id'] );
+				$review_count   = WpssoRarComment::get_review_count( $mod['id'] );
 	
 				if ( empty( $average_rating ) ) {
+
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'post id '.$mod['id'].' average rating is empty' );
 					}
+
 				} elseif ( empty( $rating_count ) && empty( $review_count ) ) {
+
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'post id '.$mod['id'].' rating and review counts empty' );
 					}
+
 				} else {
+
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'adding average rating meta tags for post id '.$mod['id'] );
 					}
+
 					$mt_og[$og_type.':rating:average'] = number_format( (float) $average_rating, 2, '.', '' );
-					$mt_og[$og_type.':rating:count'] = $rating_count;
-					$mt_og[$og_type.':rating:worst'] = 1;
-					$mt_og[$og_type.':rating:best'] = 5;
-					$mt_og[$og_type.':review:count'] = $review_count;
+					$mt_og[$og_type.':rating:count']   = $rating_count;
+					$mt_og[$og_type.':rating:worst']   = 1;
+					$mt_og[$og_type.':rating:best']    = 5;
+					$mt_og[$og_type.':review:count']   = $review_count;
 				}
+
 			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
 			if ( apply_filters( $this->p->lca.'_og_add_mt_reviews', false, $mod ) ) {	// disabled by default
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
+
 				$mt_og[$og_type.':reviews'] = $mod['obj']->get_og_type_reviews( $mod['id'], $og_type, 'rating' );
+
 			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'add review meta tags is false' );
 			}
@@ -109,26 +123,41 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		}
 
 		public function filter_messages_tooltip( $text, $idx ) {
-			if ( strpos( $idx, 'tooltip-rar_' ) !== 0 )
+
+			if ( strpos( $idx, 'tooltip-rar_' ) !== 0 ) {
 				return $text;
+			}
 
 			switch ( $idx ) {
+
 				case 'tooltip-rar_add_to':
+
 					$text = __( 'You can choose to enable or disable ratings by default for each public post type.', 'wpsso-ratings-and-reviews' ).' ';
+
 					$text .= sprintf( __( 'When editing a post (page, or custom post type), an "%1$s" option is also available to enable or disable ratings for that specific webpage.', 'wpsso-ratings-and-reviews' ), __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' ) );
+
 					break;
+
 				case 'tooltip-rar_rating_required':
+
 					$text = __( 'Force a reviewer to select a rating before submitting their review (enabled by default).', 'wpsso-ratings-and-reviews' );
+
 					break;
+
 				case 'tooltip-rar_star_color_selected':
+
 					$text = __( 'A color for selected stars representing the rating.', 'wpsso-ratings-and-reviews' );
+
 					break;
+
 				case 'tooltip-rar_star_color_default':
+
 					$text = __( 'A default color for unselected stars.', 'wpsso-ratings-and-reviews' );
+
 					break;
 			}
+
 			return $text;
 		}
 	}
 }
-
