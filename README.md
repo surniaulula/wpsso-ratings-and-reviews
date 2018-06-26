@@ -15,7 +15,7 @@
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
-<p><strong>Extend the WordPress comment system with ratings and reviews:</strong></p>
+<p><strong>Extends the WordPress comment system with ratings and reviews:</strong></p>
 
 <ul>
 <li><p>Star ratings can be enabled/disabled by post type or individual post.</p></li>

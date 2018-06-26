@@ -20,7 +20,7 @@ WPSSO Core add-on to provide ratings and reviews for WordPress comments with Agg
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
-**Extend the WordPress comment system with ratings and reviews:**
+**Extends the WordPress comment system with ratings and reviews:**
 
 * Star ratings can be enabled/disabled by post type or individual post.
 
