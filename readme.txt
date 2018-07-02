@@ -65,9 +65,7 @@ WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core Plugi
 
 * None
 
-== Other Notes ==
-
-<h3 class="top">Additional Documentation</h3>
+<h3>Documentation and Notes</h3>
 
 * [Developer Resources](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/)
 	* [Get Average Rating](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/get-average-rating/)
