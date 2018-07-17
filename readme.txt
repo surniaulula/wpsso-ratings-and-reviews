@@ -63,7 +63,7 @@ WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core Plugi
 
 <h3 class="top">Frequently Asked Questions</h3>
 
-* None
+* None.
 
 <h3>Documentation and Notes</h3>
 
@@ -97,11 +97,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 1.3.4 (2018/04/05)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
-	* None
+	* None.
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
 	* Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
 
