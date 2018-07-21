@@ -16,24 +16,24 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version' => '1.3.4',		// Plugin version.
+					'version'     => '1.4.0-rc.1',	// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
-					'short' => 'WPSSO RAR',		// Short plugin name.
-					'name' => 'WPSSO Ratings and Reviews',
-					'desc' => 'WPSSO Core add-on to provide ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.',
-					'slug' => 'wpsso-ratings-and-reviews',
-					'base' => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
+					'short'       => 'WPSSO RAR',	// Short plugin name.
+					'name'        => 'WPSSO Ratings and Reviews',
+					'desc'        => 'WPSSO Core add-on to provide ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.',
+					'slug'        => 'wpsso-ratings-and-reviews',
+					'base'        => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
 					'update_auth' => '',
 					'text_domain' => 'wpsso-ratings-and-reviews',
 					'domain_path' => '/languages',
 					'req' => array(
-						'short' => 'WPSSO Core',
-						'name' => 'WPSSO Core',
-						'min_version' => '4.7.0',
+						'short'       => 'WPSSO Core',
+						'name'        => 'WPSSO Core',
+						'min_version' => '4.9.0-rc.1',
 					),
 					'img' => array(
 						'icons' => array(
-							'low' => 'images/icon-128x128.png',
+							'low'  => 'images/icon-128x128.png',
 							'high' => 'images/icon-256x256.png',
 						),
 					),
@@ -50,15 +50,15 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			),
 			'opt' => array(						// options
 				'defaults' => array(
-					'rar_add_to_attachment' => 0,
-					'rar_add_to_page' => 1,
-					'rar_add_to_post' => 0,
-					'rar_add_to_product' => 1,
-					'rar_rating_required' => 1,
-					'rar_star_color_selected' => '#222222',
-					'rar_star_color_default' => '#dddddd',
+					'rar_add_to_attachment'       => 0,
+					'rar_add_to_page'             => 1,
+					'rar_add_to_post'             => 0,
+					'rar_add_to_product'          => 1,
+					'rar_rating_required'         => 1,
+					'rar_star_color_selected'     => '#222222',
+					'rar_star_color_default'      => '#dddddd',
 					'plugin_avg_rating_col_media' => 0,
-					'plugin_avg_rating_col_post' => 1,
+					'plugin_avg_rating_col_post'  => 1,
 				),
 			),
 		);
