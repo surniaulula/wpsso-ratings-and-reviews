@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.3.4\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2018-05-21 07:22-0600\n"
-"PO-Revision-Date: 2018-05-21 07:22-0600\n"
+"POT-Creation-Date: 2018-07-21 08:49-0400\n"
+"PO-Revision-Date: 2018-07-21 08:49-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.8.6\n"
 
-#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:118
+#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:137
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -81,23 +81,23 @@ msgctxt "plugin description"
 msgid "WPSSO Core add-on to provide ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
-#: lib/filters.php:117
+#: lib/filters.php:135
 msgid "You can choose to enable or disable ratings by default for each public post type."
 msgstr "Du kannst festlegen für welche Inhalstypen Bewertungen und Rezensionen standardmäßig aktiviert oder deaktiviert werden."
 
-#: lib/filters.php:118
+#: lib/filters.php:137
 msgid "When editing a post (page, or custom post type), an \"%1$s\" option is also available to enable or disable ratings for that specific webpage."
 msgstr "Beim Bearbeiten eines Beitrags (Seite oder benutzerdefinierter Typ) ist eine Option \"%1$s\" verfügbar, um Bewertungen für die jeweilige Webseite zu aktivieren oder zu deaktivieren."
 
-#: lib/filters.php:121
+#: lib/filters.php:143
 msgid "Force a reviewer to select a rating before submitting their review (enabled by default)."
 msgstr "Erzwinge, dass vor dem Abschicken einer Rezension eine Bewertung auswählt werden muss (standardmäßig aktiviert)."
 
-#: lib/filters.php:124
+#: lib/filters.php:149
 msgid "A color for selected stars representing the rating."
 msgstr "Eine Farbe für ausgewählte Sterne, die die Bewertung darstellen."
 
-#: lib/filters.php:127
+#: lib/filters.php:155
 msgid "A default color for unselected stars."
 msgstr "Eine Farbe für nicht ausgewählte Sterne, die die Bewertung darstellen."
 
@@ -134,19 +134,19 @@ msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr "Sternen-Bewertung Farbe (nicht markiert)"
 
-#: wpsso-ratings-and-reviews.php:99
+#: wpsso-ratings-and-reviews.php:101
 msgid "%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:101
+#: wpsso-ratings-and-reviews.php:103
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:185
+#: wpsso-ratings-and-reviews.php:187
 msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
 msgstr "Eine bereits existierende Produkt Bewertungsfunktion wurde gefunden &mdash; %1$s wurde für den \"product\" Post Typ deaktiviert."
 
-#: wpsso-ratings-and-reviews.php:220
+#: wpsso-ratings-and-reviews.php:222
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr ""
 
