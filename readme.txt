@@ -12,7 +12,7 @@ Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.7
 WC Tested Up To: 3.4.3
-Stable Tag: 1.3.4
+Stable Tag: 1.4.0
 
 WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
@@ -105,24 +105,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* None.
 
-**Version 1.3.4 (2018/04/05)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
-
 == Upgrade Notice ==
 
 = 1.4.0 =
 
 (2018/07/22) Maintenance release.
-
-= 1.3.4 =
-
-(2018/04/05) Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
 
