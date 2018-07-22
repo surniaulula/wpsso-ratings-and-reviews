@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
 "POT-Creation-Date: 2018-07-21 08:49-0400\n"
-"PO-Revision-Date: 2018-07-21 08:49-0400\n"
+"PO-Revision-Date: 2018-07-22 08:52-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -81,7 +81,7 @@ msgstr "Notes / critiques"
 #: lib/config-gettext-extract.php:4
 msgctxt "plugin description"
 msgid "WPSSO Core add-on to provide ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr "Extension d'ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
+msgstr "Extension d'ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage Schéma Review."
 
 #: lib/filters.php:135
 msgid "You can choose to enable or disable ratings by default for each public post type."
@@ -162,7 +162,7 @@ msgstr "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 
 #. Description of the plugin/theme
 msgid "WPSSO Core add-on to provide ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr "Extension d'ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
+msgstr "Extension d'ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage Schéma Review."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
