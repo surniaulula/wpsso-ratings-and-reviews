@@ -24,7 +24,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
-				'og' => 2,
+				'og'           => 2,
 			) );
 
 			if ( is_admin() ) {
