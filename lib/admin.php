@@ -36,14 +36,14 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		public function filter_get_sortable_columns( $columns ) {
 			return array_merge( array( 
 				'avg_rating' => array(
-					'header' => 'Rating',
-					'meta_key' => WPSSORAR_META_AVERAGE_RATING,
+					'header'         => 'Rating',
+					'meta_key'       => WPSSORAR_META_AVERAGE_RATING,
 					'post_callbacks' => array(	// An array of callback functions / methods.
 						$this->allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ), // The only argument is a post id.
 					),
 					'orderby' => 'meta_value',
-					'width' => '80px',
-					'height' => 'auto',
+					'width'   => '80px',
+					'height'  => 'auto',
 				)
 			), $columns );
 		}
