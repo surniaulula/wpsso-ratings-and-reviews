@@ -26,6 +26,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 		}
 
 		public static function enqueue_styles() {
+
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
 				return;
 			}
@@ -35,6 +36,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 					array(), WpssoRarConfig::get_version() );
 
 			$wpsso = Wpsso::get_instance();
+
 			$sel_color = $wpsso->options['rar_star_color_selected'];
 			$def_color = $wpsso->options['rar_star_color_default'];
 
@@ -63,4 +65,3 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 		}
 	}
 }
-

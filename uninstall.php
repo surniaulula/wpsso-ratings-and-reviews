@@ -15,5 +15,5 @@ $plugin_filepath = $plugin_dir . 'wpsso-ratings-and-reviews.php';
 require_once $plugin_dir . 'lib/config.php';
 
 WpssoRarConfig::set_constants( $plugin_filepath );
-WpssoRarConfig::require_libs( $plugin_filepath );	// includes the register.php class library
+WpssoRarConfig::require_libs( $plugin_filepath );	// Includes the register.php class library.
 WpssoRarRegister::network_uninstall();
