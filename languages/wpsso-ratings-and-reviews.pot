@@ -13,61 +13,61 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:137
+#: lib/admin.php:70 lib/admin.php:108 lib/filters.php:138
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:105
+#: lib/comment.php:106
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""
 
-#: lib/comment.php:127
+#: lib/comment.php:128
 msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:143
+#: lib/comment.php:144
 msgctxt "form label"
 msgid "Post Review"
 msgstr ""
 
-#: lib/comment.php:162
+#: lib/comment.php:163
 msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:164
+#: lib/comment.php:165
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:165
+#: lib/comment.php:166
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:166
+#: lib/comment.php:167
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:167
+#: lib/comment.php:168
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:168
+#: lib/comment.php:169
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:169
+#: lib/comment.php:170
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:237 lib/comment.php:239
+#: lib/comment.php:238 lib/comment.php:240
 msgid "Rated %d out of 5"
 msgstr ""
 
@@ -83,61 +83,61 @@ msgid ""
 "with Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
-#: lib/filters.php:135
+#: lib/filters.php:136
 msgid ""
 "You can choose to enable or disable ratings by default for each public post "
 "type."
 msgstr ""
 
-#: lib/filters.php:137
+#: lib/filters.php:138
 msgid ""
 "When editing a post (page, or custom post type), an \"%1$s\" option is also "
 "available to enable or disable ratings for that specific webpage."
 msgstr ""
 
-#: lib/filters.php:143
+#: lib/filters.php:144
 msgid ""
 "Force a reviewer to select a rating before submitting their review (enabled "
 "by default)."
 msgstr ""
 
-#: lib/filters.php:149
+#: lib/filters.php:150
 msgid "A color for selected stars representing the rating."
 msgstr ""
 
-#: lib/filters.php:155
+#: lib/filters.php:156
 msgid "A default color for unselected stars."
 msgstr ""
 
-#: lib/script.php:70
+#: lib/script.php:71
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/script.php:71
+#: lib/script.php:72
 msgid "Please write a review before submitting."
 msgstr ""
 
-#: lib/submenu/rar-general.php:32
+#: lib/submenu/rar-general.php:33
 msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr ""
 
-#: lib/submenu/rar-general.php:50
+#: lib/submenu/rar-general.php:51
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
 msgstr ""
 
-#: lib/submenu/rar-general.php:54
+#: lib/submenu/rar-general.php:55
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr ""
 
-#: lib/submenu/rar-general.php:58
+#: lib/submenu/rar-general.php:59
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:62
+#: lib/submenu/rar-general.php:63
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr ""

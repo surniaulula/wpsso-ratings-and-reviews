@@ -18,6 +18,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		protected static $rating_cache = array();
 
 		public function __construct( &$plugin ) {
+
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {

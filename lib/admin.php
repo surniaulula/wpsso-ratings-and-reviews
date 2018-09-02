@@ -17,6 +17,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		protected $allow_ratings_opt_key = 'rar_allow_ratings';
 
 		public function __construct( &$plugin ) {
+
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
