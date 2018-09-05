@@ -96,6 +96,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 			$opts = get_option( WPSSO_OPTIONS_NAME, array() );
 
 			if ( empty( $opts['plugin_preserve'] ) ) {
+
 				delete_post_meta_by_key( WPSSORAR_META_ALLOW_RATINGS );
 			}
 
