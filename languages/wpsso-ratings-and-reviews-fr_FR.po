@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 1.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2018-07-21 08:49-0400\n"
-"PO-Revision-Date: 2018-07-22 08:52-0400\n"
+"POT-Creation-Date: 2018-09-07 08:41-0600\n"
+"PO-Revision-Date: 2018-09-07 08:41-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,61 +15,61 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/admin.php:69 lib/admin.php:107 lib/filters.php:137
+#: lib/admin.php:70 lib/admin.php:108 lib/filters.php:138
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
-#: lib/comment.php:105
+#: lib/comment.php:106
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr "Laisser une critique"
 
-#: lib/comment.php:127
+#: lib/comment.php:128
 msgctxt "form label"
 msgid "Your Review"
 msgstr "Votre critique"
 
-#: lib/comment.php:143
+#: lib/comment.php:144
 msgctxt "form label"
 msgid "Post Review"
 msgstr "Publier la critique"
 
-#: lib/comment.php:162
+#: lib/comment.php:163
 msgctxt "form label"
 msgid "Your Rating"
 msgstr "Votre note"
 
-#: lib/comment.php:164
+#: lib/comment.php:165
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr "Note&hellip;"
 
-#: lib/comment.php:165
+#: lib/comment.php:166
 msgctxt "option value"
 msgid "Excellent"
 msgstr "Excellent"
 
-#: lib/comment.php:166
+#: lib/comment.php:167
 msgctxt "option value"
 msgid "Good"
 msgstr "Bon"
 
-#: lib/comment.php:167
+#: lib/comment.php:168
 msgctxt "option value"
 msgid "Average"
 msgstr "Moyen"
 
-#: lib/comment.php:168
+#: lib/comment.php:169
 msgctxt "option value"
 msgid "Not Good"
 msgstr "Pas bon"
 
-#: lib/comment.php:169
+#: lib/comment.php:170
 msgctxt "option value"
 msgid "Awful"
 msgstr "Terrible"
 
-#: lib/comment.php:237 lib/comment.php:239
+#: lib/comment.php:238 lib/comment.php:240
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
@@ -83,55 +83,55 @@ msgctxt "plugin description"
 msgid "WPSSO Core add-on to provide ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
 msgstr "Extension d'ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage Schéma Review."
 
-#: lib/filters.php:135
+#: lib/filters.php:136
 msgid "You can choose to enable or disable ratings by default for each public post type."
 msgstr "Vous pouvez choisir d'activer ou désactiver par défaut les notes pour chaque type d'article public."
 
-#: lib/filters.php:137
+#: lib/filters.php:138
 msgid "When editing a post (page, or custom post type), an \"%1$s\" option is also available to enable or disable ratings for that specific webpage."
 msgstr "Lorsque vous modifiez un article (page, ou type d'article personnalisé), une option \"%1$s\" est aussi disponible pour activer ou désactiver les notes pour cette page Web."
 
-#: lib/filters.php:143
+#: lib/filters.php:144
 msgid "Force a reviewer to select a rating before submitting their review (enabled by default)."
 msgstr "Obliger le critique à sélectionner une note avant de soumettre leur texte (activé par défaut)."
 
-#: lib/filters.php:149
+#: lib/filters.php:150
 msgid "A color for selected stars representing the rating."
 msgstr "Une couleur pour les étoiles sélectionnées représentant la note."
 
-#: lib/filters.php:155
+#: lib/filters.php:156
 msgid "A default color for unselected stars."
 msgstr "Une couleur par défaut pour les étoiles non sélectionnées."
 
-#: lib/script.php:70
+#: lib/script.php:71
 msgid "Please select a rating before submitting."
 msgstr "Veuillez sélectionner une note avant de soumettre."
 
-#: lib/script.php:71
+#: lib/script.php:72
 msgid "Please write a review before submitting."
 msgstr "Veuillez écrire une critique avant de soumettre."
 
-#: lib/submenu/rar-general.php:32
+#: lib/submenu/rar-general.php:33
 msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr "Notes et critiques"
 
-#: lib/submenu/rar-general.php:50
+#: lib/submenu/rar-general.php:51
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
 msgstr "Activer par défaut pour types d'articles"
 
-#: lib/submenu/rar-general.php:54
+#: lib/submenu/rar-general.php:55
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
 
-#: lib/submenu/rar-general.php:58
+#: lib/submenu/rar-general.php:59
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr "Couleur d'étoile sélectionné"
 
-#: lib/submenu/rar-general.php:62
+#: lib/submenu/rar-general.php:63
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr "Couleur d'étoile non sélectionné"
