@@ -88,21 +88,20 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 		}
 
 		private function deactivate_plugin() {
-			// nothing to do
 		}
 
 		private static function uninstall_plugin() {
 
 			$opts = get_option( WPSSO_OPTIONS_NAME, array() );
 
-			if ( empty( $opts['plugin_preserve'] ) ) {
+			if ( ! empty( $opts['plugin_clean_on_uninstall'] ) ) {
 
 				delete_post_meta_by_key( WPSSORAR_META_ALLOW_RATINGS );
 			}
 
-			delete_post_meta_by_key( WPSSORAR_META_AVERAGE_RATING );	// re-created automatically
-			delete_post_meta_by_key( WPSSORAR_META_RATING_COUNTS );		// re-created automatically
-			delete_post_meta_by_key( WPSSORAR_META_REVIEW_COUNT );		// re-created automatically
+			delete_post_meta_by_key( WPSSORAR_META_AVERAGE_RATING );	// Re-created automatically.
+			delete_post_meta_by_key( WPSSORAR_META_RATING_COUNTS );		// Re-created automatically.
+			delete_post_meta_by_key( WPSSORAR_META_REVIEW_COUNT );		// Re-created automatically.
 		}
 	}
 }
