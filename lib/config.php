@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.14.1',
+						'min_version' => '4.15.0',
 					),
 					'img' => array(
 						'icons' => array(
@@ -64,9 +64,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		);
 
 		public static function get_version( $add_slug = false ) {
-			$ext = 'wpssorar';
+
+			$ext  = 'wpssorar';
 			$info =& self::$cf['plugin'][$ext];
-			return $add_slug ? $info['slug'].'-'.$info['version'] : $info['version'];
+
+			return $add_slug ? $info['slug'] . '-' . $info['version'] : $info['version'];
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
@@ -119,31 +121,37 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once WPSSORAR_PLUGINDIR.'lib/comment.php';
-			require_once WPSSORAR_PLUGINDIR.'lib/filters.php';
-			require_once WPSSORAR_PLUGINDIR.'lib/register.php';
-			require_once WPSSORAR_PLUGINDIR.'lib/script.php';
-			require_once WPSSORAR_PLUGINDIR.'lib/style.php';
+			require_once WPSSORAR_PLUGINDIR . 'lib/comment.php';
+			require_once WPSSORAR_PLUGINDIR . 'lib/filters.php';
+			require_once WPSSORAR_PLUGINDIR . 'lib/register.php';
+			require_once WPSSORAR_PLUGINDIR . 'lib/script.php';
+			require_once WPSSORAR_PLUGINDIR . 'lib/style.php';
 
 			if ( is_admin() ) {
-				require_once WPSSORAR_PLUGINDIR.'lib/admin.php';
+				require_once WPSSORAR_PLUGINDIR . 'lib/admin.php';
 			}
 
 			add_filter( 'wpssorar_load_lib', array( 'WpssoRarConfig', 'load_lib' ), 10, 3 );
 		}
 
 		public static function load_lib( $ret = false, $filespec = '', $classname = '' ) {
+
 			if ( false === $ret && ! empty( $filespec ) ) {
-				$filepath = WPSSORAR_PLUGINDIR.'lib/'.$filespec.'.php';
+
+				$filepath = WPSSORAR_PLUGINDIR . 'lib/' . $filespec . '.php';
+
 				if ( file_exists( $filepath ) ) {
+
 					require_once $filepath;
+
 					if ( empty( $classname ) ) {
-						return SucomUtil::sanitize_classname( 'wpssorar'.$filespec, false );	// $underscore = false
+						return SucomUtil::sanitize_classname( 'wpssorar' . $filespec, $allow_underscore = false );
 					} else {
 						return $classname;
 					}
 				}
 			}
+
 			return $ret;
 		}
 	}
