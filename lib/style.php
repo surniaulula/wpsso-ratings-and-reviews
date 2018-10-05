@@ -32,25 +32,27 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 				return;
 			}
 
-			wp_enqueue_style( 'wpsso-rar-style', 
-				WPSSORAR_URLPATH . 'css/style.min.css', 
-					array(), WpssoRarConfig::get_version() );
-
 			$wpsso = Wpsso::get_instance();
 
 			$sel_color = $wpsso->options['rar_star_color_selected'];
 			$def_color = $wpsso->options['rar_star_color_default'];
 
+			$plugin_version = WpssoRarConfig::get_version();
+
+			wp_enqueue_style( 'wpsso-rar-style', 
+				WPSSORAR_URLPATH . 'css/style.min.css', 
+					array(), $plugin_version );
+
 			$custom_style_css = '
 				@font-face {
-					font-family:"Star";
+					font-family:"WpssoStar";
 					font-weight:normal;
 					font-style:normal;
-					src: url("' . WPSSO_URLPATH . 'fonts/star.eot");
-					src: url("' . WPSSO_URLPATH . 'fonts/star.eot?#iefix") format("embedded-opentype"),
-						url("' . WPSSO_URLPATH . 'fonts/star.woff") format("woff"),
-						url("' . WPSSO_URLPATH . 'fonts/star.ttf") format("truetype"),
-						url("' . WPSSO_URLPATH . 'fonts/star.svg#star") format("svg");
+					src: url("' . WPSSO_URLPATH . 'fonts/star.eot?' . $plugin_version . '");
+					src: url("' . WPSSO_URLPATH . 'fonts/star.eot?' . $plugin_version . '#iefix") format("embedded-opentype"),
+						url("' . WPSSO_URLPATH . 'fonts/star.woff?' . $plugin_version . '") format("woff"),
+						url("' . WPSSO_URLPATH . 'fonts/star.ttf?' . $plugin_version . '") format("truetype"),
+						url("' . WPSSO_URLPATH . 'fonts/star.svg?' . $plugin_version . '#star") format("svg");
 				}
 				.wpsso-rar .star-rating::before { color:' . $def_color . '; }
 				.wpsso-rar .star-rating span::before { color:' . $sel_color . '; }
