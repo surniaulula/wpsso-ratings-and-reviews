@@ -176,27 +176,36 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				return;	// stop here
 			}
 
-			// disable reviews on products if competing feature exists
+			/**
+			 * Disable reviews on products if competing feature exists.
+			 */
 			if ( $this->p->avail['ecom']['woocommerce'] ) {
+
 				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' || ! empty( $this->p->avail['ecom']['yotpowc'] ) ) {
+
 					if ( ! empty( $this->p->options['rar_add_to_product'] ) ) {
+
 						if ( $this->p->debug->enabled ) {
 							$this->p->debug->log( 'ratings feature for products found - ratings for the product post type disabled' );
 						}
+
 						if ( is_admin() ) {
 							$this->p->notice->warn( sprintf( __( 'An existing products rating feature has been found &mdash; %1$s for the "product" custom post type has been disabled.', 'wpsso-ratings-and-reviews' ), $this->p->cf['plugin']['wpssorar']['short'] ) );
 						}
+
 						$this->p->options['rar_add_to_product'] = 0;
-						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, false );	// $network is false.
+
+						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, $network = false );
 					}
+
 					$this->p->options['rar_add_to_product:is'] = 'disabled';
 				}
 			}
 
 			$this->comment = new WpssoRarComment( $this->p );
 			$this->filters = new WpssoRarFilters( $this->p );
-			$this->script = new WpssoRarScript( $this->p );
-			$this->style = new WpssoRarStyle( $this->p );
+			$this->script  = new WpssoRarScript( $this->p );
+			$this->style   = new WpssoRarStyle( $this->p );
 
 			if ( is_admin() ) {
 				$this->admin = new WpssoRarAdmin( $this->p );
