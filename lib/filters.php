@@ -133,7 +133,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 				case 'tooltip-rar_add_to':
 
-					$text = __( 'You can choose to enable or disable ratings by default for each public post type.', 'wpsso-ratings-and-reviews' ).' ';
+					$text = __( 'You can choose to enable or disable ratings by default for each public post type.', 'wpsso-ratings-and-reviews' ) . ' ';
 
 					$text .= sprintf( __( 'When editing a post (page, or custom post type), an "%1$s" option is also available to enable or disable ratings for that specific webpage.', 'wpsso-ratings-and-reviews' ), __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' ) );
 

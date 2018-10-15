@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				list( $comment_field, $label_before, $comment_label, $attr_before, $attr_after, $label_after ) = $matches;
 
-				$label_attr = ' ' . $attr_before . ' '. $attr_after;
+				$label_attr = ' ' . $attr_before . ' ' . $attr_after;
 				$label_attr = preg_replace( '/ id=["\'][^"\']+["\']/', '', $label_attr );
 				$label_attr = trim( $label_attr );
 
