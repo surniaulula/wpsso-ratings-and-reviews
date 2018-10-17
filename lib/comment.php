@@ -199,6 +199,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function add_rating_to_comment_text( $comment_text ) {
 
+			$comment_text = '<!-- wpsso-rar add_rating_to_comment_text filter -->' . $comment_text;
+
 			/**
 			 * Make sure we only add the star rating once (ours or from another plugin).
 			 */
@@ -263,7 +265,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				global $wpdb; 
 
 				$rating_total = $wpdb->get_var( $wpdb->prepare( "
-					SELECT SUM(meta_value) FROM $wpdb->commentmeta
+					SELECT SUM( meta_value ) FROM $wpdb->commentmeta
 					LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
 					WHERE meta_key = 'rating'
 					AND comment_post_ID = %d
