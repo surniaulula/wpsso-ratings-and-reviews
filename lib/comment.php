@@ -146,6 +146,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 						$defaults['comment_field'] . '</span><!-- .wpsso-rar -->' . "\n";
 
 			} else {
+
+				/**
+				 * Append a hidden HTML comment to signal that something went wrong.
+				 */
 				$defaults['comment_field'] .= "\n" . '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . "\n";
 			}
 
