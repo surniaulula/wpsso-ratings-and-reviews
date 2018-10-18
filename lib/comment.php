@@ -46,6 +46,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function is_rating_enabled( $post_id ) {
 
 			$wpsso = Wpsso::get_instance();
+ 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
 
 			if ( isset( self::$rating_enabled[$post_id] ) ) {	// use a status cache to optimize
 
@@ -59,8 +63,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 
 			$post_type = get_post_type( $post_id );
-			$default = empty( $wpsso->options['rar_add_to_' . $post_type] ) ? 0 : 1;
-			$disabled = isset( $wpsso->options['rar_add_to_' . $post_type . ':is'] ) &&
+			$default   = empty( $wpsso->options['rar_add_to_' . $post_type] ) ? 0 : 1;
+			$disabled  = isset( $wpsso->options['rar_add_to_' . $post_type . ':is'] ) &&
 				$wpsso->options['rar_add_to_' . $post_type . ':is'] == 'disabled' ? true : false;
 
 			if ( $disabled ) {
@@ -87,7 +91,16 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function add_comment_form_defaults( $defaults ) {
 
+			$wpsso = Wpsso::get_instance();
+ 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
 			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
+
+				$defaults['comment_field'] .= "\n" . '<!-- wpsso-rar comment rating is disabled -->' . "\n";
+
 				return $defaults;
 			}
 
@@ -133,7 +146,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 						$defaults['comment_field'] . '</span><!-- .wpsso-rar -->' . "\n";
 
 			} else {
-				$defaults['comment_field'] .= "\n".'<!-- wpsso-rar error: comment label tag not found in the \'comment_field\' value -->'."\n";
+				$defaults['comment_field'] .= "\n" . '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . "\n";
 			}
 
 			/**
@@ -150,7 +163,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		public static function get_form_rating_field( $label_attr = '' ) {
 
-			$wpsso       = Wpsso::get_instance();
+			$wpsso = Wpsso::get_instance();
+ 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
 			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
 			$is_req_span = $is_required ? ' <span class="required">*</span>' : '';
 			$is_reply    = empty( $_GET['replytocom'] ) ? false : true;
@@ -174,6 +192,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		public static function clear_rating_post_meta( $post_id ) {
+
 			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
 			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
 			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
@@ -199,7 +218,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function add_rating_to_comment_text( $comment_text ) {
 
-			$comment_text = '<!-- wpsso-rar add_rating_to_comment_text filter -->' . $comment_text;
+			$wpsso = Wpsso::get_instance();
+ 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
 
 			/**
 			 * Make sure we only add the star rating once (ours or from another plugin).
@@ -212,17 +235,24 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$comment_obj = get_comment( $comment_id );
 
 			if ( empty( $comment_obj->comment_post_ID ) ) {
-				return '<!-- wpsso-rar comment post ID is empty -->' . "\n" . $comment_text;
+
+				return '<!-- wpsso-rar comment post ID is empty -->' . $comment_text;
+
 			} elseif ( ! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
-				return '<!-- wpsso-rar rating is disabled -->' . "\n" . $comment_text;
+
+				return '<!-- wpsso-rar comment rating is disabled -->' . $comment_text;
 			}
 
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
-				$comment_text = '<div class="wpsso-rar">' . self::get_star_rating_html( $rating_value ) . 
-					'</div><!-- .wpsso-rar -->' . "\n" . $comment_text;
+				$comment_text = '<div class="wpsso-rar">' .
+					self::get_star_rating_html( $rating_value ) . 
+					'</div><!-- .wpsso-rar -->' . $comment_text;
 			}
+
+			$comment_text = '<!-- wpsso-rar ' . __FUNCTION__ . ' begin -->' .
+				$comment_text . '<!-- wpsso-rar ' . __FUNCTION__ . ' end -->';
 
 			return $comment_text;
 		}
@@ -232,15 +262,23 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function get_star_rating_html( $rating_value ) { 
 
+			$wpsso = Wpsso::get_instance();
+ 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
 			$html = ''; 
 			$rating_value = (int) $rating_value;
 
 			if ( ! empty( $rating_value ) ) { 
-				$html = '<div class="star-rating" title="' . 
-					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) . '">' . 
-				'<span style="width:' . ( ( $rating_value / 5 ) * 100 ) . '%;">' . 
-					sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) .  
-				'</span></div>';
+				$html .= '<div class="star-rating" title="' . sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) . '">';
+				$html .= '<span style="width:' . ( ( $rating_value / 5 ) * 100 ) . '%;">';
+				$html .= sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value );
+				$html .= '</span>';
+				$html .= '</div>';
+			} else {
+				$html .= '<!-- wpsso-rar no stars for empty rating value -->';
 			}
 
 			return $html;

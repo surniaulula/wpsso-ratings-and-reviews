@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.4.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2018-MO-DA HO:MI+ZONE\n"
@@ -17,57 +17,57 @@ msgstr ""
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:106
+#: lib/comment.php:119
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""
 
-#: lib/comment.php:128
+#: lib/comment.php:141
 msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:144
+#: lib/comment.php:157
 msgctxt "form label"
 msgid "Post Review"
 msgstr ""
 
-#: lib/comment.php:163
+#: lib/comment.php:181
 msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:165
+#: lib/comment.php:183
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:166
+#: lib/comment.php:184
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:167
+#: lib/comment.php:185
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:168
+#: lib/comment.php:186
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:169
+#: lib/comment.php:187
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:170
+#: lib/comment.php:188
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:240 lib/comment.php:242
+#: lib/comment.php:275 lib/comment.php:277
 msgid "Rated %d out of 5"
 msgstr ""
 
