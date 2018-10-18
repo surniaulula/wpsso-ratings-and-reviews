@@ -12,7 +12,7 @@ Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.8
 WC Tested Up To: 3.4.5
-Stable Tag: 1.4.0
+Stable Tag: 1.4.1
 
 WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
@@ -94,12 +94,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.4.0 (2018/07/22)**
+**Version 1.4.1 (2018/10/18)**
 
 * *New Features*
 	* None.
 * *Improvements*
-	* Maintenance release.
+	* Added hidden begin / end HTML comment markers in the comment text.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
@@ -107,7 +107,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.4.0 =
+= 1.4.1 =
 
-(2018/07/22) Maintenance release.
+(2018/10/18) Added hidden begin / end HTML comment markers in the comment text.
 
