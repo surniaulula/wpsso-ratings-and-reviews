@@ -114,7 +114,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Title
 			 */
-			$defaults['title_reply_before'] = '<span class="wpsso-rar">' . 
+			$defaults['title_reply_before'] = '<span class="wpsso-rar title-reply">' . 
 				$rev_span_begin . '<!-- Leave a Review --><h3 id="review-title" class="comment-review-title">' . 
 					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ) . '</h3>' . $rev_span_end .
 						$cmt_span_begin . '<!-- Leave a Reply -->' . $defaults['title_reply_before'];
@@ -141,7 +141,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 						_x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . $is_req_span . '</label>' . $rev_span_end . 
 							$cmt_span_begin . '<!-- Comment -->' . $comment_label . $cmt_span_end . $label_after;
 	
-				$defaults['comment_field'] = '<span class="wpsso-rar">' . 
+				$defaults['comment_field'] = '<span class="wpsso-rar comment-field">' . 
 					self::get_form_rating_field( $label_attr ) . 
 						$defaults['comment_field'] . '</span><!-- .wpsso-rar -->' . "\n";
 
@@ -152,7 +152,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Submit Button
 			 */
-			$defaults['submit_button'] = '<span class="wpsso-rar">' . $rev_span_begin . 
+			$defaults['submit_button'] = '<span class="wpsso-rar submit-button">' . $rev_span_begin . 
 				'<!-- Post Review --><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="' . 
 					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ) . '"/>' . $rev_span_end .
 						$cmt_span_begin . '<!-- Post Comment -->' . $defaults['submit_button'] . $cmt_span_end . 
