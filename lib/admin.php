@@ -63,7 +63,9 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			static $nonce_added = null;
 
 			if ( $nonce_added === null ) {
+
 				wp_nonce_field( WpssoAdmin::get_nonce_action(), WPSSO_NONCE_NAME );	// WPSSO_NONCE_NAME is an md5() string
+
 				$nonce_added = true;
 			}
 
@@ -101,7 +103,9 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			static $nonce_added = null;
 
 			if ( $nonce_added === null ) {
+
 				wp_nonce_field( WpssoAdmin::get_nonce_action(), WPSSO_NONCE_NAME );	// WPSSO_NONCE_NAME is an md5() string
+
 				$nonce_added = true;
 			}
 
@@ -115,15 +119,18 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		}
 
         	public function save_rating_meta_option( $post_id, $post_obj, $update ) {
-			if ( ! isset ( $_POST['post_type'] ) ) {
+
+			if ( ! isset ( $_POST[ 'post_type' ] ) ) {
 				return;
 			} elseif ( ! current_user_can( 'edit_' . $_POST['post_type'], $post_id ) ) {
 				return;
+			} elseif ( empty( $_POST[ WPSSO_NONCE_NAME ] ) ) {	// WPSSO_NONCE_NAME is an md5() string.
+				return;
 			} elseif ( ! wp_verify_nonce( $_POST[ WPSSO_NONCE_NAME ], WpssoAdmin::get_nonce_action() ) ) {
 				return;
-			} elseif ( empty( $_POST['is_checkbox_'.$this->allow_ratings_opt_key] ) ) {
+			} elseif ( empty( $_POST[ 'is_checkbox_' . $this->allow_ratings_opt_key ] ) ) {
 				return;
-			} elseif ( isset( $_POST[$this->allow_ratings_opt_key] ) && strtolower( $_POST[$this->allow_ratings_opt_key] ) === 'on' ) {
+			} elseif ( isset( $_POST[ $this->allow_ratings_opt_key ] ) && strtolower( $_POST[ $this->allow_ratings_opt_key ] ) === 'on' ) {
 				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
 			} else {
 				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
