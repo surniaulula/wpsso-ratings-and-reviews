@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.8
-WC Tested Up To: 3.4.5
+WC Tested Up To: 3.4.7
 Stable Tag: 1.4.1
 
 WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
@@ -65,7 +65,7 @@ WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core Plugi
 
 * None.
 
-<h3>Documentation and Notes</h3>
+<h3>Advanced Documentation and Notes</h3>
 
 * [Developer Resources](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/)
 	* [Get Average Rating](https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/get-average-rating/)
