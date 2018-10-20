@@ -94,7 +94,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.0-dev.5 (2018/10/20)**
+**Version 1.5.0-dev.6 (2018/10/20)**
 
 * *New Features*
 	* None.
@@ -118,7 +118,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.5.0-dev.5 =
+= 1.5.0-dev.6 =
 
 (2018/10/20) Added extra filters for a custom theme comment field and/or submit button.
 
