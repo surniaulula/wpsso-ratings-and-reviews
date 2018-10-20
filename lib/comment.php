@@ -25,11 +25,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$this->p->debug->mark();
 			}
 
-			add_filter( 'comment_form_defaults', array( __CLASS__, 'modify_comment_form_defaults' ), PHP_INT_MAX );
+			add_filter( 'comment_form_defaults', array( __CLASS__, 'update_comment_form_defaults' ), PHP_INT_MAX );
 
-			add_filter( 'comment_form_field_comment', array( __CLASS__, 'modify_form_comment_field' ), PHP_INT_MAX );
+			add_filter( 'comment_form_field_comment', array( __CLASS__, 'update_form_comment_field' ), PHP_INT_MAX );
 
-			add_filter( 'comment_form_submit_button', array( __CLASS__, 'modify_form_submit_button' ), PHP_INT_MAX );
+			add_filter( 'comment_form_submit_button', array( __CLASS__, 'update_form_submit_button' ), PHP_INT_MAX );
 
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 
@@ -89,7 +89,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Update the title, comment field, and submit button to toggle review/comment labels.
 		 * Note that custom theme values may be merged by WordPress and overwrite these defaults.
 		 */
-		public static function modify_comment_form_defaults( $defaults ) {
+		public static function update_comment_form_defaults( $defaults ) {
 
 			$wpsso = Wpsso::get_instance();
  
@@ -125,12 +125,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Comment Box
 			 */
-			$defaults[ 'comment_field' ] = self::modify_form_comment_field( $defaults[ 'comment_field' ] );
+			$defaults[ 'comment_field' ] = self::update_form_comment_field( $defaults[ 'comment_field' ] );
 
 			/**
 			 * Submit Button
 			 */
-			$defaults[ 'submit_button' ] = self::modify_form_comment_field( $defaults[ 'submit_button' ] );
+			$defaults[ 'submit_button' ] = self::update_form_comment_field( $defaults[ 'submit_button' ] );
 
 			return $defaults;
 		}
@@ -138,7 +138,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Also hooked to the 'comment_form_field_comment' filter to modify a theme custom value.
 		 */
-		public static function modify_form_comment_field( $comment_field ) {
+		public static function update_form_comment_field( $comment_field ) {
 
 			if ( strpos( $comment_field, '.wpsso-rar.comment-field' ) !== false ||
 				strpos( $comment_field, 'wpsso-rar comment rating disabled' ) !== false ) {
@@ -190,7 +190,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Also hooked to the 'comment_form_submit_button' filter to modify a theme custom value.
 		 */
-		public static function modify_form_submit_button( $submit_button ) {
+		public static function update_form_submit_button( $submit_button ) {
 
 			if ( strpos( $submit_button, '.wpsso-rar.submit-button' ) !== false || 
 				strpos( $submit_button, 'wpsso-rar comment rating disabled' ) !== false ) {
