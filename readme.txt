@@ -94,7 +94,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.0-dev.6 (2018/10/20)**
+**Version 1.5.0 (2018/10/20)**
 
 * *New Features*
 	* None.
@@ -105,24 +105,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Added hooks for the 'comment_form_field_comment' and 'comment_form_submit_button' filters.
 
-**Version 1.4.1 (2018/10/18)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added hidden begin / end HTML comment markers in the comment text.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
 == Upgrade Notice ==
 
-= 1.5.0-dev.6 =
+= 1.5.0 =
 
 (2018/10/20) Added extra filters for a custom theme comment field and/or submit button.
-
-= 1.4.1 =
-
-(2018/10/18) Added hidden begin / end HTML comment markers in the comment text.
 
