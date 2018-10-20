@@ -25,23 +25,21 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$this->p->debug->mark();
 			}
 
-			/**
-			 * Called by comment-template.php to define text and html for the form.
-			 */
-			add_filter( 'comment_form_defaults', array( __CLASS__, 'add_comment_form_defaults' ), PHP_INT_MAX );
+			add_filter( 'comment_form_defaults', array( __CLASS__, 'modify_comment_form_defaults' ), PHP_INT_MAX );
 
-			/**
-			 * Called for both front and back-end.
-			 */
-			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
+			add_filter( 'comment_form_field_comment', array( __CLASS__, 'modify_form_comment_field' ), PHP_INT_MAX );
+
+			add_filter( 'comment_form_submit_button', array( __CLASS__, 'modify_form_submit_button' ), PHP_INT_MAX );
+
+			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
 
 			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
 
-			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
+			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 		}
 
 		/**
-		 * Check if ratings are allowed for this post type.
+		 * Check if ratings are allowed for this post ID.
 		 */
 		public static function is_rating_enabled( $post_id ) {
 
@@ -51,15 +49,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( isset( self::$rating_enabled[$post_id] ) ) {	// use a status cache to optimize
-
-				$rating_is = self::$rating_enabled[$post_id] ? 'enabled' : 'disabled';
+			if ( isset( self::$rating_enabled[ $post_id ] ) ) {
 
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'rating is ' . $rating_is );
+					$wpsso->debug->log( 'rating is ' . ( self::$rating_enabled[ $post_id ] ? 'enabled' : 'disabled' ) );
 				}
 
-				return self::$rating_enabled[$post_id];
+				return self::$rating_enabled[ $post_id ];
 			}
 
 			$post_type = get_post_type( $post_id );
@@ -77,19 +73,23 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$enabled = 1;
 			}
 
-			$rating_is = $enabled ? 'enabled' : 'disabled';
-
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->log( 'rating is ' . $rating_is );
+				$wpsso->debug->log( 'rating is ' . ( $enabled ? 'enabled' : 'disabled' ) );
 			}
 
-			return self::$rating_enabled[$post_id] = $enabled;
+			return self::$rating_enabled[ $post_id ] = $enabled;
+		}
+
+		private static function get_rating_disabled_html( $post_id, $html ) {
+
+			return '<!-- wpsso-rar comment rating disabled for post ID ' . $post_id . ' -->' . "\n" . $html;
 		}
 
 		/**
 		 * Update the title, comment field, and submit button to toggle review/comment labels.
+		 * Note that custom theme values may be merged by WordPress and overwrite these defaults.
 		 */
-		public static function add_comment_form_defaults( $defaults ) {
+		public static function modify_comment_form_defaults( $defaults ) {
 
 			$wpsso = Wpsso::get_instance();
  
@@ -97,34 +97,69 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( ! self::is_rating_enabled( get_the_ID() ) ) {
+			$post_id = get_the_ID();
 
-				$defaults['comment_field'] .= "\n" . '<!-- wpsso-rar comment rating is disabled -->' . "\n";
+			if ( ! self::is_rating_enabled( $post_id ) ) {
+
+				$defaults['comment_field'] = self::get_rating_disabled_html( $post_id, $defaults['comment_field'] );
 
 				return $defaults;
 			}
 
-			$is_reply       = empty( $_GET['replytocom'] ) ? false : true;
-			$is_req_span    = ' <span class="required">*</span>';
-			$rev_span_begin = "\n" . '<span class="comment-toggle-review"' . ( $is_reply ? ' style="display:none;"' : '' ) . '>';
-			$rev_span_end   = '</span><!-- .comment-toggle-review -->';
-			$cmt_span_begin = "\n" . '<span class="comment-toggle-comment"' . ( $is_reply ? '' : ' style="display:none;"' ) . '>';
-			$cmt_span_end   = '</span><!-- .comment-toggle-comment -->';
+			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
+			$review_end_html    = '</span><!-- .comment-toggle-review -->';
+			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
+			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
 
 			/**
 			 * Title
 			 */
-			$defaults['title_reply_before'] = '<span class="wpsso-rar title-reply">' . 
-				$rev_span_begin . '<!-- Leave a Review --><h3 id="review-title" class="comment-review-title">' . 
-					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ) . '</h3>' . $rev_span_end .
-						$cmt_span_begin . '<!-- Leave a Reply -->' . $defaults['title_reply_before'];
+			$defaults[ 'title_reply_before' ] = '<span class="wpsso-rar title-reply">' . 
+				$review_begin_html . '<!-- form label: Leave a Review --><h3 id="review-title" class="comment-review-title">' . 
+					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ) . '</h3>' . $review_end_html .
+						$comment_begin_html . '<!-- form label: Leave a Reply -->' . $defaults['title_reply_before'];
 
-			$defaults['title_reply_after'] .= $cmt_span_end . '</span><!-- .wpsso-rar -->' . "\n";
+			$defaults[ 'title_reply_after' ] .= $comment_end_html . '</span><!-- .wpsso-rar.title-reply -->' . "\n";
 
 			/**
 			 * Comment Box
 			 */
-			if ( preg_match( '/^(.*)(<label ([^>]*)for="comment"([^>]*)>.*<\/label>)(.*)$/Uim', $defaults['comment_field'], $matches ) ) {
+			$defaults[ 'comment_field' ] = self::modify_form_comment_field( $defaults[ 'comment_field' ] );
+
+			/**
+			 * Submit Button
+			 */
+			$defaults[ 'submit_button' ] = self::modify_form_comment_field( $defaults[ 'submit_button' ] );
+
+			return $defaults;
+		}
+
+		/**
+		 * Also hooked to the 'comment_form_field_comment' filter to modify a theme custom value.
+		 */
+		public static function modify_form_comment_field( $comment_field ) {
+
+			if ( strpos( $comment_field, '.wpsso-rar.comment-field' ) !== false ||
+				strpos( $comment_field, 'wpsso-rar comment rating disabled' ) !== false ) {
+
+				return $comment_field;
+			}
+
+			$post_id = get_the_ID();
+
+			if ( ! self::is_rating_enabled( $post_id ) ) {
+				return self::get_rating_disabled_html( $post_id, $comment_field );
+			}
+
+			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$required_html      = ' <span class="required">*</span>';
+			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
+			$review_end_html    = '</span><!-- .comment-toggle-review -->';
+			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
+			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
+
+			if ( preg_match( '/^(.*)(<label ([^>]*)for="comment"([^>]*)>.*<\/label>)(.*)$/Uim', $comment_field, $matches ) ) {
 
 				list( $comment_field, $label_before, $comment_label, $attr_before, $attr_after, $label_after ) = $matches;
 
@@ -136,36 +171,56 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 					$label_attr .= ' ';
 				}
 
-				$defaults['comment_field'] = $label_before . $rev_span_begin .
-					'<!-- Your Review --><label ' . $label_attr . 'for="review"' . '>' .
-						_x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . $is_req_span . '</label>' . $rev_span_end . 
-							$cmt_span_begin . '<!-- Comment -->' . $comment_label . $cmt_span_end . $label_after;
+				$comment_field = $label_before . $review_begin_html .
+					'<!-- form label: Your Review --><label ' . $label_attr . 'for="review"' . '>' .
+						_x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . $required_html . '</label>' . $review_end_html . 
+							$comment_begin_html . '<!-- form label: Comment -->' . $comment_label . $comment_end_html . $label_after;
 	
-				$defaults['comment_field'] = '<span class="wpsso-rar comment-field">' . 
+				$comment_field = '<span class="wpsso-rar comment-field">' . 
 					self::get_form_rating_field( $label_attr ) . 
-						$defaults['comment_field'] . '</span><!-- .wpsso-rar -->' . "\n";
+						$comment_field . '</span><!-- .wpsso-rar.comment-field -->' . "\n";
 
 			} else {
-
-				/**
-				 * Append a hidden HTML comment to signal that something went wrong.
-				 */
-				$defaults['comment_field'] .= "\n" . '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . "\n";
+				$comment_field = '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . "\n" . $comment_field;
 			}
 
-			/**
-			 * Submit Button
-			 */
-			$defaults['submit_button'] = '<span class="wpsso-rar submit-button">' . $rev_span_begin . 
-				'<!-- Post Review --><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="' . 
-					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ) . '"/>' . $rev_span_end .
-						$cmt_span_begin . '<!-- Post Comment -->' . $defaults['submit_button'] . $cmt_span_end . 
-							'</span><!-- .wpsso-rar -->' . "\n";
-
-			return $defaults;
+			return $comment_field;
 		}
 
-		public static function get_form_rating_field( $label_attr = '' ) {
+		/**
+		 * Also hooked to the 'comment_form_submit_button' filter to modify a theme custom value.
+		 */
+		public static function modify_form_submit_button( $submit_button ) {
+
+			if ( strpos( $submit_button, '.wpsso-rar.submit-button' ) !== false || 
+				strpos( $submit_button, 'wpsso-rar comment rating disabled' ) !== false ) {
+
+				return $submit_button;
+			}
+
+			$post_id = get_the_ID();
+
+			if ( ! self::is_rating_enabled( $post_id ) ) {
+				return self::get_rating_disabled_html( $post_id, $submit_button );
+			}
+
+			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$required_html      = ' <span class="required">*</span>';
+			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
+			$review_end_html    = '</span><!-- .comment-toggle-review -->';
+			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
+			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
+
+			$submit_button = '<span class="wpsso-rar submit-button">' . $review_begin_html . 
+				'<!-- form label: Post Review --><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="' . 
+					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ) . '"/>' . $review_end_html .
+						$comment_begin_html . '<!-- form label: Post Comment -->' . $submit_button . $comment_end_html . 
+							'</span><!-- .wpsso-rar.submit-button -->' . "\n";
+
+			return $submit_button;
+		}
+
+		private static function get_form_rating_field( $label_attr = '' ) {
 
 			$wpsso = Wpsso::get_instance();
  
@@ -173,17 +228,25 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$is_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
-			$is_req_span = $is_required ? ' <span class="required">*</span>' : '';
-			$is_reply    = empty( $_GET['replytocom'] ) ? false : true;
+			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$is_rating_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
+			$required_html      = $is_rating_required ? ' <span class="required">*</span>' : '';
+			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
+			$review_end_html    = '</span><!-- .comment-toggle-review -->';
+			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
+			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
 
-			// auto-hide the paragraph for replies
-			$select = "\n" . '<p class="comment-form-rating"' . ( $is_reply ? ' style="display:none;">' : '>' ) . "\n";
+			/**
+			 * Auto-hide the paragraph for replies.
+			 */
+			$select_html = "\n" . '<p class="comment-form-rating"' . ( $is_comment_reply ? ' style="display:none;">' : '>' ) . "\n";
 
-			// auto-disable the select for replies
-			$select .= '<!-- Your Rating --><label ' . $label_attr . 'for="rating"' . '>' .
-				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) . $is_req_span . '</label>
-<select name="' . WPSSORAR_META_REVIEW_RATING . '" id="rating"' . ( $is_reply ? ' disabled' : '' ) . '>
+			/**
+			 * Auto-disable the select for replies.
+			 */
+			$select_html .= '<!-- form label: Your Rating --><label ' . $label_attr . 'for="rating"' . '>' .
+				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) . $required_html . '</label>
+<select name="' . WPSSORAR_META_REVIEW_RATING . '" id="rating"' . ( $is_comment_reply ? ' disabled' : '' ) . '>
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
@@ -192,14 +255,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 	<option value="1">' . _x( 'Awful', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 </select></p><!-- .comment-form-rating -->' . "\n";
 
-			return $select;
-		}
-
-		public static function clear_rating_post_meta( $post_id ) {
-
-			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
-			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
-			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
+			return $select_html;
 		}
 
 		/**
@@ -217,6 +273,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 		}
 
+		public static function clear_rating_post_meta( $post_id ) {
+
+			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
+			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
+			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
+		}
+
 		/**
 		 * Append the rating value to the comment text. This filter is called on both the front and back-end.
 		 */
@@ -231,7 +294,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Make sure we only add the star rating once (ours or from another plugin).
 			 */
-			if ( strpos( $comment_text, ' class="star-rating"' ) !== false ) {
+			if ( strpos( $comment_text, 'class="star-rating"' ) !== false ) {
 				return $comment_text;
 			}
 			
@@ -244,19 +307,16 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			} elseif ( ! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
 
-				return '<!-- wpsso-rar comment rating is disabled -->' . $comment_text;
+				return self::get_rating_disabled_html( $comment_obj->comment_post_ID, $comment_text );
 			}
 
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
-				$comment_text = '<div class="wpsso-rar">' .
-					self::get_star_rating_html( $rating_value ) . 
-					'</div><!-- .wpsso-rar -->' . $comment_text;
+				$comment_text = '<div class="wpsso-rar">' . self::get_star_rating_html( $rating_value ) . '</div><!-- .wpsso-rar -->' . $comment_text;
 			}
 
-			$comment_text = '<!-- wpsso-rar ' . __FUNCTION__ . ' begin -->' .
-				$comment_text . '<!-- wpsso-rar ' . __FUNCTION__ . ' end -->';
+			$comment_text = '<!-- wpsso-rar ' . __FUNCTION__ . ' begin -->' . $comment_text . '<!-- wpsso-rar ' . __FUNCTION__ . ' end -->';
 
 			return $comment_text;
 		}
@@ -264,7 +324,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Create the rating stars HTML for the rating value provided.
 		 */
-		public static function get_star_rating_html( $rating_value ) { 
+		private static function get_star_rating_html( $rating_value ) { 
 
 			$wpsso = Wpsso::get_instance();
  
@@ -272,20 +332,20 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$html = ''; 
+			$rating_html  = ''; 
 			$rating_value = (int) $rating_value;
 
-			if ( ! empty( $rating_value ) ) { 
-				$html .= '<div class="star-rating" title="' . sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) . '">';
-				$html .= '<span style="width:' . ( ( $rating_value / 5 ) * 100 ) . '%;">';
-				$html .= sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value );
-				$html .= '</span>';
-				$html .= '</div>';
+			if ( empty( $rating_value ) ) { 
+				$rating_html .= '<!-- wpsso-rar star rating skipped shown for empty rating value -->';
 			} else {
-				$html .= '<!-- wpsso-rar no stars for empty rating value -->';
+				$rating_html .= '<div class="star-rating" title="' . sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) . '">';
+				$rating_html .= '<span style="width:' . ( ( $rating_value / 5 ) * 100 ) . '%;">';
+				$rating_html .= sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value );
+				$rating_html .= '</span>';
+				$rating_html .= '</div><!-- .star-rating -->';
 			}
 
-			return $html;
+			return $rating_html;
 		}
 
 		/**
@@ -300,7 +360,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, true );
 		}
 
-		public static function sync_average_rating( $post_id ) {
+		private static function sync_average_rating( $post_id ) {
 
 			if ( $count_total = self::get_rating_count( $post_id ) ) {
 
@@ -342,7 +402,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 		}
 
-		public static function sync_rating_counts( $post_id ) {
+		private static function sync_rating_counts( $post_id ) {
 
 			global $wpdb;
 
@@ -377,7 +437,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return (int) get_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, true );
 		}
 
-		public static function sync_review_count( $post_id ) {
+		private static function sync_review_count( $post_id ) {
 
 			global $wpdb;
 
