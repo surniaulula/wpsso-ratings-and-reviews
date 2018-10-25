@@ -27,9 +27,12 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 			$this->menu_ext = $ext;
 		}
 
-		// called by the extended WpssoAdmin class
+		/**
+		 * Called by the extended WpssoAdmin class.
+		 */
 		protected function add_meta_boxes() {
-			add_meta_box( $this->pagehook.'_general',
+
+			add_meta_box( $this->pagehook . '_general',
 				_x( 'Ratings and Reviews', 'metabox title', 'wpsso-ratings-and-reviews' ), 
 					array( $this, 'show_metabox_general' ), $this->pagehook, 'normal' );
 		}
