@@ -123,13 +123,13 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			return $mt_og;
 		}
 
-		public function filter_messages_tooltip( $text, $idx ) {
+		public function filter_messages_tooltip( $text, $msg_key ) {
 
-			if ( strpos( $idx, 'tooltip-rar_' ) !== 0 ) {
+			if ( strpos( $msg_key, 'tooltip-rar_' ) !== 0 ) {
 				return $text;
 			}
 
-			switch ( $idx ) {
+			switch ( $msg_key ) {
 
 				case 'tooltip-rar_add_to':
 

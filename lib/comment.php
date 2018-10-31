@@ -387,7 +387,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Rating Count
 		 */
-		public static function get_rating_count( $post_id, $count_idx = null ) {
+		public static function get_rating_count( $post_id, $count_key = null ) {
 
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {
 				self::sync_rating_counts( $post_id );
@@ -395,10 +395,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$rating_counts = array_filter( (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, true ) );
 
-			if ( null === $count_idx ) {
+			if ( null === $count_key ) {
 				return array_sum( $rating_counts );
 			} else {
-				return isset( $rating_counts[$count_idx] ) ? (int) $rating_counts[$count_idx] : 0;
+				return isset( $rating_counts[$count_key] ) ? (int) $rating_counts[$count_key] : 0;
 			}
 		}
 
