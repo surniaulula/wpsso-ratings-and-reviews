@@ -36,15 +36,19 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 	class WpssoRar {
 
 		/**
-		 * Class Object Variables
+		 * Wpsso plugin class object variable.
 		 */
 		public $p;		// Wpsso
-		public $reg;		// WpssoRarRegister
+
+		/**
+		 * Library class object variables.
+		 */
 		public $admin;		// WpssoRarAdmin
 		public $comment;	// WpssoRarComment
 		public $filters;	// WpssoRarFilters
 		public $script;		// WpssoRarScript
 		public $style;		// WpssoRarStyle
+		public $reg;		// WpssoRarRegister
 
 		/**
 		 * Reference Variables (config, options, modules, etc.).

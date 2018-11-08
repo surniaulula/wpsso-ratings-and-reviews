@@ -23,7 +23,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 				$this->p->debug->mark();
 			}
 
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );	// also enqueued by admin class
+			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
 		}
 
 		public static function enqueue_styles() {
