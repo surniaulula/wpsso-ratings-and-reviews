@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 
 		private function activate_plugin() {
 
-			$version = WpssoRarConfig::$cf['plugin']['wpssorar']['version'];	// only our config
+			$version = WpssoRarConfig::$cf[ 'plugin' ]['wpssorar'][ 'version' ];	// only our config
 
 			if ( class_exists( 'WpssoUtil' ) ) {
 				WpssoUtil::save_all_times( 'wpssorar', $version );

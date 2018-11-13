@@ -56,13 +56,13 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! $mod['is_post'] || ! $mod['id'] ) {	// make sure we have a valid post id
+			if ( ! $mod['is_post'] || ! $mod[ 'id' ] ) {	// make sure we have a valid post id
 				return $mt_og;
 			} 
 			
-			if ( ! WpssoRarComment::is_rating_enabled( $mod['id'] ) ) {
+			if ( ! WpssoRarComment::is_rating_enabled( $mod[ 'id' ] ) ) {
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'post id '.$mod['id'].' ratings disabled' );
+					$this->p->debug->log( 'post id '.$mod[ 'id' ].' ratings disabled' );
 				}
 				return $mt_og;
 			}
@@ -75,26 +75,26 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'add rating meta tags is true' );
 				}
 
-				$average_rating = WpssoRarComment::get_average_rating( $mod['id'] );
-				$rating_count   = WpssoRarComment::get_rating_count( $mod['id'] );
-				$review_count   = WpssoRarComment::get_review_count( $mod['id'] );
+				$average_rating = WpssoRarComment::get_average_rating( $mod[ 'id' ] );
+				$rating_count   = WpssoRarComment::get_rating_count( $mod[ 'id' ] );
+				$review_count   = WpssoRarComment::get_review_count( $mod[ 'id' ] );
 	
 				if ( empty( $average_rating ) ) {
 
 					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'post id '.$mod['id'].' average rating is empty' );
+						$this->p->debug->log( 'post id '.$mod[ 'id' ].' average rating is empty' );
 					}
 
 				} elseif ( empty( $rating_count ) && empty( $review_count ) ) {
 
 					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'post id '.$mod['id'].' rating and review counts empty' );
+						$this->p->debug->log( 'post id '.$mod[ 'id' ].' rating and review counts empty' );
 					}
 
 				} else {
 
 					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'adding average rating meta tags for post id '.$mod['id'] );
+						$this->p->debug->log( 'adding average rating meta tags for post id '.$mod[ 'id' ] );
 					}
 
 					$mt_og[$og_type.':rating:average'] = number_format( (float) $average_rating, 2, '.', '' );
@@ -114,7 +114,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
 
-				$mt_og[$og_type.':reviews'] = $mod['obj']->get_og_type_reviews( $mod['id'], $og_type, 'rating' );
+				$mt_og[$og_type.':reviews'] = $mod[ 'obj' ]->get_og_type_reviews( $mod[ 'id' ], $og_type, 'rating' );
 
 			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'add review meta tags is false' );
