@@ -78,11 +78,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			}
 
 			define( 'WPSSORAR_FILEPATH', $plugin_filepath );						
-			define( 'WPSSORAR_PLUGINBASE', self::$cf[ 'plugin' ]['wpssorar'][ 'base' ] );		// wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php
+			define( 'WPSSORAR_PLUGINBASE', self::$cf[ 'plugin' ][ 'wpssorar' ][ 'base' ] );		// wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php
 			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
-			define( 'WPSSORAR_PLUGINSLUG', self::$cf[ 'plugin' ]['wpssorar'][ 'slug' ] );		// wpsso-ratings-and-reviews
+			define( 'WPSSORAR_PLUGINSLUG', self::$cf[ 'plugin' ][ 'wpssorar' ][ 'slug' ] );		// wpsso-ratings-and-reviews
 			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
-			define( 'WPSSORAR_VERSION', self::$cf[ 'plugin' ]['wpssorar'][ 'version' ] );						
+			define( 'WPSSORAR_VERSION', self::$cf[ 'plugin' ][ 'wpssorar' ][ 'version' ] );						
 
 			self::set_variable_constants();
 		}
