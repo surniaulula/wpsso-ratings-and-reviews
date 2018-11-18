@@ -140,8 +140,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function update_form_comment_field( $comment_field ) {
 
-			if ( strpos( $comment_field, '.wpsso-rar.comment-field' ) !== false ||
-				strpos( $comment_field, 'wpsso-rar comment rating disabled' ) !== false ) {
+			if ( false !== strpos( $comment_field, '.wpsso-rar.comment-field' ) ||
+				false !== strpos( $comment_field, 'wpsso-rar comment rating disabled' ) ) {
 
 				return $comment_field;
 			}
@@ -192,8 +192,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function update_form_submit_button( $submit_button ) {
 
-			if ( strpos( $submit_button, '.wpsso-rar.submit-button' ) !== false || 
-				strpos( $submit_button, 'wpsso-rar comment rating disabled' ) !== false ) {
+			if ( false !== strpos( $submit_button, '.wpsso-rar.submit-button' ) || 
+				false !== strpos( $submit_button, 'wpsso-rar comment rating disabled' ) ) {
 
 				return $submit_button;
 			}
@@ -294,7 +294,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Make sure we only add the star rating once (ours or from another plugin).
 			 */
-			if ( strpos( $comment_text, 'class="star-rating"' ) !== false ) {
+			if ( false !== strpos( $comment_text, 'class="star-rating"' ) ) {
 				return $comment_text;
 			}
 			
