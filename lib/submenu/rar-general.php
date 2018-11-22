@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 
 		public function show_metabox_general() {
 			$metabox_id = 'rar';
-			$this->p->util->do_metabox_table( apply_filters( $this->p->cf['lca'].'_'.$metabox_id.'_general_rows', 
+			$this->p->util->do_metabox_table( apply_filters( $this->p->lca . '_' . $metabox_id . '_general_rows', 
 				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
 		}
 

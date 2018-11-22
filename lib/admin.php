@@ -122,7 +122,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 			if ( ! isset ( $_POST[ 'post_type' ] ) ) {
 				return;
-			} elseif ( ! current_user_can( 'edit_' . $_POST['post_type'], $post_id ) ) {
+			} elseif ( ! current_user_can( 'edit_' . $_POST[ 'post_type' ], $post_id ) ) {
 				return;
 			} elseif ( empty( $_POST[ WPSSO_NONCE_NAME ] ) ) {	// WPSSO_NONCE_NAME is an md5() string.
 				return;

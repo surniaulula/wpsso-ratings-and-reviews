@@ -56,7 +56,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! $mod['is_post'] || ! $mod[ 'id' ] ) {	// make sure we have a valid post id
+			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// make sure we have a valid post id
 				return $mt_og;
 			} 
 			
