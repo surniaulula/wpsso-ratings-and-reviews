@@ -97,12 +97,17 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 
 		private function activate_plugin() {
 
-			$version = WpssoRarConfig::$cf[ 'plugin' ][ 'wpssorar' ][ 'version' ];	// only our config
+			if ( class_exists( 'Wpsso' ) ) {
 
-			if ( class_exists( 'WpssoUtil' ) ) {
-				WpssoUtil::save_all_times( 'wpssorar', $version );
+				if ( class_exists( 'WpssoUtil' ) ) {	// Just in case.
+
+					$version = WpssoRarConfig::$cf[ 'plugin' ][ 'wpssorar' ][ 'version' ];
+
+					WpssoUtil::save_all_times( 'wpssorar', $version );
+				}
+
 			} else {
-				WpssoRar::required_notice( true );			// $deactivate = true
+				WpssoRar::required_notice( $deactivate = true );
 			}
 		}
 
