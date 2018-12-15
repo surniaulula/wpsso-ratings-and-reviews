@@ -71,18 +71,6 @@ msgstr ""
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/config-gettext-extract.php:3
-msgctxt "lib file description"
-msgid "Rating / Review"
-msgstr ""
-
-#: lib/config-gettext-extract.php:4
-msgctxt "plugin description"
-msgid ""
-"WPSSO Core add-on to provide ratings and reviews for WordPress comments, "
-"with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr ""
-
 #: lib/filters.php:136
 msgid ""
 "You can choose to enable or disable ratings by default for each public post "
@@ -107,6 +95,18 @@ msgstr ""
 
 #: lib/filters.php:156
 msgid "A default color for unselected stars."
+msgstr ""
+
+#: lib/gettext-config.php:6
+msgctxt "lib file description"
+msgid "Rating / Review"
+msgstr ""
+
+#: lib/gettext-config.php:7
+msgctxt "plugin description"
+msgid ""
+"WPSSO Core add-on to provide ratings and reviews for WordPress comments, "
+"with Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
 #: lib/script.php:71
