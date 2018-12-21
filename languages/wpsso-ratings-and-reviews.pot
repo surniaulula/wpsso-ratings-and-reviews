@@ -105,8 +105,8 @@ msgstr ""
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid ""
-"WPSSO Core add-on to provide ratings and reviews for WordPress comments, "
-"with Aggregate Rating meta tags and optional Schema Review markup."
+"WPSSO Core add-on provides ratings and reviews for WordPress comments, with "
+"Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
 #: lib/script.php:71
@@ -176,8 +176,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO Core add-on to provide ratings and reviews for WordPress comments, "
-"with Aggregate Rating meta tags and optional Schema Review markup."
+"WPSSO Core add-on provides ratings and reviews for WordPress comments, with "
+"Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
 #. Author of the plugin/theme
