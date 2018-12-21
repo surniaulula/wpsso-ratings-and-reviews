@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings - Supports WooCommerce ===
+=== WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings (Supports WooCommerce) ===
 Plugin Name: WPSSO Ratings and Reviews
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
@@ -14,7 +14,7 @@ Tested Up To: 5.0
 WC Tested Up To: 3.5
 Stable Tag: 1.5.0
 
-WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
+WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
 == Description ==
 

@@ -1,8 +1,8 @@
-<h1>WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings</h1><h3>Supports WooCommerce</h3>
+<h1>WPSSO Ratings and Reviews / Replies with Schema Aggregate Ratings (Supports WooCommerce)</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on to provide ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.5.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.0</td></tr>
