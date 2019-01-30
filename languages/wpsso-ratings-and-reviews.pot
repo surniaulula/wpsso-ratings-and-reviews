@@ -1,8 +1,8 @@
-# Copyright (C) 2019 WPSSO Ratings and Reviews [Add-on]
-# This file is distributed under the same license as the WPSSO Ratings and Reviews [Add-on] package.
+# Copyright (C) 2019 WPSSO Ratings and Reviews
+# This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews [Add-on] 1.5.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Ratings and Reviews [Add-on]"
+msgid "WPSSO Ratings and Reviews"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'version'     => '1.5.0',	// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
-					'name'        => 'WPSSO Ratings and Reviews [Add-on]',
+					'name'        => 'WPSSO Ratings and Reviews',
 					'desc'        => 'WPSSO Core add-on provides ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.',
 					'slug'        => 'wpsso-ratings-and-reviews',
 					'base'        => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
