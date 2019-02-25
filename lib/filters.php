@@ -61,9 +61,11 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			} 
 			
 			if ( ! WpssoRarComment::is_rating_enabled( $mod[ 'id' ] ) ) {
+
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'post id '.$mod[ 'id' ].' ratings disabled' );
 				}
+
 				return $mt_og;
 			}
 
@@ -97,24 +99,24 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 						$this->p->debug->log( 'adding average rating meta tags for post id '.$mod[ 'id' ] );
 					}
 
-					$mt_og[$og_type.':rating:average'] = number_format( (float) $average_rating, 2, '.', '' );
-					$mt_og[$og_type.':rating:count']   = $rating_count;
-					$mt_og[$og_type.':rating:worst']   = 1;
-					$mt_og[$og_type.':rating:best']    = 5;
-					$mt_og[$og_type.':review:count']   = $review_count;
+					$mt_og[ $og_type.':rating:average' ] = number_format( (float) $average_rating, 2, '.', '' );
+					$mt_og[ $og_type.':rating:count' ]   = $rating_count;
+					$mt_og[ $og_type.':rating:worst' ]   = 1;
+					$mt_og[ $og_type.':rating:best' ]    = 5;
+					$mt_og[ $og_type.':review:count' ]   = $review_count;
 				}
 
 			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
-			if ( apply_filters( $this->p->lca.'_og_add_mt_reviews', false, $mod ) ) {	// disabled by default
+			if ( apply_filters( $this->p->lca.'_og_add_mt_reviews', false, $mod ) ) {	// Disabled by default.
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
 
-				$mt_og[$og_type.':reviews'] = $mod[ 'obj' ]->get_og_type_reviews( $mod[ 'id' ], $og_type, 'rating' );
+				$mt_og[ $og_type.':reviews' ] = $mod[ 'obj' ]->get_og_type_reviews( $mod[ 'id' ], $og_type, 'rating' );
 
 			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'add review meta tags is false' );
