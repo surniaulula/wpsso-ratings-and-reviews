@@ -34,8 +34,8 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 
 			$wpsso = Wpsso::get_instance();
 
-			$sel_color = $wpsso->options['rar_star_color_selected'];
-			$def_color = $wpsso->options['rar_star_color_default'];
+			$sel_color = $wpsso->options[ 'rar_star_color_selected' ];
+			$def_color = $wpsso->options[ 'rar_star_color_default' ];
 
 			$plugin_version = WpssoRarConfig::get_version();
 

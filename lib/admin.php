@@ -35,6 +35,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		}
 
 		public function filter_get_sortable_columns( $columns ) {
+
 			return array_merge( array( 
 				'avg_rating' => array(
 					'header'         => 'Rating',
@@ -55,8 +56,9 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				return;
 			}
 
-			if ( isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
-				$this->p->options['rar_add_to_' . $post_type . ':is'] === 'disabled' ) {
+			if ( isset( $this->p->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
+				$this->p->options[ 'rar_add_to_' . $post_type . ':is' ] === 'disabled' ) {
+
 				return;
 			}
 
@@ -95,8 +97,8 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 			$post_type = get_post_type( $post_obj->ID );
 			
-			if ( isset( $this->p->options['rar_add_to_' . $post_type . ':is'] ) &&
-				$this->p->options['rar_add_to_' . $post_type . ':is'] === 'disabled' ) {
+			if ( isset( $this->p->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
+				$this->p->options[ 'rar_add_to_' . $post_type . ':is' ] === 'disabled' ) {
 				return;
 			}
 

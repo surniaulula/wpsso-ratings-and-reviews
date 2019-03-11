@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:72 lib/admin.php:112 lib/filters.php:140
+#: lib/admin.php:74 lib/admin.php:114 lib/filters.php:140
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -109,11 +109,11 @@ msgid ""
 "Aggregate Rating meta tags and optional Schema Review markup."
 msgstr ""
 
-#: lib/script.php:71
+#: lib/script.php:74
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/script.php:72
+#: lib/script.php:75
 msgid "Please write a review before submitting."
 msgstr ""
 

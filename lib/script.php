@@ -32,8 +32,11 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 			$plugin_version = WpssoRarConfig::get_version();
 
-			// don't load our javascript where we don't need it
+			/**
+			 * Don't load our javascript where we don't need it.
+			 */
 			switch ( $hook_name ) {
+
 				case 'edit.php':
 
 					wp_enqueue_script( 'wpsso-rar-admin-script', 
@@ -65,12 +68,12 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 			$wpsso = Wpsso::get_instance();
 
-			$is_reply = empty( $_GET['replytocom'] ) ? false : true;
+			$is_reply = empty( $_GET[ 'replytocom' ] ) ? false : true;
 
 			return array(
 				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
 				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
-				'review_rating_required'    => empty( $wpsso->options['rar_rating_required'] ) || $is_reply ? false : true,
+				'review_rating_required'    => empty( $wpsso->options[ 'rar_rating_required' ] ) || $is_reply ? false : true,
 			);
 		}
 	}
