@@ -15,7 +15,7 @@
  * Requires At Least: 3.8
  * Tested Up To: 5.1
  * WC Tested Up To: 3.5
- * Version: 1.5.1
+ * Version: 1.5.2-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -163,11 +163,11 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			}
 
 			if ( ! $this->have_req_min ) {
-				$this->p->avail['p_ext']['rar'] = false;	// Signal that this extension / add-on is not available.
+				$this->p->avail[ 'p_ext' ][ 'rar' ] = false;	// Signal that this extension / add-on is not available.
 				return;
 			}
 
-			$this->p->avail['p_ext']['rar'] = true;	// Signal that this extension / add-on is available.
+			$this->p->avail[ 'p_ext' ][ 'rar' ] = true;	// Signal that this extension / add-on is available.
 		}
 
 		public function wpsso_init_objects() {
@@ -183,11 +183,12 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			/**
 			 * Disable reviews on products if competing feature exists.
 			 */
-			if ( $this->p->avail['ecom']['woocommerce'] ) {
+			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
 
-				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' || ! empty( $this->p->avail['ecom']['yotpowc'] ) ) {
+				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ||
+					! empty( $this->p->avail[ 'review' ][ 'yotpowc' ] ) ) {
 
-					if ( ! empty( $this->p->options['rar_add_to_product'] ) ) {
+					if ( ! empty( $this->p->options[ 'rar_add_to_product' ] ) ) {
 
 						if ( $this->p->debug->enabled ) {
 							$this->p->debug->log( 'ratings feature for products found - ratings for the product post type disabled' );
@@ -197,12 +198,12 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 							$this->p->notice->warn( sprintf( __( 'An existing products rating feature has been found &mdash; %1$s for the "product" custom post type has been disabled.', 'wpsso-ratings-and-reviews' ), $this->p->cf[ 'plugin' ][ 'wpssorar' ][ 'short' ] ) );
 						}
 
-						$this->p->options['rar_add_to_product'] = 0;
+						$this->p->options[ 'rar_add_to_product' ] = 0;
 
 						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, $network = false );
 					}
 
-					$this->p->options['rar_add_to_product:is'] = 'disabled';
+					$this->p->options[ 'rar_add_to_product:is' ] = 'disabled';
 				}
 			}
 
