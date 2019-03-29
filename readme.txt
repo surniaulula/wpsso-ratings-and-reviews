@@ -94,6 +94,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.5.2-dev.1 (2019/03/29)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* Fixed a check for the Yotpo Social Reviews for WooCommerce plugin.
+* *Developer Notes*
+	* None.
+
 **Version 1.5.1 (2019/01/31)**
 
 * *New Features*
@@ -117,6 +128,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added hooks for the 'comment_form_field_comment' and 'comment_form_submit_button' filters.
 
 == Upgrade Notice ==
+
+= 1.5.2-dev.1 =
+
+(2019/03/29) Fixed a check for the Yotpo Social Reviews for WooCommerce plugin.
 
 = 1.5.1 =
 
