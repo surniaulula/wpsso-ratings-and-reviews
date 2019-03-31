@@ -94,7 +94,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.2-dev.6 (2019/03/31)**
+**Version 1.5.2-b.1 (2019/03/31)**
 
 * *New Features*
 	* None.
@@ -129,7 +129,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.5.2-dev.6 =
+= 1.5.2-b.1 =
 
 (2019/03/31) Fixed a check for the Yotpo Social Reviews for WooCommerce plugin.
 
