@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 3.8
 Tested Up To: 5.1
 WC Tested Up To: 3.5
-Stable Tag: 1.5.1
+Stable Tag: 1.5.2
 
 WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
@@ -132,8 +132,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 1.5.2 =
 
 (2019/03/31) Fixed a check for the Yotpo Social Reviews for WooCommerce plugin.
-
-= 1.5.1 =
-
-(2019/01/31) Maintenance release for WPSSO Core v4.22.0.
 
