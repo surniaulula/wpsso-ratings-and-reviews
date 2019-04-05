@@ -26,12 +26,12 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'update_auth' => '',
 					'text_domain' => 'wpsso-ratings-and-reviews',
 					'domain_path' => '/languages',
-					'req' => array(
+					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
 						'min_version' => '4.26.0',
 					),
-					'img' => array(
+					'assets' => array(
 						'icons' => array(
 							'low'  => 'images/icon-128x128.png',
 							'high' => 'images/icon-256x256.png',

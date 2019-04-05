@@ -12,7 +12,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: WPSSO Core add-on provides ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup.
  * Requires At Least: 3.8
- * Tested Up To: 5.1
+ * Tested Up To: 5.1.1
  * WC Tested Up To: 3.5
  * Version: 1.5.2
  *
