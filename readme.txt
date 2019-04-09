@@ -93,42 +93,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.2 (2019/03/31)**
+**Version 1.5.3 (2019/04/09)**
 
 * *New Features*
 	* None.
 * *Improvements*
 	* None.
 * *Bugfixes*
-	* Fixed a check for the Yotpo Social Reviews for WooCommerce plugin.
-* *Developer Notes*
-	* None.
-
-**Version 1.5.1 (2019/01/31)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Maintenance release for WPSSO Core v4.22.0.
-* *Bugfixes*
 	* None.
 * *Developer Notes*
-	* Updated the required minimum PHP version from 5.4 to 5.5.
-
-**Version 1.5.0 (2018/10/20)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added extra filters for a custom theme comment field and/or submit button.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Added hooks for the 'comment_form_field_comment' and 'comment_form_submit_button' filters.
+	* Maintenance release for WPSSO Core v4.27.2 config array updates.
 
 == Upgrade Notice ==
 
-= 1.5.2 =
+= 1.5.3 =
 
-(2019/03/31) Fixed a check for the Yotpo Social Reviews for WooCommerce plugin.
+(2019/04/09) Maintenance release for WPSSO Core v4.27.2 config array updates.
 
