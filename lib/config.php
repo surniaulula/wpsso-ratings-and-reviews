@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 						),
 						'pro' => array(
 						),
-						'submenu' => array(	// Note that submenu elements must have unique keys.
+						'submenu' => array(
 							'rar-general' => 'Rating / Review',
 						),
 					),
