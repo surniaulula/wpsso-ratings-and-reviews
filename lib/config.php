@@ -38,12 +38,12 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 						),
 					),
 					'lib' => array(
-						'submenu' => array(	// Note that submenu elements must have unique keys.
-							'rar-general' => 'Rating / Review',
-						),
 						'gpl' => array(
 						),
 						'pro' => array(
+						),
+						'submenu' => array(	// Note that submenu elements must have unique keys.
+							'rar-general' => 'Rating / Review',
 						),
 					),
 				),
