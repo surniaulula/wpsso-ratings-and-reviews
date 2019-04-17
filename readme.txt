@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.5.4-dev.4 (2019/04/17)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* Added more debug logging in the WpssoRarFilters class.
+
 **Version 1.5.3 (2019/04/09)**
 
 * *New Features*
@@ -105,6 +116,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Maintenance release for WPSSO Core v4.27.2 config array updates.
 
 == Upgrade Notice ==
+
+= 1.5.4-dev.1 =
+
+(2019/04/17) Added more debug logging in the WpssoRarFilters class.
 
 = 1.5.3 =
 
