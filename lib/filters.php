@@ -26,7 +26,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
 				'og'           => 2,
-			) );
+			), 1000 );
 
 			if ( is_admin() ) {
 				$this->p->util->add_plugin_filters( $this, array( 
@@ -69,7 +69,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				return $mt_og;
 			}
 
-			$og_type = $mt_og['og:type'];
+			$og_type = $mt_og[ 'og:type' ];
 
 			if ( apply_filters( $this->p->lca . '_og_add_mt_rating', true, $mod ) ) {	// Enabled by default.
 
@@ -80,7 +80,13 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$average_rating = WpssoRarComment::get_average_rating( $mod[ 'id' ] );
 				$rating_count   = WpssoRarComment::get_rating_count( $mod[ 'id' ] );
 				$review_count   = WpssoRarComment::get_review_count( $mod[ 'id' ] );
-	
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'average rating = ' . $average_rating );
+					$this->p->debug->log( 'rating count = ' . $rating_count );
+					$this->p->debug->log( 'review count = ' . $review_count );
+				}
+
 				if ( empty( $average_rating ) ) {
 
 					if ( $this->p->debug->enabled ) {
