@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.4-dev.5 (2019/04/18)**
+**Version 1.5.4-b.1 (2019/04/19)**
 
 * *New Features*
 	* None.
@@ -117,9 +117,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.5.4-dev.5 =
+= 1.5.4-b.1 =
 
-(2019/04/18) Added more debug logging in the WpssoRarFilters class.
+(2019/04/19) Added more debug logging in the WpssoRarFilters class.
 
 = 1.5.3 =
 
