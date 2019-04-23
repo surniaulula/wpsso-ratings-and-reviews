@@ -44,6 +44,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 					array(), $plugin_version );
 
 			$custom_style_css = '
+
 				@font-face {
 					font-family:"WpssoStar";
 					font-weight:normal;
@@ -54,6 +55,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 						url("' . WPSSO_URLPATH . 'fonts/star.ttf?' . $plugin_version . '") format("truetype"),
 						url("' . WPSSO_URLPATH . 'fonts/star.svg?' . $plugin_version . '#star") format("svg");
 				}
+
 				.wpsso-rar .star-rating::before { color:' . $def_color . '; }
 				.wpsso-rar .star-rating span::before { color:' . $sel_color . '; }
 				.wpsso-rar p.select-star a::before { color:' . $def_color . '; }
