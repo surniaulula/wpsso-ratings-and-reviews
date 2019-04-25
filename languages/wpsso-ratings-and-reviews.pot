@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.5.4\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.5.5-dev.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -97,6 +97,13 @@ msgstr ""
 msgid "A default color for unselected stars."
 msgstr ""
 
+#: lib/filters.php:170
+msgid ""
+"When this option is enabled, and a rating for the webpage content is NOT "
+"available, then a generic 5 star rating from the site organization is added "
+"to the main Schema type markup."
+msgstr ""
+
 #: lib/gettext-config.php:6
 msgctxt "lib file description"
 msgid "Rating / Review"
@@ -122,24 +129,29 @@ msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr ""
 
-#: lib/submenu/rar-general.php:62
+#: lib/submenu/rar-general.php:65
 msgctxt "option label"
 msgid "Enable by Default for Post Types"
 msgstr ""
 
-#: lib/submenu/rar-general.php:66
+#: lib/submenu/rar-general.php:69
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr ""
 
-#: lib/submenu/rar-general.php:70
+#: lib/submenu/rar-general.php:73
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:74
+#: lib/submenu/rar-general.php:77
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
+msgstr ""
+
+#: lib/submenu/rar-general.php:82
+msgctxt "option label"
+msgid "Add Schema 5 Star Rating If None"
 msgstr ""
 
 #: wpsso-ratings-and-reviews.php:104

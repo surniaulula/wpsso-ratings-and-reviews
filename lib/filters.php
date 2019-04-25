@@ -164,6 +164,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$text = __( 'A default color for unselected stars.', 'wpsso-ratings-and-reviews' );
 
 					break;
+
+				case 'tooltip-rar_add_5_star_rating':	// Add Schema 5 Star Rating If None.
+
+					$text .= __( 'When this option is enabled, and a rating for the webpage content is NOT available, then a generic 5 star rating from the site organization is added to the main Schema type markup.', 'wpsso-schema-json-ld' ) . ' ';
+
+					break;
 			}
 
 			return $text;

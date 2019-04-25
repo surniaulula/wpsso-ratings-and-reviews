@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '1.5.4',	// Plugin version.
+					'version'     => '1.5.5-dev.4',	// Plugin version.
 					'opt_version' => '5',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.29.0',
+						'min_version' => '4.29.1-dev.4',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -54,11 +54,13 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_add_to_page'             => 1,
 					'rar_add_to_post'             => 0,
 					'rar_add_to_product'          => 1,
+					'rar_add_to_recipe'           => 1,
 					'rar_rating_required'         => 1,
 					'rar_star_color_selected'     => '#222222',
 					'rar_star_color_default'      => '#dddddd',
 					'plugin_avg_rating_col_media' => 0,
 					'plugin_avg_rating_col_post'  => 1,
+					'schema_add_5_star_rating'    => 1,	// Add Schema 5 Star Rating If None.
 				),
 			),
 		);
