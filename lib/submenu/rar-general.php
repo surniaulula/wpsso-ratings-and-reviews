@@ -62,11 +62,11 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 					$json_req_msg = $this->p->admin->get_ext_required_msg( 'json' );
 					$json_disable = empty( $json_req_msg ) ? false : true;
 
-					$table_rows[ 'rar_add_to' ] = $this->form->get_th_html( _x( 'Enable by Default for Post Types',
+					$table_rows[ 'rar_add_to' ] = $this->form->get_th_html( _x( 'Rating Form for Post Types',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_add_to' ).
 					'<td>'.$this->form->get_checklist_post_types( 'rar_add_to' ).'</td>';
 
-					$table_rows[ 'rar_rating_required' ] = $this->form->get_th_html( _x( 'Rating Required to Submit Review',
+					$table_rows[ 'rar_rating_required' ] = $this->form->get_th_html( _x( 'Rating Required for Review',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_rating_required' ).
 					'<td>'.$this->form->get_checkbox( 'rar_rating_required' ).'</td>';
 
@@ -79,7 +79,7 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 					'<td>'.$this->form->get_input_color( 'rar_star_color_default' ).'</td>';
 
 					$table_rows[ 'rar_add_5_star_rating' ] = '' .
-					$this->form->get_th_html( _x( 'Add Schema 5 Star Rating If None',
+					$this->form->get_th_html( _x( 'Add 5 Star Rating If No Rating',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_add_5_star_rating' ) . 
 					'<td>' . $this->form->get_checkbox( 'schema_add_5_star_rating',
 						'', '', $json_disable ) . $json_req_msg . '</td>';

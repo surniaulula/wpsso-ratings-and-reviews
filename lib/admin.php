@@ -99,6 +99,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			
 			if ( isset( $this->p->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
 				$this->p->options[ 'rar_add_to_' . $post_type . ':is' ] === 'disabled' ) {
+
 				return;
 			}
 

@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			 * Add options using a key prefix array and post type names.
 			 */
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
-				'rar_add_to' => 0,
+				'rar_add_to' => 0,	// Rating Form for Post Types.
 			) );
 
 			return $def_opts;
@@ -139,7 +139,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-rar_add_to':
+				case 'tooltip-rar_add_to':	// Rating Form for Post Types.
 
 					$text = __( 'You can choose to enable or disable ratings by default for each public post type.', 'wpsso-ratings-and-reviews' ) . ' ';
 
@@ -147,25 +147,25 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 					break;
 
-				case 'tooltip-rar_rating_required':
+				case 'tooltip-rar_rating_required':	// Rating Required for Review.
 
 					$text = __( 'Force a reviewer to select a rating before submitting their review (enabled by default).', 'wpsso-ratings-and-reviews' );
 
 					break;
 
-				case 'tooltip-rar_star_color_selected':
+				case 'tooltip-rar_star_color_selected':	// Selected Star Rating Color.
 
 					$text = __( 'A color for selected stars representing the rating.', 'wpsso-ratings-and-reviews' );
 
 					break;
 
-				case 'tooltip-rar_star_color_default':
+				case 'tooltip-rar_star_color_default':	// Unselected Star Rating Color.
 
 					$text = __( 'A default color for unselected stars.', 'wpsso-ratings-and-reviews' );
 
 					break;
 
-				case 'tooltip-rar_add_5_star_rating':	// Add Schema 5 Star Rating If None.
+				case 'tooltip-rar_add_5_star_rating':	// Add 5 Star Rating If No Rating.
 
 					$text .= __( 'When this option is enabled, and a rating for the webpage content is NOT available, then a generic 5 star rating from the site organization is added to the main Schema type markup.', 'wpsso-schema-json-ld' ) . ' ';
 

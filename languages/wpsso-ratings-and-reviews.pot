@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 1.5.5-dev.4\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 1.5.5-dev.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:74 lib/admin.php:114 lib/filters.php:146
+#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:146
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -131,12 +131,12 @@ msgstr ""
 
 #: lib/submenu/rar-general.php:65
 msgctxt "option label"
-msgid "Enable by Default for Post Types"
+msgid "Rating Form for Post Types"
 msgstr ""
 
 #: lib/submenu/rar-general.php:69
 msgctxt "option label"
-msgid "Rating Required to Submit Review"
+msgid "Rating Required for Review"
 msgstr ""
 
 #: lib/submenu/rar-general.php:73
@@ -151,7 +151,7 @@ msgstr ""
 
 #: lib/submenu/rar-general.php:82
 msgctxt "option label"
-msgid "Add Schema 5 Star Rating If None"
+msgid "Add 5 Star Rating If No Rating"
 msgstr ""
 
 #: wpsso-ratings-and-reviews.php:104

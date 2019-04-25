@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 1.5.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2019-04-25 11:05-0700\n"
-"PO-Revision-Date: 2019-04-25 11:05-0700\n"
+"POT-Creation-Date: 2019-04-25 15:55-0700\n"
+"PO-Revision-Date: 2019-04-25 15:55-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/admin.php:74 lib/admin.php:114 lib/filters.php:146
+#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:146
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
@@ -122,13 +122,13 @@ msgstr "Notes et critiques"
 
 #: lib/submenu/rar-general.php:65
 msgctxt "option label"
-msgid "Enable by Default for Post Types"
-msgstr "Activer par défaut pour types d'articles"
+msgid "Rating Form for Post Types"
+msgstr "Formulaire de note pour types d'articles"
 
 #: lib/submenu/rar-general.php:69
 msgctxt "option label"
-msgid "Rating Required to Submit Review"
-msgstr "Évaluation requise pour soumettre critique"
+msgid "Rating Required for Review"
+msgstr "Évaluation requise pour critique"
 
 #: lib/submenu/rar-general.php:73
 msgctxt "option label"
@@ -142,8 +142,8 @@ msgstr "Couleur d'étoile non sélectionné"
 
 #: lib/submenu/rar-general.php:82
 msgctxt "option label"
-msgid "Add Schema 5 Star Rating If None"
-msgstr "Ajouter 5 étoiles au Schéma si aucune note"
+msgid "Add 5 Star Rating If No Rating"
+msgstr "Ajouter note 5 étoiles si aucune note"
 
 #: wpsso-ratings-and-reviews.php:104
 msgid "%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
