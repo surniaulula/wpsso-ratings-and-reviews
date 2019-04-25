@@ -58,9 +58,9 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_rating_required'         => 1,
 					'rar_star_color_selected'     => '#222222',
 					'rar_star_color_default'      => '#dddddd',
+					'schema_add_5_star_rating'    => 0,	// Add Schema 5 Star Rating If None.
 					'plugin_avg_rating_col_media' => 0,
 					'plugin_avg_rating_col_post'  => 1,
-					'schema_add_5_star_rating'    => 1,	// Add Schema 5 Star Rating If None.
 				),
 			),
 		);
