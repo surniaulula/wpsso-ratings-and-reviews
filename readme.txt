@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.5.5-dev.4 (2019/04/25)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* Added a new "Add Schema 5 Star Rating If None" option in the SSO &gt; Rating / Review settings page (WPSSO JSON add-on required).
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* None.
+
 **Version 1.5.4 (2019/04/21)**
 
 * *New Features*
@@ -105,6 +116,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added more debug logging in the WpssoRarFilters class.
 
 == Upgrade Notice ==
+
+= 1.5.5-dev.4 =
+
+(2019/04/25) Added a new "Add Schema 5 Star Rating If None" option in the SSO &gt; Rating / Review settings page (WPSSO JSON add-on required).
 
 = 1.5.4 =
 
