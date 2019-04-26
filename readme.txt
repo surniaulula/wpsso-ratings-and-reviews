@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.5-dev.5 (2019/04/25)**
+**Version 1.5.5-b.1 (2019/04/26)**
 
 * *New Features*
 	* None.
@@ -117,9 +117,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.5.5-dev.5 =
+= 1.5.5-b.1 =
 
-(2019/04/25) Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Rating / Review settings page (WPSSO JSON add-on required).
+(2019/04/26) Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Rating / Review settings page (WPSSO JSON add-on required).
 
 = 1.5.4 =
 
