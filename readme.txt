@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
 Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
 Contributors: jsmoriss
 Requires At Least: 3.8
-Tested Up To: 5.1.1
+Tested Up To: 5.2
 WC Tested Up To: 3.6
 Stable Tag: 1.5.4
 
@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.5-rc.1 (2019/04/27)**
+**Version 1.5.5 (2019/04/27)**
 
 * *New Features*
 	* None.
@@ -117,11 +117,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.5.5-rc.1 =
+= 1.5.5 =
 
 (2019/04/27) Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Rating / Review settings page (WPSSO JSON add-on required).
-
-= 1.5.4 =
-
-(2019/04/21) Added more debug logging in the WpssoRarFilters class.
 
