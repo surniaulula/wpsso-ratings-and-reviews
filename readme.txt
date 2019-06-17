@@ -49,7 +49,7 @@ Simply activate / deactivate the plugin to enable / disable the addition of rati
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core Plugin](https://wordpress.org/plugins/wpsso/) (Free or Pro version).
+WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core Plugin](https://wordpress.org/plugins/wpsso/).
 
 == Installation ==
 
@@ -93,6 +93,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.0.0-dev.1 (2019/06/17)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* Maintenance release for WPSSO Core v5.0.0.
+
 **Version 1.5.5 (2019/04/27)**
 
 * *New Features*
@@ -116,6 +127,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added more debug logging in the WpssoRarFilters class.
 
 == Upgrade Notice ==
+
+= 2.0.0-dev.1 =
+
+(2019/06/17) Maintenance release for WPSSO Core v5.0.0.
 
 = 1.5.5 =
 
