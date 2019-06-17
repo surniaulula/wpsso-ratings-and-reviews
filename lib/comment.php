@@ -59,9 +59,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 
 			$post_type = get_post_type( $post_id );
-			$default   = empty( $wpsso->options['rar_add_to_' . $post_type] ) ? 0 : 1;
-			$disabled  = isset( $wpsso->options['rar_add_to_' . $post_type . ':is'] ) &&
-				$wpsso->options['rar_add_to_' . $post_type . ':is'] == 'disabled' ? true : false;
+			$default   = empty( $wpsso->options[ 'rar_add_to_' . $post_type ] ) ? 0 : 1;
+			$disabled  = isset( $wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
+				$wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] == 'disabled' ? true : false;
 
 			if ( $disabled ) {
 				$enabled = 0;
@@ -101,12 +101,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			if ( ! self::is_rating_enabled( $post_id ) ) {
 
-				$defaults['comment_field'] = self::get_rating_disabled_html( $post_id, $defaults['comment_field'] );
+				$defaults[ 'comment_field' ] = self::get_rating_disabled_html( $post_id, $defaults[ 'comment_field' ] );
 
 				return $defaults;
 			}
 
-			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$is_comment_reply   = empty( $_GET[ 'replytocom' ] ) ? false : true;
 			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
 			$review_end_html    = '</span><!-- .comment-toggle-review -->';
 			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
@@ -118,7 +118,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$defaults[ 'title_reply_before' ] = '<span class="wpsso-rar title-reply">' . 
 				$review_begin_html . '<!-- form label: Leave a Review --><h3 id="review-title" class="comment-review-title">' . 
 					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ) . '</h3>' . $review_end_html .
-						$comment_begin_html . '<!-- form label: Leave a Reply -->' . $defaults['title_reply_before'];
+						$comment_begin_html . '<!-- form label: Leave a Reply -->' . $defaults[ 'title_reply_before' ];
 
 			$defaults[ 'title_reply_after' ] .= $comment_end_html . '</span><!-- .wpsso-rar.title-reply -->' . "\n";
 
@@ -152,7 +152,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return self::get_rating_disabled_html( $post_id, $comment_field );
 			}
 
-			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$is_comment_reply   = empty( $_GET[ 'replytocom' ] ) ? false : true;
 			$required_html      = ' <span class="required">*</span>';
 			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
 			$review_end_html    = '</span><!-- .comment-toggle-review -->';
@@ -204,7 +204,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return self::get_rating_disabled_html( $post_id, $submit_button );
 			}
 
-			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
+			$is_comment_reply   = empty( $_GET[ 'replytocom' ] ) ? false : true;
 			$required_html      = ' <span class="required">*</span>';
 			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
 			$review_end_html    = '</span><!-- .comment-toggle-review -->';
@@ -228,8 +228,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$is_comment_reply   = empty( $_GET['replytocom'] ) ? false : true;
-			$is_rating_required = empty( $wpsso->options['rar_rating_required'] ) ? false : true;
+			$is_comment_reply   = empty( $_GET[ 'replytocom' ] ) ? false : true;
+			$is_rating_required = empty( $wpsso->options[ 'rar_rating_required' ] ) ? false : true;
 			$required_html      = $is_rating_required ? ' <span class="required">*</span>' : '';
 			$review_begin_html  = "\n" . '<span class="comment-toggle-review"' . ( $is_comment_reply ? ' style="display:none;"' : '' ) . '>';
 			$review_end_html    = '</span><!-- .comment-toggle-review -->';
@@ -263,7 +263,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function save_request_comment_rating( $comment_id ) { 
 
-			if ( empty( $_GET['replytocom'] ) && empty( $_POST['replytocom'] ) ) {	// don't save reply ratings
+			if ( empty( $_GET[ 'replytocom' ] ) && empty( $_POST[ 'replytocom' ] ) ) {	// don't save reply ratings
 
 				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
 
