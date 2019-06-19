@@ -19,6 +19,8 @@ WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggre
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
 
+**Compatible with WooCommerce product ratings and reviews.**
+
 **Extends the WordPress comment system with ratings and reviews:**
 
 * Star ratings can be enabled/disabled by post type or individual post.
@@ -30,10 +32,6 @@ WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggre
 * The review reply form is correctly labeled as a "Reply".
 
 * The color of star ratings can be customized from the settings page.
-
-**Does not conflict with WooCommerce ratings and reviews:**
-
-The [WooCommerce](https://wordpress.org/plugins/woocommerce/) plugin settings are checked, and if WooCommerce product reviews are enabled (or the [Yotpo Reviews for Woocommerce](https://wordpress.org/plugins/yotpo-social-reviews-for-woocommerce/) plugin is active), the original WooCommerce product review feature is left as-is.
 
 **Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and JSON-LD markup:**
 
