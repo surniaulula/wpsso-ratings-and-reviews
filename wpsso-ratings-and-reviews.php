@@ -184,8 +184,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
 
-				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ||
-					! empty( $this->p->avail[ 'review' ][ 'yotpowc' ] ) ) {
+				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) {
 
 					if ( ! empty( $this->p->options[ 'rar_add_to_product' ] ) ) {
 
