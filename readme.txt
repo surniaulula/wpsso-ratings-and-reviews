@@ -98,7 +98,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *New Features*
 	* None.
 * *Improvements*
-	* None.
+	* Removed support for the Yotpo Social Reviews for WooCommerce plugin (too many bad reviews and too few active installations).
 * *Bugfixes*
 	* None.
 * *Developer Notes*
@@ -130,7 +130,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.0.0-dev.2 =
 
-(2019/06/18) Maintenance release for WPSSO Core v5.0.0.
+(2019/06/18) Removed support for the Yotpo Social Reviews for WooCommerce plugin. Maintenance release for WPSSO Core v5.0.0.
 
 = 1.5.5 =
 
