@@ -5,7 +5,7 @@
 <tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.1</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce</td></tr>
