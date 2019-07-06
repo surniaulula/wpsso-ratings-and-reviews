@@ -132,6 +132,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 		}
 
 		public static function wpsso_init_textdomain() {
+
 			load_plugin_textdomain( 'wpsso-ratings-and-reviews', false, 'wpsso-ratings-and-reviews/languages/' );
 		}
 
@@ -143,7 +144,9 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			$info = WpssoRarConfig::$cf[ 'plugin' ][ 'wpssorar' ];
 
 			if ( version_compare( $plugin_version, $info[ 'req' ][ 'min_version' ], '<' ) ) {
+
 				$this->have_req_min = false;
+
 				return $cf;
 			}
 
@@ -162,11 +165,13 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			}
 
 			if ( ! $this->have_req_min ) {
+
 				$this->p->avail[ 'p_ext' ][ 'rar' ] = false;	// Signal that this extension / add-on is not available.
+
 				return;
 			}
 
-			$this->p->avail[ 'p_ext' ][ 'rar' ] = true;	// Signal that this extension / add-on is available.
+			$this->p->avail[ 'p_ext' ][ 'rar' ] = true;		// Signal that this extension / add-on is available.
 		}
 
 		public function wpsso_init_objects() {
