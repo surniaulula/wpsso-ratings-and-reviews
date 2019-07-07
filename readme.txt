@@ -107,7 +107,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *New Features*
 	* None.
 * *Improvements*
-	* Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Rating / Review settings page (WPSSO JSON add-on required).
+	* Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Ratings / Reviews settings page (WPSSO JSON add-on required).
 * *Bugfixes*
 	* None.
 * *Developer Notes*
