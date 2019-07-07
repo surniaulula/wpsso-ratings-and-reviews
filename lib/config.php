@@ -43,7 +43,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 						'std' => array(
 						),
 						'submenu' => array(
-							'rar-general' => 'Rating / Review',
+							'rar-general' => 'Ratings / Reviews',
 						),
 					),
 				),
