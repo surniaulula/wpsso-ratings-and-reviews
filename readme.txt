@@ -93,35 +93,35 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 **Version 2.0.0 (2019/06/24)**
 
-* *New Features*
+* **New Features**
 	* None.
-* *Improvements*
+* **Improvements**
 	* Removed support for the Yotpo Social Reviews for WooCommerce plugin (too many bad reviews and too few active installations).
-* *Bugfixes*
+* **Bugfixes**
 	* None.
-* *Developer Notes*
+* **Developer Notes**
 	* Maintenance release for WPSSO Core v5.0.0.
 
 **Version 1.5.5 (2019/04/27)**
 
-* *New Features*
+* **New Features**
 	* None.
-* *Improvements*
+* **Improvements**
 	* Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Ratings / Reviews settings page (WPSSO JSON add-on required).
-* *Bugfixes*
+* **Bugfixes**
 	* None.
-* *Developer Notes*
+* **Developer Notes**
 	* None.
 
 **Version 1.5.4 (2019/04/21)**
 
-* *New Features*
+* **New Features**
 	* None.
-* *Improvements*
+* **Improvements**
 	* None.
-* *Bugfixes*
+* **Bugfixes**
 	* None.
-* *Developer Notes*
+* **Developer Notes**
 	* Added more debug logging in the WpssoRarFilters class.
 
 == Upgrade Notice ==
