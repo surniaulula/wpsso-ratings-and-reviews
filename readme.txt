@@ -91,6 +91,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.1.0-rc.1 (2019/07/12)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Minor update for menus, labels, and translation strings.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.0.0 (2019/06/24)**
 
 * **New Features**
@@ -102,29 +113,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Maintenance release for WPSSO Core v5.0.0.
 
-**Version 1.5.5 (2019/04/27)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added a new "Add 5 Star Rating If No Rating" option in the SSO &gt; Ratings / Reviews settings page (WPSSO JSON add-on required).
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 1.5.4 (2019/04/21)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added more debug logging in the WpssoRarFilters class.
-
 == Upgrade Notice ==
+
+= 2.1.0-rc.1 =
+
+(2019/07/12) Minor update for menus, labels, and translation strings.
 
 = 2.0.0 =
 
