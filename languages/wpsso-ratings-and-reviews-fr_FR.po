@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.0.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2019-06-23 16:07-0700\n"
-"PO-Revision-Date: 2019-06-23 16:07-0700\n"
+"POT-Creation-Date: 2019-07-11 15:36-0700\n"
+"PO-Revision-Date: 2019-07-11 15:37-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -99,7 +99,7 @@ msgstr "Lorsque cette option est activée, et qu'une note pour le contenu de la 
 
 #: lib/gettext-config.php:6
 msgctxt "lib file description"
-msgid "Rating / Review"
+msgid "Ratings / Reviews"
 msgstr "Notes / critiques"
 
 #: lib/gettext-config.php:7
@@ -145,19 +145,19 @@ msgctxt "option label"
 msgid "Add 5 Star Rating If No Rating"
 msgstr "Ajouter note 5 étoiles si aucune note"
 
-#: wpsso-ratings-and-reviews.php:104
+#: wpsso-ratings-and-reviews.php:110
 msgid "%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est un ajout pour l'extension %2$s &mdash; SVP installer et activer l'extension %3$s avant d'activer %4$s."
 
-#: wpsso-ratings-and-reviews.php:106
+#: wpsso-ratings-and-reviews.php:112
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
 
-#: wpsso-ratings-and-reviews.php:196
+#: wpsso-ratings-and-reviews.php:207
 msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
 msgstr "Une fonctionnalité de notation des produits a été trouvée &mdash; %1$s a été désactivé pour le type d'article personnalisé \"produit\"."
 
-#: wpsso-ratings-and-reviews.php:234
+#: wpsso-ratings-and-reviews.php:245
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
