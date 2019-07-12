@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0-rc.2 (2019/07/12)**
+**Version 2.1.0-rc.3 (2019/07/12)**
 
 * **New Features**
 	* None.
@@ -115,7 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.0-rc.2 =
+= 2.1.0-rc.3 =
 
 (2019/07/12) Minor update for menus, labels, and translation strings.
 
