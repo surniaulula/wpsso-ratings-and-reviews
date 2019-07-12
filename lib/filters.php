@@ -13,7 +13,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 	class WpssoRarFilters {
 
-		protected $p;
+		private $p;
 
 		public function __construct( &$plugin ) {
 
@@ -26,9 +26,10 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
 				'og'           => 2,
-			), 1000 );
+			), $prio = 1000 );
 
 			if ( is_admin() ) {
+
 				$this->p->util->add_plugin_filters( $this, array( 
 					'messages_tooltip' => 2,
 				) );
