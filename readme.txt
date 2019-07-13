@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0-rc.5 (2019/07/13)**
+**Version 2.1.0 (2019/07/13)**
 
 * **New Features**
 	* None.
@@ -115,11 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.0-rc.5 =
+= 2.1.0 =
 
 (2019/07/13) Minor update for menus, labels, and translation strings.
-
-= 2.0.0 =
-
-(2019/06/24) Removed support for the Yotpo Social Reviews for WooCommerce plugin. Maintenance release for WPSSO Core v5.0.0.
 
