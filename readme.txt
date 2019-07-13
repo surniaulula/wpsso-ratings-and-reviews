@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.8
 Tested Up To: 5.2.2
 WC Tested Up To: 3.6
-Stable Tag: 2.0.0
+Stable Tag: 2.1.0
 
 WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggregate Rating meta tags, and optional Schema Review markup.
 
