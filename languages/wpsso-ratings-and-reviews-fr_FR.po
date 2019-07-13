@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 2.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2019-07-11 15:36-0700\n"
-"PO-Revision-Date: 2019-07-11 15:37-0700\n"
+"POT-Creation-Date: 2019-07-12 17:19-0700\n"
+"PO-Revision-Date: 2019-07-12 17:19-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:146
+#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:147
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
@@ -73,27 +73,27 @@ msgstr "Terrible"
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
-#: lib/filters.php:144
+#: lib/filters.php:145
 msgid "You can choose to enable or disable ratings by default for each public post type."
 msgstr "Vous pouvez choisir d'activer ou désactiver par défaut les notes pour chaque type d'article public."
 
-#: lib/filters.php:146
+#: lib/filters.php:147
 msgid "When editing a post (page, or custom post type), an \"%1$s\" option is also available to enable or disable ratings for that specific webpage."
 msgstr "Lorsque vous modifiez un article (page, ou type d'article personnalisé), une option \"%1$s\" est aussi disponible pour activer ou désactiver les notes pour cette page Web."
 
-#: lib/filters.php:152
+#: lib/filters.php:153
 msgid "Force a reviewer to select a rating before submitting their review (enabled by default)."
 msgstr "Obliger le critique à sélectionner une note avant de soumettre leur texte (activé par défaut)."
 
-#: lib/filters.php:158
+#: lib/filters.php:159
 msgid "A color for selected stars representing the rating."
 msgstr "Une couleur pour les étoiles sélectionnées représentant la note."
 
-#: lib/filters.php:164
+#: lib/filters.php:165
 msgid "A default color for unselected stars."
 msgstr "Une couleur par défaut pour les étoiles non sélectionnées."
 
-#: lib/filters.php:170
+#: lib/filters.php:171
 msgid "When this option is enabled, and a rating for the webpage content is NOT available, then a generic 5 star rating from the site organization is added to the main Schema type markup."
 msgstr "Lorsque cette option est activée, et qu'une note pour le contenu de la page Web n'est PAS disponible, une note générique 5 étoiles de l'organisation du site est ajoutée au balisage du type de Schéma principale."
 
