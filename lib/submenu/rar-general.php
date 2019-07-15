@@ -59,7 +59,7 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 
 				case 'rar-general':
 
-					$json_req_msg = $this->p->admin->get_ext_required_msg( 'json' );
+					$json_req_msg = $this->p->msgs->maybe_ext_required( 'wpssojson' );
 					$json_disable = empty( $json_req_msg ) ? false : true;
 
 					$table_rows[ 'rar_add_to' ] = $this->form->get_th_html( _x( 'Rating Form for Post Types',
