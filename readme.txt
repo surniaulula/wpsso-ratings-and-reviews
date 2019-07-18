@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.0-rc.1 (2019/07/18)**
+**Version 2.2.0 (2019/07/18)**
 
 * **New Features**
 	* None.
@@ -102,35 +102,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Maintenance release for WPSSO Core v5.3.0.
 
-**Version 2.1.0 (2019/07/13)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update for menus, labels, and translation strings.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 2.0.0 (2019/06/24)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Removed support for the Yotpo Social Reviews for WooCommerce plugin (too many bad reviews and too few active installations).
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Maintenance release for WPSSO Core v5.0.0.
-
 == Upgrade Notice ==
 
-= 2.2.0-rc.1 =
+= 2.2.0 =
 
 (2019/07/18) Maintenance release for WPSSO Core v5.3.0.
-
-= 2.1.0 =
-
-(2019/07/13) Minor update for menus, labels, and translation strings.
 
