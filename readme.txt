@@ -45,7 +45,7 @@ Including information about the review (author name, creation time, excerpt, rat
 
 Simply activate / deactivate the plugin to enable / disable the addition of ratings and reviews.
 
-<h3>WPSSO Core Plugin Prerequisite</h3>
+<h3>WPSSO Core Plugin Required</h3>
 
 WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
 
