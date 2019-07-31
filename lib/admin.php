@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 						$this->allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ), // The only argument is a post id.
 					),
 					'orderby' => 'meta_value',
-					'width'   => '80px',
+					'width'   => '75px',
 					'height'  => 'auto',
 				)
 			), $columns );
