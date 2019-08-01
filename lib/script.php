@@ -43,7 +43,7 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 						WPSSORAR_URLPATH.'js/admin-script.min.js', 
 							array( 'jquery' ), $plugin_version, true );
 
-					break;	// stop here
+					break;	// Stop here.
 			}
 
 		}

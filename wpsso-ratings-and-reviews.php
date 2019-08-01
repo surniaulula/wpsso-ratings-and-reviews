@@ -187,7 +187,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			}
 
 			if ( ! $this->have_req_min ) {
-				return;	// stop here
+				return;	// Stop here.
 			}
 
 			/**
@@ -236,7 +236,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 				$this->min_version_notice();
 
-				return;	// stop here
+				return;	// Stop here.
 			}
 		}
 
