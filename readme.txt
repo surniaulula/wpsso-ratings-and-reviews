@@ -1,4 +1,4 @@
-=== WPSSO Ratings and Reviews ===
+=== Ratings and Reviews | WPSSO Add-on ===
 Plugin Name: WPSSO Ratings and Reviews
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
@@ -13,7 +13,7 @@ Tested Up To: 5.2.2
 WC Tested Up To: 3.6
 Stable Tag: 2.2.0
 
-WPSSO Core add-on provides ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
+Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
 
 == Description ==
 
