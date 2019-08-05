@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.2.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.2.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2019-07-16 10:14-0700\n"
-"PO-Revision-Date: 2019-07-16 10:14-0700\n"
+"POT-Creation-Date: 2019-08-05 08:56-0700\n"
+"PO-Revision-Date: 2019-08-05 08:56-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -104,8 +104,8 @@ msgstr "Notes / critiques"
 
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
-msgid "WPSSO Core add-on provides ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr "Ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
+msgid "Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup."
+msgstr "Notes et critiques pour commentaires WordPress avec balises méta Aggregate Rating et balisage Schéma Review."
 
 #: lib/script.php:74
 msgid "Please select a rating before submitting."
@@ -157,7 +157,7 @@ msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'ex
 msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
 msgstr "Une fonctionnalité de notation des produits a été trouvée &mdash; %1$s a été désactivé pour le type d'article personnalisé \"produit\"."
 
-#: wpsso-ratings-and-reviews.php:245
+#: wpsso-ratings-and-reviews.php:247
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
@@ -170,8 +170,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 
 #. Description of the plugin/theme
-msgid "WPSSO Core add-on provides ratings and reviews for WordPress comments, with Aggregate Rating meta tags and optional Schema Review markup."
-msgstr "Ajout WPSSO Core pour fournir des notes et critiques aux commentaires WordPress, avec balises méta Aggregate Rating et balisage de Schéma Review."
+msgid "Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup."
+msgstr "Notes et critiques pour commentaires WordPress avec balises méta Aggregate Rating et balisage Schéma Review."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
