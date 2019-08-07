@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.8
 Tested Up To: 5.2.2
 WC Tested Up To: 3.6
-Stable Tag: 2.2.0
+Stable Tag: 2.2.1
 
 Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
 
