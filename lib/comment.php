@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$post_type = get_post_type( $post_id );
 			$default   = empty( $wpsso->options[ 'rar_add_to_' . $post_type ] ) ? 0 : 1;
 			$disabled  = isset( $wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
-				$wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] == 'disabled' ? true : false;
+				$wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] === 'disabled' ? true : false;
 
 			if ( $disabled ) {
 				$enabled = 0;
