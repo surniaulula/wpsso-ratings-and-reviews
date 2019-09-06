@@ -105,9 +105,6 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 
 					WpssoUtil::save_all_times( 'wpssorar', $version );
 				}
-
-			} else {
-				WpssoRar::required_notice( $deactivate = true );
 			}
 		}
 
