@@ -62,27 +62,25 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 					$json_req_msg = $this->p->msgs->maybe_ext_required( 'wpssojson' );
 					$json_disable = empty( $json_req_msg ) ? false : true;
 
-					$table_rows[ 'rar_add_to' ] = $this->form->get_th_html( _x( 'Rating Form for Post Types',
+					$table_rows[ 'rar_add_to' ] = '' .
+					$this->form->get_th_html( _x( 'Rating Form for Post Types',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_add_to' ).
 					'<td>'.$this->form->get_checklist_post_types( 'rar_add_to' ).'</td>';
 
-					$table_rows[ 'rar_rating_required' ] = $this->form->get_th_html( _x( 'Rating Required for Review',
+					$table_rows[ 'rar_rating_required' ] = '' .
+					$this->form->get_th_html( _x( 'Rating Required for Review',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_rating_required' ).
 					'<td>'.$this->form->get_checkbox( 'rar_rating_required' ).'</td>';
 
-					$table_rows[ 'rar_star_color_selected' ] = $this->form->get_th_html( _x( 'Selected Star Rating Color',
+					$table_rows[ 'rar_star_color_selected' ] = '' .
+					$this->form->get_th_html( _x( 'Selected Star Rating Color',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_star_color_selected' ).
 					'<td>'.$this->form->get_input_color( 'rar_star_color_selected' ).'</td>';
 
-					$table_rows[ 'rar_star_color_default' ] = $this->form->get_th_html( _x( 'Unselected Star Rating Color',
+					$table_rows[ 'rar_star_color_default' ] = '' .
+					$this->form->get_th_html( _x( 'Unselected Star Rating Color',
 						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_star_color_default' ).
 					'<td>'.$this->form->get_input_color( 'rar_star_color_default' ).'</td>';
-
-					$table_rows[ 'rar_add_5_star_rating' ] = '' .
-					$this->form->get_th_html( _x( 'Add 5 Star Rating If No Rating',
-						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_add_5_star_rating' ) . 
-					'<td>' . $this->form->get_checkbox( 'schema_add_5_star_rating',
-						'', '', $json_disable ) . $json_req_msg . '</td>';
 
 					break;
 			}

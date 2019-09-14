@@ -58,7 +58,6 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_rating_required'         => 1,		// Rating Required for Review.
 					'rar_star_color_selected'     => '#222222',	// Selected Star Rating Color.
 					'rar_star_color_default'      => '#dddddd',	// Unselected Star Rating Color.
-					'schema_add_5_star_rating'    => 0,		// Add 5 Star Rating If No Rating.
 					'plugin_avg_rating_col_media' => 0,
 					'plugin_avg_rating_col_post'  => 1,
 				),
