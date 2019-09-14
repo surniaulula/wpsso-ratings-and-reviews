@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.0-dev.6 (2019/09/13)**
+**Version 2.3.0-dev.7 (2019/09/13)**
 
 * **New Features**
 	* None.
@@ -115,7 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.0-dev.6 =
+= 2.3.0-dev.7 =
 
 (2019/09/13) Added a 'wpsso_json_scripts' filter for WPSSO Core v6.3.0 to add rating meta tags.
 
