@@ -96,11 +96,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Maintenance release.
+	* None.
 
 **Version 2.2.1 (2019/08/07)**
 
@@ -117,7 +117,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.3.0-dev.8 =
 
-(2019/09/15) Maintenance release.
+(2019/09/15) Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
 
 = 2.2.1 =
 
