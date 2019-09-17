@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.0-b.2 (2019/09/16)**
+**Version 2.3.0-rc.1 (2019/09/17)**
 
 * **New Features**
 	* None.
@@ -115,9 +115,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.0-b.2 =
+= 2.3.0-rc.1 =
 
-(2019/09/16) Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
+(2019/09/17) Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
 
 = 2.2.1 =
 
