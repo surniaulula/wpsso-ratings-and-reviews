@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.0-rc.1 (2019/09/17)**
+**Version 2.3.0 (2019/09/17)**
 
 * **New Features**
 	* None.
@@ -102,24 +102,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 
-**Version 2.2.1 (2019/08/07)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update for "fr_FR" translations.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
 
-= 2.3.0-rc.1 =
+= 2.3.0 =
 
 (2019/09/17) Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
-
-= 2.2.1 =
-
-(2019/08/07) Minor update for "fr_FR" translations.
 
