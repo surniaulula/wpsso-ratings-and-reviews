@@ -91,23 +91,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.3.1-rc.1 (2019/10/03)**
+**Version 2.3.1 (2019/10/04)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Maintenance release for WPSSO Core v6.6.1.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
-**Version 2.3.0 (2019/09/17)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
+	* Maintenance release for WPSSO Core v6.7.0.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -115,11 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.1-rc.1 =
+= 2.3.1 =
 
-(2019/10/03) Maintenance release for WPSSO Core v6.6.1.
-
-= 2.3.0 =
-
-(2019/09/17) Moved the "Add 5 Star Rating If No Rating" option to the WPSSO JSON add-on settings page.
+(2019/10/04) Maintenance release for WPSSO Core v6.7.0.
 
