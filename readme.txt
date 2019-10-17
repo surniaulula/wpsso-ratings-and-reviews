@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
 Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
 Contributors: jsmoriss
 Requires At Least: 3.9
-Tested Up To: 5.2.4
+Tested Up To: 5.3
 WC Tested Up To: 3.7.1
 Stable Tag: 2.3.1
 
