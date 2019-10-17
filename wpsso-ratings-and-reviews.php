@@ -12,7 +12,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
  * Requires At Least: 3.9
- * Tested Up To: 5.2.4
+ * Tested Up To: 5.3
  * WC Tested Up To: 3.7.1
  * Version: 2.3.1
  *
