@@ -66,8 +66,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 		public static function get_version( $add_slug = false ) {
 
-			$ext  = 'wpssorar';
-			$info =& self::$cf[ 'plugin' ][$ext];
+			$info =& self::$cf[ 'plugin' ][ 'wpssorar' ];
 
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
@@ -78,13 +77,21 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 				return;
 			}
 
-			define( 'WPSSORAR_FILEPATH', $plugin_filepath );						
-			define( 'WPSSORAR_PLUGINBASE', self::$cf[ 'plugin' ][ 'wpssorar' ][ 'base' ] );		// wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php
-			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
-			define( 'WPSSORAR_PLUGINSLUG', self::$cf[ 'plugin' ][ 'wpssorar' ][ 'slug' ] );		// wpsso-ratings-and-reviews
-			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
-			define( 'WPSSORAR_VERSION', self::$cf[ 'plugin' ][ 'wpssorar' ][ 'version' ] );						
+			$info =& self::$cf[ 'plugin' ][ 'wpssorar' ];
 
+			/**
+			 * Define fixed constants.
+			 */
+			define( 'WPSSORAR_FILEPATH', $plugin_filepath );						
+			define( 'WPSSORAR_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php.
+			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
+			define( 'WPSSORAR_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-ratings-and-reviews.
+			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
+			define( 'WPSSORAR_VERSION', $info[ 'version' ] );						
+
+			/**
+			 * Define variable constants.
+			 */
 			self::set_variable_constants();
 		}
 
@@ -94,6 +101,9 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 				$var_const = self::get_variable_constants();
 			}
 
+			/**
+			 * Define the variable constants, if not already defined.
+			 */
 			foreach ( $var_const as $name => $value ) {
 				if ( ! defined( $name ) ) {
 					define( $name, $value );
@@ -105,15 +115,18 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 			$var_const = array();
 
-			$var_const['WPSSORAR_META_REVIEW_RATING'] = 'rating';			// comment meta int
-			$var_const['WPSSORAR_META_ALLOW_RATINGS'] = '_wpsso_allow_ratings';	// post meta 0/1
-			$var_const['WPSSORAR_META_AVERAGE_RATING'] = '_wpsso_average_rating';	// post meta float
-			$var_const['WPSSORAR_META_RATING_COUNTS'] = '_wpsso_rating_counts';	// post meta array
-			$var_const['WPSSORAR_META_REVIEW_COUNT'] = '_wpsso_review_count';	// post meta int
+			$var_const[ 'WPSSORAR_META_REVIEW_RATING' ]  = 'rating';		// Comment meta int.
+			$var_const[ 'WPSSORAR_META_ALLOW_RATINGS' ]  = '_wpsso_allow_ratings';	// Post meta 0/1.
+			$var_const[ 'WPSSORAR_META_AVERAGE_RATING' ] = '_wpsso_average_rating';	// Post meta float.
+			$var_const[ 'WPSSORAR_META_RATING_COUNTS' ]  = '_wpsso_rating_counts';	// Post meta array.
+			$var_const[ 'WPSSORAR_META_REVIEW_COUNT' ]   = '_wpsso_review_count';	// Post meta int.
 
+			/**
+			 * Maybe override the default constant value with a pre-defined constant value.
+			 */
 			foreach ( $var_const as $name => $value ) {
 				if ( defined( $name ) ) {
-					$var_const[$name] = constant( $name );	// inherit existing values
+					$var_const[$name] = constant( $name );
 				}
 			}
 
