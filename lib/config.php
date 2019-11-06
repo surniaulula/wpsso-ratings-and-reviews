@@ -23,13 +23,13 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'desc'        => 'Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.',
 					'slug'        => 'wpsso-ratings-and-reviews',
 					'base'        => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
-					'update_auth' => '',
+					'update_auth' => '',		// No premium version.
 					'text_domain' => 'wpsso-ratings-and-reviews',
 					'domain_path' => '/languages',
 					'req'         => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.11.0',
+						'min_version' => '6.11.1',
 					),
 					'assets' => array(
 						'icons' => array(
