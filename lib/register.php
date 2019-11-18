@@ -103,7 +103,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 
 					$version = WpssoRarConfig::$cf[ 'plugin' ][ 'wpssorar' ][ 'version' ];
 
-					WpssoUtil::save_all_times( 'wpssorar', $version );
+					WpssoUtil::register_ext_version( 'wpssorar', $version );
 				}
 			}
 		}
