@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.3
 WC Tested Up To: 3.8.0
-Stable Tag: 2.3.1
+Stable Tag: 2.3.2
 
 Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
 
@@ -102,24 +102,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Updated `WpssoRarRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.0.
 
-**Version 2.3.1 (2019/10/04)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Maintenance release for WPSSO Core v6.7.0.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
 
 = 2.3.2 =
 
 (2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.0.
-
-= 2.3.1 =
-
-(2019/10/04) Maintenance release for WPSSO Core v6.7.0.
 
