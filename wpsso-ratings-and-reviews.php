@@ -13,7 +13,7 @@
  * Description: Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
  * Requires At Least: 3.9
  * Tested Up To: 5.3
- * WC Tested Up To: 3.8.0
+ * WC Tested Up To: 3.8.1
  * Version: 2.3.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
