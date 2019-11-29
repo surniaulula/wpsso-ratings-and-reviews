@@ -71,7 +71,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
-		public static function set_constants( $plugin_filepath ) { 
+		public static function set_constants( $plugin_file_path ) { 
 
 			if ( defined( 'WPSSORAR_VERSION' ) ) {	// Define constants only once.
 				return;
@@ -82,11 +82,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSORAR_FILEPATH', $plugin_filepath );						
+			define( 'WPSSORAR_FILEPATH', $plugin_file_path );						
 			define( 'WPSSORAR_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php.
-			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
+			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file_path ) ) ) );
 			define( 'WPSSORAR_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-ratings-and-reviews.
-			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
+			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_file_path ) ) );
 			define( 'WPSSORAR_VERSION', $info[ 'version' ] );						
 
 			/**
@@ -133,7 +133,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			return $var_const;
 		}
 
-		public static function require_libs( $plugin_filepath ) {
+		public static function require_libs( $plugin_file_path ) {
 
 			require_once WPSSORAR_PLUGINDIR . 'lib/comment.php';
 			require_once WPSSORAR_PLUGINDIR . 'lib/filters.php';
@@ -152,11 +152,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 			if ( false === $ret && ! empty( $filespec ) ) {
 
-				$filepath = WPSSORAR_PLUGINDIR . 'lib/' . $filespec . '.php';
+				$file_path = WPSSORAR_PLUGINDIR . 'lib/' . $filespec . '.php';
 
-				if ( file_exists( $filepath ) ) {
+				if ( file_exists( $file_path ) ) {
 
-					require_once $filepath;
+					require_once $file_path;
 
 					if ( empty( $classname ) ) {
 						return SucomUtil::sanitize_classname( 'wpssorar' . $filespec, $allow_underscore = false );

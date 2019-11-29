@@ -11,12 +11,12 @@ if ( ! defined( 'ABSPATH' ) || ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 $plugin_dir = trailingslashit( dirname( __FILE__ ) );
 
-$plugin_filepath = $plugin_dir . 'wpsso-ratings-and-reviews.php';
+$plugin_file_path = $plugin_dir . 'wpsso-ratings-and-reviews.php';
 
 require_once $plugin_dir . 'lib/config.php';
 
-WpssoRarConfig::set_constants( $plugin_filepath );
+WpssoRarConfig::set_constants( $plugin_file_path );
 
-WpssoRarConfig::require_libs( $plugin_filepath );	// Includes the register.php class library.
+WpssoRarConfig::require_libs( $plugin_file_path );	// Includes the register.php class library.
 
 WpssoRarRegister::network_uninstall();
