@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					),
 				),
 			),
-			'opt' => array(						// options
+			'opt' => array(
 				'defaults' => array(
 					'rar_add_to_attachment'       => 0,		// Rating Form for Post Types.
 					'rar_add_to_page'             => 1,
