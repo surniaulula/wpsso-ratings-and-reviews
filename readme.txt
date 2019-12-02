@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.3
 WC Tested Up To: 3.8.1
-Stable Tag: 2.3.2
+Stable Tag: 2.4.0
 
 Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
 
@@ -91,6 +91,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.4.0 (2019/12/02)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated the 'title_reply' value from "Leave a Reply" to "Leave a Review".
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.3.2 (2019/11/23)**
 
 * **New Features**
@@ -104,7 +115,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.3.2 =
+= 2.4.0 =
 
-(2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.1.
+(2019/12/02) Updated the 'title_reply' value from "Leave a Reply" to "Leave a Review".
 
