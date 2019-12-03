@@ -69,9 +69,8 @@ WPSSO Ratings and Reviews (aka WPSSO RAR) is an add-on for the [WPSSO Core plugi
 
 == Screenshots ==
 
-01. WPSSO RAR settings page to enable ratings by post type, optionally force star ratings for reviews, and select colors for the star ratings. 
-02. WPSSO RAR editing page showing an option to enable / disable ratings per post, reviews with star ratings, and a reply to a review (no star rating).
-03. WPSSO RAR showing the submission of a review &mdash; note the themed labels (Your Rating, Your Review, etc.) and the customized star colors.
+01. The WPSSO RAR settings page to enable ratings by post type and select colors for the star ratings. 
+02. The WPSSO RAR review submission &mdash; note the customized labels (Your Rating, Your Review, etc.).
 
 == Changelog ==
 
