@@ -17,11 +17,7 @@ msgstr ""
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:118
-msgid "Leave a Review"
-msgstr ""
-
-#: lib/comment.php:122
+#: lib/comment.php:118 lib/comment.php:122
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""

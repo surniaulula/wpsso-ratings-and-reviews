@@ -115,7 +115,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Title
 			 */
-			$defaults[ 'title_reply' ] =  __( 'Leave a Review', 'wpsso-ratings-and-reviews' );
+			$defaults[ 'title_reply' ] =  _x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' );
 
 			$defaults[ 'title_reply_before' ] = '<span class="wpsso-rar title-reply">' . 
 				$review_begin_html . '<!-- form label: Leave a Review --><h3 id="review-title" class="comment-review-title">' . 
