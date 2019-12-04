@@ -27,13 +27,13 @@
 <li><p>The color of star ratings can be customized from the settings page.</p></li>
 </ul>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and JSON-LD markup:</strong></p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and (optional) JSON-LD markup:</strong></p>
 
-<p>Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> required for JSON-LD markup). WooCommerce product ratings and reviews are also included in the aggregate rating meta tags and JSON-LD markup.</p>
+<p>Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results (the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> is required for the optional JSON-LD markup).</p>
 
-<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> as optional JSON-LD markup:</strong></p>
+<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> in the (optional) JSON-LD markup:</strong></p>
 
-<p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (<a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> required for JSON-LD markup).</p>
+<p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> is required for the optional JSON-LD markup).</p>
 
 <h3>No templates to modify or update!</h3>
 
