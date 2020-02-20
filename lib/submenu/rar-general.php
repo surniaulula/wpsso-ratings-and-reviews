@@ -48,14 +48,14 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 		public function show_metabox_general() {
 			$metabox_id = 'rar';
 			$this->p->util->do_metabox_table( apply_filters( $this->p->lca . '_' . $metabox_id . '_general_rows', 
-				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-'.$metabox_id.'-general' );
+				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-' . $metabox_id . '-general' );
 		}
 
 		protected function get_table_rows( $metabox_id, $tab_key ) {
 
 			$table_rows = array();
 
-			switch ( $metabox_id.'-'.$tab_key ) {
+			switch ( $metabox_id . '-' . $tab_key ) {
 
 				case 'rar-general':
 
@@ -64,23 +64,23 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 
 					$table_rows[ 'rar_add_to' ] = '' .
 					$this->form->get_th_html( _x( 'Rating Form for Post Types',
-						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_add_to' ).
-					'<td>'.$this->form->get_checklist_post_types( 'rar_add_to' ).'</td>';
+						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_add_to' ) . 
+					'<td>' . $this->form->get_checklist_post_types( 'rar_add_to' ) . '</td>';
 
 					$table_rows[ 'rar_rating_required' ] = '' .
 					$this->form->get_th_html( _x( 'Rating Required for Review',
-						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_rating_required' ).
-					'<td>'.$this->form->get_checkbox( 'rar_rating_required' ).'</td>';
+						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_rating_required' ) . 
+					'<td>' . $this->form->get_checkbox( 'rar_rating_required' ) . '</td>';
 
 					$table_rows[ 'rar_star_color_selected' ] = '' .
 					$this->form->get_th_html( _x( 'Selected Star Rating Color',
-						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_star_color_selected' ).
-					'<td>'.$this->form->get_input_color( 'rar_star_color_selected' ).'</td>';
+						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_star_color_selected' ) . 
+					'<td>' . $this->form->get_input_color( 'rar_star_color_selected' ) . '</td>';
 
 					$table_rows[ 'rar_star_color_default' ] = '' .
 					$this->form->get_th_html( _x( 'Unselected Star Rating Color',
-						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_star_color_default' ).
-					'<td>'.$this->form->get_input_color( 'rar_star_color_default' ).'</td>';
+						'option label', 'wpsso-ratings-and-reviews' ), '', 'rar_star_color_default' ) . 
+					'<td>' . $this->form->get_input_color( 'rar_star_color_default' ) . '</td>';
 
 					break;
 			}
