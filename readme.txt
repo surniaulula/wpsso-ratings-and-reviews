@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
 Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
 Contributors: jsmoriss
-Requires PHP: 5.5
+Requires PHP: 5.6
 Requires At Least: 4.0
 Tested Up To: 5.4
 WC Tested Up To: 3.9.2
@@ -102,20 +102,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v5.5.
+	* PHP v5.6.
 	* WordPress v4.0.
-	* WPSSO Core v6.21.2.
-
-**Version 2.3.2 (2019/11/23)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated `WpssoRarRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.1.
+	* WPSSO Core v6.23.1.
 
 == Upgrade Notice ==
 
