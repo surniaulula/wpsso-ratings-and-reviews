@@ -91,16 +91,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.4.0 (2019/12/02)**
+**Version 2.5.0 (2020/03/31)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Updated the 'title_reply' value from "Leave a Reply" to "Leave a Review".
+	* None.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Added extra sanity checks to prevent aggregate rating values, rating counts, or review counts of 0.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.0.
@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.4.0 =
+= 2.5.0 =
 
-(2019/12/02) Updated the 'title_reply' value from "Leave a Reply" to "Leave a Review".
+(2020/03/31) Added extra sanity checks to prevent aggregate rating values, rating counts, or review counts of 0.
 
