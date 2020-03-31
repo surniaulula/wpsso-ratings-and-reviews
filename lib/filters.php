@@ -87,7 +87,9 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				return $mt_og;
 			}
 
-			$og_type = $mt_og[ 'og:type' ];
+			$og_type      = $mt_og[ 'og:type' ];
+			$worst_rating = 1;
+			$best_rating  = 5;
 
 			if ( apply_filters( $this->p->lca . '_og_add_mt_rating', true, $mod ) ) {
 
@@ -137,7 +139,8 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
 
-				$mt_og[ $og_type . ':reviews' ] = $mod[ 'obj' ]->get_og_type_reviews( $mod[ 'id' ], $og_type, 'rating' );
+				$mt_og[ $og_type . ':reviews' ] = $mod[ 'obj' ]->get_og_type_reviews( $mod[ 'id' ],
+					$og_type, $rating_meta = 'rating', $worst_rating, $best_rating );
 
 			} elseif ( $this->p->debug->enabled ) {
 				$this->p->debug->log( 'add review meta tags is false' );
