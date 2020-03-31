@@ -72,13 +72,18 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			if ( ! WpssoRarComment::is_rating_enabled( $mod[ 'id' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( 'post id ' . $mod[ 'id' ] . ' ratings disabled' );
+					$this->p->debug->log( 'exiting early: post id ' . $mod[ 'id' ] . ' ratings disabled' );
 				}
 
 				return $mt_og;
 			}
 
 			if ( empty( $mt_og[ 'og:type' ] ) ) {	// Just in case.
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'exiting early: open graph type is empty' );
+				}
+
 				return $mt_og;
 			}
 
