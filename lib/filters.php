@@ -105,29 +105,26 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'review count = ' . $review_count );
 				}
 
-				if ( empty( $average_rating ) ) {
+				if ( $average_rating > 0 ) {
+				
+					if ( $rating_count > 0 || $review_count > 0 ) {
 
-					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'post id ' . $mod[ 'id' ] . ' average rating is empty' );
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log( 'adding rating meta tags for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
+						}
+
+						$mt_og[ $og_type . ':rating:average' ] = number_format( (float) $average_rating, 2, '.', '' );
+						$mt_og[ $og_type . ':rating:count' ]   = $rating_count;
+						$mt_og[ $og_type . ':rating:worst' ]   = 1;
+						$mt_og[ $og_type . ':rating:best' ]    = 5;
+						$mt_og[ $og_type . ':review:count' ]   = $review_count;
+
+					} elseif ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'rating and review count is invalid (must be greater than 0)' );
 					}
 
-				} elseif ( empty( $rating_count ) && empty( $review_count ) ) {
-
-					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'post id ' . $mod[ 'id' ] . ' rating and review counts empty' );
-					}
-
-				} else {
-
-					if ( $this->p->debug->enabled ) {
-						$this->p->debug->log( 'adding average rating meta tags for post id ' . $mod[ 'id' ] );
-					}
-
-					$mt_og[ $og_type . ':rating:average' ] = number_format( (float) $average_rating, 2, '.', '' );
-					$mt_og[ $og_type . ':rating:count' ]   = $rating_count;
-					$mt_og[ $og_type . ':rating:worst' ]   = 1;
-					$mt_og[ $og_type . ':rating:best' ]    = 5;
-					$mt_og[ $og_type . ':review:count' ]   = $review_count;
+				} elseif ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'average rating is invalid (must be greater than 0)' );
 				}
 
 			} elseif ( $this->p->debug->enabled ) {

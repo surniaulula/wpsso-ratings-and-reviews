@@ -356,7 +356,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function get_average_rating( $post_id ) {
 
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
-				self::sync_average_rating( $post_id );	// calculate the average rating
+				self::sync_average_rating( $post_id );	// Calculate the average rating.
 			} 
 
 			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, true );
