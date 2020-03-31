@@ -97,9 +97,9 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'add rating meta tags is true' );
 				}
 
-				$average_rating = WpssoRarComment::get_average_rating( $mod[ 'id' ] );
-				$rating_count   = WpssoRarComment::get_rating_count( $mod[ 'id' ] );
-				$review_count   = WpssoRarComment::get_review_count( $mod[ 'id' ] );
+				$average_rating = (float) WpssoRarComment::get_average_rating( $mod[ 'id' ] );
+				$rating_count   = (int) WpssoRarComment::get_rating_count( $mod[ 'id' ] );
+				$review_count   = (int) WpssoRarComment::get_review_count( $mod[ 'id' ] );
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( 'average rating = ' . $average_rating );
@@ -121,10 +121,10 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 							$this->p->debug->log( 'adding rating meta tags for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 						}
 
-						$mt_og[ $og_type . ':rating:average' ] = number_format( (float) $average_rating, 2, '.', '' );
+						$mt_og[ $og_type . ':rating:average' ] = $average_rating;
 						$mt_og[ $og_type . ':rating:count' ]   = $rating_count;
-						$mt_og[ $og_type . ':rating:worst' ]   = 1;
-						$mt_og[ $og_type . ':rating:best' ]    = 5;
+						$mt_og[ $og_type . ':rating:worst' ]   = $worst_rating;
+						$mt_og[ $og_type . ':rating:best' ]    = $best_rating;
 						$mt_og[ $og_type . ':review:count' ]   = $review_count;
 
 					} elseif ( $this->p->debug->enabled ) {
