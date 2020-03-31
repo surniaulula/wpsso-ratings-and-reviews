@@ -107,8 +107,14 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'review count = ' . $review_count );
 				}
 
+				/**
+				 * An average rating value must be greater than 0.
+				 */
 				if ( $average_rating > 0 ) {
-				
+			
+					/**
+					 * At least one rating or review is required.
+					 */
 					if ( $rating_count > 0 || $review_count > 0 ) {
 
 						if ( $this->p->debug->enabled ) {

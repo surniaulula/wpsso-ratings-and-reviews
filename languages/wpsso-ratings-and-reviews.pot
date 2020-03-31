@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:164
+#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:170
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -71,29 +71,29 @@ msgstr ""
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/filters.php:162
+#: lib/filters.php:168
 msgid ""
 "You can choose to enable or disable ratings by default for each public post "
 "type."
 msgstr ""
 
-#: lib/filters.php:164
+#: lib/filters.php:170
 msgid ""
 "When editing a post (page, or custom post type), an \"%1$s\" option is also "
 "available to enable or disable ratings for that specific webpage."
 msgstr ""
 
-#: lib/filters.php:170
+#: lib/filters.php:176
 msgid ""
 "Force a reviewer to select a rating before submitting their review (enabled "
 "by default)."
 msgstr ""
 
-#: lib/filters.php:176
+#: lib/filters.php:182
 msgid "A color for selected stars representing the rating."
 msgstr ""
 
-#: lib/filters.php:182
+#: lib/filters.php:188
 msgid "A default color for unselected stars."
 msgstr ""
 
