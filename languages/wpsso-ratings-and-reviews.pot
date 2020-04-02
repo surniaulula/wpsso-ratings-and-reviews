@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.5.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.6.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -142,19 +142,19 @@ msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:110
+#: wpsso-ratings-and-reviews.php:117
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
-"%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
+"plugin or <a href=\"%3$s\">deactivate this add-on</a>."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:192
+#: wpsso-ratings-and-reviews.php:202
 msgid ""
 "An existing products rating feature has been found &mdash; %1$s for the "
 "\"product\" custom post type has been disabled."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:239
+#: wpsso-ratings-and-reviews.php:251
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
