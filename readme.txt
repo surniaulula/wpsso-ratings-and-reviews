@@ -14,7 +14,7 @@ Tested Up To: 5.4
 WC Tested Up To: 4.0.1
 Stable Tag: 2.5.0
 
-Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
+Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
 
 == Description ==
 
@@ -34,11 +34,11 @@ Ratings and reviews for WordPress comments with Aggregate Rating meta tags and S
 
 * The color of star ratings can be customized from the settings page.
 
-**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and (optional) JSON-LD markup:**
+**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and optional JSON-LD markup:**
 
-Google reads aggregate rating meta tags (or the optional Schema JSON-LD markup) to add star ratings to search results (the [WPSSO JSON Premium add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) is required for the optional JSON-LD markup).
+Google reads aggregate rating meta tags, or the optional Schema JSON-LD markup, to add star ratings to search results (the WPSSO Schema JSON-LD Markup add-on is required for JSON-LD markup).
 
-**Includes complete [Schema Review](https://schema.org/Review) in the (optional) JSON-LD markup:**
+**Includes complete [Schema Review](https://schema.org/Review) in the optional JSON-LD markup:**
 
 Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (the [WPSSO JSON Premium add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) is required for the optional JSON-LD markup).
 
