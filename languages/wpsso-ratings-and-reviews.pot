@@ -105,8 +105,8 @@ msgstr ""
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid ""
-"Ratings and reviews for WordPress comments with Aggregate Rating meta tags "
-"and Schema Review markup."
+"Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
+"Schema Review Markup."
 msgstr ""
 
 #: lib/script.php:74
@@ -170,8 +170,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Ratings and reviews for WordPress comments with Aggregate Rating meta tags "
-"and Schema Review markup."
+"Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
+"Schema Review Markup."
 msgstr ""
 
 #. Author of the plugin/theme

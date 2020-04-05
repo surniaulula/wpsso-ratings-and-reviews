@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup.
+ * Description: Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
  * Requires PHP: 5.6
  * Requires At Least: 4.2
  * Tested Up To: 5.4
