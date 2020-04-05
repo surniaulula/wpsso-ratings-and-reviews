@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 2.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-04-03 11:27-0700\n"
-"PO-Revision-Date: 2020-04-03 11:27-0700\n"
+"POT-Creation-Date: 2020-04-05 15:45-0700\n"
+"PO-Revision-Date: 2020-04-05 15:45-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -100,8 +100,8 @@ msgstr "Notes / critiques"
 
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
-msgid "Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup."
-msgstr "Notes et critiques pour commentaires WordPress avec balises méta Aggregate Rating et balisage Schéma Review."
+msgid "Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup."
+msgstr "Notes et critiques pour commentaires WordPress avec balisage de Schéma Aggregate Rating et Schéma Review."
 
 #: lib/script.php:74
 msgid "Please select a rating before submitting."
@@ -157,8 +157,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 
 #. Description of the plugin/theme
-msgid "Ratings and reviews for WordPress comments with Aggregate Rating meta tags and Schema Review markup."
-msgstr "Notes et critiques pour commentaires WordPress avec balises méta Aggregate Rating et balisage Schéma Review."
+msgid "Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup."
+msgstr "Notes et critiques pour commentaires WordPress avec balisage de Schéma Aggregate Rating et Schéma Review."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
