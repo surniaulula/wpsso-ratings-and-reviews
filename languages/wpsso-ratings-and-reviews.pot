@@ -90,11 +90,11 @@ msgid ""
 msgstr ""
 
 #: lib/filters.php:182
-msgid "A color for selected stars representing the rating."
+msgid "A default color for unselected stars."
 msgstr ""
 
 #: lib/filters.php:188
-msgid "A default color for unselected stars."
+msgid "A color for selected stars representing the rating."
 msgstr ""
 
 #: lib/gettext-config.php:6
@@ -122,24 +122,24 @@ msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr ""
 
-#: lib/submenu/rar-general.php:68
+#: lib/submenu/rar-general.php:65
 msgctxt "option label"
-msgid "Rating Form for Post Types"
+msgid "Unselected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:73
-msgctxt "option label"
-msgid "Rating Required for Review"
-msgstr ""
-
-#: lib/submenu/rar-general.php:78
+#: lib/submenu/rar-general.php:70
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:83
+#: lib/submenu/rar-general.php:75
 msgctxt "option label"
-msgid "Unselected Star Rating Color"
+msgid "Rating Required for Review"
+msgstr ""
+
+#: lib/submenu/rar-general.php:80
+msgctxt "option label"
+msgid "Rating Form for Post Types"
 msgstr ""
 
 #: wpsso-ratings-and-reviews.php:123

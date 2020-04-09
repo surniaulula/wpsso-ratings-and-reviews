@@ -177,15 +177,15 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 					break;
 
-				case 'tooltip-rar_star_color_selected':	// Selected Star Rating Color.
-
-					$text = __( 'A color for selected stars representing the rating.', 'wpsso-ratings-and-reviews' );
-
-					break;
-
 				case 'tooltip-rar_star_color_default':	// Unselected Star Rating Color.
 
 					$text = __( 'A default color for unselected stars.', 'wpsso-ratings-and-reviews' );
+
+					break;
+
+				case 'tooltip-rar_star_color_selected':	// Selected Star Rating Color.
+
+					$text = __( 'A color for selected stars representing the rating.', 'wpsso-ratings-and-reviews' );
 
 					break;
 			}
