@@ -32,7 +32,7 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 		 */
 		protected function add_meta_boxes() {
 
-			$metabox_id      = 'general';
+			$metabox_id      = 'rar';
 			$metabox_title   = _x( 'Ratings and Reviews', 'metabox title', 'wpsso-ratings-and-reviews' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
@@ -41,12 +41,14 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 			);
 
 			add_meta_box( $this->pagehook . '_' . $metabox_id, $metabox_title,
-				array( $this, 'show_metabox_general' ), $metabox_screen,
+				array( $this, 'show_metabox_' . $metabox_id ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
 		}
 
-		public function show_metabox_general() {
+		public function show_metabox_rar() {
+
 			$metabox_id = 'rar';
+
 			$this->p->util->do_metabox_table( apply_filters( $this->p->lca . '_' . $metabox_id . '_general_rows', 
 				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-' . $metabox_id . '-general' );
 		}
