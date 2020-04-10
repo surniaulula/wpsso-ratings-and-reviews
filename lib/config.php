@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.6.0',	// Plugin version.
+					'version'     => '2.7.0-dev.1',	// Plugin version.
 					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -73,7 +73,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_add_to_post'             => 0,
 					'rar_add_to_product'          => 1,
 					'rar_add_to_recipe'           => 1,
-					'rar_rating_required'         => 1,		// Rating Required for Review.
+					'rar_rating_required'         => 1,		// Rating Required to Submit Review.
 					'rar_star_color_selected'     => '#222222',	// Selected Star Rating Color.
 					'rar_star_color_default'      => '#dddddd',	// Unselected Star Rating Color.
 					'plugin_avg_rating_col_media' => 0,

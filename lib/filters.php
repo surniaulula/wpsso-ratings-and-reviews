@@ -165,27 +165,25 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 				case 'tooltip-rar_add_to':		// Rating Form for Post Types.
 
-					$text = __( 'You can choose to enable or disable ratings by default for each public post type.', 'wpsso-ratings-and-reviews' ) . ' ';
-
-					$text .= sprintf( __( 'When editing a post (page, or custom post type), an "%1$s" option is also available to enable or disable ratings for that specific webpage.', 'wpsso-ratings-and-reviews' ), __( 'Enable ratings and reviews', 'wpsso-ratings-and-reviews' ) );
+					$text = __( 'Enable or disable the ratings feature by public post type.', 'wpsso-ratings-and-reviews' ) . ' ';
 
 					break;
 
-				case 'tooltip-rar_rating_required':	// Rating Required for Review.
+				case 'tooltip-rar_rating_required':	// Rating Required to Submit Review.
 
-					$text = __( 'Force a reviewer to select a rating before submitting their review (enabled by default).', 'wpsso-ratings-and-reviews' );
+					$text = __( 'A rating value must be selected to submit a review (enabled by default).', 'wpsso-ratings-and-reviews' );
 
 					break;
 
 				case 'tooltip-rar_star_color_default':	// Unselected Star Rating Color.
 
-					$text = __( 'A default color for unselected stars.', 'wpsso-ratings-and-reviews' );
+					$text = __( 'The border color for unselected stars.', 'wpsso-ratings-and-reviews' );
 
 					break;
 
 				case 'tooltip-rar_star_color_selected':	// Selected Star Rating Color.
 
-					$text = __( 'A color for selected stars representing the rating.', 'wpsso-ratings-and-reviews' );
+					$text = __( 'The color for selected stars.', 'wpsso-ratings-and-reviews' );
 
 					break;
 			}

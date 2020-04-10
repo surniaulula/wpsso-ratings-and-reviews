@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.6.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.7.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/admin.php:74 lib/admin.php:115 lib/filters.php:170
+#: lib/admin.php:74 lib/admin.php:115
 msgid "Enable ratings and reviews"
 msgstr ""
 
@@ -72,29 +72,20 @@ msgid "Rated %d out of 5"
 msgstr ""
 
 #: lib/filters.php:168
+msgid "Enable or disable the ratings feature by public post type."
+msgstr ""
+
+#: lib/filters.php:174
 msgid ""
-"You can choose to enable or disable ratings by default for each public post "
-"type."
+"A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
-#: lib/filters.php:170
-msgid ""
-"When editing a post (page, or custom post type), an \"%1$s\" option is also "
-"available to enable or disable ratings for that specific webpage."
+#: lib/filters.php:180
+msgid "The border color for unselected stars."
 msgstr ""
 
-#: lib/filters.php:176
-msgid ""
-"Force a reviewer to select a rating before submitting their review (enabled "
-"by default)."
-msgstr ""
-
-#: lib/filters.php:182
-msgid "A default color for unselected stars."
-msgstr ""
-
-#: lib/filters.php:188
-msgid "A color for selected stars representing the rating."
+#: lib/filters.php:186
+msgid "The color for selected stars."
 msgstr ""
 
 #: lib/gettext-config.php:6
@@ -124,22 +115,22 @@ msgstr ""
 
 #: lib/submenu/rar-general.php:65
 msgctxt "option label"
-msgid "Unselected Star Rating Color"
+msgid "Selected Star Rating Color"
 msgstr ""
 
 #: lib/submenu/rar-general.php:70
 msgctxt "option label"
-msgid "Selected Star Rating Color"
+msgid "Unselected Star Rating Color"
 msgstr ""
 
 #: lib/submenu/rar-general.php:75
 msgctxt "option label"
-msgid "Rating Required for Review"
+msgid "Show Rating Form for Post Types"
 msgstr ""
 
 #: lib/submenu/rar-general.php:80
 msgctxt "option label"
-msgid "Rating Form for Post Types"
+msgid "Rating Required to Submit Review"
 msgstr ""
 
 #: wpsso-ratings-and-reviews.php:123
