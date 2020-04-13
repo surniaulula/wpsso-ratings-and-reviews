@@ -49,8 +49,13 @@ if ( ! class_exists( 'WpssoRarSubmenuRarGeneral' ) && class_exists( 'WpssoAdmin'
 
 			$metabox_id = 'rar';
 
-			$this->p->util->do_metabox_table( apply_filters( $this->p->lca . '_' . $metabox_id . '_general_rows', 
-				$this->get_table_rows( $metabox_id, 'general' ), $this->form ), 'metabox-' . $metabox_id . '-general' );
+			$tab_key = 'general';
+
+			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
+
+			$table_rows = apply_filters( $filter_name, $this->get_table_rows( $metabox_id, $tab_key ), $this->form );
+
+			$this->p->util->do_metabox_table( $table_rows, 'metabox-' . $metabox_id . '-' . $tab_key );
 		}
 
 		protected function get_table_rows( $metabox_id, $tab_key ) {
