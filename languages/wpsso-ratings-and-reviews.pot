@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.7.0-dev.2\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.7.0-dev.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -71,20 +71,20 @@ msgstr ""
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/filters.php:168
+#: lib/filters.php:172
 msgid "Enable or disable the ratings feature by public post type."
 msgstr ""
 
-#: lib/filters.php:174
+#: lib/filters.php:178
 msgid ""
 "A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
-#: lib/filters.php:180
+#: lib/filters.php:184
 msgid "The border color for unselected stars."
 msgstr ""
 
-#: lib/filters.php:186
+#: lib/filters.php:190
 msgid "The color for selected stars."
 msgstr ""
 

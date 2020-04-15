@@ -49,6 +49,10 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 		public function filter_get_defaults( $def_opts ) {
 
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
