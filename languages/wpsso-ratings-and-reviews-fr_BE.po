@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.6.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-04-12 17:35-0700\n"
-"PO-Revision-Date: 2020-04-12 17:39-0700\n"
+"POT-Creation-Date: 2020-04-16 06:58-0700\n"
+"PO-Revision-Date: 2020-04-16 06:58-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -73,19 +73,19 @@ msgstr "Terrible"
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
-#: lib/filters.php:168
+#: lib/filters.php:172
 msgid "Enable or disable the ratings feature by public post type."
 msgstr "Activer ou désactiver la fonction de notes par type d'article public."
 
-#: lib/filters.php:174
+#: lib/filters.php:178
 msgid "A rating value must be selected to submit a review (enabled by default)."
 msgstr "Une note doit être sélectionnée pour soumettre une critique (activée par défaut)."
 
-#: lib/filters.php:180
+#: lib/filters.php:184
 msgid "The border color for unselected stars."
 msgstr "La couleur de la bordure pour les étoiles non sélectionnées."
 
-#: lib/filters.php:186
+#: lib/filters.php:190
 msgid "The color for selected stars."
 msgstr "La couleur des étoiles sélectionnées."
 
@@ -112,22 +112,22 @@ msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr "Notes et critiques"
 
-#: lib/submenu/rar-general.php:65
+#: lib/submenu/rar-general.php:70
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr "Couleur d'étoile sélectionné"
 
-#: lib/submenu/rar-general.php:70
+#: lib/submenu/rar-general.php:75
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr "Couleur d'étoile non sélectionné"
 
-#: lib/submenu/rar-general.php:75
+#: lib/submenu/rar-general.php:80
 msgctxt "option label"
 msgid "Show Rating Form for Post Types"
 msgstr "Formulaire de note pour types d'articles"
 
-#: lib/submenu/rar-general.php:80
+#: lib/submenu/rar-general.php:85
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
