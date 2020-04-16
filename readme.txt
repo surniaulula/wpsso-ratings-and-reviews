@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.7.0-b.1 (2020/04/16)**
+**Version 2.7.0-rc.1 (2020/04/16)**
 
 * **New Features**
 	* None.
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v6.29.0-b.1.
+	* WPSSO Core v6.29.0-rc.1.
 
 **Version 2.6.0 (2020/04/06)**
 
@@ -138,7 +138,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.7.0-b.1 =
+= 2.7.0-rc.1 =
 
 (2020/04/16) Updated the SSO &gt; Ratings / Reviews settings page option labels and their help popup text.
 
