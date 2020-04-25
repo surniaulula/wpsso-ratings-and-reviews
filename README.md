@@ -51,8 +51,8 @@
 <h3 class="top">Install and Uninstall</h3>
 
 <ul>
-<li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/">Install the WPSSO RAR Add-on</a></li>
-<li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/uninstall-the-plugin/">Uninstall the WPSSO RAR Add-on</a></li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/">Install the WPSSO Ratings and Reviews add-on</a>.</li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/uninstall-the-plugin/">Uninstall the WPSSO Ratings and Reviews add-on</a>.</li>
 </ul>
 
 
