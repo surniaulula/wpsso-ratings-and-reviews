@@ -10,7 +10,7 @@ Tags: star rating, aggregate rating, review, google, schema, comment, knowledge 
 Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
-Tested Up To: 5.4
+Tested Up To: 4.5.1
 WC Tested Up To: 4.0.1
 Stable Tag: 2.7.0
 
