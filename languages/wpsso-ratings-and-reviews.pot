@@ -133,19 +133,13 @@ msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:123
+#: wpsso-ratings-and-reviews.php:116
 msgid ""
-"The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
-"plugin or <a href=\"%3$s\">deactivate this add-on</a>."
+"The %1$s add-on requires the %2$s plugin &mdash; please install and activate "
+"the missing plugin."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:214
-msgid ""
-"An existing products rating feature has been found &mdash; %1$s for the "
-"\"product\" custom post type has been disabled."
-msgstr ""
-
-#: wpsso-ratings-and-reviews.php:261
+#: wpsso-ratings-and-reviews.php:288
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
