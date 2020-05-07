@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			}
 		}
 
-		public function filter_get_defaults( $def_opts ) {
+		public function filter_get_defaults( $defs ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
@@ -56,11 +56,11 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
-			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
-				'rar_add_to' => 0,	// Rating Form for Post Types.
+			$this->p->util->add_post_type_names( $defs, array(
+				'rar_add_to' => 0,
 			) );
 
-			return $def_opts;
+			return $defs;
 		}
 
 		public function filter_og( array $mt_og, array $mod ) {
