@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews (WPSSO RAR) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.7.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.8.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-04-16 06:58-0700\n"
-"PO-Revision-Date: 2020-04-16 06:58-0700\n"
+"POT-Creation-Date: 2020-05-08 08:07-0700\n"
+"PO-Revision-Date: 2020-05-08 08:08-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -132,17 +132,13 @@ msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
 
-#: wpsso-ratings-and-reviews.php:123
-msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the plugin or <a href=\"%3$s\">deactivate this add-on</a>."
-msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension ou <a href=\"%3$s\">désactiver cet ajout</a>."
+#: wpsso-ratings-and-reviews.php:271
+msgid "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please activate the missing plugin."
+msgstr "L'ajout %1$s version %2$s nécessite l'extension %3$s &mdash; veuillez activer l'extension manquante."
 
-#: wpsso-ratings-and-reviews.php:214
-msgid "An existing products rating feature has been found &mdash; %1$s for the \"product\" custom post type has been disabled."
-msgstr "Une fonctionnalité de notation des produits a été trouvée &mdash; %1$s a été désactivé pour le type d'article personnalisé \"produit\"."
-
-#: wpsso-ratings-and-reviews.php:261
+#: wpsso-ratings-and-reviews.php:274
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
-msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
+msgstr "L'ajout %1$s version %2$s nécessite %3$s version %4$s ou plus récente (la version %5$s est actuellement installée)."
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Ratings and Reviews"
