@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-dev.4 (2020/08/01)**
+**Version 2.9.0-b.1 (2020/08/02)**
 
 * **New Features**
 	* None.
@@ -123,9 +123,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.9.0-dev.4 =
+= 2.9.0-b.1 =
 
-(2020/08/01) Tested with WordPress v5.5.
+(2020/08/02) Tested with WordPress v5.5.
 
 = 2.8.0 =
 
