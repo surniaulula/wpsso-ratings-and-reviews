@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.2
 Tested Up To: 5.5
 WC Tested Up To: 4.3.1
-Stable Tag: 2.8.0
+Stable Tag: 2.9.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
 
