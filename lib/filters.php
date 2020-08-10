@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -23,6 +24,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			static $do_once = null;
 
 			if ( true === $do_once ) {
+
 				return;	// Stop here.
 			}
 
@@ -31,6 +33,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -50,6 +53,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		public function filter_get_defaults( $defs ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -66,16 +70,19 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		public function filter_og( array $mt_og, array $mod ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// Make sure we have a valid post id.
+
 				return $mt_og;
 			} 
 
 			if ( ! WpssoRarComment::is_rating_enabled( $mod[ 'id' ] ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: post id ' . $mod[ 'id' ] . ' ratings disabled' );
 				}
 
@@ -85,6 +92,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			if ( empty( $mt_og[ 'og:type' ] ) ) {	// Just in case.
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'exiting early: open graph type is empty' );
 				}
 
@@ -98,6 +106,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			if ( apply_filters( $this->p->lca . '_og_add_mt_rating', true, $mod ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'add rating meta tags is true' );
 				}
 
@@ -106,6 +115,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$review_count   = (int) WpssoRarComment::get_review_count( $mod[ 'id' ] );
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'average rating = ' . $average_rating );
 					$this->p->debug->log( 'rating count = ' . $rating_count );
 					$this->p->debug->log( 'review count = ' . $review_count );
@@ -122,6 +132,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					if ( $rating_count > 0 || $review_count > 0 ) {
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( 'adding rating meta tags for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 						}
 
@@ -132,20 +143,24 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 						$mt_og[ $og_type . ':review:count' ]   = $review_count;
 
 					} elseif ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'rating and review count is invalid (must be greater than 0)' );
 					}
 
 				} elseif ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'average rating is invalid (must be greater than 0)' );
 				}
 
 			} elseif ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
 			if ( apply_filters( $this->p->lca . '_og_add_mt_reviews', false, $mod ) ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
 
@@ -153,6 +168,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$og_type, $rating_meta = 'rating', $worst_rating, $best_rating );
 
 			} elseif ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'add review meta tags is false' );
 			}
 
@@ -162,6 +178,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		public function filter_messages_tooltip( $text, $msg_key ) {
 
 			if ( strpos( $msg_key, 'tooltip-rar_' ) !== 0 ) {
+
 				return $text;
 			}
 

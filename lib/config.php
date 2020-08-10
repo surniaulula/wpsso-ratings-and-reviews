@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.10.0-dev.9',	// Plugin version.
+					'version'     => '2.10.0-dev.10',	// Plugin version.
 					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '8.0.0-dev.9',
+							'min_version'   => '8.0.0-dev.10',
 						),
 					),
 
