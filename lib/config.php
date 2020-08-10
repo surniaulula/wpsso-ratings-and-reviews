@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -16,7 +17,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.10.0-dev.10',	// Plugin version.
+					'version'     => '2.10.0-b.1',	// Plugin version.
 					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -36,7 +37,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '8.0.0-dev.10',
+							'min_version'   => '8.0.0-b.1',
 						),
 					),
 
@@ -94,6 +95,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static function set_constants( $plugin_file_path ) { 
 
 			if ( defined( 'WPSSORAR_VERSION' ) ) {	// Define constants only once.
+
 				return;
 			}
 
@@ -118,6 +120,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static function set_variable_constants( $var_const = null ) {
 
 			if ( ! is_array( $var_const ) ) {
+
 				$var_const = (array) self::get_variable_constants();
 			}
 
@@ -125,7 +128,9 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			 * Define the variable constants, if not already defined.
 			 */
 			foreach ( $var_const as $name => $value ) {
+
 				if ( ! defined( $name ) ) {
+
 					define( $name, $value );
 				}
 			}
@@ -145,7 +150,9 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			 * Maybe override the default constant value with a pre-defined constant value.
 			 */
 			foreach ( $var_const as $name => $value ) {
+
 				if ( defined( $name ) ) {
+
 					$var_const[$name] = constant( $name );
 				}
 			}
@@ -162,6 +169,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			require_once WPSSORAR_PLUGINDIR . 'lib/style.php';
 
 			if ( is_admin() ) {
+
 				require_once WPSSORAR_PLUGINDIR . 'lib/admin.php';
 			}
 
