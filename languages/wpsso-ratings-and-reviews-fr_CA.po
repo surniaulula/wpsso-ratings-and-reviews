@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.9.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.10.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-08-02 10:41-0700\n"
-"PO-Revision-Date: 2020-08-02 10:41-0700\n"
+"POT-Creation-Date: 2020-08-11 12:00-0700\n"
+"PO-Revision-Date: 2020-08-11 12:00-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -71,19 +71,19 @@ msgstr "Terrible"
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
-#: lib/filters.php:172
+#: lib/filters.php:189
 msgid "Enable or disable the ratings feature by public post type."
 msgstr "Activer ou désactiver la fonction de notes par type d'article public."
 
-#: lib/filters.php:178
+#: lib/filters.php:195
 msgid "A rating value must be selected to submit a review (enabled by default)."
 msgstr "Une note doit être sélectionnée pour soumettre une critique (activée par défaut)."
 
-#: lib/filters.php:184
+#: lib/filters.php:201
 msgid "The border color for unselected stars."
 msgstr "La couleur de la bordure pour les étoiles non sélectionnées."
 
-#: lib/filters.php:190
+#: lib/filters.php:207
 msgid "The color for selected stars."
 msgstr "La couleur des étoiles sélectionnées."
 
@@ -130,11 +130,11 @@ msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
 
-#: wpsso-ratings-and-reviews.php:280
+#: wpsso-ratings-and-reviews.php:301
 msgid "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please activate the missing plugin."
 msgstr "L'ajout %1$s version %2$s nécessite l'extension %3$s &mdash; veuillez activer l'extension manquante."
 
-#: wpsso-ratings-and-reviews.php:283
+#: wpsso-ratings-and-reviews.php:314
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s nécessite %3$s version %4$s ou plus récente (la version %5$s est actuellement installée)."
 
