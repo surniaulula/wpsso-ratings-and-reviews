@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -20,6 +21,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -29,12 +31,14 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 		public static function enqueue_styles() {
 
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
+
 				return;
 			}
 
 			$wpsso = Wpsso::get_instance();
 
 			$sel_color = $wpsso->options[ 'rar_star_color_selected' ];
+
 			$def_color = $wpsso->options[ 'rar_star_color_default' ];
 
 			$plugin_version = WpssoRarConfig::get_version();
