@@ -71,20 +71,20 @@ msgstr ""
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/filters.php:189
+#: lib/filters.php:186
 msgid "Enable or disable the ratings feature by public post type."
 msgstr ""
 
-#: lib/filters.php:195
+#: lib/filters.php:192
 msgid ""
 "A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
-#: lib/filters.php:201
+#: lib/filters.php:198
 msgid "The border color for unselected stars."
 msgstr ""
 
-#: lib/filters.php:207
+#: lib/filters.php:204
 msgid "The color for selected stars."
 msgstr ""
 
