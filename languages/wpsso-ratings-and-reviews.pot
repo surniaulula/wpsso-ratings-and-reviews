@@ -17,57 +17,57 @@ msgstr ""
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:118 lib/comment.php:122
+#: lib/comment.php:131 lib/comment.php:135
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""
 
-#: lib/comment.php:178
+#: lib/comment.php:193
 msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:218
+#: lib/comment.php:234
 msgctxt "form label"
 msgid "Post Review"
 msgstr ""
 
-#: lib/comment.php:250
+#: lib/comment.php:267
 msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:252
+#: lib/comment.php:269
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:253
+#: lib/comment.php:270
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:254
+#: lib/comment.php:271
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:255
+#: lib/comment.php:272
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:256
+#: lib/comment.php:273
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:257
+#: lib/comment.php:274
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:343 lib/comment.php:345
+#: lib/comment.php:368 lib/comment.php:370
 msgid "Rated %d out of 5"
 msgstr ""
 

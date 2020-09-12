@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -22,6 +23,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -46,12 +48,14 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$wpsso = Wpsso::get_instance();
  
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark();
 			}
 
 			if ( isset( self::$rating_enabled[ $post_id ] ) ) {
 
 				if ( $wpsso->debug->enabled ) {
+
 					$wpsso->debug->log( 'rating is ' . ( self::$rating_enabled[ $post_id ] ? 'enabled' : 'disabled' ) );
 				}
 
@@ -64,16 +68,24 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] === 'disabled' ? true : false;
 
 			if ( $disabled ) {
+
 				$enabled = 0;
+
 			} elseif ( ( $current = get_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, true ) ) === '' ) {
+
 				$enabled = $default;
+
 			} elseif ( empty( $current ) ) {
+
 				$enabled = 0;
+
 			} else {
+
 				$enabled = 1;
 			}
 
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->log( 'rating is ' . ( $enabled ? 'enabled' : 'disabled' ) );
 			}
 
@@ -94,6 +106,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$wpsso = Wpsso::get_instance();
  
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark();
 			}
 
@@ -151,6 +164,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$post_id = get_the_ID();
 
 			if ( ! self::is_rating_enabled( $post_id ) ) {
+
 				return self::get_rating_disabled_html( $post_id, $comment_field );
 			}
 
@@ -170,6 +184,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$label_attr = trim( $label_attr );
 
 				if ( ! empty( $label_attr ) ) {
+
 					$label_attr .= ' ';
 				}
 
@@ -203,6 +218,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$post_id = get_the_ID();
 
 			if ( ! self::is_rating_enabled( $post_id ) ) {
+
 				return self::get_rating_disabled_html( $post_id, $submit_button );
 			}
 
@@ -227,6 +243,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$wpsso = Wpsso::get_instance();
  
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark();
 			}
 
@@ -270,6 +287,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
 
 				if ( $rating_value ) {
+
 					add_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, $rating_value );
 				}
 			}
@@ -290,6 +308,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$wpsso = Wpsso::get_instance();
  
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark();
 			}
 
@@ -297,6 +316,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 * Make sure we only add the star rating once (ours or from another plugin).
 			 */
 			if ( false !== strpos( $comment_text, 'class="star-rating"' ) ) {
+
 				return $comment_text;
 			}
 			
@@ -315,6 +335,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
 
 			if ( $rating_value ) {
+
 				$comment_text = '<div class="wpsso-rar">' . self::get_star_rating_html( $rating_value ) . '</div><!-- .wpsso-rar -->' . $comment_text;
 			}
 
@@ -331,6 +352,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$wpsso = Wpsso::get_instance();
  
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark();
 			}
 
@@ -338,8 +360,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_value = (int) $rating_value;
 
 			if ( empty( $rating_value ) ) { 
+
 				$rating_html .= '<!-- wpsso-rar star rating skipped shown for empty rating value -->';
+
 			} else {
+
 				$rating_html .= '<div class="star-rating" title="' . sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value ) . '">';
 				$rating_html .= '<span style="width:' . ( ( $rating_value / 5 ) * 100 ) . '%;">';
 				$rating_html .= sprintf( __( 'Rated %d out of 5', 'wpsso-ratings-and-reviews' ), $rating_value );
@@ -356,6 +381,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function get_average_rating( $post_id ) {
 
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
+
 				self::sync_average_rating( $post_id );	// Calculate the average rating.
 			} 
 
@@ -392,16 +418,19 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function get_rating_count( $post_id, $rating_value = null ) {
 
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {
+
 				self::sync_rating_counts( $post_id );
 			}
 
 			$rating_counts = array_filter( (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, true ) );
 
 			if ( null === $rating_value ) {
+
 				return array_sum( $rating_counts );
-			} else {
-				return isset( $rating_counts[ $rating_value ] ) ? (int) $rating_counts[ $rating_value ] : 0;
+
 			}
+
+			return isset( $rating_counts[ $rating_value ] ) ? (int) $rating_counts[ $rating_value ] : 0;
 		}
 
 		private static function sync_rating_counts( $post_id ) {
@@ -433,6 +462,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function get_review_count( $post_id ) {
 
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_REVIEW_COUNT ) ) {
+
 				self::sync_review_count( $post_id );
 			}
 
