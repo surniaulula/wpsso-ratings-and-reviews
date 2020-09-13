@@ -13,6 +13,18 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
+#: gettext/gettext-config.php:6 lib/gettext-config.php:6
+msgctxt "lib file description"
+msgid "Ratings / Reviews"
+msgstr ""
+
+#: gettext/gettext-config.php:7 lib/gettext-config.php:7
+msgctxt "plugin description"
+msgid ""
+"Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
+"Schema Review Markup."
+msgstr ""
+
 #: lib/admin.php:74 lib/admin.php:115
 msgid "Enable ratings and reviews"
 msgstr ""
@@ -86,18 +98,6 @@ msgstr ""
 
 #: lib/filters.php:204
 msgid "The color for selected stars."
-msgstr ""
-
-#: lib/gettext-config.php:6
-msgctxt "lib file description"
-msgid "Ratings / Reviews"
-msgstr ""
-
-#: lib/gettext-config.php:7
-msgctxt "plugin description"
-msgid ""
-"Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
-"Schema Review Markup."
 msgstr ""
 
 #: lib/script.php:74
