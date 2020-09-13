@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 2.10.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-08-11 12:00-0700\n"
-"PO-Revision-Date: 2020-08-11 12:00-0700\n"
+"POT-Creation-Date: 2020-09-13 12:22-0700\n"
+"PO-Revision-Date: 2020-09-13 12:22-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,89 +13,89 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/admin.php:74 lib/admin.php:115
-msgid "Enable ratings and reviews"
-msgstr "Activer notes et critiques"
-
-#: lib/comment.php:118 lib/comment.php:122
-msgctxt "form label"
-msgid "Leave a Review"
-msgstr "Laisser une critique"
-
-#: lib/comment.php:178
-msgctxt "form label"
-msgid "Your Review"
-msgstr "Votre critique"
-
-#: lib/comment.php:218
-msgctxt "form label"
-msgid "Post Review"
-msgstr "Publier la critique"
-
-#: lib/comment.php:250
-msgctxt "form label"
-msgid "Your Rating"
-msgstr "Votre note"
-
-#: lib/comment.php:252
-msgctxt "option value"
-msgid "Rating&hellip;"
-msgstr "Note&hellip;"
-
-#: lib/comment.php:253
-msgctxt "option value"
-msgid "Excellent"
-msgstr "Excellent"
-
-#: lib/comment.php:254
-msgctxt "option value"
-msgid "Good"
-msgstr "Bon"
-
-#: lib/comment.php:255
-msgctxt "option value"
-msgid "Average"
-msgstr "Moyen"
-
-#: lib/comment.php:256
-msgctxt "option value"
-msgid "Not Good"
-msgstr "Pas bon"
-
-#: lib/comment.php:257
-msgctxt "option value"
-msgid "Awful"
-msgstr "Terrible"
-
-#: lib/comment.php:343 lib/comment.php:345
-msgid "Rated %d out of 5"
-msgstr "Noté %d sur 5"
-
-#: lib/filters.php:189
-msgid "Enable or disable the ratings feature by public post type."
-msgstr "Activer ou désactiver la fonction de notes par type d'article public."
-
-#: lib/filters.php:195
-msgid "A rating value must be selected to submit a review (enabled by default)."
-msgstr "Une note doit être sélectionnée pour soumettre une critique (activée par défaut)."
-
-#: lib/filters.php:201
-msgid "The border color for unselected stars."
-msgstr "La couleur de la bordure pour les étoiles non sélectionnées."
-
-#: lib/filters.php:207
-msgid "The color for selected stars."
-msgstr "La couleur des étoiles sélectionnées."
-
-#: lib/gettext-config.php:6
+#: gettext/gettext-config.php:6 lib/gettext-config.php:6
 msgctxt "lib file description"
 msgid "Ratings / Reviews"
 msgstr "Notes / critiques"
 
-#: lib/gettext-config.php:7
+#: gettext/gettext-config.php:7 lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid "Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup."
 msgstr "Notes et critiques pour commentaires WordPress avec balisage de Schéma Aggregate Rating et Schéma Review."
+
+#: lib/admin.php:74 lib/admin.php:115
+msgid "Enable ratings and reviews"
+msgstr "Activer notes et critiques"
+
+#: lib/comment.php:131 lib/comment.php:135
+msgctxt "form label"
+msgid "Leave a Review"
+msgstr "Laisser une critique"
+
+#: lib/comment.php:193
+msgctxt "form label"
+msgid "Your Review"
+msgstr "Votre critique"
+
+#: lib/comment.php:234
+msgctxt "form label"
+msgid "Post Review"
+msgstr "Publier la critique"
+
+#: lib/comment.php:267
+msgctxt "form label"
+msgid "Your Rating"
+msgstr "Votre note"
+
+#: lib/comment.php:269
+msgctxt "option value"
+msgid "Rating&hellip;"
+msgstr "Note&hellip;"
+
+#: lib/comment.php:270
+msgctxt "option value"
+msgid "Excellent"
+msgstr "Excellent"
+
+#: lib/comment.php:271
+msgctxt "option value"
+msgid "Good"
+msgstr "Bon"
+
+#: lib/comment.php:272
+msgctxt "option value"
+msgid "Average"
+msgstr "Moyen"
+
+#: lib/comment.php:273
+msgctxt "option value"
+msgid "Not Good"
+msgstr "Pas bon"
+
+#: lib/comment.php:274
+msgctxt "option value"
+msgid "Awful"
+msgstr "Terrible"
+
+#: lib/comment.php:368 lib/comment.php:370
+msgid "Rated %d out of 5"
+msgstr "Noté %d sur 5"
+
+#: lib/filters.php:186
+msgid "Enable or disable the ratings feature by public post type."
+msgstr "Activer ou désactiver la fonction de notes par type d'article public."
+
+#: lib/filters.php:192
+msgid "A rating value must be selected to submit a review (enabled by default)."
+msgstr "Une note doit être sélectionnée pour soumettre une critique (activée par défaut)."
+
+#: lib/filters.php:198
+msgid "The border color for unselected stars."
+msgstr "La couleur de la bordure pour les étoiles non sélectionnées."
+
+#: lib/filters.php:204
+msgid "The color for selected stars."
+msgstr "La couleur des étoiles sélectionnées."
 
 #: lib/script.php:74
 msgid "Please select a rating before submitting."
