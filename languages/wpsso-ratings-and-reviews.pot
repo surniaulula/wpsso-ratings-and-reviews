@@ -19,6 +19,11 @@ msgid "Ratings / Reviews"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:7
+msgctxt "plugin name"
+msgid "WPSSO Ratings and Reviews"
+msgstr ""
+
+#: gettext/gettext-lib-config.php:8
 msgctxt "plugin description"
 msgid ""
 "Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
