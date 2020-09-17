@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -20,11 +21,11 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
-			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ) );
-
+			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
 		}
 
@@ -51,6 +52,7 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 		public static function enqueue_scripts() {
 
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
+
 				return;
 			}
 

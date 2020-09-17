@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -21,6 +22,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -28,7 +30,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 				'get_sortable_columns' => 1,
 			) );
 
-			add_action( 'admin_enqueue_scripts', array( 'WpssoRarStyle', 'enqueue_styles' ) );
+			add_action( 'admin_enqueue_scripts', array( 'WpssoRarStyle', 'enqueue_styles' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
 			add_action( 'post_comment_status_meta_box-options', array( $this, 'show_comment_metabox_option' ), 10, 1 );
 			add_action( 'quick_edit_custom_box', array( $this, 'show_quick_edit_option' ), 10, 2 );
             		add_action( 'save_post', array( $this, 'save_rating_meta_option' ), 10, 3 );
@@ -53,6 +55,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		public function show_quick_edit_option( $column_name, $post_type ) {
 
 			if ( $column_name !== 'wpsso_avg_rating' ) {
+
 				return;
 			}
 
@@ -92,6 +95,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 		public function show_comment_metabox_option( $post_obj ) {
 
 			if ( ! is_object( $post_obj ) ) {	// just in case
+
 				return;
 			}
 
@@ -124,18 +128,31 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
         	public function save_rating_meta_option( $post_id, $post_obj, $update ) {
 
 			if ( ! isset ( $_POST[ 'post_type' ] ) ) {
+
 				return;
+
 			} elseif ( ! current_user_can( 'edit_' . $_POST[ 'post_type' ], $post_id ) ) {
+
 				return;
+
 			} elseif ( empty( $_POST[ WPSSO_NONCE_NAME ] ) ) {	// WPSSO_NONCE_NAME is an md5() string.
+
 				return;
+
 			} elseif ( ! wp_verify_nonce( $_POST[ WPSSO_NONCE_NAME ], WpssoAdmin::get_nonce_action() ) ) {
+
 				return;
+
 			} elseif ( empty( $_POST[ 'is_checkbox_' . $this->allow_ratings_opt_key ] ) ) {
+
 				return;
+
 			} elseif ( isset( $_POST[ $this->allow_ratings_opt_key ] ) && strtolower( $_POST[ $this->allow_ratings_opt_key ] ) === 'on' ) {
+
 				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
+
 			} else {
+
 				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
 			}
 		}
