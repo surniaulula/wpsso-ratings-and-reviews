@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.20.2-rc.1 (2020/09/18)**
+**Version 2.20.2 (2020/09/18)**
 
 * **New Features**
 	* None.
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.5.1i-rc.1.
+	* WPSSO Core v8.5.1.
 
 **Version 2.10.1 (2020/09/15)**
 
@@ -123,11 +123,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.10.2-rc.1 =
+= 2.10.2 =
 
 (2020/09/18) Added support for the new WPSSO_ADMIN_SCRIPTS_PRIORITY constant in WPSSO Core v8.5.1.
-
-= 2.10.1 =
-
-(2020/09/15) Updated the French plugin translations.
 
