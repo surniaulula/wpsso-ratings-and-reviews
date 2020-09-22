@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.10.1\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.10.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-09-15 10:52-0700\n"
-"PO-Revision-Date: 2020-09-15 10:52-0700\n"
+"POT-Creation-Date: 2020-09-18 10:53-0700\n"
+"PO-Revision-Date: 2020-09-18 10:53-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -28,7 +28,7 @@ msgctxt "plugin description"
 msgid "Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup."
 msgstr "Notes et critiques pour commentaires WordPress avec balisage de Schéma Aggregate Rating et Schéma Review."
 
-#: lib/admin.php:74 lib/admin.php:115
+#: lib/admin.php:77 lib/admin.php:119
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
@@ -102,11 +102,11 @@ msgstr "La couleur de la bordure pour les étoiles non sélectionnées."
 msgid "The color for selected stars."
 msgstr "La couleur des étoiles sélectionnées."
 
-#: lib/script.php:74
+#: lib/script.php:76
 msgid "Please select a rating before submitting."
 msgstr "Veuillez sélectionner une note avant de soumettre."
 
-#: lib/script.php:75
+#: lib/script.php:77
 msgid "Please write a review before submitting."
 msgstr "Veuillez écrire une critique avant de soumettre."
 
