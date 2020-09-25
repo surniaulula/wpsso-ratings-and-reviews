@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
 Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
 Contributors: jsmoriss
 Requires PHP: 5.6
-Requires At Least: 4.2
+Requires At Least: 4.4
 Tested Up To: 5.5.1
 WC Tested Up To: 4.5.2
 Stable Tag: 2.10.2
@@ -103,7 +103,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added support for the new WPSSO_ADMIN_SCRIPTS_PRIORITY constant in WPSSO Core v8.5.1.
 * **Requires At Least**
 	* PHP v5.6.
-	* WordPress v4.2.
+	* WordPress v4.4.
 	* WPSSO Core v8.5.1.
 
 **Version 2.10.1 (2020/09/15)**
