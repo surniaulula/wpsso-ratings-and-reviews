@@ -92,7 +92,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
-		public static function set_constants( $plugin_file_path ) { 
+		public static function set_constants( $plugin_file ) { 
 
 			if ( defined( 'WPSSORAR_VERSION' ) ) {	// Define constants only once.
 
@@ -104,11 +104,11 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSORAR_FILEPATH', $plugin_file_path );						
+			define( 'WPSSORAR_FILEPATH', $plugin_file );						
 			define( 'WPSSORAR_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php.
-			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file_path ) ) ) );
+			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
 			define( 'WPSSORAR_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-ratings-and-reviews.
-			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_file_path ) ) );
+			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSORAR_VERSION', $info[ 'version' ] );						
 
 			/**
@@ -160,7 +160,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			return $var_const;
 		}
 
-		public static function require_libs( $plugin_file_path ) {
+		public static function require_libs( $plugin_file ) {
 
 			require_once WPSSORAR_PLUGINDIR . 'lib/comment.php';
 			require_once WPSSORAR_PLUGINDIR . 'lib/filters.php';
