@@ -41,23 +41,13 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 	class WpssoRar extends WpssoAddOn {
 
-		/**
-		 * Library class object variables.
-		 */
 		public $admin;		// WpssoRarAdmin class.
 		public $comment;	// WpssoRarComment class.
 		public $filters;	// WpssoRarFilters class.
 		public $script;		// WpssoRarScript class.
 		public $style;		// WpssoRarStyle class.
-		public $reg;		// WpssoRarRegister class.
 
-		/**
-		 * Reference Variables (config, options, modules, etc.).
-		 */
 		protected $p;
-		protected $ext   = 'wpssorar';
-		protected $p_ext = 'rar';
-		protected $cf    = array();
 
 		private static $instance  = null;
 
