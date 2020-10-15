@@ -18,7 +18,7 @@ jQuery( document ).ready( function( $ ) {
 			var $star       = $( this );
 			var $rating     = $( this ).closest( '#respond' ).find( '.wpsso-rar select#rating' );
 			var $container  = $( this ).closest( '.select-star' );
-	
+
 			$rating.val( $star.text() );
 
 			$star.siblings( 'a' ).removeClass( 'active' );
@@ -26,7 +26,7 @@ jQuery( document ).ready( function( $ ) {
 			$star.addClass( 'active' );
 
 			$container.addClass( 'selected' );
-	
+
 			return false;
 		})
 		.on( 'click', '#respond #submit', function() {
@@ -38,7 +38,7 @@ jQuery( document ).ready( function( $ ) {
 			 */
 			var $rating = $( this ).closest( '#respond' ).find( '.wpsso-rar select#rating:enabled' ), rating = $rating.val();
 			var $review = $( this ).closest( '#respond' ).find( '.wpsso-rar textarea#comment:enabled' ), review = $review.val();
-	
+
 			if ( $rating.length > 0 && ! rating && wpsso_rar_script.review_rating_required ) {
 
 				window.alert( wpsso_rar_script.i18n_required_rating_text );

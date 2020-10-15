@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function is_rating_enabled( $post_id ) {
 
 			$wpsso = Wpsso::get_instance();
- 
+
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark();
@@ -104,7 +104,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function update_comment_form_defaults( $defaults ) {
 
 			$wpsso = Wpsso::get_instance();
- 
+
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark();
@@ -192,7 +192,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 					'<!-- form label: Your Review --><label ' . $label_attr . 'for="review"' . '>' .
 						_x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . $required_html . '</label>' . $review_end_html . 
 							$comment_begin_html . '<!-- form label: Comment -->' . $comment_label . $comment_end_html . $label_after;
-	
+
 				$comment_field = '<span class="wpsso-rar comment-field">' . 
 					self::get_form_rating_field( $label_attr ) . 
 						$comment_field . '</span><!-- .wpsso-rar.comment-field -->' . "\n";
@@ -241,7 +241,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		private static function get_form_rating_field( $label_attr = '' ) {
 
 			$wpsso = Wpsso::get_instance();
- 
+
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark();
@@ -306,7 +306,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		public static function add_rating_to_comment_text( $comment_text ) {
 
 			$wpsso = Wpsso::get_instance();
- 
+
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark();
@@ -319,7 +319,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				return $comment_text;
 			}
-			
+
 			$comment_id  = get_comment_ID();
 			$comment_obj = get_comment( $comment_id );
 
@@ -350,7 +350,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		private static function get_star_rating_html( $rating_value ) { 
 
 			$wpsso = Wpsso::get_instance();
- 
+
 			if ( $wpsso->debug->enabled ) {
 
 				$wpsso->debug->mark();

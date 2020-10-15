@@ -122,7 +122,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				 * An average rating value must be greater than 0.
 				 */
 				if ( $average_rating > 0 ) {
-			
+
 					/**
 					 * At least one rating or review is required.
 					 */
