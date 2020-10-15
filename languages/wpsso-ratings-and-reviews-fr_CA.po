@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.10.2\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.11.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
-"POT-Creation-Date: 2020-09-18 10:53-0700\n"
-"PO-Revision-Date: 2020-09-18 10:53-0700\n"
+"POT-Creation-Date: 2020-10-07 16:26-0700\n"
+"PO-Revision-Date: 2020-10-07 16:26-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -12,6 +12,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:157
+msgid "The %1$s add-on requires the %2$s plugin &mdash; please activate the missing plugin."
+msgstr "L'ajout %1$s nécessite l'extension %2$s &mdash; veuillez activer l'extension manquante."
+
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:171
+msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
+msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est actuellement installée)."
 
 #: gettext/gettext-lib-config.php:6
 msgctxt "lib file description"
@@ -134,14 +142,6 @@ msgstr "Formulaire de note pour types d'articles"
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
-
-#: wpsso-ratings-and-reviews.php:301
-msgid "The %1$s version %2$s add-on requires the %3$s plugin &mdash; please activate the missing plugin."
-msgstr "L'ajout %1$s version %2$s nécessite l'extension %3$s &mdash; veuillez activer l'extension manquante."
-
-#: wpsso-ratings-and-reviews.php:314
-msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
-msgstr "L'ajout %1$s version %2$s nécessite %3$s version %4$s ou plus récente (la version %5$s est actuellement installée)."
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Ratings and Reviews"
