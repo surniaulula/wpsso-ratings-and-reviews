@@ -12,7 +12,7 @@ Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.5.1
 WC Tested Up To: 4.6.0
-Stable Tag: 2.10.2
+Stable Tag: 2.11.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
 
@@ -109,43 +109,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v4.4.
 	* WPSSO Core v8.8.0.
 
-**Version 2.10.2 (2020/09/18)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added support for the new WPSSO_ADMIN_SCRIPTS_PRIORITY constant in WPSSO Core v8.5.1.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.4.
-	* WPSSO Core v8.5.1.
-
-**Version 2.10.1 (2020/09/15)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Updated the French plugin translations.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Moved extracted translation strings from lib/gettext-*.php files to a new gettext/ folder.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.2.
-	* WPSSO Core v8.5.0.
-
 == Upgrade Notice ==
 
 = 2.11.0 =
 
 (2020/10/17) Refactored the add-on class to extend a new WpssoAddOn abstract class.
-
-= 2.10.2 =
-
-(2020/09/18) Added support for the new WPSSO_ADMIN_SCRIPTS_PRIORITY constant in WPSSO Core v8.5.1.
 
