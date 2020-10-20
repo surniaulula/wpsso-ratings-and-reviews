@@ -74,7 +74,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// Make sure we have a valid post id.
 
 				return $mt_og;
-			} 
+			}
 
 			if ( ! WpssoRarComment::is_rating_enabled( $mod[ 'id' ] ) ) {
 

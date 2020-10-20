@@ -356,7 +356,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$rating_html  = ''; 
+			$rating_html  = '';
 			$rating_value = (int) $rating_value;
 
 			if ( empty( $rating_value ) ) { 
@@ -383,7 +383,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
 
 				self::sync_average_rating( $post_id );	// Calculate the average rating.
-			} 
+			}
 
 			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, true );
 		}
@@ -392,7 +392,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			if ( $count_total = self::get_rating_count( $post_id ) ) {
 
-				global $wpdb; 
+				global $wpdb;
 
 				$rating_total = $wpdb->get_var( $wpdb->prepare( "
 					SELECT SUM( meta_value ) FROM $wpdb->commentmeta

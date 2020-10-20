@@ -104,12 +104,12 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSORAR_FILEPATH', $plugin_file );						
+			define( 'WPSSORAR_FILEPATH', $plugin_file );
 			define( 'WPSSORAR_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php.
 			define( 'WPSSORAR_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
 			define( 'WPSSORAR_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-ratings-and-reviews.
 			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
-			define( 'WPSSORAR_VERSION', $info[ 'version' ] );						
+			define( 'WPSSORAR_VERSION', $info[ 'version' ] );
 
 			/**
 			 * Define variable constants.
