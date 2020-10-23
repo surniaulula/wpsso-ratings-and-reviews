@@ -41,15 +41,15 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 	class WpssoRar extends WpssoAddOn {
 
-		public $admin;		// WpssoRarAdmin class.
-		public $comment;	// WpssoRarComment class.
-		public $filters;	// WpssoRarFilters class.
-		public $script;		// WpssoRarScript class.
-		public $style;		// WpssoRarStyle class.
+		public $admin;		// WpssoRarAdmin class object.
+		public $comment;	// WpssoRarComment class object.
+		public $filters;	// WpssoRarFilters class object.
+		public $script;		// WpssoRarScript class object.
+		public $style;		// WpssoRarStyle class object.
 
-		protected $p;
+		protected $p;	// Wpsso class object.
 
-		private static $instance  = null;
+		private static $instance  = null;	// WpssoRar class object.
 
 		public function __construct() {
 
