@@ -280,7 +280,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
-		public static function save_request_comment_rating( $comment_id ) { 
+		public static function save_request_comment_rating( $comment_id ) {
 
 			if ( empty( $_GET[ 'replytocom' ] ) && empty( $_POST[ 'replytocom' ] ) ) {	// don't save reply ratings
 
@@ -347,7 +347,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Create the rating stars HTML for the rating value provided.
 		 */
-		private static function get_star_rating_html( $rating_value ) { 
+		private static function get_star_rating_html( $rating_value ) {
 
 			$wpsso = Wpsso::get_instance();
 
@@ -359,7 +359,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_html  = '';
 			$rating_value = (int) $rating_value;
 
-			if ( empty( $rating_value ) ) { 
+			if ( empty( $rating_value ) ) {
 
 				$rating_html .= '<!-- wpsso-rar star rating skipped shown for empty rating value -->';
 

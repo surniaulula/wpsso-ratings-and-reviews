@@ -43,8 +43,8 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 
 			$plugin_version = WpssoRarConfig::get_version();
 
-			wp_enqueue_style( 'wpsso-rar-style', 
-				WPSSORAR_URLPATH . 'css/style.min.css', 
+			wp_enqueue_style( 'wpsso-rar-style',
+				WPSSORAR_URLPATH . 'css/style.min.css',
 					array(), $plugin_version );
 
 			$custom_style_css = '

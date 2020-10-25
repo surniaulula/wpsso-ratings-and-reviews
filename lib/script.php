@@ -40,8 +40,8 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 				case 'edit.php':
 
-					wp_enqueue_script( 'wpsso-rar-admin-script', 
-						WPSSORAR_URLPATH.'js/admin-script.min.js', 
+					wp_enqueue_script( 'wpsso-rar-admin-script',
+						WPSSORAR_URLPATH.'js/admin-script.min.js',
 							array( 'jquery' ), $plugin_version, true );
 
 					break;	// Stop here.
@@ -58,8 +58,8 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 			$plugin_version = WpssoRarConfig::get_version();
 
-			wp_enqueue_script( 'wpsso-rar-script', 
-				WPSSORAR_URLPATH.'js/script.min.js', 
+			wp_enqueue_script( 'wpsso-rar-script',
+				WPSSORAR_URLPATH.'js/script.min.js',
 					array( 'jquery' ), $plugin_version );
 
 			wp_localize_script( 'wpsso-rar-script',
