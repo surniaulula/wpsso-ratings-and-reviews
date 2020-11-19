@@ -1,4 +1,4 @@
-<h1>Ratings and Reviews</h1><h3>WPSSO Add-on</h3>
+<h1>WPSSO Ratings and Reviews</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>

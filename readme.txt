@@ -1,4 +1,4 @@
-=== Ratings and Reviews | WPSSO Add-on ===
+=== WPSSO Ratings and Reviews ===
 Plugin Name: WPSSO Ratings and Reviews
 Plugin Slug: wpsso-ratings-and-reviews
 Text Domain: wpsso-ratings-and-reviews
