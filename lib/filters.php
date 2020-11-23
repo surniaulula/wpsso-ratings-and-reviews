@@ -100,7 +100,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$worst_rating = 1;
 			$best_rating  = 5;
 
-			if ( apply_filters( $this->p->lca . '_og_add_mt_rating', true, $mod ) ) {
+			if ( apply_filters( 'wpsso_og_add_mt_rating', true, $mod ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
@@ -154,7 +154,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
-			if ( apply_filters( $this->p->lca . '_og_add_mt_reviews', false, $mod ) ) {
+			if ( apply_filters( 'wpsso_og_add_mt_reviews', false, $mod ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
