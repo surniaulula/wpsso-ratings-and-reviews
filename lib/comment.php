@@ -406,6 +406,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$average = number_format( $rating_total / $count_total, 2, '.', '' );
 
 			} else {
+
 				$average = 0;
 			}
 
