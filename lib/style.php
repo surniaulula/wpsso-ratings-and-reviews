@@ -14,32 +14,30 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 
 	class WpssoRarStyle {
 
-		protected $p;
+		private $p;	// Wpsso class object.
+		private $a;	// WpssoRar class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoRar->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
+			$this->a =& $addon;
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_styles' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		}
 
-		public static function enqueue_styles() {
+		public function enqueue_styles() {
 
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
 
 				return;
 			}
 
-			$wpsso = Wpsso::get_instance();
+			$sel_color = $this->p->options[ 'rar_star_color_selected' ];
 
-			$sel_color = $wpsso->options[ 'rar_star_color_selected' ];
-
-			$def_color = $wpsso->options[ 'rar_star_color_default' ];
+			$def_color = $this->p->options[ 'rar_star_color_default' ];
 
 			$plugin_version = WpssoRarConfig::get_version();
 

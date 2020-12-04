@@ -106,14 +106,14 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				}
 			}
 
-			$this->comment = new WpssoRarComment( $this->p );
-			$this->filters = new WpssoRarFilters( $this->p );
-			$this->script  = new WpssoRarScript( $this->p );
-			$this->style   = new WpssoRarStyle( $this->p );
+			$this->comment = new WpssoRarComment( $this->p, $this );
+			$this->filters = new WpssoRarFilters( $this->p, $this );
+			$this->script  = new WpssoRarScript( $this->p, $this );
+			$this->style   = new WpssoRarStyle( $this->p, $this );
 
 			if ( is_admin() ) {
 
-				$this->admin = new WpssoRarAdmin( $this->p );
+				$this->admin = new WpssoRarAdmin( $this->p, $this );
 			}
 		}
 	}

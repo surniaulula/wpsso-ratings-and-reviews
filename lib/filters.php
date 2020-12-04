@@ -15,8 +15,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 	class WpssoRarFilters {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoRar class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoRar->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			static $do_once = null;
 
@@ -28,11 +32,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$do_once = true;
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
@@ -49,11 +49,6 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 		public function filter_get_defaults( $defs ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
@@ -65,11 +60,6 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		}
 
 		public function filter_og( array $mt_og, array $mod ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// Make sure we have a valid post id.
 

@@ -12,6 +12,7 @@ jQuery( document ).ready( function( $ ) {
 		var $post_id = 0;
 
 		if ( typeof( id ) == 'object' ) {
+
 			$post_id = parseInt( this.getId( id ) );
 		}
 
@@ -33,6 +34,7 @@ jQuery( document ).ready( function( $ ) {
 			 * Populate the data.
 			 */
 			if ( $allow_ratings_value == 1 ) {
+
 				$( ':input[name="' + $allow_ratings_opt_key + '"]', $edit_row ).prop( 'checked', true );
 			}
 		}

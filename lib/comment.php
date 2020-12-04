@@ -14,30 +14,24 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 	class WpssoRarComment {
 
-		protected $p;
-		protected static $rating_enabled = array();
-		protected static $rating_cache = array();
+		private $p;	// Wpsso class object.
+		private $a;	// WpssoRar class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoRar->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			add_filter( 'comment_form_defaults', array( __CLASS__, 'update_comment_form_defaults' ), PHP_INT_MAX );
-
 			add_filter( 'comment_form_field_comment', array( __CLASS__, 'update_form_comment_field' ), PHP_INT_MAX );
-
 			add_filter( 'comment_form_submit_button', array( __CLASS__, 'update_form_submit_button' ), PHP_INT_MAX );
+			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
-
 			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
-
-			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 		}
 
 		/**
@@ -47,19 +41,16 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$wpsso = Wpsso::get_instance();
 
-			if ( $wpsso->debug->enabled ) {
+			static $local_cache = array();
 
-				$wpsso->debug->mark();
-			}
-
-			if ( isset( self::$rating_enabled[ $post_id ] ) ) {
+			if ( isset( $local_cache[ $post_id ] ) ) {
 
 				if ( $wpsso->debug->enabled ) {
 
-					$wpsso->debug->log( 'rating is ' . ( self::$rating_enabled[ $post_id ] ? 'enabled' : 'disabled' ) );
+					$wpsso->debug->log( 'rating is ' . ( $local_cache[ $post_id ] ? 'enabled' : 'disabled' ) );
 				}
 
-				return self::$rating_enabled[ $post_id ];
+				return $local_cache[ $post_id ];
 			}
 
 			$post_type = get_post_type( $post_id );
@@ -89,7 +80,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->log( 'rating is ' . ( $enabled ? 'enabled' : 'disabled' ) );
 			}
 
-			return self::$rating_enabled[ $post_id ] = $enabled;
+			return $local_cache[ $post_id ] = $enabled;
 		}
 
 		private static function get_rating_disabled_html( $post_id, $html ) {
@@ -102,13 +93,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * values may be merged by WordPress and overwrite these defaults.
 		 */
 		public static function update_comment_form_defaults( $defaults ) {
-
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
 
 			$post_id = get_the_ID();
 
@@ -198,6 +182,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 						$comment_field . '</span><!-- .wpsso-rar.comment-field -->' . "\n";
 
 			} else {
+
 				$comment_field = '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . "\n" . $comment_field;
 			}
 
@@ -241,11 +226,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		private static function get_form_rating_field( $label_attr = '' ) {
 
 			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
 
 			$is_comment_reply   = empty( $_GET[ 'replytocom' ] ) ? false : true;
 			$is_rating_required = empty( $wpsso->options[ 'rar_rating_required' ] ) ? false : true;
@@ -305,13 +285,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function add_rating_to_comment_text( $comment_text ) {
 
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
-
 			/**
 			 * Make sure we only add the star rating once (ours or from another plugin).
 			 */
@@ -348,13 +321,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 * Create the rating stars HTML for the rating value provided.
 		 */
 		private static function get_star_rating_html( $rating_value ) {
-
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
 
 			$rating_html  = '';
 			$rating_value = (int) $rating_value;

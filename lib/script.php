@@ -14,22 +14,22 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 	class WpssoRarScript {
 
-		protected $p;
+		private $p;	// Wpsso class object.
+		private $a;	// WpssoRar class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoRar->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
+			$this->a =& $addon;
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			add_action( 'admin_enqueue_scripts', array( __CLASS__, 'admin_enqueue_scripts' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
-			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_scripts' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		}
 
-		public static function admin_enqueue_scripts( $hook_name ) {
+		public function admin_enqueue_scripts( $hook_name ) {
 
 			$plugin_version = WpssoRarConfig::get_version();
 
@@ -49,7 +49,7 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 		}
 
-		public static function enqueue_scripts() {
+		public function enqueue_scripts() {
 
 			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
 
@@ -63,19 +63,17 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 					array( 'jquery' ), $plugin_version );
 
 			wp_localize_script( 'wpsso-rar-script',
-				'wpsso_rar_script', self::get_script_data() );
+				'wpsso_rar_script', $this->get_script_data() );
 		}
 
-		public static function get_script_data() {
-
-			$wpsso = Wpsso::get_instance();
+		public function get_script_data() {
 
 			$is_reply = empty( $_GET[ 'replytocom' ] ) ? false : true;
 
 			return array(
 				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
 				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
-				'review_rating_required'    => empty( $wpsso->options[ 'rar_rating_required' ] ) || $is_reply ? false : true,
+				'review_rating_required'    => empty( $this->p->options[ 'rar_rating_required' ] ) || $is_reply ? false : true,
 			);
 		}
 	}

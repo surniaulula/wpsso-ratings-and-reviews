@@ -42,86 +42,86 @@ msgid ""
 "Schema Review Markup."
 msgstr ""
 
-#: lib/admin.php:77 lib/admin.php:119
+#: lib/admin.php:78 lib/admin.php:120
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:131 lib/comment.php:135
+#: lib/comment.php:115 lib/comment.php:119
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""
 
-#: lib/comment.php:193
+#: lib/comment.php:177
 msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:234
+#: lib/comment.php:219
 msgctxt "form label"
 msgid "Post Review"
 msgstr ""
 
-#: lib/comment.php:267
+#: lib/comment.php:247
 msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:269
+#: lib/comment.php:249
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:270
+#: lib/comment.php:250
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:271
+#: lib/comment.php:251
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:272
+#: lib/comment.php:252
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:273
+#: lib/comment.php:253
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:274
+#: lib/comment.php:254
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:368 lib/comment.php:370
+#: lib/comment.php:334 lib/comment.php:336
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/filters.php:186
+#: lib/filters.php:176
 msgid "Enable or disable the ratings feature by public post type."
 msgstr ""
 
-#: lib/filters.php:192
+#: lib/filters.php:182
 msgid ""
 "A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
-#: lib/filters.php:198
+#: lib/filters.php:188
 msgid "The border color for unselected stars."
 msgstr ""
 
-#: lib/filters.php:204
+#: lib/filters.php:194
 msgid "The color for selected stars."
 msgstr ""
 
-#: lib/script.php:76
+#: lib/script.php:74
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/script.php:77
+#: lib/script.php:75
 msgid "Please write a review before submitting."
 msgstr ""
 

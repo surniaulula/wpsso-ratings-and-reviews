@@ -14,23 +14,24 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 	class WpssoRarAdmin {
 
-		protected $p;
-		protected $allow_ratings_opt_key = 'rar_allow_ratings';
+		private $p;
+		private $a;	// WpssoRar class object.
 
-		public function __construct( &$plugin ) {
+		private static $allow_ratings_opt_key = 'rar_allow_ratings';
+
+		/**
+		 * Instantiated by WpssoRar->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
 				'get_sortable_columns' => 1,
 			) );
 
-			add_action( 'admin_enqueue_scripts', array( 'WpssoRarStyle', 'enqueue_styles' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
+			add_action( 'admin_enqueue_scripts', array( $this->a->style, 'enqueue_styles' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
 			add_action( 'post_comment_status_meta_box-options', array( $this, 'show_comment_metabox_option' ), 10, 1 );
 			add_action( 'quick_edit_custom_box', array( $this, 'show_quick_edit_option' ), 10, 2 );
             		add_action( 'save_post', array( $this, 'save_rating_meta_option' ), 10, 3 );
@@ -43,7 +44,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 					'header'         => 'Rating',
 					'meta_key'       => WPSSORAR_META_AVERAGE_RATING,
 					'post_callbacks' => array(	// An array of callback functions / methods.
-						$this->allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ), // The only argument is a post id.
+						self::$allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ), // The only argument is a post id.
 					),
 					'orderby' => 'meta_value',
 					'width'   => '75px',
@@ -82,7 +83,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			echo '<label class="alignleft">';
 
 			printf( '<input type="hidden" name="is_checkbox_%1$s" value="1"/>' .
-				'<input type="checkbox" name="%1$s" class="selectit"/>', $this->allow_ratings_opt_key );
+				'<input type="checkbox" name="%1$s" class="selectit"/>', self::$allow_ratings_opt_key );
 
 			echo '<span class="checkbox-title">' . $enable_ratings_label . '</span>';
 
@@ -122,7 +123,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 			printf( '<br /><label for="%1$s"><input type="hidden" name="is_checkbox_%1$s" value="1"/>' .
 				'<input type="checkbox" name="%1$s" class="selectit" %2$s/> %3$s</label>',
-					$this->allow_ratings_opt_key, checked( $allow_ratings, 1, false ), $enable_ratings_label );
+					self::$allow_ratings_opt_key, checked( $allow_ratings, 1, false ), $enable_ratings_label );
 		}
 
         	public function save_rating_meta_option( $post_id, $post_obj, $update ) {
@@ -143,11 +144,11 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 				return;
 
-			} elseif ( empty( $_POST[ 'is_checkbox_' . $this->allow_ratings_opt_key ] ) ) {
+			} elseif ( empty( $_POST[ 'is_checkbox_' . self::$allow_ratings_opt_key ] ) ) {
 
 				return;
 
-			} elseif ( isset( $_POST[ $this->allow_ratings_opt_key ] ) && strtolower( $_POST[ $this->allow_ratings_opt_key ] ) === 'on' ) {
+			} elseif ( isset( $_POST[ self::$allow_ratings_opt_key ] ) && strtolower( $_POST[ self::$allow_ratings_opt_key ] ) === 'on' ) {
 
 				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
 
