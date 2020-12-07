@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		/**
-		 * Check if ratings are allowed for this post ID.
+		 * Check if ratings are allowed for this post id.
 		 */
 		public static function is_rating_enabled( $post_id ) {
 
@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		private static function get_rating_disabled_html( $post_id, $html ) {
 
-			return '<!-- wpsso-rar comment rating disabled for post ID ' . $post_id . ' -->' . "\n" . $html;
+			return '<!-- wpsso-rar comment rating disabled for post id ' . $post_id . ' -->' . "\n" . $html;
 		}
 
 		/**
@@ -298,7 +298,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			if ( empty( $comment_obj->comment_post_ID ) ) {
 
-				return '<!-- wpsso-rar comment post ID is empty -->' . $comment_text;
+				return '<!-- wpsso-rar comment post id is empty -->' . $comment_text;
 
 			} elseif ( ! self::is_rating_enabled( $comment_obj->comment_post_ID ) ) {
 
