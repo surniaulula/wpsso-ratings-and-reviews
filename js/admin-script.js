@@ -7,7 +7,7 @@ jQuery( document ).ready( function( $ ) {
 		$wp_inline_edit.apply( this, arguments );
 
 		/**
-		 * Get the post id.
+		 * Get the post ID.
 		 */
 		var $post_id = 0;
 

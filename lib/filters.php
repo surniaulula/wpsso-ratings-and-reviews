@@ -61,7 +61,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 		public function filter_og( array $mt_og, array $mod ) {
 
-			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// Make sure we have a valid post id.
+			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// Make sure we have a valid post ID.
 
 				return $mt_og;
 			}
@@ -70,7 +70,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( 'exiting early: post id ' . $mod[ 'id' ] . ' ratings disabled' );
+					$this->p->debug->log( 'exiting early: post ID ' . $mod[ 'id' ] . ' ratings disabled' );
 				}
 
 				return $mt_og;
