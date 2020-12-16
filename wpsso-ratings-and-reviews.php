@@ -11,7 +11,7 @@
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
- * Requires PHP: 5.6
+ * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.6
  * WC Tested Up To: 4.8.0
