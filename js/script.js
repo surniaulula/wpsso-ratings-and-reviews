@@ -4,6 +4,7 @@ jQuery( document ).ready( function( $ ) {
 	 * The wpsso_rar_script is required to continue, so make sure the object exists.
 	 */
 	if ( typeof wpsso_rar_script === 'undefined' ) {
+
 		return false;
 	}
 
@@ -32,9 +33,8 @@ jQuery( document ).ready( function( $ ) {
 		.on( 'click', '#respond #submit', function() {
 
 			/**
-			 * Value tests are performed only on enabled input fields, so the rating select
-			 * is disabled when the reply link is clicked, and reenabled when cancelled to
-			 * avoid star value checks on replies.
+			 * Value tests are performed only on enabled input fields, so the rating select is disabled when the reply
+			 * link is clicked, and reenabled when cancelled to avoid star value checks on replies.
 			 */
 			var $rating = $( this ).closest( '#respond' ).find( '.wpsso-rar select#rating:enabled' ), rating = $rating.val();
 			var $review = $( this ).closest( '#respond' ).find( '.wpsso-rar textarea#comment:enabled' ), review = $review.val();
@@ -45,6 +45,7 @@ jQuery( document ).ready( function( $ ) {
 
 				return false;
 			}
+
 			if ( $review.length > 0 && ! review ) {
 
 				window.alert( wpsso_rar_script.i18n_required_review_text );
