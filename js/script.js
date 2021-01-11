@@ -1,4 +1,4 @@
-jQuery( document ).ready( function( $ ) {
+jQuery( document ).on( 'ready', function( $ ) {
 
 	/**
 	 * The wpsso_rar_script is required to continue, so make sure the object exists.
