@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6
-WC Tested Up To: 4.9.0
+WC Tested Up To: 4.9.1
 Stable Tag: 2.12.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.13.0-dev.2 (2021/01/19)**
+**Version 2.13.0-dev.3 (2021/01/20)**
 
 * **New Features**
 	* None.
@@ -102,6 +102,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Changed `jQuery( document ).on( 'ready' )` event handlers to `jQuery()` for jQuery v3.0.
 	* Renamed 'get_og_type_reviews()' to 'get_mt_reviews()' for WPSSO v8.20.0.
 * **Requires At Least**
 	* PHP v7.0.
@@ -141,9 +142,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.13.0-dev.2 =
+= 2.13.0-dev.3 =
 
-(2021/01/19) Renamed 'get_og_type_reviews()' to 'get_mt_reviews()' for WPSSO v8.20.0.
+(2021/01/20) Changed `jQuery( document ).on( 'ready' )` event handlers to `jQuery()` for jQuery v3.0.
 
 = 2.12.0 =
 
