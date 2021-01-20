@@ -93,6 +93,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.13.0-dev.2 (2021/01/19)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Renamed 'get_og_type_reviews()' to 'get_mt_reviews()' for WPSSO v8.20.0.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+	* WPSSO Core v8.16.0.
+
 **Version 2.12.0 (2020/12/04)**
 
 * **New Features**
@@ -125,6 +140,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.13.0.
 
 == Upgrade Notice ==
+
+= 2.13.0-dev.2 =
+
+(2021/01/19) Renamed 'get_og_type_reviews()' to 'get_mt_reviews()' for WPSSO v8.20.0.
 
 = 2.12.0 =
 
