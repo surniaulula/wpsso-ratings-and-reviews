@@ -1,4 +1,4 @@
-jQuery( document ).on( 'ready', function( $ ) {
+jQuery( function( $ ){
 
 	var $wp_inline_edit = inlineEditPost.edit;
 
