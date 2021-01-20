@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.13.0-dev.3 (2021/01/20)**
+**Version 2.13.0-dev.4 (2021/01/20)**
 
 * **New Features**
 	* None.
@@ -107,7 +107,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v4.5.
-	* WPSSO Core v8.16.0.
+	* WPSSO Core v8.20.0-dev.4.
 
 **Version 2.12.0 (2020/12/04)**
 
@@ -142,7 +142,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.13.0-dev.3 =
+= 2.13.0-dev.4 =
 
 (2021/01/20) Changed `jQuery( document ).on( 'ready' )` event handlers to `jQuery()` for jQuery v3.0.
 
