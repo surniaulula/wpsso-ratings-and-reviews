@@ -15,9 +15,7 @@
 
 <h2>Description</h2>
 
-<p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"></p>
-
-<p><strong>Compatible with WooCommerce product ratings and reviews.</strong></p>
+<p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"> <strong>Compatible with WooCommerce product ratings and reviews.</strong></p>
 
 <p><strong>Extends the WordPress comment system with ratings and reviews:</strong></p>
 
