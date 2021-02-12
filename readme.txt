@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6.1
-WC Tested Up To: 4.9.2
+WC Tested Up To: 5.0.0
 Stable Tag: 2.13.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
