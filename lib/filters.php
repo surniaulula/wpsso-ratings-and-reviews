@@ -86,12 +86,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				return $mt_og;
 			}
 
-			$og_type      = $mt_og[ 'og:type' ];
-			$rating_meta  = 'rating';
-			$worst_rating = 1;
-			$best_rating  = 5;
+			$og_type        = $mt_og[ 'og:type' ];
+			$rating_md_name = 'rating';
+			$worst_rating   = 1;
+			$best_rating    = 5;
 
-			if ( apply_filters( 'wpsso_og_add_mt_rating', true, $mod ) ) {
+			if ( apply_filters( 'wpsso_og_add_mt_rating', true, $mod ) ) {	// Enabled by default.
 
 				if ( $this->p->debug->enabled ) {
 
@@ -145,14 +145,14 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
-			if ( apply_filters( 'wpsso_og_add_mt_reviews', false, $mod ) ) {
+			if ( apply_filters( 'wpsso_og_add_mt_reviews', false, $mod ) ) {	// Enabled by the WPSSO JSON add-on.
 
 				if ( $this->p->debug->enabled ) {
 
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
 
-				$mt_og[ $og_type . ':reviews' ] = $mod[ 'obj' ]->get_mt_reviews( $mod[ 'id' ], $og_type, $rating_meta, $worst_rating, $best_rating );
+				$mt_og[ $og_type . ':reviews' ] = $mod[ 'obj' ]->get_mt_reviews( $mod[ 'id' ], $og_type, $rating_md_name, $worst_rating, $best_rating );
 
 			} elseif ( $this->p->debug->enabled ) {
 
