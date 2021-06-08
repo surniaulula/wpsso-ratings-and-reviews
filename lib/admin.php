@@ -44,13 +44,22 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 					'header'         => 'Rating',
 					'meta_key'       => WPSSORAR_META_AVERAGE_RATING,
 					'post_callbacks' => array(	// An array of callback functions / methods.
-						self::$allow_ratings_opt_key => array( 'WpssoRarComment', 'is_rating_enabled' ), // The only argument is a post ID.
+						array( $this, 'post_callback_rating_enabled' ),
 					),
 					'orderby' => 'meta_value',
 					'width'   => '75px',
 					'height'  => 'auto',
 				)
 			), $columns );
+		}
+
+		public function post_callback_rating_enabled( $value, $post_id ) {
+
+			$rating_enabled = WpssoRarComment::is_rating_enabled( $post_id );
+
+			$input_hidden = '<input name="' . self::$allow_ratings_opt_key . '" type="hidden" value="' . $rating_enabled . '" readonly="readonly" />';
+
+			return $value . "\n" . $input_hidden;
 		}
 
 		public function show_quick_edit_option( $column_name, $post_type ) {
