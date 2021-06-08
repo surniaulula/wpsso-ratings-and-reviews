@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.0-b.2 (2021/06/08)**
+**Version 2.14.0-rc.1 (2021/06/08)**
 
 * **New Features**
 	* None.
@@ -102,7 +102,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v4.5.
-	* WPSSO Core v8.30.0-b.2.
+	* WPSSO Core v8.30.0-rc.1.
 
 **Version 2.13.1 (2021/02/25)**
 
@@ -168,7 +168,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.14.0-b.2 =
+= 2.14.0-rc.1 =
 
 (2021/06/08) Updated the 'wpss_get_sortable_columns' filter for WPSSO Core v8.30.0.
 
