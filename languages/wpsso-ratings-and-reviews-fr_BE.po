@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.13.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.14.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-01-21 05:48-0800\n"
+"PO-Revision-Date: 2021-06-08 16:54-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:178
@@ -36,7 +36,7 @@ msgctxt "plugin description"
 msgid "Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup."
 msgstr "Notes et critiques pour commentaires WordPress avec balisage de Schéma Aggregate Rating et Schéma Review."
 
-#: lib/admin.php:78 lib/admin.php:120
+#: lib/admin.php:87 lib/admin.php:129
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
