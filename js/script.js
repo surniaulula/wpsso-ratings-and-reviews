@@ -39,16 +39,16 @@ jQuery( function( $ ){
 			var $rating = $( this ).closest( '#respond' ).find( '.wpsso-rar select#rating:enabled' ), rating = $rating.val();
 			var $review = $( this ).closest( '#respond' ).find( '.wpsso-rar textarea#comment:enabled' ), review = $review.val();
 
-			if ( $rating.length > 0 && ! rating && wpsso_rar_script.review_rating_required ) {
+			if ( $rating.length > 0 && ! rating && wpsso_rar_script._rating_required ) {
 
-				window.alert( wpsso_rar_script.i18n_required_rating_text );
+				window.alert( wpsso_rar_script._required_rating_transl );
 
 				return false;
 			}
 
 			if ( $review.length > 0 && ! review ) {
 
-				window.alert( wpsso_rar_script.i18n_required_review_text );
+				window.alert( wpsso_rar_script._required_review_transl );
 
 				return false;
 			}

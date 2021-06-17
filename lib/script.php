@@ -41,8 +41,8 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 				case 'edit.php':
 
 					wp_enqueue_script( 'wpsso-rar-admin-script',
-						WPSSORAR_URLPATH.'js/admin-script.min.js',
-							array( 'jquery' ), $plugin_version, true );
+						WPSSORAR_URLPATH . 'js/admin-script.min.js',
+							array( 'jquery' ), $plugin_version, $in_footer = true );
 
 					break;	// Stop here.
 			}
@@ -59,7 +59,7 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 			$plugin_version = WpssoRarConfig::get_version();
 
 			wp_enqueue_script( 'wpsso-rar-script',
-				WPSSORAR_URLPATH.'js/script.min.js',
+				WPSSORAR_URLPATH . 'js/script.min.js',
 					array( 'jquery' ), $plugin_version );
 
 			wp_localize_script( 'wpsso-rar-script',
@@ -71,9 +71,9 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 			$is_reply = empty( $_GET[ 'replytocom' ] ) ? false : true;
 
 			return array(
-				'i18n_required_rating_text' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
-				'i18n_required_review_text' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
-				'review_rating_required'    => empty( $this->p->options[ 'rar_rating_required' ] ) || $is_reply ? false : true,
+				'_required_rating_transl' => esc_attr__( 'Please select a rating before submitting.', 'wpsso-ratings-and-reviews' ),
+				'_required_review_transl' => esc_attr__( 'Please write a review before submitting.', 'wpsso-ratings-and-reviews' ),
+				'_rating_required'        => empty( $this->p->options[ 'rar_rating_required' ] ) || $is_reply ? false : true,
 			);
 		}
 	}
