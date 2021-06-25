@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.2-b.2 (2021/06/25)**
+**Version 2.14.2-b.2 (2021/06/25)**
 
 * **New Features**
 	* None.
