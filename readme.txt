@@ -198,6 +198,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
+= 2.14.2-b.2 =
+
+(2021/06/25) Minor changes for HTML debug messages.
+
 = 2.14.1 =
 
 (2021/06/18) Updated the 'wpsso-rar-script' localized variable names.

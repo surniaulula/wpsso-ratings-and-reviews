@@ -47,7 +47,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				if ( $wpsso->debug->enabled ) {
 
-					$wpsso->debug->log( 'rating is ' . ( $local_cache[ $post_id ] ? 'enabled' : 'disabled' ) );
+					$wpsso->debug->log( 'rating for post id ' . $post_id . ' from cache is ' . ( $local_cache[ $post_id ] ? 'enabled' : 'disabled' ) );
 				}
 
 				return $local_cache[ $post_id ];
@@ -56,7 +56,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$post_type = get_post_type( $post_id );
 			$default   = empty( $wpsso->options[ 'rar_add_to_' . $post_type ] ) ? 0 : 1;
 			$disabled  = isset( $wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
-				$wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] === 'disabled' ? true : false;
+				'disabled' === $wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] ? true : false;
 
 			if ( $disabled ) {
 
@@ -77,7 +77,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			if ( $wpsso->debug->enabled ) {
 
-				$wpsso->debug->log( 'rating is ' . ( $enabled ? 'enabled' : 'disabled' ) );
+				$wpsso->debug->log( 'rating for post id ' . $post_id . ' is ' . ( $enabled ? 'enabled' : 'disabled' ) );
 			}
 
 			return $local_cache[ $post_id ] = $enabled;

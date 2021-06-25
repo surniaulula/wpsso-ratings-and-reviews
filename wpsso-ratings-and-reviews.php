@@ -15,7 +15,7 @@
  * Requires At Least: 4.5
  * Tested Up To: 5.7.2
  * WC Tested Up To: 5.4.1
- * Version: 2.14.1
+ * Version: 2.15.2-b.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -93,7 +93,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
 
-				if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) {
+				if ( 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) {
 
 					if ( ! empty( $this->p->options[ 'rar_add_to_product' ] ) ) {
 

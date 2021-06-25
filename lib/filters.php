@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->p->util->add_plugin_filters( $this, array( 
 				'get_defaults' => 1,
 				'og'           => 2,
-			), $prio = 1000 );
+			), $prio = 1000 );	// Make sure we run before any Ratings and Review API service - just in case.
 
 			if ( is_admin() ) {
 
@@ -91,6 +91,9 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$worst_rating   = 1;
 			$best_rating    = 5;
 
+			/**
+			 * Add rating meta tags.
+			 */
 			if ( apply_filters( 'wpsso_og_add_mt_rating', true, $mod ) ) {	// Enabled by default.
 
 				if ( $this->p->debug->enabled ) {
@@ -145,6 +148,9 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
+			/**
+			 * Add reviews meta tags.
+			 */
 			if ( apply_filters( 'wpsso_og_add_mt_reviews', false, $mod ) ) {	// Enabled by the WPSSO JSON add-on.
 
 				if ( $this->p->debug->enabled ) {
