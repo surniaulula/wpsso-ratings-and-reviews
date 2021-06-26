@@ -97,16 +97,20 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 					$this->init_textdomain();	// If not already loaded, load the textdomain now.
 
-					$info        = $this->cf[ 'plugin' ][ $this->ext ];
+					$info = $this->cf[ 'plugin' ][ $this->ext ];
+
 					$addon_name  = $info[ 'name' ];
-					$option_link = $this->p->util->get_admin_url( 'advanced#sucom-tabset_services-tab_ratings_reviews',
-						_x( 'Ratings and Reviews Service', 'option label', 'wpsso' ) );
 
-					$notice_msg = sprintf( __( 'The %1$s add-on is not compatible with the %2$s option.',
-						'wpsso-ratings-and-reviews' ), $addon_name, $option_link ) . ' ';
+					// translators: Please ignore - translation uses a different text domain.
+					$option_label = _x( 'Ratings and Reviews Service', 'option label', 'wpsso' );
 
-					$notice_msg .= sprintf( __( 'You must either deactivate the %1$s add-on or disable the %2$s option.',
-						'wpsso-ratings-and-reviews' ), $addon_name, $option_link );
+					$option_link = $this->p->util->get_admin_url( 'advanced#sucom-tabset_services-tab_ratings_reviews', $option_label );
+
+					$notice_msg = sprintf( __( 'The %1$s add-on is not compatible with the %2$s option.', 'wpsso-ratings-and-reviews' ),
+						$addon_name, $option_link ) . ' ';
+
+					$notice_msg .= sprintf( __( 'You must either deactivate the %1$s add-on or disable the %2$s option.', 'wpsso-ratings-and-reviews' ),
+						$addon_name, $option_link );
 
 					$this->p->notice->err( $notice_msg );
 
