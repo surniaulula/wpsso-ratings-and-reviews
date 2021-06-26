@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.2-b.2 (2021/06/25)**
+**Version 2.14.2-b.3 (2021/06/25)**
 
 * **New Features**
 	* None.
@@ -102,7 +102,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v4.5.
-	* WPSSO Core v8.33.0-b.2.
+	* WPSSO Core v8.33.0-b.3.
 
 **Version 2.14.1 (2021/06/18)**
 
@@ -198,7 +198,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.14.2-b.2 =
+= 2.14.2-b.3 =
 
 (2021/06/25) Minor changes for HTML debug messages.
 
