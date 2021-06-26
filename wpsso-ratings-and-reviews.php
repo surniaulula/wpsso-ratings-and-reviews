@@ -15,7 +15,7 @@
  * Requires At Least: 4.5
  * Tested Up To: 5.7.2
  * WC Tested Up To: 5.4.1
- * Version: 2.14.2-b.3
+ * Version: 2.14.2-rc.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -89,6 +89,32 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			}
 
 			/**
+			 * Make sure there are no conflicting settings.
+			 */
+			if ( ! empty( $this->p->options[ 'plugin_ratings_reviews_svc' ] ) ) {
+			
+				if ( 'none' !== $this->p->options[ 'plugin_ratings_reviews_svc' ] ) {
+
+					$this->init_textdomain();	// If not already loaded, load the textdomain now.
+
+					$info        = $this->cf[ 'plugin' ][ $this->ext ];
+					$addon_name  = $info[ 'name' ];
+					$option_link = $this->p->util->get_admin_url( 'advanced#sucom-tabset_services-tab_ratings_reviews',
+						_x( 'Ratings and Reviews Service', 'option label', 'wpsso' ) );
+
+					$notice_msg = sprintf( __( 'The %1$s add-on is not compatible with the %2$s option.',
+						'wpsso-ratings-and-reviews' ), $addon_name, $option_link ) . ' ';
+
+					$notice_msg .= sprintf( __( 'You must either deactivate the %1$s add-on or disable the %2$s option.',
+						'wpsso-ratings-and-reviews' ), $addon_name, $option_link );
+
+					$this->p->notice->err( $notice_msg );
+
+					return;	// Stop here.
+				}
+			}
+
+			/**
 			 * Disable reviews on products if competing feature exists.
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
@@ -102,6 +128,9 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, $network = false );
 					}
 
+					/**
+					 * Disable this post type option in the add-on settings.
+					 */
 					$this->p->options[ 'rar_add_to_product:is' ] = 'disabled';
 				}
 			}

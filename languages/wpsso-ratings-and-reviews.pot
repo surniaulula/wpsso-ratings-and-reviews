@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.14.2-b.3\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.14.2-rc.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
@@ -148,6 +148,19 @@ msgstr ""
 #: lib/submenu/rar-general.php:87
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
+msgstr ""
+
+#: wpsso-ratings-and-reviews.php:103
+msgctxt "option label"
+msgid "Ratings and Reviews Service"
+msgstr ""
+
+#: wpsso-ratings-and-reviews.php:105
+msgid "The %1$s add-on is not compatible with the %2$s option."
+msgstr ""
+
+#: wpsso-ratings-and-reviews.php:108
+msgid "You must either deactivate the %1$s add-on or disable the %2$s option."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
