@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.14.2-rc.1 (2021/06/26)**
+**Version 2.14.2 (2021/06/27)**
 
 * **New Features**
 	* None.
@@ -102,7 +102,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v4.5.
-	* WPSSO Core v8.33.0-rc.1.
+	* WPSSO Core v8.33.0.
 
 **Version 2.14.1 (2021/06/18)**
 
@@ -198,9 +198,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.14.2-rc.1 =
+= 2.14.2 =
 
-(2021/06/26) Added a conflict check for the new "Ratings and Reviews Service" option in WPSSO Core v8.33.0.
+(2021/06/27) Added a conflict check for the new "Ratings and Reviews Service" option in WPSSO Core v8.33.0.
 
 = 2.14.1 =
 
