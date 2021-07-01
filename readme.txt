@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
 Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
 Contributors: jsmoriss
 Requires PHP: 7.0
-Requires At Least: 4.5
+Requires At Least: 5.0
 Tested Up To: 5.7.2
 WC Tested Up To: 5.4.1
 Stable Tag: 2.14.2
@@ -101,8 +101,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Requires At Least**
 	* PHP v7.0.
-	* WordPress v4.5.
-	* WPSSO Core v8.33.0.
+	* WordPress v5.0.
+	* WPSSO Core v8.34.0.
 
 **Version 2.14.1 (2021/06/18)**
 
