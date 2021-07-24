@@ -262,7 +262,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function save_request_comment_rating( $comment_id ) {
 
-			if ( empty( $_GET[ 'replytocom' ] ) && empty( $_POST[ 'replytocom' ] ) ) {	// don't save reply ratings
+			if ( empty( $_GET[ 'replytocom' ] ) && empty( $_POST[ 'replytocom' ] ) ) {	// Don't save reply ratings.
 
 				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
 
@@ -380,24 +380,35 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		/**
-		 * Rating Count.
+		 * Return a rating count (ie. the number of ratings for a rating value, or all rating values).
+		 *
+		 * The WPSSORAR_META_RATING_COUNTS post meta array acts as a cache, which is deleted by the
+		 * 'wp_update_comment_count' action.
 		 */
 		public static function get_rating_count( $post_id, $rating_value = null ) {
 
-			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {
+			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {	// Just in case.
 
 				self::sync_rating_counts( $post_id );
 			}
 
-			$rating_counts = array_filter( (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, true ) );
+			$rating_counts = get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $single = true );
 
-			if ( null === $rating_value ) {
+			if ( is_array( $rating_counts ) ) {	// Just in case.
 
-				return array_sum( $rating_counts );
+				$rating_counts = array_filter( $rating_counts );
 
+				if ( null === $rating_value ) {
+
+					return array_sum( $rating_counts );	// Return a count for all rating values.
+
+				} elseif ( isset( $rating_counts[ $rating_value ] ) ) {	// Return the count for a specific rating.
+				
+					return (int) $rating_counts[ $rating_value ];
+				}
 			}
 
-			return isset( $rating_counts[ $rating_value ] ) ? (int) $rating_counts[ $rating_value ] : 0;
+			return 0;
 		}
 
 		private static function sync_rating_counts( $post_id ) {
@@ -417,6 +428,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$rating_counts = array();
 
 			foreach ( $count_meta as $count ) {
+
 				$rating_counts[ $count->meta_value ] = $count->meta_value_count;
 			}
 
