@@ -92,7 +92,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			 * Make sure there are no conflicting settings.
 			 */
 			if ( ! empty( $this->p->options[ 'plugin_ratings_reviews_svc' ] ) ) {	// Since WPSSO Core v8.33.0.
-			
+
 				if ( 'none' !== $this->p->options[ 'plugin_ratings_reviews_svc' ] ) {
 
 					$this->init_textdomain();	// If not already loaded, load the textdomain now.

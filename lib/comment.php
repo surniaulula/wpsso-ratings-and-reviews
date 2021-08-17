@@ -403,7 +403,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 					return array_sum( $rating_counts );	// Return a count for all rating values.
 
 				} elseif ( isset( $rating_counts[ $rating_value ] ) ) {	// Return the count for a specific rating.
-				
+
 					return (int) $rating_counts[ $rating_value ];
 				}
 			}
