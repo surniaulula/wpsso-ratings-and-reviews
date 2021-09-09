@@ -13,7 +13,7 @@
  * Description: Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
  * Requires PHP: 7.0
  * Requires At Least: 5.0
- * Tested Up To: 5.8
+ * Tested Up To: 5.8.1
  * WC Tested Up To: 5.6.0
  * Version: 2.14.2
  *
