@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-dev.1 (TBD)**
+**Version 2.15.0-dev.1 (2021/09/17)**
 
 * **New Features**
 	* None.
@@ -215,7 +215,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.15.0-dev.1 =
 
-(TBD) Updated the 'wpsso_og_add_mt_reviews' default value for WPSSO Core v9.0.0.
+(2021/09/17) Updated the 'wpsso_og_add_mt_reviews' default value for WPSSO Core v9.0.0.
 
 = 2.14.2 =
 
