@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.14.2\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.15.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-26 07:18-0700\n"
+"PO-Revision-Date: 2021-09-19 18:06-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -94,19 +94,19 @@ msgstr "Terrible"
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
-#: lib/filters.php:182
+#: lib/filters.php:183
 msgid "Enable or disable the ratings feature by public post type."
 msgstr "Activer ou désactiver la fonction de notes par type d'article public."
 
-#: lib/filters.php:188
+#: lib/filters.php:189
 msgid "A rating value must be selected to submit a review (enabled by default)."
 msgstr "Une note doit être sélectionnée pour soumettre une critique (activée par défaut)."
 
-#: lib/filters.php:194
+#: lib/filters.php:195
 msgid "The border color for unselected stars."
 msgstr "La couleur de la bordure pour les étoiles non sélectionnées."
 
-#: lib/filters.php:200
+#: lib/filters.php:201
 msgid "The color for selected stars."
 msgstr "La couleur des étoiles sélectionnées."
 
@@ -143,16 +143,17 @@ msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr "Évaluation requise pour soumettre critique"
 
-#: wpsso-ratings-and-reviews.php:103
+#. translators: Please ignore - translation uses a different text domain.
+#: wpsso-ratings-and-reviews.php:105
 msgctxt "option label"
 msgid "Ratings and Reviews Service"
 msgstr "Service de notes et critiques"
 
-#: wpsso-ratings-and-reviews.php:105
+#: wpsso-ratings-and-reviews.php:109
 msgid "The %1$s add-on is not compatible with the %2$s option."
 msgstr "L'ajout %1$s n'est pas compatible avec l'option %2$s."
 
-#: wpsso-ratings-and-reviews.php:108
+#: wpsso-ratings-and-reviews.php:112
 msgid "You must either deactivate the %1$s add-on or disable the %2$s option."
 msgstr "Vous devez soit désactiver l'ajout %1$s ou désactiver l'option %2$s."
 
