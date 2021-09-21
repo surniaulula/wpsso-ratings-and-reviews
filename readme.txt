@@ -89,20 +89,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-dev.7 (2021/09/20)**
+**Version 2.15.0-dev.8 (2021/09/21)**
 
 * **New Features**
 	* None.
 * **Improvements**
 	* None.
 * **Bugfixes**
-	* None.
+	* Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
 * **Developer Notes**
 	* Updated the 'wpsso_og_add_mt_reviews' default value for WPSSO Core v9.0.0.
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.0.0-dev.7.
+	* WPSSO Core v9.0.0-dev.8.
 
 **Version 2.14.2 (2021/06/27)**
 
@@ -213,9 +213,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.15.0-dev.7 =
+= 2.15.0-dev.8 =
 
-(2021/09/20) Updated the 'wpsso_og_add_mt_reviews' default value for WPSSO Core v9.0.0.
+(2021/09/21) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
 
 = 2.14.2 =
 
