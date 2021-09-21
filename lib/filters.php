@@ -16,6 +16,8 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoRar class object.
+		private $msgs;	// WpssoRarFiltersMessages class object.
+		private $opts;	// WpssoRarFiltersOptions class object.
 
 		/**
 		 * Instantiated by WpssoRar->init_objects().
@@ -34,29 +36,20 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
+			require_once WPSSORAR_PLUGINDIR . 'lib/filters-options.php';
+
+			$this->opts = new WpssoRarFiltersOptions( $plugin, $addon );
+
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,
-				'og'           => 2,
+				'og' => 2,
 			), $prio = 1000 );	// Run before rating or review API service.
 
 			if ( is_admin() ) {
 
-				$this->p->util->add_plugin_filters( $this, array( 
-					'messages_tooltip' => 2,
-				) );
+				require_once WPSSORAR_PLUGINDIR . 'lib/filters-messages.php';
+
+				$this->msgs = new WpssoRarFiltersMessages( $plugin, $addon );
 			}
-		}
-
-		public function filter_get_defaults( $defs ) {
-
-			/**
-			 * Add options using a key prefix array and post type names.
-			 */
-			$this->p->util->add_post_type_names( $defs, array(
-				'rar_add_to' => 0,
-			) );
-
-			return $defs;
 		}
 
 		public function filter_og( array $mt_og, array $mod ) {
@@ -167,43 +160,6 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			}
 
 			return $mt_og;
-		}
-
-		public function filter_messages_tooltip( $text, $msg_key ) {
-
-			if ( strpos( $msg_key, 'tooltip-rar_' ) !== 0 ) {
-
-				return $text;
-			}
-
-			switch ( $msg_key ) {
-
-				case 'tooltip-rar_add_to':		// Rating Form for Post Types.
-
-					$text = __( 'Enable or disable the ratings feature by public post type.', 'wpsso-ratings-and-reviews' ) . ' ';
-
-					break;
-
-				case 'tooltip-rar_rating_required':	// Rating Required to Submit Review.
-
-					$text = __( 'A rating value must be selected to submit a review (enabled by default).', 'wpsso-ratings-and-reviews' );
-
-					break;
-
-				case 'tooltip-rar_star_color_default':	// Unselected Star Rating Color.
-
-					$text = __( 'The border color for unselected stars.', 'wpsso-ratings-and-reviews' );
-
-					break;
-
-				case 'tooltip-rar_star_color_selected':	// Selected Star Rating Color.
-
-					$text = __( 'The color for selected stars.', 'wpsso-ratings-and-reviews' );
-
-					break;
-			}
-
-			return $text;
 		}
 	}
 }

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.15.0-dev.7\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.15.0-dev.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
@@ -13,13 +13,13 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:178
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:179
 msgid ""
 "The %1$s add-on requires the %2$s plugin - please activate the missing "
 "plugin."
 msgstr ""
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:196
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:197
 msgid ""
 "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is "
 "currently installed)."
@@ -100,21 +100,21 @@ msgstr ""
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: lib/filters.php:183
-msgid "Enable or disable the ratings feature by public post type."
+#: lib/filters-messages.php:44
+msgid "The color for selected stars."
 msgstr ""
 
-#: lib/filters.php:189
-msgid ""
-"A rating value must be selected to submit a review (enabled by default)."
-msgstr ""
-
-#: lib/filters.php:195
+#: lib/filters-messages.php:50
 msgid "The border color for unselected stars."
 msgstr ""
 
-#: lib/filters.php:201
-msgid "The color for selected stars."
+#: lib/filters-messages.php:56
+msgid "Enable or disable the ratings feature by public post type."
+msgstr ""
+
+#: lib/filters-messages.php:62
+msgid ""
+"A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
 #: lib/script.php:74
