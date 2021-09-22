@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-b.2 (2021/09/21)**
+**Version 2.15.0-b.2 (2021/09/22)**
 
 * **New Features**
 	* None.
@@ -215,7 +215,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.15.0-b.2 =
 
-(2021/09/21) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
+(2021/09/22) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
 
 = 2.14.2 =
 
