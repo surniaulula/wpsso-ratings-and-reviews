@@ -26,19 +26,17 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 
 * A rating value can be required (or not) before reviews are accepted.
 
-* The review form is correctly labeled as a "Review".
+* The theme template review form is correctly labeled as a "Review".
 
-* The review reply form is correctly labeled as a "Reply".
+* The theme template review reply form is correctly labeled as a "Reply".
 
 * The color of star ratings can be customized from the settings page.
 
-**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) meta tags and optional JSON-LD markup:**
+**Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) markup.**
 
-Google reads aggregate rating meta tags, or the optional Schema JSON-LD markup, to add star ratings to search results (the WPSSO Schema JSON-LD Markup add-on is required for JSON-LD markup).
+**Provides [Schema Review](https://schema.org/Review) markup:**
 
-**Includes complete [Schema Review](https://schema.org/Review) in the optional JSON-LD markup:**
-
-Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (the [WPSSO JSON Premium add-on](https://wpsso.com/extend/plugins/wpsso-schema-json-ld/) is required for the optional JSON-LD markup).
+Including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.
 
 <h3>No templates to modify or update!</h3>
 
@@ -89,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-rc.1 (2021/09/23)**
+**Version 2.15.0-rc.2 (2021/09/23)**
 
 * **New Features**
 	* None.
@@ -102,7 +100,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.0.0-rc.1.
+	* WPSSO Core v9.0.0-rc.2.
 
 **Version 2.14.2 (2021/06/27)**
 
@@ -213,7 +211,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.15.0-rc.1 =
+= 2.15.0-rc.2 =
 
 (2021/09/23) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
 

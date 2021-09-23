@@ -22,18 +22,16 @@
 <ul>
 <li><p>Star ratings can be enabled/disabled by post type or individual post.</p></li>
 <li><p>A rating value can be required (or not) before reviews are accepted.</p></li>
-<li><p>The review form is correctly labeled as a "Review".</p></li>
-<li><p>The review reply form is correctly labeled as a "Reply".</p></li>
+<li><p>The theme template review form is correctly labeled as a "Review".</p></li>
+<li><p>The theme template review reply form is correctly labeled as a "Reply".</p></li>
 <li><p>The color of star ratings can be customized from the settings page.</p></li>
 </ul>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> meta tags and optional JSON-LD markup:</strong></p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> markup.</strong></p>
 
-<p>Google reads aggregate rating meta tags, or the optional Schema JSON-LD markup, to add star ratings to search results (the WPSSO Schema JSON-LD Markup add-on is required for JSON-LD markup).</p>
+<p><strong>Provides <a href="https://schema.org/Review">Schema Review</a> markup:</strong></p>
 
-<p><strong>Includes complete <a href="https://schema.org/Review">Schema Review</a> in the optional JSON-LD markup:</strong></p>
-
-<p>Including information about the review (author name, creation time, excerpt, rating), along with the threaded replies / comments for each review (the <a href="https://wpsso.com/extend/plugins/wpsso-schema-json-ld/">WPSSO JSON Premium add-on</a> is required for the optional JSON-LD markup).</p>
+<p>Including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.</p>
 
 <h3>No templates to modify or update!</h3>
 
