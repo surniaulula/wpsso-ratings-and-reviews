@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-rc.3 (2021/09/24)**
+**Version 2.15.0 (2021/09/24)**
 
 * **New Features**
 	* None.
@@ -100,7 +100,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.0.0-rc.3.
+	* WPSSO Core v9.0.0.
 
 **Version 2.14.2 (2021/06/27)**
 
@@ -211,7 +211,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.15.0-rc.3 =
+= 2.15.0 =
 
 (2021/09/24) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
 
