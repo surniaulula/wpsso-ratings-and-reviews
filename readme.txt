@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.0
 Requires At Least: 5.0
 Tested Up To: 5.8.1
-WC Tested Up To: 5.7.0
+WC Tested Up To: 5.7.1
 Stable Tag: 2.14.2
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.0-rc.2 (2021/09/23)**
+**Version 2.15.0-rc.3 (2021/09/24)**
 
 * **New Features**
 	* None.
@@ -100,7 +100,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.0.0-rc.2.
+	* WPSSO Core v9.0.0-rc.3.
 
 **Version 2.14.2 (2021/06/27)**
 
@@ -211,9 +211,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.15.0-rc.2 =
+= 2.15.0-rc.3 =
 
-(2021/09/23) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
+(2021/09/24) Fixed saving star rating colors in the SSO &gt; Ratings / Reviews settings page.
 
 = 2.14.2 =
 
