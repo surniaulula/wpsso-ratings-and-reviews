@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.1-rc.1 (2021/10/05)**
+**Version 2.15.1 (2021/10/06)**
 
 * **New Features**
 	* None.
@@ -100,7 +100,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.1.0-rc.1.
+	* WPSSO Core v9.1.0.
 
 **Version 2.15.0 (2021/09/24)**
 
@@ -226,9 +226,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.15.1-rc.1 =
+= 2.15.1 =
 
-(2021/10/05) Standardized `get_table_rows()` calls and filters in 'submenu' and 'sitesubmenu' classes.
+(2021/10/06) Standardized `get_table_rows()` calls and filters in 'submenu' and 'sitesubmenu' classes.
 
 = 2.15.0 =
 
