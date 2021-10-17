@@ -93,6 +93,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.15.2-dev.1 (2021/10/17)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* Fixed an extra newline character, that was converted to a line-break, in comment text.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v5.0.
+	* WPSSO Core v9.2.0.
+
 **Version 2.15.1 (2021/10/06)**
 
 * **New Features**
@@ -231,6 +246,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.13.0.
 
 == Upgrade Notice ==
+
+= 2.15.2-dev.1 =
+
+(2021/10/17) Fixed an extra newline character, that was converted to a line-break, in comment text.
 
 = 2.15.1 =
 
