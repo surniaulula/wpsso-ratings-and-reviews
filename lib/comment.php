@@ -85,7 +85,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		private static function get_rating_disabled_html( $post_id, $html ) {
 
-			return '<!-- wpsso-rar comment rating disabled for post ID ' . $post_id . ' -->' . "\n" . $html;
+			/**
+			 * Do not add a newline as newlines are converted to line-breaks in $comment_text.
+			 */
+			return '<!-- wpsso-rar comment rating disabled for post ID ' . $post_id . ' -->' . $html;
 		}
 
 		/**
@@ -183,7 +186,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			} else {
 
-				$comment_field = '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . "\n" . $comment_field;
+				$comment_field = '<!-- wpsso-rar comment label attribute missing in \'comment_field\' value -->' . $comment_field;
 			}
 
 			return $comment_field;
