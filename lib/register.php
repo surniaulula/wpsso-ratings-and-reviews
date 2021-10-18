@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -81,6 +82,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 				global $wpdb;
 
 				$db_query = 'SELECT blog_id FROM '.$wpdb->blogs;
+
 				$blog_ids = $wpdb->get_col( $db_query );
 
 				foreach ( $blog_ids as $blog_id ) {
@@ -93,6 +95,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 				restore_current_blog();
 
 			} else {
+
 				call_user_func_array( $method, array( $args ) );
 			}
 		}
@@ -118,12 +121,16 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 		private static function uninstall_plugin() {
 
 			if ( defined( 'WPSSO_OPTIONS_NAME' ) ) {	// Just in case.
+
 				$opts = get_option( WPSSO_OPTIONS_NAME, array() );
+
 			} else {
+
 				$opts = array();
 			}
 
 			if ( ! empty( $opts[ 'plugin_clean_on_uninstall' ] ) ) {
+
 				delete_post_meta_by_key( WPSSORAR_META_ALLOW_RATINGS );
 			}
 
