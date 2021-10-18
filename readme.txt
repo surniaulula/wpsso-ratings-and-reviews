@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.2-dev.1 (2021/10/17)**
+**Version 2.15.2-dev.1 (2021/10/18)**
 
 * **New Features**
 	* None.
@@ -249,7 +249,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.15.2-dev.1 =
 
-(2021/10/17) Fixed an extra newline character, that was converted to a line-break, in comment text.
+(2021/10/18) Fixed an extra newline character, that was converted to a line-break, in comment text.
 
 = 2.15.1 =
 
