@@ -18,7 +18,7 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 
 == Description ==
 
-<p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/icon-256x256.png"> <strong>Compatible with WooCommerce product ratings and reviews.</strong></p>
+**Compatible with WooCommerce product ratings and reviews.**
 
 **Extends the WordPress comment system with ratings and reviews:**
 
