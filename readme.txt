@@ -34,11 +34,11 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 
 **Provides [Schema Review](https://schema.org/Review) markup,** including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.
 
-<!-- /about -->
-
 <h3>No templates to modify or update!</h3>
 
 Simply activate / deactivate the plugin to enable / disable the addition of ratings and reviews.
+
+<!-- /about -->
 
 <h3>WPSSO Core Required</h3>
 
