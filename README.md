@@ -15,23 +15,27 @@
 
 <h2>Description</h2>
 
-<p><strong>Compatible with WooCommerce product ratings and reviews.</strong></p>
+<!-- about -->
 
-<p><strong>Extends the WordPress comment system with ratings and reviews:</strong></p>
+<p><strong>The WPSSO Ratings and Reviews add-on extends the WordPress comment system:</strong></p>
 
 <ul>
-<li><p>Star ratings can be enabled/disabled by post type or individual post.</p></li>
-<li><p>A rating value can be required (or not) before reviews are accepted.</p></li>
-<li><p>The theme template review form is correctly labeled as a "Review".</p></li>
-<li><p>The theme template review reply form is correctly labeled as a "Reply".</p></li>
-<li><p>The color of star ratings can be customized from the settings page.</p></li>
+<li>Star ratings can be enabled/disabled by post type or individual post.</li>
+<li>A rating value can be required (or not) before reviews are accepted.</li>
+<li>The theme template review form is correctly labeled as a "Review".</li>
+<li>The theme template review reply form is correctly labeled as a "Reply".</li>
+<li>The color of star ratings can be customized from the settings page.</li>
 </ul>
+
+<p><strong>Compatible with WooCommerce product ratings.</strong></p>
 
 <p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> markup.</strong></p>
 
 <p><strong>Provides <a href="https://schema.org/Review">Schema Review</a> markup:</strong></p>
 
 <p>Including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.</p>
+
+<!-- /about -->
 
 <h3>No templates to modify or update!</h3>
 

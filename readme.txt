@@ -18,25 +18,25 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 
 == Description ==
 
-**Compatible with WooCommerce product ratings and reviews.**
+<!-- about -->
 
-**Extends the WordPress comment system with ratings and reviews:**
+**The WPSSO Ratings and Reviews add-on extends the WordPress comment system:**
 
 * Star ratings can be enabled/disabled by post type or individual post.
-
 * A rating value can be required (or not) before reviews are accepted.
-
 * The theme template review form is correctly labeled as a "Review".
-
 * The theme template review reply form is correctly labeled as a "Reply".
-
 * The color of star ratings can be customized from the settings page.
+
+**Compatible with WooCommerce product ratings.**
 
 **Provides [Schema Aggregate Rating](https://schema.org/aggregateRating) markup.**
 
 **Provides [Schema Review](https://schema.org/Review) markup:**
 
 Including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.
+
+<!-- /about -->
 
 <h3>No templates to modify or update!</h3>
 
