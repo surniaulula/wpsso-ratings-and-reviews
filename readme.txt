@@ -23,7 +23,7 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 **The WPSSO Ratings and Reviews add-on extends the WordPress comment system:**
 
 * The star ratings can be enabled/disabled by post type or individual post.
-* A rating value can be required (or not) before reviews are accepted.
+* A rating value can be optional, or required before reviews are accepted.
 * The color of star ratings can be customized from the add-on settings page.
 * The theme template review form is correctly labeled as a "Review".
 * The theme template review reply form is correctly labeled as a "Reply".
