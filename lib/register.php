@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 				 */
 				if ( class_exists( 'WpssoUtilReg' ) ) { // Since WPSSO Core v6.13.1.
 
-					$version = WpssoRarConfig::$cf[ 'plugin' ][ 'wpssorar' ][ 'version' ];
+					$version = WpssoRarConfig::get_version();
 
 					WpssoUtilReg::update_ext_version( 'wpssorar', $version );
 				}

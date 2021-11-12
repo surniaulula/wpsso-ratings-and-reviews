@@ -32,9 +32,6 @@ if ( ! class_exists( 'WpssoRarFiltersOptions' ) ) {
 
 		public function filter_get_defaults( $defs ) {
 
-			/**
-			 * Add options using a key prefix array and post type names.
-			 */
 			$this->p->util->add_post_type_names( $defs, array(
 				'rar_add_to' => 0,
 			) );
