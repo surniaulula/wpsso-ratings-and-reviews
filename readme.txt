@@ -36,7 +36,7 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 
 <h3>No templates to modify or update!</h3>
 
-Simply activate / deactivate the plugin to enable / disable the addition of ratings and reviews.
+Simply activate the plugin to enable the addition of ratings and reviews.
 
 <!-- /about -->
 
