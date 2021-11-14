@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Ratings and Reviews 2.15.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-10-05 08:56-0700\n"
+"PO-Revision-Date: 2021-11-13 16:21-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:179
-msgid "The %1$s add-on requires the %2$s plugin - please activate the missing plugin."
-msgstr "L'ajout %1$s nécessite l'extension %2$s - veuillez activer l'extension manquante."
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:182
+msgid "The %1$s add-on requires the %2$s plugin."
+msgstr "L'ajout %1$s requiert l'extension %2$s."
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:197
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:198
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est actuellement installée)."
 
@@ -40,57 +40,57 @@ msgstr "Notes et critiques pour commentaires WordPress avec balisage de Schéma 
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
-#: lib/comment.php:115 lib/comment.php:119
+#: lib/comment.php:118 lib/comment.php:122
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr "Laisser une critique"
 
-#: lib/comment.php:177
+#: lib/comment.php:180
 msgctxt "form label"
 msgid "Your Review"
 msgstr "Votre critique"
 
-#: lib/comment.php:219
+#: lib/comment.php:222
 msgctxt "form label"
 msgid "Post Review"
 msgstr "Publier la critique"
 
-#: lib/comment.php:247
+#: lib/comment.php:250
 msgctxt "form label"
 msgid "Your Rating"
 msgstr "Votre note"
 
-#: lib/comment.php:249
+#: lib/comment.php:252
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr "Note&hellip;"
 
-#: lib/comment.php:250
+#: lib/comment.php:253
 msgctxt "option value"
 msgid "Excellent"
 msgstr "Excellent"
 
-#: lib/comment.php:251
+#: lib/comment.php:254
 msgctxt "option value"
 msgid "Good"
 msgstr "Bon"
 
-#: lib/comment.php:252
+#: lib/comment.php:255
 msgctxt "option value"
 msgid "Average"
 msgstr "Moyen"
 
-#: lib/comment.php:253
+#: lib/comment.php:256
 msgctxt "option value"
 msgid "Not Good"
 msgstr "Pas bon"
 
-#: lib/comment.php:254
+#: lib/comment.php:257
 msgctxt "option value"
 msgid "Awful"
 msgstr "Terrible"
 
-#: lib/comment.php:334 lib/comment.php:336
+#: lib/comment.php:337 lib/comment.php:339
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
