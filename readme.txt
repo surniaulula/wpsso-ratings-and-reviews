@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.15.3-rc.2 (2021/11/15)**
+**Version 2.15.3 (2021/11/15)**
 
 * **New Features**
 	* None.
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.8.0-rc.2.
+	* WPSSO Core v9.8.0.
 
 **Version 2.15.2 (2021/10/18)**
 
@@ -260,7 +260,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.15.3-rc.2 =
+= 2.15.3 =
 
 (2021/11/15) Refactored the `SucomAddOn->get_missing_requirements()` method.
 
