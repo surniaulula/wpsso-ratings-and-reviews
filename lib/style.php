@@ -68,7 +68,9 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 				.wpsso-rar p.select-star.selected a:not(.active)::before { color:' . $sel_color . '; }
 			';
 
-			wp_add_inline_style( 'wpsso-rar-style', SucomUtil::minify_css( $custom_style_css, 'wpsso' ) );
+			$custom_style_css = SucomUtil::minify_css( $custom_style_css, $filter_prefix = 'wpsso' );
+
+			wp_add_inline_style( 'wpsso-rar-style', $custom_style_css );
 		}
 	}
 }
