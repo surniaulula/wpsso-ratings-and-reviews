@@ -173,12 +173,25 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 				require_once WPSSORAR_PLUGINDIR . 'lib/admin.php';
 			}
 
-			add_filter( 'wpssorar_load_lib', array( 'WpssoRarConfig', 'load_lib' ), 10, 3 );
+			add_filter( 'wpssorar_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );
 		}
 
 		public static function load_lib( $success = false, $filespec = '', $classname = '' ) {
 
-			if ( false === $success && ! empty( $filespec ) ) {
+			if ( false !== $success ) {
+
+				return $success;
+			}
+
+			if ( ! empty( $classname ) ) {
+
+				if ( class_exists( $classname ) ) {
+
+					return $classname;
+				}
+			}
+
+			if ( ! empty( $filespec ) ) {
 
 				$file_path = WPSSORAR_PLUGINDIR . 'lib/' . $filespec . '.php';
 
