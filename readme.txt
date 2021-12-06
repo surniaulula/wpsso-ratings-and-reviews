@@ -91,6 +91,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.16.0-dev.2 (2021/12/06)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Replaced the 'wp_update_comment_count' action hook with 'comment_post' and 'transition_comment_status' to clear the comment rating metadata cache.
+* **Requires At Least**
+	* PHP v7.2.
+	* WordPress v5.2.
+	* WPSSO Core v9.10.2-dev.2.
+
 **Version 2.15.3 (2021/11/16)**
 
 * **New Features**
@@ -259,6 +274,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.13.0.
 
 == Upgrade Notice ==
+
+= 2.16.0-dev.2 =
+
+(2021/12/06) Replaced the 'wp_update_comment_count' action hook with 'comment_post' and 'transition_comment_status' to clear the comment rating metadata cache.
 
 = 2.15.3 =
 
