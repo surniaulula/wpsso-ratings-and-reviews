@@ -33,9 +33,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			/**
 			 * Note that WpssoComment->clear_cache_comment_post() is hooked to the 'comment_post' action at priority PHP_INT_MAX.
 			 */
-			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ), 10, 1 );
+			add_action( 'comment_post', array( __CLASS__, 'save_rating_comment_post' ), 10, 2 );
 
-			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ), 10, 1 );
+			add_action( 'comment_post', array( __CLASS__, 'clear_cache_comment_post' ), 100, 2 );
+
+			add_action( 'transition_comment_status', array( __CLASS__, 'clear_cache_transition_comment_status' ), 100, 3 );
 		}
 
 		/**
@@ -267,7 +269,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		/**
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
-		public static function save_request_comment_rating( $comment_id ) {
+		public static function save_rating_comment_post( $comment_id, $comment_approved ) {
 
 			$wpsso = Wpsso::get_instance();
 
@@ -276,13 +278,39 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			if ( empty( $_GET[ 'replytocom' ] ) && empty( $_POST[ 'replytocom' ] ) ) {	// Don't save reply ratings.
+			if ( ! empty( $_GET[ 'replytocom' ] ) || ! empty( $_POST[ 'replytocom' ] ) ) {	// Don't try to save reply ratings.
 
-				$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
+				return;
+			}
 
-				if ( $rating_value ) {
+			$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
 
-					add_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, $rating_value );
+			if ( $rating_value ) {
+
+				add_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, $rating_value );
+			}
+		}
+
+		public static function clear_cache_comment_post( $comment_id, $comment_approved ) {
+
+			if ( $comment_id && $comment_approved ) {
+
+				$comment = get_comment( $comment_id );
+				
+				if ( ! empty( $comment->comment_post_ID ) ) {
+
+					self::clear_rating_post_meta( $comment->comment_post_ID );
+				}
+			}
+		}
+
+		public static function clear_cache_transition_comment_status( $new_status, $old_status, $comment ) {
+
+			if ( 'approved' === $new_status || 'approved' === $old_status ) {
+
+				if ( ! empty( $comment->comment_post_ID ) ) {
+
+					self::clear_rating_post_meta( $comment->comment_post_ID );
 				}
 			}
 		}
