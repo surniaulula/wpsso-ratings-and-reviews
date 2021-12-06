@@ -45,20 +45,14 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function is_rating_enabled( $post_id ) {
 
-			$wpsso = Wpsso::get_instance();
-
 			static $local_cache = array();
 
 			if ( isset( $local_cache[ $post_id ] ) ) {
 
-				if ( $wpsso->debug->enabled ) {
-
-					$wpsso->debug->log( 'rating for post id ' . $post_id . ' from cache is ' . ( $local_cache[ $post_id ] ? 'enabled' : 'disabled' ) );
-				}
-
 				return $local_cache[ $post_id ];
 			}
 
+			$wpsso     = Wpsso::get_instance();
 			$post_type = get_post_type( $post_id );
 			$default   = empty( $wpsso->options[ 'rar_add_to_' . $post_type ] ) ? 0 : 1;
 			$disabled  = isset( $wpsso->options[ 'rar_add_to_' . $post_type . ':is' ] ) &&
@@ -68,17 +62,22 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				$enabled = 0;
 
-			} elseif ( ( $current = get_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, true ) ) === '' ) {
-
-				$enabled = $default;
-
-			} elseif ( empty( $current ) ) {
-
-				$enabled = 0;
-
 			} else {
 
-				$enabled = 1;
+				$current = get_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, $single = true );
+
+				if ( '' === $current ) {
+
+					$enabled = $default;
+
+				} elseif ( empty( $current ) ) {
+
+					$enabled = 0;
+
+				} else {
+
+					$enabled = 1;
+				}
 			}
 
 			if ( $wpsso->debug->enabled ) {
@@ -296,7 +295,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			if ( $comment_id && $comment_approved ) {
 
 				$comment = get_comment( $comment_id );
-				
+
 				if ( ! empty( $comment->comment_post_ID ) ) {
 
 					self::clear_rating_post_meta( $comment->comment_post_ID );
@@ -400,7 +399,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				self::sync_average_rating( $post_id );	// Calculate the average rating.
 			}
 
-			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, true );
+			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, $single = true );
 		}
 
 		private static function sync_average_rating( $post_id ) {
@@ -508,7 +507,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				self::sync_review_count( $post_id );
 			}
 
-			return (int) get_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, true );
+			return (int) get_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, $single = true );
 		}
 
 		private static function sync_review_count( $post_id ) {
