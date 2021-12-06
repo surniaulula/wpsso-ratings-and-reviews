@@ -30,7 +30,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			add_filter( 'comment_form_submit_button', array( __CLASS__, 'update_form_submit_button' ), PHP_INT_MAX );
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
+			/**
+			 * Note that WpssoComment->clear_cache_comment_post() is hooked to the 'comment_post' action at priority 1000.
+			 */
 			add_action( 'comment_post', array( __CLASS__, 'save_request_comment_rating' ) );
+
 			add_action( 'wp_update_comment_count', array( __CLASS__, 'clear_rating_post_meta' ) );
 		}
 
