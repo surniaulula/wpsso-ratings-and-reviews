@@ -96,11 +96,15 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Improved the post meta cache update methods for new / changed comments.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Replaced the 'wp_update_comment_count' action hook with 'comment_post' and 'transition_comment_status' to clear the comment rating metadata cache.
+	* Replaced the `WpssoRarComment::clear_rating_post_meta()` method by:
+		* `WpssoRarComment::update_cache_comment_post()`
+		* `WpssoRarComment::update_cache_transition_comment_status()`
+		* `WpssoRarComment::update_cache_post_meta()`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
@@ -277,7 +281,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.16.0-dev.5 =
 
-(2021/12/07) Replaced the 'wp_update_comment_count' action hook with 'comment_post' and 'transition_comment_status' to clear the comment rating metadata cache.
+(2021/12/07) Improved the post meta cache update methods for new / changed comments.
 
 = 2.15.3 =
 
