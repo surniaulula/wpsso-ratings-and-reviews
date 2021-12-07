@@ -30,14 +30,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			add_filter( 'comment_form_submit_button', array( __CLASS__, 'update_form_submit_button' ), PHP_INT_MAX );
 			add_filter( 'comment_text', array( __CLASS__, 'add_rating_to_comment_text' ) );
 
-			/**
-			 * Note that WpssoComment->clear_cache_comment_post() is hooked to the 'comment_post' action at priority PHP_INT_MAX.
-			 */
 			add_action( 'comment_post', array( __CLASS__, 'save_rating_comment_post' ), 10, 2 );
-
-			add_action( 'comment_post', array( __CLASS__, 'clear_cache_comment_post' ), 100, 2 );
-
-			add_action( 'transition_comment_status', array( __CLASS__, 'clear_cache_transition_comment_status' ), 100, 3 );
+			add_action( 'comment_post', array( __CLASS__, 'update_cache_comment_post' ), 100, 2 );
+			add_action( 'transition_comment_status', array( __CLASS__, 'update_cache_transition_comment_status' ), 100, 3 );
 		}
 
 		/**
@@ -275,13 +270,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function save_rating_comment_post( $comment_id, $comment_approved ) {
 
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
-
 			if ( ! empty( $_GET[ 'replytocom' ] ) || ! empty( $_POST[ 'replytocom' ] ) ) {	// Don't try to save reply ratings.
 
 				return;
@@ -295,7 +283,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			}
 		}
 
-		public static function clear_cache_comment_post( $comment_id, $comment_approved ) {
+		public static function update_cache_comment_post( $comment_id, $comment_approved ) {
 
 			if ( $comment_id && $comment_approved ) {
 
@@ -303,34 +291,27 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				if ( ! empty( $comment->comment_post_ID ) ) {
 
-					self::clear_rating_post_meta( $comment->comment_post_ID );
+					self::update_cache_post_meta( $comment->comment_post_ID );
 				}
 			}
 		}
 
-		public static function clear_cache_transition_comment_status( $new_status, $old_status, $comment ) {
+		public static function update_cache_transition_comment_status( $new_status, $old_status, $comment ) {
 
 			if ( 'approved' === $new_status || 'approved' === $old_status ) {
 
 				if ( ! empty( $comment->comment_post_ID ) ) {
 
-					self::clear_rating_post_meta( $comment->comment_post_ID );
+					self::update_cache_post_meta( $comment->comment_post_ID );
 				}
 			}
 		}
 
-		public static function clear_rating_post_meta( $post_id ) {
+		public static function update_cache_post_meta( $post_id ) {
 
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->log( 'clearing rating meta for post id ' . $post_id );
-			}
-
-			delete_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING );
-			delete_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS );
-			delete_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT );
+			self::sync_review_count( $post_id );
+			self::sync_rating_counts( $post_id );	// Update the rating count before the average rating. 
+			self::sync_average_rating( $post_id );
 		}
 
 		/**
@@ -416,13 +397,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		private static function sync_average_rating( $post_id ) {
 
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->log( 'syncing average rating meta for post id ' . $post_id );
-			}
-
 			if ( $count_total = self::get_rating_count( $post_id ) ) {
 
 				global $wpdb;
@@ -489,13 +463,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		private static function sync_rating_counts( $post_id ) {
 
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->log( 'syncing rating counts meta for post id ' . $post_id );
-			}
-
 			global $wpdb;
 
 			$count_meta = $wpdb->get_results( $wpdb->prepare( "
@@ -543,13 +510,6 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		}
 
 		private static function sync_review_count( $post_id ) {
-
-			$wpsso = Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->log( 'syncing review count meta for post id ' . $post_id );
-			}
 
 			global $wpdb;
 
