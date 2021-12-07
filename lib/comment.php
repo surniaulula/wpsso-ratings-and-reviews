@@ -309,6 +309,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		public static function update_cache_post_meta( $post_id ) {
 
+			if ( empty( $post_id ) || ! is_numeric( $post_id ) ) {	// Just in case.
+
+				return;
+			}
+
 			self::sync_review_count( $post_id );
 			self::sync_rating_counts( $post_id );	// Update the rating count before the average rating. 
 			self::sync_average_rating( $post_id );
