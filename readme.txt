@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.16.0-dev.5 (2021/12/07)**
+**Version 2.16.0-b.1 (2021/12/08)**
 
 * **New Features**
 	* None.
@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v9.10.2-dev.5.
+	* WPSSO Core v9.10.2-b.1.
 
 **Version 2.15.3 (2021/11/16)**
 
@@ -279,9 +279,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.16.0-dev.5 =
+= 2.16.0-b.1 =
 
-(2021/12/07) Improved the post meta cache update methods for new / changed comments.
+(2021/12/08) Improved the post meta cache update methods for new / changed comments.
 
 = 2.15.3 =
 
