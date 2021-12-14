@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.16.0',	// Plugin version.
+					'version'     => '2.17.0-dev.2',	// Plugin version.
 					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '9.11.0',
+							'min_version'   => '9.11.1-dev.2',
 						),
 					),
 
@@ -72,6 +72,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			'opt' => array(
 				'defaults' => array(
 					'rar_add_to_attachment'       => 0,		// Rating Form for Post Types.
+					'rar_add_to_download'         => 1,
 					'rar_add_to_page'             => 1,
 					'rar_add_to_post'             => 0,
 					'rar_add_to_product'          => 1,
@@ -79,8 +80,12 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_rating_required'         => 1,		// Rating Required to Submit Review.
 					'rar_star_color_selected'     => '#dd3333',	// Selected Star Rating Color.
 					'rar_star_color_default'      => '#000000',	// Unselected Star Rating Color.
-					'plugin_avg_rating_col_media' => 0,
-					'plugin_avg_rating_col_post'  => 1,
+					'plugin_avg_rating_col_attachment' => 0,
+					'plugin_avg_rating_col_download'   => 1,
+					'plugin_avg_rating_col_post'       => 0,
+					'plugin_avg_rating_col_page'       => 1,
+					'plugin_avg_rating_col_product'    => 1,
+					'plugin_avg_rating_col_recipe'     => 1,
 				),
 			),
 		);
@@ -162,6 +167,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 		public static function require_libs( $plugin_file ) {
 
+			require_once WPSSORAR_PLUGINDIR . 'lib/actions.php';
 			require_once WPSSORAR_PLUGINDIR . 'lib/comment.php';
 			require_once WPSSORAR_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSORAR_PLUGINDIR . 'lib/register.php';

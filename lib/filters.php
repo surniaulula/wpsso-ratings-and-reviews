@@ -41,8 +41,9 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->opts = new WpssoRarFiltersOptions( $plugin, $addon );
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'og' => 2,
-			), $prio = 1000 );	// Run before rating or review API service.
+				'get_sortable_columns' => 1,
+				'og'                   => 2,
+			), $prio = 1000 );
 
 			if ( is_admin() ) {
 
@@ -50,6 +51,31 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 				$this->msgs = new WpssoRarFiltersMessages( $plugin, $addon );
 			}
+		}
+
+		public function filter_get_sortable_columns( $columns ) {
+
+			return array_merge( array( 
+				'avg_rating' => array(
+					'header'         => 'Rating',
+					'meta_key'       => WPSSORAR_META_AVERAGE_RATING,
+					'post_callbacks' => array(	// An array of callback functions / methods.
+						array( $this, 'post_callback_rating_enabled' ),
+					),
+					'orderby' => 'meta_value',
+					'width'   => '75px',
+					'height'  => 'auto',
+				)
+			), $columns );
+		}
+
+		public function post_callback_rating_enabled( $value, $post_id ) {
+
+			$rating_enabled = WpssoRarComment::is_rating_enabled( $post_id );
+
+			$input_hidden = '<input name="rar_allow_ratings" type="hidden" value="' . $rating_enabled . '" readonly="readonly" />';
+
+			return $value . "\n" . $input_hidden;
 		}
 
 		public function filter_og( array $mt_og, array $mod ) {

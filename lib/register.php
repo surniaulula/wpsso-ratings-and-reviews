@@ -120,14 +120,7 @@ if ( ! class_exists( 'WpssoRarRegister' ) ) {
 
 		private static function uninstall_plugin() {
 
-			if ( defined( 'WPSSO_OPTIONS_NAME' ) ) {	// Just in case.
-
-				$opts = get_option( WPSSO_OPTIONS_NAME, array() );
-
-			} else {
-
-				$opts = array();
-			}
+			$opts = defined( 'WPSSO_OPTIONS_NAME' ) ? get_option( WPSSO_OPTIONS_NAME, array() ) : array();
 
 			if ( ! empty( $opts[ 'plugin_clean_on_uninstall' ] ) ) {
 

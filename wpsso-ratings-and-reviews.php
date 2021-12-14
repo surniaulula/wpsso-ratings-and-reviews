@@ -15,7 +15,7 @@
  * Requires At Least: 5.2
  * Tested Up To: 5.8.2
  * WC Tested Up To: 5.9.0
- * Version: 2.16.0
+ * Version: 2.17.0-dev.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -41,6 +41,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 	class WpssoRar extends WpssoAddOn {
 
+		public $actions;	// WpssoRarActions class object.
 		public $admin;		// WpssoRarAdmin class object.
 		public $comment;	// WpssoRarComment class object.
 		public $filters;	// WpssoRarFilters class object.
@@ -122,20 +123,12 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 
 				if ( 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) {
 
-					if ( ! empty( $this->p->options[ 'rar_add_to_product' ] ) ) {
-
-						$this->p->options[ 'rar_add_to_product' ] = 0;
-
-						$this->p->opt->save_options( WPSSO_OPTIONS_NAME, $this->p->options, $network = false );
-					}
-
-					/**
-					 * Disable this post type option in the add-on settings.
-					 */
-					$this->p->options[ 'rar_add_to_product:is' ] = 'disabled';
+					$this->p->options[ 'rar_add_to_product' ]          = 0;
+					$this->p->options[ 'rar_add_to_product:disabled' ] = true;
 				}
 			}
 
+			$this->actions = new WpssoRarActions( $this->p, $this );
 			$this->comment = new WpssoRarComment( $this->p, $this );
 			$this->filters = new WpssoRarFilters( $this->p, $this );
 			$this->script  = new WpssoRarScript( $this->p, $this );

@@ -26,17 +26,24 @@ if ( ! class_exists( 'WpssoRarFiltersOptions' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,
-			), $prio = 1000 );	// Run before rating or review API service.
+				'add_custom_post_type_names' => 1,
+				'add_custom_taxonomy_names'  => 1,
+			) );
 		}
 
-		public function filter_get_defaults( $defs ) {
+		public function filter_add_custom_post_type_names( $post_type_names ) {
 
-			$this->p->util->add_post_type_names( $defs, array(
-				'rar_add_to' => 0,
-			) );
+			$post_type_names[ 'rar_add_to' ]            = 0;
+			$post_type_names[ 'plugin_avg_rating_col' ] = 1;
 
-			return $defs;
+			return $post_type_names;
+		}
+
+		public function filter_add_custom_taxonomy_names( $taxonomy_names ) {
+
+			unset( $taxonomy_names[ 'plugin_avg_rating_col_tax' ] );
+
+			return $taxonomy_names;
 		}
 	}
 }
