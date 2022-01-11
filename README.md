@@ -43,7 +43,6 @@
 
 <p>WPSSO Ratings and Reviews (WPSSO RAR) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p>
 
-
 <h2>Installation</h2>
 
 <h3 class="top">Install and Uninstall</h3>
@@ -52,7 +51,6 @@
 <li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/install-the-plugin/">Install the WPSSO Ratings and Reviews add-on</a>.</li>
 <li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/installation/uninstall-the-plugin/">Uninstall the WPSSO Ratings and Reviews add-on</a>.</li>
 </ul>
-
 
 <h2>Frequently Asked Questions</h2>
 
@@ -71,5 +69,4 @@
 <li><a href="https://wpsso.com/docs/plugins/wpsso-ratings-and-reviews/notes/developer/get-average-rating/">Get Average Rating</a></li>
 </ul></li>
 </ul>
-
 
