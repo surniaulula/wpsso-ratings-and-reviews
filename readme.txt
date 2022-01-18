@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.18.0-dev.7 (2022/01/17)**
+**Version 2.18.0-b.1 (2022/01/18)**
 
 * **New Features**
 	* None.
@@ -107,7 +107,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v9.14.0-dev.7.
+	* WPSSO Core v9.14.0-b.1.
 
 **Version 2.17.0 (2021/12/16)**
 
@@ -316,9 +316,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.18.0-dev.7 =
+= 2.18.0-b.1 =
 
-(2022/01/17) Renamed the lib/abstracts/ folder and its classes.
+(2022/01/18) Renamed the lib/abstracts/ folder and its classes.
 
 = 2.17.0 =
 
