@@ -10,8 +10,8 @@ Tags: star rating, aggregate rating, review, google, schema, comment, knowledge 
 Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
-Tested Up To: 5.8.3
-WC Tested Up To: 6.1.0
+Tested Up To: 5.9.0
+WC Tested Up To: 6.1.1
 Stable Tag: 2.18.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
