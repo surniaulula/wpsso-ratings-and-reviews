@@ -315,6 +315,9 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			self::sync_review_count( $post_id );	// Returns an integer.
 
+			/**
+			 * Update the rating count before the average rating.
+			 */
 			self::sync_rating_counts( $post_id );	// Returns an array.
 
 			self::sync_average_rating( $post_id );	// Returns a float.
