@@ -99,7 +99,7 @@ msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:372 lib/comment.php:374
+#: lib/comment.php:374 lib/comment.php:376
 msgid "Rated %d out of 5"
 msgstr ""
 

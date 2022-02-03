@@ -313,9 +313,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return;
 			}
 
-			self::sync_review_count( $post_id );
-			self::sync_rating_counts( $post_id );	// Update the rating count before the average rating. 
-			self::sync_average_rating( $post_id );
+			self::sync_review_count( $post_id );	// Returns an integer.
+
+			self::sync_rating_counts( $post_id );	// Returns an array.
+
+			self::sync_average_rating( $post_id );	// Returns a float.
 		}
 
 		/**

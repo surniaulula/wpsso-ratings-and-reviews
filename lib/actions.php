@@ -36,7 +36,7 @@ if ( ! class_exists( 'WpssoRarActions' ) ) {
 
 			$this->p->util->add_plugin_actions( $this, array(
 				'clear_cache'      => 4,
-				'clear_post_cache' => 1,
+				'clear_post_cache' => 2,
 			) );
 		}
 
