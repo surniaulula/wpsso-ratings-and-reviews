@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.18.0',	// Plugin version.
-					'opt_version' => '6',		// Increment when changing default option values.
+					'version'     => '2.18.1-b.2',	// Plugin version.
+					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
 					'desc'        => 'Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '9.14.0',
+							'min_version'   => '11.5.0-b.2',
 						),
 					),
 
@@ -71,15 +71,15 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			 */
 			'opt' => array(
 				'defaults' => array(
-					'rar_add_to_attachment'       => 0,		// Rating Form for Post Types.
-					'rar_add_to_download'         => 1,
-					'rar_add_to_page'             => 1,
-					'rar_add_to_post'             => 0,
-					'rar_add_to_product'          => 1,
-					'rar_add_to_recipe'           => 1,
-					'rar_rating_required'         => 1,		// Rating Required to Submit Review.
-					'rar_star_color_selected'     => '#dd3333',	// Selected Star Rating Color.
-					'rar_star_color_default'      => '#000000',	// Unselected Star Rating Color.
+					'rar_add_to_attachment'            => 0,		// Rating Form for Post Types.
+					'rar_add_to_download'              => 1,
+					'rar_add_to_page'                  => 1,
+					'rar_add_to_post'                  => 0,
+					'rar_add_to_product'               => 1,
+					'rar_add_to_recipe'                => 1,
+					'rar_rating_required'              => 1,		// Rating Required to Submit Review.
+					'rar_star_color_selected'          => '#dd3333',	// Selected Star Rating Color.
+					'rar_star_color_default'           => '#000000',	// Unselected Star Rating Color.
 					'plugin_avg_rating_col_attachment' => 0,
 					'plugin_avg_rating_col_download'   => 1,
 					'plugin_avg_rating_col_post'       => 0,
