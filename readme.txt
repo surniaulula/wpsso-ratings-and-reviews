@@ -91,6 +91,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.19.0-dev.1 (2022/03/11)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
+* **Requires At Least**
+	* PHP v7.2.
+	* WordPress v5.2.
+	* WPSSO Core v11.7.0-dev.1.
+
 **Version 2.18.1 (2022/03/07)**
 
 Maintenance release.
@@ -332,6 +347,10 @@ Maintenance release.
 	* WPSSO Core v8.13.0.
 
 == Upgrade Notice ==
+
+= 2.19.0-dev.1 =
+
+(2022/03/11) Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
 
 = 2.18.1 =
 
