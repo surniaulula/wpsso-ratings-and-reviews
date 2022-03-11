@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.18.1',	// Plugin version.
+					'version'     => '2.19.0-dev.1',	// Plugin version.
 					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '11.5.0',
+							'min_version'   => '11.7.0-dev.1',
 						),
 					),
 
@@ -78,8 +78,8 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'rar_add_to_product'               => 1,
 					'rar_add_to_recipe'                => 1,
 					'rar_rating_required'              => 1,		// Rating Required to Submit Review.
-					'rar_star_color_selected'          => '#dd3333',	// Selected Star Rating Color.
-					'rar_star_color_default'           => '#000000',	// Unselected Star Rating Color.
+					'rar_star_color_selected'          => '#81d742',	// Selected Star Rating Color.
+					'rar_star_color_default'           => '#dddddd',	// Unselected Star Rating Color.
 					'plugin_avg_rating_col_attachment' => 0,
 					'plugin_avg_rating_col_download'   => 1,
 					'plugin_avg_rating_col_post'       => 0,
@@ -145,7 +145,6 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 			$var_const = array();
 
-			$var_const[ 'WPSSORAR_META_REVIEW_RATING' ]  = 'rating';		// Comment meta int.
 			$var_const[ 'WPSSORAR_META_ALLOW_RATINGS' ]  = '_wpsso_allow_ratings';	// Post meta 0/1.
 			$var_const[ 'WPSSORAR_META_AVERAGE_RATING' ] = '_wpsso_average_rating';	// Post meta float.
 			$var_const[ 'WPSSORAR_META_RATING_COUNTS' ]  = '_wpsso_rating_counts';	// Post meta array.

@@ -252,7 +252,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 */
 			$select_html .= '<!-- form label: Your Rating --><label ' . $label_attr . 'for="rating"' . '>' .
 				_x( 'Your Rating', 'form label', 'wpsso-ratings-and-reviews' ) . $required_html . '</label>
-<select name="' . WPSSORAR_META_REVIEW_RATING . '" id="rating"' . ( $is_comment_reply ? ' disabled' : '' ) . '>
+<select name="' . WPSSO_META_RATING_NAME . '" id="rating"' . ( $is_comment_reply ? ' disabled' : '' ) . '>
 	<option value="">' . _x( 'Rating&hellip;', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="5">' . _x( 'Excellent', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
 	<option value="4">' . _x( 'Good', 'option value', 'wpsso-ratings-and-reviews' ) . '</option>
@@ -274,11 +274,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return;
 			}
 
-			$rating_value = (int) SucomUtil::get_request_value( WPSSORAR_META_REVIEW_RATING, 'POST' );
+			$rating_value = (int) SucomUtil::get_request_value( WPSSO_META_RATING_NAME, 'POST' );
 
 			if ( $rating_value ) {
 
-				add_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, $rating_value );
+				add_comment_meta( $comment_id, WPSSO_META_RATING_NAME, $rating_value );
 			}
 		}
 
@@ -348,7 +348,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return self::get_rating_disabled_html( $comment_obj->comment_post_ID, $comment_text );
 			}
 
-			$rating_value = get_comment_meta( $comment_id, WPSSORAR_META_REVIEW_RATING, true );
+			$rating_value = get_comment_meta( $comment_id, WPSSO_META_RATING_NAME, true );
 
 			if ( $rating_value ) {
 

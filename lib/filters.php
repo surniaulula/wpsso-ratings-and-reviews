@@ -177,8 +177,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'add review meta tags is true' );
 				}
 
-				$mt_og[ $og_type . ':reviews' ] = $mod[ 'obj' ]->get_mt_reviews( $mod[ 'id' ],
-					$og_type, WPSSORAR_META_REVIEW_RATING, $worst_rating, $best_rating );
+				$mt_og[ $og_type . ':reviews' ] = $mod[ 'obj' ]->get_mt_reviews( $mod[ 'id' ], $og_type, WPSSO_META_RATING_NAME, $worst_rating, $best_rating );
 
 			} elseif ( $this->p->debug->enabled ) {
 
