@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.19.0-dev.3 (2022/03/11)**
+**Version 2.19.0-dev.4 (2022/03/13)**
 
 * **New Features**
 	* None.
@@ -101,10 +101,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Developer Notes**
 	* Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
+	* Removed the `$mt_prefix` argument from:
+		* `WpssoPost->get_mt_reviews()`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v11.7.0-dev.3.
+	* WPSSO Core v11.7.0-dev.4.
 
 **Version 2.18.1 (2022/03/07)**
 
@@ -348,9 +350,9 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.19.0-dev.3 =
+= 2.19.0-dev.4 =
 
-(2022/03/11) Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
+(2022/03/13) Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
 
 = 2.18.1 =
 
