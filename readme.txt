@@ -12,7 +12,7 @@ Requires PHP: 7.2
 Requires At Least: 5.2
 Tested Up To: 5.9.2
 WC Tested Up To: 6.3.1
-Stable Tag: 2.18.1
+Stable Tag: 2.19.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
 
@@ -332,22 +332,6 @@ Maintenance release.
 	* WordPress v4.5.
 	* WPSSO Core v8.16.0.
 
-**Version 2.11.1 (2020/10/17)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Refactored the add-on class to extend a new WpssoAddOn abstract class.
-* **Bugfixes**
-	* Fixed backwards compatibility with older 'init_objects' and 'init_plugin' action arguments.
-* **Developer Notes**
-	* Added a new WpssoAddOn class in lib/abstracts/add-on.php.
-	* Added a new SucomAddOn class in lib/abstracts/com/add-on.php.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.4.
-	* WPSSO Core v8.13.0.
-
 == Upgrade Notice ==
 
 = 2.19.0 =
@@ -409,8 +393,4 @@ Maintenance release.
 = 2.12.0 =
 
 (2020/12/04) Included the `$addon` argument for library class constructors.
-
-= 2.11.1 =
-
-(2020/10/17) Refactored the add-on class to extend a new WpssoAddOn abstract class.
 
