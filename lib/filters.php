@@ -40,7 +40,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 			$this->opts = new WpssoRarFiltersOptions( $plugin, $addon );
 
-			$this->p->util->add_plugin_filters( $this, array( 
+			$this->p->util->add_plugin_filters( $this, array(
 				'get_sortable_columns' => 1,
 				'og'                   => 2,
 			), $prio = 1000 );
@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 		public function filter_get_sortable_columns( $columns ) {
 
-			return array_merge( array( 
+			return array_merge( array(
 				'avg_rating' => array(
 					'header'         => 'Rating',
 					'meta_key'       => WPSSORAR_META_AVERAGE_RATING,

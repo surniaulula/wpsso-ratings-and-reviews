@@ -121,8 +121,8 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 */
 			$defaults[ 'title_reply' ] =  _x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' );
 
-			$defaults[ 'title_reply_before' ] = '<span class="wpsso-rar title-reply">' . 
-				$review_begin_html . '<!-- form label: Leave a Review --><h3 id="review-title" class="comment-review-title">' . 
+			$defaults[ 'title_reply_before' ] = '<span class="wpsso-rar title-reply">' .
+				$review_begin_html . '<!-- form label: Leave a Review --><h3 id="review-title" class="comment-review-title">' .
 					_x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' ) . '</h3>' . $review_end_html .
 						$comment_begin_html . '<!-- form label: Leave a Reply -->' . $defaults[ 'title_reply_before' ];
 
@@ -181,11 +181,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 				$comment_field = $label_before . $review_begin_html .
 					'<!-- form label: Your Review --><label ' . $label_attr . 'for="review"' . '>' .
-						_x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . $required_html . '</label>' . $review_end_html . 
+						_x( 'Your Review', 'form label', 'wpsso-ratings-and-reviews' ) . $required_html . '</label>' . $review_end_html .
 							$comment_begin_html . '<!-- form label: Comment -->' . $comment_label . $comment_end_html . $label_after;
 
-				$comment_field = '<span class="wpsso-rar comment-field">' . 
-					self::get_form_rating_field( $label_attr ) . 
+				$comment_field = '<span class="wpsso-rar comment-field">' .
+					self::get_form_rating_field( $label_attr ) .
 						$comment_field . '</span><!-- .wpsso-rar.comment-field -->' . "\n";
 
 			} else {
@@ -201,7 +201,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function update_form_submit_button( $submit_button ) {
 
-			if ( false !== strpos( $submit_button, '.wpsso-rar.submit-button' ) || 
+			if ( false !== strpos( $submit_button, '.wpsso-rar.submit-button' ) ||
 				false !== strpos( $submit_button, 'wpsso-rar comment rating disabled' ) ) {
 
 				return $submit_button;
@@ -221,10 +221,10 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
 			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
 
-			$submit_button = '<span class="wpsso-rar submit-button">' . $review_begin_html . 
-				'<!-- form label: Post Review --><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="' . 
+			$submit_button = '<span class="wpsso-rar submit-button">' . $review_begin_html .
+				'<!-- form label: Post Review --><input name="%1$s" type="submit" id="%2$s" class="%3$s" value="' .
 					_x( 'Post Review', 'form label', 'wpsso-ratings-and-reviews' ) . '"/>' . $review_end_html .
-						$comment_begin_html . '<!-- form label: Post Comment -->' . $submit_button . $comment_end_html . 
+						$comment_begin_html . '<!-- form label: Post Comment -->' . $submit_button . $comment_end_html .
 							'</span><!-- .wpsso-rar.submit-button -->' . "\n";
 
 			return $submit_button;
@@ -392,7 +392,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
 
 				return (float) self::sync_average_rating( $post_id );	// Calculate the average rating.
-			} 
+			}
 
 			/**
 			 * Returns an array of values if $single is false, the value of the meta field if $single is true,
