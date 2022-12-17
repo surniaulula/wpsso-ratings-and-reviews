@@ -40,7 +40,7 @@
 
 <h3>WPSSO Core Required</h3>
 
-<p>WPSSO Ratings and Reviews (WPSSO RAR) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p>
+<p>WPSSO Ratings and Reviews (WPSSO RAR) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>, which provides complete structured data for WordPress to present your content at its best on social sites and in search results – no matter how URLs are shared, reshared, messaged, posted, embedded, or crawled.</p>
 
 <h2>Installation</h2>
 
