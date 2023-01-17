@@ -16,23 +16,17 @@
 
 <!-- about -->
 
-<p><strong>The WPSSO Ratings and Reviews add-on extends the WordPress comment system:</strong></p>
+<p><strong>Extends the built-in WordPress comment system.</strong></p>
 
-<ul>
-<li>The star ratings can be enabled/disabled by post type or individual post.</li>
-<li>A rating value can be optional, or required before reviews are accepted.</li>
-<li>The color of star ratings can be customized from the add-on settings page.</li>
-<li>The theme template review form is correctly labeled as a "Review".</li>
-<li>The theme template review reply form is correctly labeled as a "Reply".</li>
-</ul>
-
-<p><strong>Compatible with WooCommerce product ratings.</strong></p>
+<p><strong>Compatible with WooCommerce and its product ratings.</strong></p>
 
 <p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> markup.</strong></p>
 
-<p><strong>Provides <a href="https://schema.org/Review">Schema Review</a> markup,</strong> including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.</p>
+<p><strong>Provides <a href="https://schema.org/Review">Schema Review</a> markup:</strong></p>
 
-<h3>No templates to modify or update!</h3>
+<p>Including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.</p>
+
+<p><strong>No templates to modify or update:</strong></p>
 
 <p>Simply activate the plugin to enable the addition of ratings and reviews.</p>
 
