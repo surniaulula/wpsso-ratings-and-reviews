@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Copyright 2017-2023 Jean-Sebastien Morisset (https://wpsso.com/)
@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoRar class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoRar->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 			$plugin_version = WpssoRarConfig::get_version();
 
-			/**
+			/*
 			 * Don't load our javascript where we don't need it.
 			 */
 			switch ( $hook_name ) {

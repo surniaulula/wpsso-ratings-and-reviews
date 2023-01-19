@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Copyright 2017-2023 Jean-Sebastien Morisset (https://wpsso.com/)
@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 		private $msgs;	// WpssoRarFiltersMessages class object.
 		private $opts;	// WpssoRarFiltersOptions class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoRar->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -110,7 +110,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$best_rating  = 5;
 			$have_schema  = $this->p->avail[ 'p' ][ 'schema' ] ? true : false;
 
-			/**
+			/*
 			 * Add rating meta tags.
 			 */
 			if ( apply_filters( 'wpsso_og_add_mt_rating', true, $mod ) ) {	// Enabled by default.
@@ -131,12 +131,12 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 					$this->p->debug->log( 'review count = ' . $review_count );
 				}
 
-				/**
+				/*
 				 * An average rating value must be greater than 0.
 				 */
 				if ( $average_rating > 0 ) {
 
-					/**
+					/*
 					 * At least one rating or review is required.
 					 */
 					if ( $rating_count > 0 || $review_count > 0 ) {
@@ -167,7 +167,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 				$this->p->debug->log( 'add rating meta tags is false' );
 			}
 
-			/**
+			/*
 			 * Add reviews meta tags.
 			 */
 			if ( apply_filters( 'wpsso_og_add_mt_reviews', $have_schema, $mod ) ) {

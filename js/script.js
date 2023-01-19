@@ -1,6 +1,6 @@
 jQuery( function( $ ){
 
-	/**
+	/*
 	 * The wpsso_rar_script is required to continue, so make sure the object exists.
 	 */
 	if ( typeof wpsso_rar_script === 'undefined' ) {
@@ -32,7 +32,7 @@ jQuery( function( $ ){
 		})
 		.on( 'click', '#respond #submit', function() {
 
-			/**
+			/*
 			 * Value tests are performed only on enabled input fields, so the rating select is disabled when the reply
 			 * link is clicked, and reenabled when cancelled to avoid star value checks on replies.
 			 */

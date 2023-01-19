@@ -6,7 +6,7 @@ jQuery( function( $ ){
 
 		$wp_inline_edit.apply( this, arguments );
 
-		/**
+		/*
 		 * Get the post ID.
 		 */
 		var $post_id = 0;
@@ -18,19 +18,19 @@ jQuery( function( $ ){
 
 		if ( $post_id > 0 ) {
 
-			/**
+			/*
 			 * Define the edit row.
 			 */
 			var $edit_row = $( '#edit-' + $post_id );
 			var $post_row = $( '#post-' + $post_id );
 			var $allow_ratings_opt_key = 'rar_allow_ratings';
 
-			/**
+			/*
 			 * Get the data. Hidden input value is 0 or 1.
 			 */
 			var $allow_ratings_value = $( 'input[name="' + $allow_ratings_opt_key + '"]', $post_row ).val();
 
-			/**
+			/*
 			 * Populate the data.
 			 */
 			if ( $allow_ratings_value == 1 ) {

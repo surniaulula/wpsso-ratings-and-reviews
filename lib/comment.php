@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Copyright 2017-2023 Jean-Sebastien Morisset (https://wpsso.com/)
@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoRar class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoRar->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -35,7 +35,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			add_action( 'transition_comment_status', array( __CLASS__, 'update_cache_transition_comment_status' ), 100, 3 );
 		}
 
-		/**
+		/*
 		 * Check if ratings are allowed for this post ID.
 		 */
 		public static function is_rating_enabled( $post_id ) {
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			} else {
 
-				/**
+				/*
 				 * Returns an array of values if $single is false, the value of the meta field if $single is true,
 				 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 				 * valid but non-existing post ID is passed.
@@ -89,13 +89,13 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 		private static function get_rating_disabled_html( $post_id, $html ) {
 
-			/**
+			/*
 			 * Do not add a newline as newlines are converted to line-breaks in $comment_text.
 			 */
 			return '<!-- wpsso-rar comment rating disabled for post ID ' . $post_id . ' -->' . $html;
 		}
 
-		/**
+		/*
 		 * Update the title, comment field, and submit button to toggle review/comment labels. Note that custom theme
 		 * values may be merged by WordPress and overwrite these defaults.
 		 */
@@ -116,7 +116,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
 			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
 
-			/**
+			/*
 			 * Title
 			 */
 			$defaults[ 'title_reply' ] =  _x( 'Leave a Review', 'form label', 'wpsso-ratings-and-reviews' );
@@ -128,12 +128,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$defaults[ 'title_reply_after' ] .= $comment_end_html . '</span><!-- .wpsso-rar.title-reply -->' . "\n";
 
-			/**
+			/*
 			 * Comment Box
 			 */
 			$defaults[ 'comment_field' ] = self::update_form_comment_field( $defaults[ 'comment_field' ] );
 
-			/**
+			/*
 			 * Submit Button
 			 */
 			$defaults[ 'submit_button' ] = self::update_form_comment_field( $defaults[ 'submit_button' ] );
@@ -141,7 +141,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $defaults;
 		}
 
-		/**
+		/*
 		 * Also hooked to the 'comment_form_field_comment' filter to modify a theme custom value.
 		 */
 		public static function update_form_comment_field( $comment_field ) {
@@ -196,7 +196,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $comment_field;
 		}
 
-		/**
+		/*
 		 * Also hooked to the 'comment_form_submit_button' filter to modify a theme custom value.
 		 */
 		public static function update_form_submit_button( $submit_button ) {
@@ -242,12 +242,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			$comment_begin_html = "\n" . '<span class="comment-toggle-comment"' . ( $is_comment_reply ? '' : ' style="display:none;"' ) . '>';
 			$comment_end_html   = '</span><!-- .comment-toggle-comment -->';
 
-			/**
+			/*
 			 * Auto-hide the paragraph for replies.
 			 */
 			$select_html = "\n" . '<p class="comment-form-rating"' . ( $is_comment_reply ? ' style="display:none;">' : '>' ) . "\n";
 
-			/**
+			/*
 			 * Auto-disable the select for replies.
 			 */
 			$select_html .= '<!-- form label: Your Rating --><label ' . $label_attr . 'for="rating"' . '>' .
@@ -264,7 +264,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $select_html;
 		}
 
-		/**
+		/*
 		 * Save the rating value on comment submit, unless it's a reply (replies should not have ratings).
 		 */
 		public static function save_rating_comment_post( $comment_id, $comment_approved ) {
@@ -315,7 +315,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			self::sync_review_count( $post_id );	// Returns an integer.
 
-			/**
+			/*
 			 * Update the rating count before the average rating.
 			 */
 			self::sync_rating_counts( $post_id );	// Returns an array.
@@ -323,12 +323,12 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			self::sync_average_rating( $post_id );	// Returns a float.
 		}
 
-		/**
+		/*
 		 * Append the rating value to the comment text. This filter is called on both the front and back-end.
 		 */
 		public static function add_rating_to_comment_text( $comment_text ) {
 
-			/**
+			/*
 			 * Make sure we only add the star rating once (ours or from another plugin).
 			 */
 			if ( false !== strpos( $comment_text, 'class="star-rating"' ) ) {
@@ -360,7 +360,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $comment_text;
 		}
 
-		/**
+		/*
 		 * Create the rating stars HTML for the rating value provided.
 		 */
 		private static function get_star_rating_html( $rating_value ) {
@@ -384,7 +384,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return $rating_html;
 		}
 
-		/**
+		/*
 		 * Average Rating.
 		 */
 		public static function get_average_rating( $post_id ) {
@@ -394,7 +394,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return (float) self::sync_average_rating( $post_id );	// Calculate the average rating.
 			}
 
-			/**
+			/*
 			 * Returns an array of values if $single is false, the value of the meta field if $single is true,
 			 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 			 * valid but non-existing post ID is passed.
@@ -426,7 +426,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			$average_rating = number_format( $average_rating, 2, '.', '' );
 
-			/**
+			/*
 			 * Returns the meta ID if the key didn't exist, true on successful update, false on failure or if the value
 			 * passed to the function is the same as the one that is already in the database.
 			 */
@@ -435,7 +435,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return (float) $average_rating;
 		}
 
-		/**
+		/*
 		 * Return a rating count (ie. the number of ratings for a rating value, or all rating values).
 		 *
 		 * The WPSSORAR_META_RATING_COUNTS post meta array acts as a cache, which is deleted by the
@@ -449,7 +449,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			} else {
 
-				/**
+				/*
 				 * Returns an array of values if $single is false, the value of the meta field if $single is true,
 				 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 				 * valid but non-existing post ID is passed.
@@ -492,7 +492,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				$rating_counts[ $count->meta_value ] = $count->meta_value_count;
 			}
 
-			/**
+			/*
 			 * Returns the meta ID if the key didn't exist, true on successful update, false on failure or if the value
 			 * passed to the function is the same as the one that is already in the database.
 			 */
@@ -501,7 +501,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			return (array) $rating_counts;
 		}
 
-		/**
+		/*
 		 * Review Count.
 		 */
 		public static function get_review_count( $post_id ) {
@@ -511,7 +511,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return (int) self::sync_review_count( $post_id );
 			}
 
-			/**
+			/*
 			 * Returns an array of values if $single is false, the value of the meta field if $single is true,
 			 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 			 * valid but non-existing post ID is passed.
@@ -530,7 +530,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				AND comment_parent = '0'
 				AND comment_approved = '1'", $post_id ) );
 
-			/**
+			/*
 			 * Returns the meta ID if the key didn't exist, true on successful update, false on failure or if the value
 			 * passed to the function is the same as the one that is already in the database.
 			 */
