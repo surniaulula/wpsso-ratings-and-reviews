@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Copyright 2014-2022 Jean-Sebastien Morisset (https://wpsso.com/)
@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssorar' => array(			// Plugin acronym.
-					'version'     => '2.20.0-rc.1',	// Plugin version.
+					'version'     => '2.20.0-rc.2',	// Plugin version.
 					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
@@ -28,7 +28,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'text_domain' => 'wpsso-ratings-and-reviews',
 					'domain_path' => '/languages',
 
-					/**
+					/*
 					 * Required plugin and its version.
 					 */
 					'req' => array(
@@ -37,16 +37,16 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '14.5.0-rc.1',
+							'min_version'   => '14.5.0-rc.2',
 						),
 					),
 
-					/**
+					/*
 					 * URLs or relative paths to plugin banners and icons.
 					 */
 					'assets' => array(
 
-						/**
+						/*
 						 * Icon image array keys are '1x' and '2x'.
 						 */
 						'icons' => array(
@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 						),
 					),
 
-					/**
+					/*
 					 * Library files loaded and instantiated by WPSSO.
 					 */
 					'lib' => array(
@@ -66,7 +66,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 				),
 			),
 
-			/**
+			/*
 			 * Additional add-on setting options.
 			 */
 			'opt' => array(
@@ -106,7 +106,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 			$info =& self::$cf[ 'plugin' ][ 'wpssorar' ];
 
-			/**
+			/*
 			 * Define fixed constants.
 			 */
 			define( 'WPSSORAR_FILEPATH', $plugin_file );
@@ -116,7 +116,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			define( 'WPSSORAR_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSORAR_VERSION', $info[ 'version' ] );
 
-			/**
+			/*
 			 * Define variable constants.
 			 */
 			self::set_variable_constants();
@@ -129,7 +129,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 				$var_const = (array) self::get_variable_constants();
 			}
 
-			/**
+			/*
 			 * Define the variable constants, if not already defined.
 			 */
 			foreach ( $var_const as $name => $value ) {
@@ -150,7 +150,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 			$var_const[ 'WPSSORAR_META_RATING_COUNTS' ]  = '_wpsso_rating_counts';	// Post meta array.
 			$var_const[ 'WPSSORAR_META_REVIEW_COUNT' ]   = '_wpsso_review_count';	// Post meta int.
 
-			/**
+			/*
 			 * Maybe override the default constant value with a pre-defined constant value.
 			 */
 			foreach ( $var_const as $name => $value ) {

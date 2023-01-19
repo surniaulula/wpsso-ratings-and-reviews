@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: WPSSO Ratings and Reviews
  * Plugin Slug: wpsso-ratings-and-reviews
  * Text Domain: wpsso-ratings-and-reviews
@@ -16,7 +16,7 @@
  * Requires At Least: 5.2
  * Tested Up To: 6.1.1
  * WC Tested Up To: 7.3.0
- * Version: 2.20.0-rc.1
+ * Version: 2.20.0-rc.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -87,7 +87,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				return;	// Stop here.
 			}
 
-			/**
+			/*
 			 * Make sure there are no conflicting settings.
 			 */
 			if ( ! empty( $this->p->options[ 'plugin_ratings_reviews_svc' ] ) ) {	// Since WPSSO Core v8.33.0.
@@ -117,7 +117,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				}
 			}
 
-			/**
+			/*
 			 * Disable reviews on products if competing feature exists.
 			 */
 			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
