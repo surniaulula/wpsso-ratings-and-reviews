@@ -5,7 +5,7 @@
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.20.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2 or newer</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.2 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.4 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.1.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>7.3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
