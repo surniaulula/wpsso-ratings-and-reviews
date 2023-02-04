@@ -154,16 +154,16 @@ msgid "Rating Required to Submit Review"
 msgstr ""
 
 #. translators: Please ignore - translation uses a different text domain.
-#: wpsso-ratings-and-reviews.php:104
+#: wpsso-ratings-and-reviews.php:107
 msgctxt "option label"
 msgid "Ratings and Reviews Service"
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:108
+#: wpsso-ratings-and-reviews.php:111
 msgid "The %1$s add-on is not compatible with the %2$s option."
 msgstr ""
 
-#: wpsso-ratings-and-reviews.php:111
+#: wpsso-ratings-and-reviews.php:114
 msgid "You must either deactivate the %1$s add-on or disable the %2$s option."
 msgstr ""
 
