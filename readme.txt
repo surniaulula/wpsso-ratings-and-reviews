@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.0-dev.4 (2023/02/12)**
+**Version 2.21.0-dev.5 (2023/02/12)**
 
 * **New Features**
 	* None.
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.3.0-dev.4.
+	* WPSSO Core v15.3.0-dev.5.
 
 **Version 2.20.1 (2023/01/26)**
 
@@ -191,7 +191,7 @@ Maintenance release.
 
 == Upgrade Notice ==
 
-= 2.21.0-dev.4 =
+= 2.21.0-dev.5 =
 
 (2023/02/12) Changed the cache clearing action hook to a cache refresh filter hook.
 
