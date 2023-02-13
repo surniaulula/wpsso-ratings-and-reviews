@@ -41,6 +41,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 			$this->opts = new WpssoRarFiltersOptions( $plugin, $addon );
 
 			$this->p->util->add_plugin_filters( $this, array(
+				'cache_refreshed_notice' => 2,
 				'get_sortable_columns' => 1,
 				'og'                   => 2,
 			), $prio = 1000 );
@@ -51,6 +52,15 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 				$this->msgs = new WpssoRarFiltersMessages( $plugin, $addon );
 			}
+		}
+
+		public function filter_cache_refreshed_notice( $notice_msg, $user_id = null ) {
+
+			delete_post_meta_by_key( WPSSORAR_META_AVERAGE_RATING );	// Re-created automatically.
+			delete_post_meta_by_key( WPSSORAR_META_RATING_COUNTS );		// Re-created automatically.
+			delete_post_meta_by_key( WPSSORAR_META_REVIEW_COUNT );		// Re-created automatically.
+
+			return $notice_msg;
 		}
 
 		public function filter_get_sortable_columns( $columns ) {

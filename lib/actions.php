@@ -35,19 +35,8 @@ if ( ! class_exists( 'WpssoRarActions' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_actions( $this, array(
-				'clear_cache'      => 4,
 				'clear_post_cache' => 2,
 			) );
-		}
-
-		public function action_clear_cache( $user_id, $clear_other, $clear_short, $refresh ) {
-
-			if ( $refresh ) {
-
-				delete_post_meta_by_key( WPSSORAR_META_AVERAGE_RATING );	// Re-created automatically.
-				delete_post_meta_by_key( WPSSORAR_META_RATING_COUNTS );		// Re-created automatically.
-				delete_post_meta_by_key( WPSSORAR_META_REVIEW_COUNT );		// Re-created automatically.
-			}
 		}
 
 		public function action_clear_post_cache( $post_id ) {
