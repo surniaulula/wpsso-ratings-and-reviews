@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.21.0-dev.5 (2023/02/12)**
+**Version 2.21.0-b.1 (2023/02/13)**
 
 * **New Features**
 	* None.
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.3.0-dev.5.
+	* WPSSO Core v15.3.0-b.1.
 
 **Version 2.20.1 (2023/01/26)**
 
@@ -137,63 +137,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.2.
 	* WPSSO Core v14.5.0.
 
-**Version 2.19.0 (2022/03/14)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
-	* Removed the `$mt_prefix` argument from:
-		* `WpssoPost->get_mt_reviews()`
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-	* WPSSO Core v11.7.0.
-
-**Version 2.18.1 (2022/03/07)**
-
-Maintenance release.
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-	* WPSSO Core v11.5.0.
-
-**Version 2.18.0 (2022/01/19)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed the lib/abstracts/ folder to lib/abstract/.
-	* Renamed the `SucomAddOn` class to `SucomAbstractAddOn`.
-	* Renamed the `WpssoAddOn` class to `WpssoAbstractAddOn`.
-	* Renamed the `WpssoWpMeta` class to `WpssoAbstractWpMeta`.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-	* WPSSO Core v9.14.0.
-
 == Upgrade Notice ==
 
-= 2.21.0-dev.5 =
+= 2.21.0-b.1 =
 
-(2023/02/12) Changed the cache clearing action hook to a cache refresh filter hook.
+(2023/02/13) Changed the cache clearing action hook to a cache refresh filter hook.
 
 = 2.20.1 =
 
@@ -202,16 +150,4 @@ Maintenance release.
 = 2.20.0 =
 
 (2023/01/20) Updated the `SucomAbstractAddOn` common library class.
-
-= 2.19.0 =
-
-(2022/03/14) Renamed the WPSSORAR_META_REVIEW_RATING constant to WPSSO_META_RATING_NAME.
-
-= 2.18.1 =
-
-(2022/03/07) Maintenance release.
-
-= 2.18.0 =
-
-(2022/01/19) Renamed the lib/abstracts/ folder and its classes.
 
