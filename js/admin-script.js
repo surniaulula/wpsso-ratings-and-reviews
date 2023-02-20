@@ -1,3 +1,4 @@
+
 jQuery( function( $ ){
 
 	var $wp_inline_edit = inlineEditPost.edit;
@@ -40,3 +41,4 @@ jQuery( function( $ ){
 		}
 	};
 });
+
