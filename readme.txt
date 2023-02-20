@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.22.0-rc.1 (2023/02/20)**
+**Version 2.22.0 (2023/02/20)**
 
 * **New Features**
 	* None.
@@ -105,7 +105,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.4.0-rc.1.
+	* WPSSO Core v15.4.0.
 
 **Version 2.21.0 (2023/02/14)**
 
@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.22.0-rc.1 =
+= 2.22.0 =
 
 (2023/02/20) Added a new 'wpssorar_post_column_rating_value' filter.
 
