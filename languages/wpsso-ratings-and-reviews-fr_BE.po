@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.21.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.22.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-reviews\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-02-13 09:02-0800\n"
+"PO-Revision-Date: 2023-02-20 10:30-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -45,57 +45,57 @@ msgstr "WPSSO Core"
 msgid "Enable ratings and reviews"
 msgstr "Activer notes et critiques"
 
-#: lib/comment.php:122 lib/comment.php:126
+#: lib/comment.php:126 lib/comment.php:130
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr "Laisser une critique"
 
-#: lib/comment.php:184
+#: lib/comment.php:188
 msgctxt "form label"
 msgid "Your Review"
 msgstr "Votre critique"
 
-#: lib/comment.php:226
+#: lib/comment.php:230
 msgctxt "form label"
 msgid "Post Review"
 msgstr "Publier la critique"
 
-#: lib/comment.php:254
+#: lib/comment.php:258
 msgctxt "form label"
 msgid "Your Rating"
 msgstr "Votre note"
 
-#: lib/comment.php:256
+#: lib/comment.php:260
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr "Note&hellip;"
 
-#: lib/comment.php:257
+#: lib/comment.php:261
 msgctxt "option value"
 msgid "Excellent"
 msgstr "Excellent"
 
-#: lib/comment.php:258
+#: lib/comment.php:262
 msgctxt "option value"
 msgid "Good"
 msgstr "Bon"
 
-#: lib/comment.php:259
+#: lib/comment.php:263
 msgctxt "option value"
 msgid "Average"
 msgstr "Moyen"
 
-#: lib/comment.php:260
+#: lib/comment.php:264
 msgctxt "option value"
 msgid "Not Good"
 msgstr "Pas bon"
 
-#: lib/comment.php:261
+#: lib/comment.php:265
 msgctxt "option value"
 msgid "Awful"
 msgstr "Terrible"
 
-#: lib/comment.php:377 lib/comment.php:379
+#: lib/comment.php:381 lib/comment.php:383
 msgid "Rated %d out of 5"
 msgstr "Noté %d sur 5"
 
@@ -115,11 +115,11 @@ msgstr "Activer ou désactiver la fonction de notes par type d'article public."
 msgid "A rating value must be selected to submit a review (enabled by default)."
 msgstr "Une note doit être sélectionnée pour soumettre une critique (activée par défaut)."
 
-#: lib/script.php:74
+#: lib/script.php:78
 msgid "Please select a rating before submitting."
 msgstr "Veuillez sélectionner une note avant de soumettre."
 
-#: lib/script.php:75
+#: lib/script.php:79
 msgid "Please write a review before submitting."
 msgstr "Veuillez écrire une critique avant de soumettre."
 
