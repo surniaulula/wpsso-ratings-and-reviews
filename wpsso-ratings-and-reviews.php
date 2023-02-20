@@ -16,7 +16,7 @@
  * Requires At Least: 5.4
  * Tested Up To: 6.1.1
  * WC Tested Up To: 7.4.0
- * Version: 2.22.0-b.2
+ * Version: 2.22.0-rc.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -117,18 +117,6 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 					$this->p->notice->err( $notice_msg );
 
 					return;	// Stop here.
-				}
-			}
-
-			/*
-			 * Disable reviews on products if competing feature exists.
-			 */
-			if ( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) {
-
-				if ( 'yes' === get_option( 'woocommerce_enable_review_rating' ) ) {
-
-					$this->p->options[ 'rar_add_to_product' ]          = 0;
-					$this->p->options[ 'rar_add_to_product:disabled' ] = true;
 				}
 			}
 
