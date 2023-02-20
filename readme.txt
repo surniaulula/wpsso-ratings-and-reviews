@@ -99,7 +99,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Added a new 'wpssorar_post_column_rating_value' filter.
+	* Removed the 'wpsso_cache_refreshed_notice' filter hook.
+	* Removed the `WpssoRarFilters->filter_cache_refreshed_notice()` method.
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
@@ -156,7 +158,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.22.0-b.2 =
 
-(2023/02/20) None.
+(2023/02/20) Added a new 'wpssorar_post_column_rating_value' filter.
 
 = 2.21.0 =
 
