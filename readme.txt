@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
-Tags: star rating, aggregate rating, review, google, schema, comment, knowledge graph, product rating, product review, meta tags, schema review, schema markup, woocommerce
+Tags: star rating, aggregate rating, product ratings, product reviews, schema review, woocommerce
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2
@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.22.0-b.2 (2023/02/20)**
+**Version 2.22.0-rc.1 (2023/02/20)**
 
 * **New Features**
 	* None.
@@ -105,7 +105,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.4.
-	* WPSSO Core v15.4.0-b.2.
+	* WPSSO Core v15.4.0-rc.1.
 
 **Version 2.21.0 (2023/02/14)**
 
@@ -156,7 +156,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.22.0-b.2 =
+= 2.22.0-rc.1 =
 
 (2023/02/20) Added a new 'wpssorar_post_column_rating_value' filter.
 
