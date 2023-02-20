@@ -49,57 +49,57 @@ msgstr ""
 msgid "Enable ratings and reviews"
 msgstr ""
 
-#: lib/comment.php:122 lib/comment.php:126
+#: lib/comment.php:126 lib/comment.php:130
 msgctxt "form label"
 msgid "Leave a Review"
 msgstr ""
 
-#: lib/comment.php:184
+#: lib/comment.php:188
 msgctxt "form label"
 msgid "Your Review"
 msgstr ""
 
-#: lib/comment.php:226
+#: lib/comment.php:230
 msgctxt "form label"
 msgid "Post Review"
 msgstr ""
 
-#: lib/comment.php:254
+#: lib/comment.php:258
 msgctxt "form label"
 msgid "Your Rating"
 msgstr ""
 
-#: lib/comment.php:256
+#: lib/comment.php:260
 msgctxt "option value"
 msgid "Rating&hellip;"
 msgstr ""
 
-#: lib/comment.php:257
+#: lib/comment.php:261
 msgctxt "option value"
 msgid "Excellent"
 msgstr ""
 
-#: lib/comment.php:258
+#: lib/comment.php:262
 msgctxt "option value"
 msgid "Good"
 msgstr ""
 
-#: lib/comment.php:259
+#: lib/comment.php:263
 msgctxt "option value"
 msgid "Average"
 msgstr ""
 
-#: lib/comment.php:260
+#: lib/comment.php:264
 msgctxt "option value"
 msgid "Not Good"
 msgstr ""
 
-#: lib/comment.php:261
+#: lib/comment.php:265
 msgctxt "option value"
 msgid "Awful"
 msgstr ""
 
-#: lib/comment.php:377 lib/comment.php:379
+#: lib/comment.php:381 lib/comment.php:383
 msgid "Rated %d out of 5"
 msgstr ""
 
@@ -120,11 +120,11 @@ msgid ""
 "A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
-#: lib/script.php:74
+#: lib/script.php:78
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/script.php:75
+#: lib/script.php:79
 msgid "Please write a review before submitting."
 msgstr ""
 

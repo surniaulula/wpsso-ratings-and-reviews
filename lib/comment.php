@@ -42,7 +42,11 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			static $local_cache = array();
 
-			if ( isset( $local_cache[ $post_id ] ) ) {
+			if ( empty( $post_id ) ) {	// Just in case.
+
+				return false;
+
+			} elseif ( isset( $local_cache[ $post_id ] ) ) {
 
 				return $local_cache[ $post_id ];
 			}

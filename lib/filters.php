@@ -82,7 +82,7 @@ if ( ! class_exists( 'WpssoRarFilters' ) ) {
 
 		public function filter_og( array $mt_og, array $mod ) {
 
-			if ( ! $mod[ 'is_post' ] || ! $mod[ 'id' ] ) {	// Make sure we have a valid post ID.
+			if ( empty( $mod[ 'is_post' ] ) || empty( $mod[ 'id' ] ) ) {	// Make sure we have a valid post ID.
 
 				return $mt_og;
 			}

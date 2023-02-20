@@ -51,7 +51,11 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 		public function enqueue_scripts() {
 
-			if ( ! WpssoRarComment::is_rating_enabled( get_the_ID() ) ) {
+			if ( ! $post_id = get_the_ID() ) {
+
+				return;
+
+			} elseif ( ! WpssoRarComment::is_rating_enabled( $post_id ) ) {
 
 				return;
 			}
