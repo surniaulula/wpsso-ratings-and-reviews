@@ -33,7 +33,7 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 			if ( ! $post_id = get_the_ID() ) {
 
 				return;
-			
+
 			} elseif ( ! WpssoRarComment::is_rating_enabled( $post_id ) ) {
 
 				return;
