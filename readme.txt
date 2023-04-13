@@ -10,7 +10,7 @@ Tags: star rating, aggregate rating, product ratings, product reviews, schema re
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2
-Requires At Least: 5.4
+Requires At Least: 5.5
 Tested Up To: 6.2.0
 WC Tested Up To: 7.5.1
 Stable Tag: 2.22.0
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Removed the `WpssoRarFilters->filter_cache_refreshed_notice()` method.
 * **Requires At Least**
 	* PHP v7.2.
-	* WordPress v5.4.
+	* WordPress v5.5.
 	* WPSSO Core v15.4.0.
 
 **Version 2.21.0 (2023/02/14)**
