@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
 Tags: star rating, aggregate rating, product ratings, product reviews, schema review, woocommerce
 Contributors: jsmoriss
 Requires Plugins: wpsso
-Requires PHP: 7.2
+Requires PHP: 7.2.5
 Requires At Least: 5.5
 Tested Up To: 6.2.0
 WC Tested Up To: 7.6.0
@@ -103,7 +103,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Removed the 'wpsso_cache_refreshed_notice' filter hook.
 	* Removed the `WpssoRarFilters->filter_cache_refreshed_notice()` method.
 * **Requires At Least**
-	* PHP v7.2.
+	* PHP v7.2.5.
 	* WordPress v5.5.
 	* WPSSO Core v15.4.0.
 
