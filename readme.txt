@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.2.5
 Requires At Least: 5.5
 Tested Up To: 6.2.0
-WC Tested Up To: 7.6.0
+WC Tested Up To: 7.6.1
 Stable Tag: 2.22.0
 
 Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
