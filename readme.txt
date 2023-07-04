@@ -103,7 +103,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Removed the 'wpsso_cache_refreshed_notice' filter hook.
 	* Removed the `WpssoRarFilters->filter_cache_refreshed_notice()` method.
 * **Requires At Least**
-	* PHP v7.2.5.
+	* PHP v7.2.34.
 	* WordPress v5.5.
 	* WPSSO Core v15.4.0.
 
