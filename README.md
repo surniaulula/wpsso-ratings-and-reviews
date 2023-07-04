@@ -4,10 +4,10 @@
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.22.0</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.5 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.34 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.2.2</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>7.8.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>7.8.2</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>star rating, aggregate rating, product ratings, product reviews, schema review, woocommerce</td></tr>
