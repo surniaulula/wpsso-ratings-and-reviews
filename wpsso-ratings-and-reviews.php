@@ -12,7 +12,7 @@
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.
  * Requires Plugins: wpsso
- * Requires PHP: 7.2.5
+ * Requires PHP: 7.2.34
  * Requires At Least: 5.5
  * Tested Up To: 6.2.2
  * WC Tested Up To: 7.8.2
