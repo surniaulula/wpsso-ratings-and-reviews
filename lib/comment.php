@@ -449,7 +449,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_RATING_COUNTS ) ) {	// Just in case.
 
-				$rating_counts = (array) self::sync_rating_counts( $post_id );
+				$rating_counts = self::sync_rating_counts( $post_id );
 
 			} else {
 
@@ -458,7 +458,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 				 * valid but non-existing post ID is passed.
 				 */
-				$rating_counts = (array) get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $single = true );
+				$rating_counts = get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $single = true );
 			}
 
 			$rating_counts = array_filter( $rating_counts );
@@ -502,7 +502,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 */
 			update_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $rating_counts );
 
-			return (array) $rating_counts;
+			return $rating_counts;
 		}
 
 		/*
