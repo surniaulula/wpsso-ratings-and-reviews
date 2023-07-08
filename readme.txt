@@ -90,6 +90,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.22.1-dev.1 (2023/07/08)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Minor code optimization and standardization:
+		* Replaced `{get|update|delete}_{comment|post|term|user}_meta()` functions by `{get|update|delete}_metadata()`.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.5.
+	* WPSSO Core v15.15.2-dev.1.
+
 **Version 2.22.0 (2023/02/20)**
 
 * **New Features**
@@ -155,6 +171,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v14.5.0.
 
 == Upgrade Notice ==
+
+= 2.22.1-dev.1 =
+
+(2023/07/08) Minor code optimization and standardization:
 
 = 2.22.0 =
 
