@@ -174,7 +174,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.22.1-dev.1 =
 
-(2023/07/08) Minor code optimization and standardization:
+(2023/07/08) Minor code optimization and standardization.
 
 = 2.22.0 =
 
