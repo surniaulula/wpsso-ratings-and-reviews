@@ -126,11 +126,11 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 			} elseif ( isset( $_POST[ 'rar_allow_ratings' ] ) && strtolower( $_POST[ 'rar_allow_ratings' ] ) === 'on' ) {
 
-				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
+				update_metadata( 'post', $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
 
 			} else {
 
-				update_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
+				update_metadata( 'post', $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
 			}
 		}
 	}

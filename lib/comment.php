@@ -67,7 +67,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 				 * valid but non-existing post ID is passed.
 				 */
-				$current = get_post_meta( $post_id, WPSSORAR_META_ALLOW_RATINGS, $single = true );
+				$current = get_metadata( 'post', $post_id, WPSSORAR_META_ALLOW_RATINGS, $single = true );
 
 				if ( '' === $current ) {
 
@@ -352,7 +352,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				return self::get_rating_disabled_html( $comment_obj->comment_post_ID, $comment_text );
 			}
 
-			$rating_value = get_comment_meta( $comment_id, WPSSO_META_RATING_NAME, true );
+			$rating_value = get_metadata( 'comment', $comment_id, WPSSO_META_RATING_NAME, true );
 
 			if ( $rating_value ) {
 
@@ -403,7 +403,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 			 * valid but non-existing post ID is passed.
 			 */
-			return (float) get_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, $single = true );
+			return (float) get_metadata( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING, $single = true );
 		}
 
 		private static function sync_average_rating( $post_id ) {
@@ -434,7 +434,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 * Returns the meta ID if the key didn't exist, true on successful update, false on failure or if the value
 			 * passed to the function is the same as the one that is already in the database.
 			 */
-			update_post_meta( $post_id, WPSSORAR_META_AVERAGE_RATING, $average_rating );
+			update_metadata( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING, $average_rating );
 
 			return (float) $average_rating;
 		}
@@ -458,7 +458,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 				 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 				 * valid but non-existing post ID is passed.
 				 */
-				$rating_counts = get_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $single = true );
+				$rating_counts = get_metadata( 'post', $post_id, WPSSORAR_META_RATING_COUNTS, $single = true );
 			}
 
 			$rating_counts = array_filter( $rating_counts );
@@ -500,7 +500,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 * Returns the meta ID if the key didn't exist, true on successful update, false on failure or if the value
 			 * passed to the function is the same as the one that is already in the database.
 			 */
-			update_post_meta( $post_id, WPSSORAR_META_RATING_COUNTS, $rating_counts );
+			update_metadata( 'post', $post_id, WPSSORAR_META_RATING_COUNTS, $rating_counts );
 
 			return $rating_counts;
 		}
@@ -520,7 +520,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 * false for an invalid $post_id (non-numeric, zero, or negative value), or an empty string if a
 			 * valid but non-existing post ID is passed.
 			 */
-			return (int) get_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, $single = true );
+			return (int) get_metadata( 'post', $post_id, WPSSORAR_META_REVIEW_COUNT, $single = true );
 		}
 
 		private static function sync_review_count( $post_id ) {
@@ -538,7 +538,7 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 			 * Returns the meta ID if the key didn't exist, true on successful update, false on failure or if the value
 			 * passed to the function is the same as the one that is already in the database.
 			 */
-			update_post_meta( $post_id, WPSSORAR_META_REVIEW_COUNT, $review_count );
+			update_metadata( 'post', $post_id, WPSSORAR_META_REVIEW_COUNT, $review_count );
 
 			return (int) $review_count;
 		}
