@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.22.1-b.7 (2023/07/12)**
+**Version 2.22.1-rc.1 (2023/07/13)**
 
 * **New Features**
 	* None.
@@ -104,7 +104,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v15.16.0-b.7.
+	* WPSSO Core v15.16.0-rc.1.
 
 **Version 2.22.0 (2023/02/20)**
 
@@ -172,9 +172,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.22.1-b.7 =
+= 2.22.1-rc.1 =
 
-(2023/07/12) Minor code optimization and standardization.
+(2023/07/13) Minor code optimization and standardization.
 
 = 2.22.0 =
 
