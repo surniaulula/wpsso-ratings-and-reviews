@@ -393,9 +393,21 @@ if ( ! class_exists( 'WpssoRarComment' ) ) {
 		 */
 		public static function get_average_rating( $post_id ) {
 
+			$wpsso = Wpsso::get_instance();
+
 			if ( ! metadata_exists( 'post', $post_id, WPSSORAR_META_AVERAGE_RATING ) ) {
 
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'syncing ' . WPSSORAR_META_AVERAGE_RATING . ' metadata value' );
+				}
+
 				return (float) self::sync_average_rating( $post_id );	// Calculate the average rating.
+			}
+
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->log( 'returning ' . WPSSORAR_META_AVERAGE_RATING . ' metadata value' );
 			}
 
 			/*
