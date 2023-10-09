@@ -90,6 +90,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.23.0-rc.2 (2023/10/09)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added an action hook to update metadata values when WPSSO refreshes its cache.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a new `WpssoRarActions->action_refresh_cache()` method.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.5.
+	* WPSSO Core v16.2.0-rc.2.
+
 **Version 2.22.1 (2023/07/13)**
 
 * **New Features**
@@ -171,6 +186,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v14.5.0.
 
 == Upgrade Notice ==
+
+= 2.23.0-rc.2 =
+
+(2023/10/09) Added an action hook to update metadata values when WPSSO refreshes its cache.
 
 = 2.22.1 =
 
