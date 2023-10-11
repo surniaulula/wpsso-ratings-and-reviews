@@ -41,7 +41,7 @@ if ( ! class_exists( 'WpssoRarActions' ) ) {
 		}
 
 		public function action_refresh_cache( $user_id = null ) {
-			
+
 			delete_post_meta_by_key( WPSSORAR_META_AVERAGE_RATING );	// Re-created automatically.
 			delete_post_meta_by_key( WPSSORAR_META_RATING_COUNTS );		// Re-created automatically.
 			delete_post_meta_by_key( WPSSORAR_META_REVIEW_COUNT );		// Re-created automatically.
