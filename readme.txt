@@ -21,7 +21,7 @@ Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Sche
 
 <!-- about -->
 
-**Extends the built-in WordPress comment system.**
+**Extends the WordPress comment system.**
 
 **Compatible with WooCommerce and its product ratings.**
 
