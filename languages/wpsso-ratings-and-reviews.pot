@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 2.23.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 2.24.0-dev.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -128,27 +128,27 @@ msgstr ""
 msgid "Please write a review before submitting."
 msgstr ""
 
-#: lib/submenu/rar-general.php:38
+#: lib/submenu/ratings-reviews.php:32
 msgctxt "metabox title"
 msgid "Ratings and Reviews"
 msgstr ""
 
-#: lib/submenu/rar-general.php:74
+#: lib/submenu/ratings-reviews.php:46
 msgctxt "option label"
 msgid "Selected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:79
+#: lib/submenu/ratings-reviews.php:51
 msgctxt "option label"
 msgid "Unselected Star Rating Color"
 msgstr ""
 
-#: lib/submenu/rar-general.php:84
+#: lib/submenu/ratings-reviews.php:56
 msgctxt "option label"
 msgid "Show Rating Form for Post Types"
 msgstr ""
 
-#: lib/submenu/rar-general.php:89
+#: lib/submenu/ratings-reviews.php:61
 msgctxt "option label"
 msgid "Rating Required to Submit Review"
 msgstr ""
