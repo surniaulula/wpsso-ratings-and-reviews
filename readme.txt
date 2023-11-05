@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.24.0-dev.11 (2021/11/05)**
+**Version 3.0.0-dev.13 (2021/11/05)**
 
 * **New Features**
 	* None.
@@ -99,11 +99,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Refactored the settings page load process.
+	* Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v16.7.0-dev.11.
+	* WPSSO Core v17.0.0-dev.13.
 
 **Version 2.23.0 (2023/10/09)**
 
@@ -120,113 +120,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.5.
 	* WPSSO Core v16.2.0.
 
-**Version 2.22.1 (2023/07/13)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Minor code optimization and standardization:
-		* Replaced `{get|update|delete}_{comment|post|term|user}_meta()` functions by `{get|update|delete}_metadata()`.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v15.16.0.
-
-**Version 2.22.0 (2023/02/20)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a new 'wpssorar_post_column_rating_value' filter.
-	* Removed the 'wpsso_cache_refreshed_notice' filter hook.
-	* Removed the `WpssoRarFilters->filter_cache_refreshed_notice()` method.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v15.4.0.
-
-**Version 2.21.0 (2023/02/14)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Changed the cache clearing action hook to a cache refresh filter hook.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a new `WpssoRarFilters->filter_cache_refreshed_notice()` method.
-	* Removed the `WpssoRarActions->action_clear_cache()` method.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.5.
-	* WPSSO Core v15.3.0.
-
-**Version 2.20.1 (2023/01/26)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added compatibility declaration for WooCommerce HPOS.
-	* Updated the minimum WordPress version from v5.2 to v5.5.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated the `WpssoAbstractAddOn` library class.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.5.
-	* WPSSO Core v14.7.0.
-
-**Version 2.20.0 (2023/01/20)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated the `SucomAbstractAddOn` common library class.
-* **Requires At Least**
-	* PHP v7.2.
-	* WordPress v5.2.
-	* WPSSO Core v14.5.0.
-
 == Upgrade Notice ==
 
-= 2.24.0-dev.11 =
+= 3.0.0-dev.13 =
 
-(2021/11/05) Refactored the settings page load process.
+(2021/11/05) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
 
 = 2.23.0 =
 
 (2023/10/09) Added an action hook to update metadata values when WPSSO refreshes its cache.
-
-= 2.22.1 =
-
-(2023/07/13) Minor code optimization and standardization.
-
-= 2.22.0 =
-
-(2023/02/20) Added a new 'wpssorar_post_column_rating_value' filter.
-
-= 2.21.0 =
-
-(2023/02/14) Changed the cache clearing action hook to a cache refresh filter hook.
-
-= 2.20.1 =
-
-(2023/01/26) Added compatibility declaration for WooCommerce HPOS. Updated the minimum WordPress version from v5.2 to v5.5.
-
-= 2.20.0 =
-
-(2023/01/20) Updated the `SucomAbstractAddOn` common library class.
 
