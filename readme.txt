@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.1.0-rc.1 (2024/03/10)**
+**Version 3.1.0 (2024/03/10)**
 
 * **New Features**
 	* None.
@@ -137,7 +137,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.1.0-rc.1 =
+= 3.1.0 =
 
 (2024/03/10) Added a check for `SucomUtilWP::doing_dev()` in the WpssoRarScript and WpssoRarStyle classes.
 
