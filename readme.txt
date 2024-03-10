@@ -90,7 +90,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0 (2021/11/08)**
+**Version 3.1.0-rc.1 (2024/03/10)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added a check for `SucomUtilWP::doing_dev()` in the WpssoRarScript and WpssoRarStyle classes.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.8.
+	* WPSSO Core v17.0.0.
+
+**Version 3.0.0 (2023/11/08)**
 
 * **New Features**
 	* None.
@@ -122,9 +137,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
+= 3.1.0-rc.1 =
+
+(2024/03/10) Added a check for `SucomUtilWP::doing_dev()` in the WpssoRarScript and WpssoRarStyle classes.
+
 = 3.0.0 =
 
-(2021/11/08) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
+(2023/11/08) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
 
 = 2.23.0 =
 
