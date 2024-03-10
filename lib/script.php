@@ -16,6 +16,9 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoRar class object.
+		private $doing_dev = false;
+		private $file_ext  = 'min.js';
+		private $version   = '';
 
 		/*
 		 * Instantiated by WpssoRar->init_objects().
@@ -25,13 +28,20 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
+
+			$this->doing_dev = SucomUtilWP::doing_dev();
+			$this->file_ext  = $this->doing_dev ? 'js' : 'min.js';
+			$this->version   = WpssoRarConfig::get_version() . ( $this->doing_dev ? gmdate( '-ymd-His' ) : '' );
+
 			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		}
 
 		public function admin_enqueue_scripts( $hook_name ) {
-
-			$plugin_version = WpssoRarConfig::get_version();
 
 			/*
 			 * Don't load our javascript where we don't need it.
@@ -41,8 +51,8 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 				case 'edit.php':
 
 					wp_enqueue_script( 'wpsso-rar-admin-script',
-						WPSSORAR_URLPATH . 'js/admin-script.min.js',
-							array( 'jquery' ), $plugin_version, $in_footer = true );
+						WPSSORAR_URLPATH . 'js/admin-script.' . $this->file_ext,
+							array( 'jquery' ), $this->version, $in_footer = true );
 
 					break;	// Stop here.
 			}
@@ -60,11 +70,9 @@ if ( ! class_exists( 'WpssoRarScript' ) ) {
 				return;
 			}
 
-			$plugin_version = WpssoRarConfig::get_version();
-
 			wp_enqueue_script( 'wpsso-rar-script',
-				WPSSORAR_URLPATH . 'js/script.min.js',
-					array( 'jquery' ), $plugin_version );
+				WPSSORAR_URLPATH . 'js/script.' . $this->file_ext,
+					array( 'jquery' ), $this->version );
 
 			wp_localize_script( 'wpsso-rar-script',
 				'wpsso_rar_script', $this->get_script_data() );

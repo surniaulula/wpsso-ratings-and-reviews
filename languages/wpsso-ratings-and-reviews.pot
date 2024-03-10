@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Ratings and Reviews package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Ratings and Reviews 3.0.0\n"
+"Project-Id-Version: WPSSO Ratings and Reviews 3.1.0-rc.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-ratings-and-"
 "reviews\n"
 "POT-Creation-Date: 2024-MO-DA HO:MI+ZONE\n"
@@ -120,11 +120,11 @@ msgid ""
 "A rating value must be selected to submit a review (enabled by default)."
 msgstr ""
 
-#: lib/script.php:78
+#: lib/script.php:86
 msgid "Please select a rating before submitting."
 msgstr ""
 
-#: lib/script.php:79
+#: lib/script.php:87
 msgid "Please write a review before submitting."
 msgstr ""
 
