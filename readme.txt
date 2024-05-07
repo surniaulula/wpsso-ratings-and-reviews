@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-ratings-and-reviews/assets/
-Tags: star rating, aggregate rating, product ratings, product reviews, schema review, woocommerce
+Tags: star rating, aggregate rating, product ratings, product reviews, woocommerce
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2.34
