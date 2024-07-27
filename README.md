@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and Schema Review Markup.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Add Ratings and Reviews Features to the WordPress Comments Templates.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.34 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.8 or newer</td></tr>
@@ -19,7 +19,7 @@
 
 <p><strong>Extends the WordPress comment system.</strong></p>
 
-<p>Add ratings and reviews to Posts, Pages, and custom post types by extending the WordPress comment features.</p>
+<p>Add ratings and reviews to Posts, Pages, and custom post types by extending the WordPress comments templates.</p>
 
 <p><strong>Compatible with WooCommerce and its product ratings.</strong></p>
 
@@ -27,13 +27,13 @@
 
 <p>The WPSSO Ratings and Reviews add-on can provide ratings and reviews features for other post types, without interfering with WooCommerce's product ratings and reviews features.</p>
 
-<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> markup.</strong></p>
+<p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> markup:</strong></p>
 
-<p><strong>Provides <a href="https://schema.org/Review">Schema Review</a> markup:</strong></p>
-
-<p>Including information about the review (author name, creation time, excerpt, rating) and threaded replies / comments for each review.</p>
+<p>In Posts, Pages, and custom post types where ratings and reviews features have been enabled, the WPSSO Ratings and Reviews add-on includes information in the Schema markup about the review (author name, creation time, excerpt, rating) and the threaded replies / comments for each review.</p>
 
 <p><strong>No templates to modify or update:</strong></p>
+
+<p>The WPSSO Ratings and Reviews add-on automatically extends the WordPress comments templates.</p>
 
 <p>Simply activate the plugin to enable the addition of ratings and reviews.</p>
 
