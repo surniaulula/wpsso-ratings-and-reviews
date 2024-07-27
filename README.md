@@ -7,7 +7,7 @@
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.34 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.8 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.6.1</td></tr>
-<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>9.1.2</td></tr>
+<tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>9.1.4</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
 <tr><th align="right" valign="top" nowrap>License</th><td><a href="https://www.gnu.org/licenses/gpl.txt">GPLv3</a></td></tr>
 <tr><th align="right" valign="top" nowrap>Tags / Keywords</th><td>star rating, aggregate rating, product ratings, product reviews, woocommerce</td></tr>
@@ -19,7 +19,13 @@
 
 <p><strong>Extends the WordPress comment system.</strong></p>
 
+<p>Add ratings and reviews to Posts, Pages, and custom post types by extending the WordPress comment features.</p>
+
 <p><strong>Compatible with WooCommerce and its product ratings.</strong></p>
+
+<p>WooCommerce provides its own product ratings and reviews features.</p>
+
+<p>The WPSSO Ratings and Reviews add-on can provide ratings and reviews features for other post types, without interfering with WooCommerce's product ratings and reviews features.</p>
 
 <p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> markup.</strong></p>
 
