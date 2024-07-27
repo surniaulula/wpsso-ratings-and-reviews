@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: https://www.gnu.org/licenses/gpl.txt
- * Description: Add Ratings and Reviews Features to the WordPress Comments Templates.
+ * Description: Adds Ratings and Reviews Features to the WordPress Comments System.
  * Requires Plugins: wpsso
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8

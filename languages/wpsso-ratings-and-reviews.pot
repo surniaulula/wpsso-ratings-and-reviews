@@ -35,7 +35,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:7
 msgctxt "plugin description"
-msgid "Add Ratings and Reviews Features to the WordPress Comments Templates."
+msgid "Adds Ratings and Reviews Features to the WordPress Comments System."
 msgstr ""
 
 #: gettext/gettext-lib-config.php:8
@@ -174,7 +174,7 @@ msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Add Ratings and Reviews Features to the WordPress Comments Templates."
+msgid "Adds Ratings and Reviews Features to the WordPress Comments System."
 msgstr ""
 
 #. Author of the plugin/theme

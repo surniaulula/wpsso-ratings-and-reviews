@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO RAR',	// Short plugin name.
 					'name'        => 'WPSSO Ratings and Reviews',
-					'desc'        => 'Add Ratings and Reviews Features to the WordPress Comments Templates.',
+					'desc'        => 'Adds Ratings and Reviews Features to the WordPress Comments System.',
 					'slug'        => 'wpsso-ratings-and-reviews',
 					'base'        => 'wpsso-ratings-and-reviews/wpsso-ratings-and-reviews.php',
 					'update_auth' => '',		// No premium version.
