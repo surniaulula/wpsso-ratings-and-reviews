@@ -35,9 +35,7 @@ msgstr ""
 
 #: gettext/gettext-lib-config.php:7
 msgctxt "plugin description"
-msgid ""
-"Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
-"Schema Review Markup."
+msgid "Add Ratings and Reviews Features to the WordPress Comments Templates."
 msgstr ""
 
 #: gettext/gettext-lib-config.php:8
@@ -176,9 +174,7 @@ msgid "https://wpsso.com/extend/plugins/wpsso-ratings-and-reviews/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Ratings and Reviews for WordPress Comments with Schema Aggregate Rating and "
-"Schema Review Markup."
+msgid "Add Ratings and Reviews Features to the WordPress Comments Templates."
 msgstr ""
 
 #. Author of the plugin/theme
