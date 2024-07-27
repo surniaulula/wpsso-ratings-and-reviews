@@ -15,15 +15,15 @@ Tested Up To: 6.6.1
 WC Tested Up To: 9.1.4
 Stable Tag: 3.1.0
 
-Add Ratings and Reviews Features to the WordPress Comments Templates.
+Adds Ratings and Reviews Features to the WordPress Comments System.
 
 == Description ==
 
 <!-- about -->
 
-**Extends the WordPress comment system:**
+**Extends the WordPress comments system:**
 
-Add ratings and reviews to Posts, Pages, and custom post types by extending the WordPress comments templates.
+Adds ratings and reviews features to Posts, Pages, and custom post types by extending the WordPress comments system.
 
 **Compatible with WooCommerce and its product ratings:**
 
@@ -37,7 +37,7 @@ In Posts, Pages, and custom post types where ratings and reviews have been enabl
 
 **No templates to modify or update:**
 
-The WPSSO Ratings and Reviews add-on automatically extends the WordPress comments templates.
+The WPSSO Ratings and Reviews add-on automatically and dynamically extends the WordPress comments system without modifying any templates.
 
 Simply activate the plugin to enable the addition of ratings and reviews.
 
