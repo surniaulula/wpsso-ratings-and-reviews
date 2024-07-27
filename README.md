@@ -17,11 +17,11 @@
 
 <!-- about -->
 
-<p><strong>Extends the WordPress comment system.</strong></p>
+<p><strong>Extends the WordPress comment system:</strong></p>
 
 <p>Add ratings and reviews to Posts, Pages, and custom post types by extending the WordPress comments templates.</p>
 
-<p><strong>Compatible with WooCommerce and its product ratings.</strong></p>
+<p><strong>Compatible with WooCommerce and its product ratings:</strong></p>
 
 <p>WooCommerce provides its own product ratings and reviews features.</p>
 
@@ -29,7 +29,7 @@
 
 <p><strong>Provides <a href="https://schema.org/aggregateRating">Schema Aggregate Rating</a> and <a href="https://schema.org/Review">Schema Review</a> markup:</strong></p>
 
-<p>In Posts, Pages, and custom post types where ratings and reviews features have been enabled, the WPSSO Ratings and Reviews add-on includes information in the Schema markup about the review (author name, creation time, excerpt, rating) and the threaded replies / comments for each review.</p>
+<p>In Posts, Pages, and custom post types where ratings and reviews have been enabled, the WPSSO Ratings and Reviews add-on includes information in the Schema markup about the review (author name, creation time, excerpt, rating) and the threaded replies / comments for each review.</p>
 
 <p><strong>No templates to modify or update:</strong></p>
 
