@@ -16,7 +16,7 @@
  * Requires At Least: 5.8
  * Tested Up To: 6.6.1
  * WC Tested Up To: 9.2.2
- * Version: 3.1.0
+ * Version: 3.2.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -41,13 +41,6 @@ if ( ! class_exists( 'WpssoAbstractAddOn' ) ) {
 if ( ! class_exists( 'WpssoRar' ) ) {
 
 	class WpssoRar extends WpssoAbstractAddOn {
-
-		public $actions;	// WpssoRarActions class object.
-		public $admin;		// WpssoRarAdmin class object.
-		public $comment;	// WpssoRarComment class object.
-		public $filters;	// WpssoRarFilters class object.
-		public $script;		// WpssoRarScript class object.
-		public $style;		// WpssoRarStyle class object.
 
 		protected $p;	// Wpsso class object.
 
@@ -76,7 +69,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 		/*
 		 * Called by Wpsso->set_objects() which runs at init priority 10.
 		 */
-		public function init_objects() {
+		public function init_objects_preloader() {
 
 			$this->p =& Wpsso::get_instance();
 
@@ -120,15 +113,15 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 				}
 			}
 
-			$this->actions = new WpssoRarActions( $this->p, $this );
-			$this->comment = new WpssoRarComment( $this->p, $this );
-			$this->filters = new WpssoRarFilters( $this->p, $this );
-			$this->script  = new WpssoRarScript( $this->p, $this );
-			$this->style   = new WpssoRarStyle( $this->p, $this );
+			new WpssoRarActions( $this->p, $this );
+			new WpssoRarComment( $this->p, $this );
+			new WpssoRarFilters( $this->p, $this );
+			new WpssoRarScript( $this->p, $this );
+			new WpssoRarStyle( $this->p, $this );
 
 			if ( is_admin() ) {
-
-				$this->admin = new WpssoRarAdmin( $this->p, $this );
+			
+				new WpssoRarAdmin( $this->p, $this );
 			}
 		}
 	}

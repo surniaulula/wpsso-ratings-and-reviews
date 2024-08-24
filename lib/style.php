@@ -37,7 +37,11 @@ if ( ! class_exists( 'WpssoRarStyle' ) ) {
 			$this->file_ext  = $this->doing_dev ? 'css' : 'min.css';
 			$this->version   = WpssoRarConfig::get_version() . ( $this->doing_dev ? gmdate( '-ymd-His' ) : '' );
 
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+			if ( is_admin() ) {
+
+				add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+
+			} else add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		}
 
 		public function enqueue_styles() {

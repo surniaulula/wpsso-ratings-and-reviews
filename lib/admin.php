@@ -25,7 +25,6 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
-			add_action( 'admin_enqueue_scripts', array( $this->a->style, 'enqueue_styles' ), WPSSO_ADMIN_SCRIPTS_PRIORITY );
 			add_action( 'post_comment_status_meta_box-options', array( $this, 'show_comment_metabox_option' ), 10, 1 );
 			add_action( 'quick_edit_custom_box', array( $this, 'show_quick_edit_option' ), 10, 2 );
             		add_action( 'save_post', array( $this, 'save_rating_meta_option' ), 10, 3 );
