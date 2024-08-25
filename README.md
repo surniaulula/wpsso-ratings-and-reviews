@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Ratings and Reviews</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Adds Ratings and Reviews Features to the WordPress Comments System.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.1.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.2.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2.34 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.8 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.6.1</td></tr>

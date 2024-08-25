@@ -13,7 +13,7 @@ Requires PHP: 7.2.34
 Requires At Least: 5.8
 Tested Up To: 6.6.1
 WC Tested Up To: 9.2.2
-Stable Tag: 3.1.0
+Stable Tag: 3.2.0
 
 Adds Ratings and Reviews Features to the WordPress Comments System.
 
@@ -141,21 +141,6 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.8.
 	* WPSSO Core v17.0.0.
 
-**Version 2.23.0 (2023/10/09)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Added an action hook to update metadata values when WPSSO refreshes its cache.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added a new `WpssoRarActions->action_refresh_cache()` method.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v16.2.0.
-
 == Upgrade Notice ==
 
 = 3.2.0 =
@@ -169,8 +154,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 3.0.0 =
 
 (2023/11/08) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
-
-= 2.23.0 =
-
-(2023/10/09) Added an action hook to update metadata values when WPSSO refreshes its cache.
 
