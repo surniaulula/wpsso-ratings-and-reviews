@@ -120,7 +120,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			new WpssoRarStyle( $this->p, $this );
 
 			if ( is_admin() ) {
-			
+
 				new WpssoRarAdmin( $this->p, $this );
 			}
 		}
