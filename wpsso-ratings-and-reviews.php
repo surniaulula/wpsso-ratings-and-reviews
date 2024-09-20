@@ -15,7 +15,7 @@
  * Requires PHP: 7.4.33
  * Requires At Least: 5.9
  * Tested Up To: 6.6.2
- * WC Tested Up To: 9.3.1
+ * WC Tested Up To: 9.3.2
  * Version: 3.2.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
@@ -86,7 +86,7 @@ if ( ! class_exists( 'WpssoRar' ) ) {
 			/*
 			 * Make sure there are no conflicting settings.
 			 */
-			if ( ! empty( $this->p->options[ 'plugin_ratings_reviews_svc' ] ) ) {	// Since WPSSO Core v8.33.0.
+			if ( ! empty( $this->p->options[ 'plugin_ratings_reviews_svc' ] ) ) {
 
 				if ( 'none' !== $this->p->options[ 'plugin_ratings_reviews_svc' ] ) {
 
