@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.4.33
 Requires At Least: 5.9
 Tested Up To: 6.6.2
-WC Tested Up To: 9.3.2
+WC Tested Up To: 9.3.3
 Stable Tag: 3.2.0
 
 Adds Ratings and Reviews Features to the WordPress Comments System.
