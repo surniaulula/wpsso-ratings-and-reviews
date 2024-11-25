@@ -127,10 +127,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 				update_metadata( 'post', $post_id, WPSSORAR_META_ALLOW_RATINGS, 1 );
 
-			} else {
-
-				update_metadata( 'post', $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
-			}
+			} else update_metadata( 'post', $post_id, WPSSORAR_META_ALLOW_RATINGS, 0 );
 		}
 	}
 }
