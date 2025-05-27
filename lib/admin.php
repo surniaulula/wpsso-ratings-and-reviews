@@ -27,7 +27,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 
 			add_action( 'post_comment_status_meta_box-options', array( $this, 'show_comment_metabox_option' ), 10, 1 );
 			add_action( 'quick_edit_custom_box', array( $this, 'show_quick_edit_option' ), 10, 2 );
-            		add_action( 'save_post', array( $this, 'save_rating_meta_option' ), 10, 3 );
+			add_action( 'save_post', array( $this, 'save_rating_meta_option' ), 10, 3 );
 		}
 
 		public function show_comment_metabox_option( $post_obj ) {
@@ -101,7 +101,7 @@ if ( ! class_exists( 'WpssoRarAdmin' ) ) {
 			echo '</fieldset>';
 		}
 
-        	public function save_rating_meta_option( $post_id, $post_obj, $update ) {
+		public function save_rating_meta_option( $post_id, $post_obj, $update ) {
 
 			if ( ! isset ( $_POST[ 'post_type' ] ) ) {
 
