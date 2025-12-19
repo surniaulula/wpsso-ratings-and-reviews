@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.4.33
 Requires At Least: 5.9
 Tested Up To: 6.9
-WC Tested Up To: 10.3.6
+WC Tested Up To: 10.4.2
 Stable Tag: 3.2.0
 
 Adds Ratings and Reviews Features to the WordPress Comments System.
@@ -96,6 +96,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.3.0-dev.2 (2025/12/19)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Renamed the 'wpsso_add_custom_post_type_options' filter hook to 'wpsso_custom_post_type_options'.
+	* Renamed the 'wpsso_add_custom_taxonomy_options' filter hook to 'wpsso_custom_taxonomy_options'.
+* **Requires At Least**
+	* PHP v7.4.33.
+	* WordPress v5.9.
+	* WPSSO Core v21.11.0-dev.2.
+
 **Version 3.2.0 (2024/08/25)**
 
 * **New Features**
@@ -112,6 +128,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v18.20.0.
 
 == Upgrade Notice ==
+
+= 3.3.0-dev.2 =
+
+(2025/12/19) Renamed the 'wpsso_add_custom_post_type_options' and 'wpsso_add_custom_taxonomy_options' filters hooks.
 
 = 3.2.0 =
 
