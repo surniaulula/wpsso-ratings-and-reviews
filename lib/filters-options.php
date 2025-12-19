@@ -26,12 +26,12 @@ if ( ! class_exists( 'WpssoRarFiltersOptions' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'add_custom_post_type_options' => 1,
-				'add_custom_taxonomy_options'  => 1,
+				'custom_post_type_options' => 1,
+				'custom_taxonomy_options'  => 1,
 			) );
 		}
 
-		public function filter_add_custom_post_type_options( $opt_prefixes ) {
+		public function filter_custom_post_type_options( $opt_prefixes ) {
 
 			$opt_prefixes[ 'rar_add_to' ]            = 0;
 			$opt_prefixes[ 'plugin_avg_rating_col' ] = 1;
@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoRarFiltersOptions' ) ) {
 			return $opt_prefixes;
 		}
 
-		public function filter_add_custom_taxonomy_options( $opt_prefixes ) {
+		public function filter_custom_taxonomy_options( $opt_prefixes ) {
 
 			unset( $opt_prefixes[ 'plugin_avg_rating_col_tax' ] );
 
