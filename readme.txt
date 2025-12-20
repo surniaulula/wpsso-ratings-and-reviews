@@ -96,7 +96,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.3.0-b.1 (2025/12/19)**
+**Version 3.3.0-rc.1 (2025/12/20)**
 
 * **New Features**
 	* None.
@@ -110,7 +110,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v21.11.0-b.1.
+	* WPSSO Core v21.11.0-rc.1.
 
 **Version 3.2.0 (2024/08/25)**
 
@@ -129,9 +129,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.3.0-b.1 =
+= 3.3.0-rc.1 =
 
-(2025/12/19) Renamed the 'wpsso_add_custom_post_type_options' and 'wpsso_add_custom_taxonomy_options' filters hooks.
+(2025/12/20) Renamed the 'wpsso_add_custom_post_type_options' and 'wpsso_add_custom_taxonomy_options' filters hooks.
 
 = 3.2.0 =
 
