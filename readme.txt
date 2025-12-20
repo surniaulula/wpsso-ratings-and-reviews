@@ -13,7 +13,7 @@ Requires PHP: 7.4.33
 Requires At Least: 5.9
 Tested Up To: 6.9
 WC Tested Up To: 10.4.2
-Stable Tag: 3.2.0
+Stable Tag: 3.3.0
 
 Adds Ratings and Reviews Features to the WordPress Comments System.
 
@@ -112,28 +112,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.9.
 	* WPSSO Core v21.11.0.
 
-**Version 3.2.0 (2024/08/25)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
-* **Requires At Least**
-	* PHP v7.4.33.
-	* WordPress v5.9.
-	* WPSSO Core v18.20.0.
-
 == Upgrade Notice ==
 
 = 3.3.0 =
 
 (2025/12/20) Renamed the 'wpsso_add_custom_post_type_options' and 'wpsso_add_custom_taxonomy_options' filters hooks.
-
-= 3.2.0 =
-
-(2024/08/25) Changed the main instantiation action hook from 'init_objects' to 'init_objects_preloader'.
 
