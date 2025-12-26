@@ -5,7 +5,7 @@
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Adds Ratings and Reviews Features to the WordPress Comments System.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>3.3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.4.33 or newer</td></tr>
-<tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.9 or newer</td></tr>
+<tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>6.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>6.9</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WooCommerce</th><td>10.4.3</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>

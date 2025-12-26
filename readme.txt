@@ -10,7 +10,7 @@ Tags: star rating, aggregate rating, product ratings, product reviews, woocommer
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.4.33
-Requires At Least: 5.9
+Requires At Least: 6.0
 Tested Up To: 6.9
 WC Tested Up To: 10.4.3
 Stable Tag: 3.3.0
@@ -109,7 +109,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the 'wpsso_add_custom_taxonomy_options' filter hook to 'wpsso_custom_taxonomy_options'.
 * **Requires At Least**
 	* PHP v7.4.33.
-	* WordPress v5.9.
+	* WordPress v6.0.
 	* WPSSO Core v21.11.0.
 
 == Upgrade Notice ==
