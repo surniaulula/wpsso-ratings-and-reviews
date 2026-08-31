@@ -166,7 +166,7 @@ if ( ! class_exists( 'WpssoRarConfig' ) ) {
 
 				if ( defined( $name ) ) {
 
-					$var_const[$name] = constant( $name );
+					$var_const[ $name ] = constant( $name );
 				}
 			}
 
